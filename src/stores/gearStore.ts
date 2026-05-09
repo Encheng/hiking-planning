@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, toRaw } from 'vue';
 import { db } from '@/db';
 import type { GearChecklist, CustomItem, GearTemplates, TripType } from '@/types';
 import { suggestGear, type SuggestOutput } from '@/services/GearSuggester';
@@ -25,10 +25,11 @@ export const useGearStore = defineStore('gear', () => {
 
   async function saveChecklist(): Promise<void> {
     if (!currentChecklist.value) return;
-    if (currentChecklist.value.id) {
-      await db.gearChecklists.put(currentChecklist.value);
+    const raw = toRaw(currentChecklist.value);
+    if (raw.id) {
+      await db.gearChecklists.put(raw);
     } else {
-      const id = await db.gearChecklists.add(currentChecklist.value);
+      const id = await db.gearChecklists.add(raw);
       currentChecklist.value.id = id as number;
     }
   }

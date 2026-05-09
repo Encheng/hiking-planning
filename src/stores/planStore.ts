@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref, computed } from 'vue';
+import { ref, computed, toRaw } from 'vue';
 import { db } from '@/db';
 import type { Plan, SegmentTime, TripType } from '@/types';
 import { calculateTimes } from '@/services/TimeCalculator';
@@ -21,11 +21,12 @@ export const usePlanStore = defineStore('plan', () => {
   }
 
   async function savePlan(plan: Plan): Promise<number> {
-    if (plan.id) {
-      await db.plans.put(plan);
-      return plan.id;
+    const rawPlan = toRaw(plan);
+    if (rawPlan.id) {
+      await db.plans.put(rawPlan);
+      return rawPlan.id;
     }
-    return (await db.plans.add({ ...plan, createdAt: plan.createdAt ?? new Date().toISOString() })) as number;
+    return (await db.plans.add({ ...rawPlan, createdAt: rawPlan.createdAt ?? new Date().toISOString() })) as number;
   }
 
   async function deletePlan(id: number) {

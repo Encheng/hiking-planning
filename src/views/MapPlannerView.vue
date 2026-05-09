@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue';
+import { computed, onMounted, watch, toRaw } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { NButton, NCard, NSpace, NTag, useMessage } from 'naive-ui';
 import MapCanvas from '@/components/map/MapCanvas.vue';
@@ -52,7 +52,7 @@ async function savePlan() {
     routeId: routeId.value,
     startNodeId: mapStore.selectedStartId,
     endNodeId: mapStore.selectedEndId,
-    nodeSequence: resolvedPath.value.combined,
+    nodeSequence: toRaw(resolvedPath.value.combined),
     paceMultiplier: draft.paceMultiplier ?? settings.defaultPaceMultiplier,
     startDate: draft.startDate ?? today,
     startTime: draft.startTime ?? '06:00',
