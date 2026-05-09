@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "id": "light_summit",
+      "name": "輕裝攻頂 (≤4h)",
+      "matchCondition": { "maxHours": 4, "overnight": false },
+      "items": [
+        { "id": "i_water_1l", "name": "水 1L", "essential": true, "weight_g": 1000 },
+        { "id": "i_snack", "name": "行動糧", "essential": true },
+        { "id": "i_raincoat", "name": "輕便雨衣", "essential": true },
+        { "id": "i_hat", "name": "遮陽帽" },
+        { "id": "i_sunscreen", "name": "防曬乳" },
+        { "id": "i_phone", "name": "手機 (滿電)", "essential": true }
+      ]
+    },
+    {
+      "id": "long_day",
+      "name": "長日單攻 (>4h)",
+      "matchCondition": { "maxHours": 99, "overnight": false },
+      "items": [
+        { "id": "i_water_2l", "name": "水 2L", "essential": true, "weight_g": 2000 },
+        { "id": "i_headlamp", "name": "頭燈 + 備用電池", "essential": true },
+        { "id": "i_emergency_blanket", "name": "緊急保暖毯", "essential": true },
+        { "id": "i_first_aid", "name": "急救包", "essential": true },
+        { "id": "i_whistle", "name": "哨子", "essential": true }
+      ]
+    },
+    {
+      "id": "overnight_hut",
+      "name": "山屋過夜",
+      "matchCondition": { "minNights": 1, "camping": false },
+      "items": [
+        { "id": "i_sleeping_bag", "name": "睡袋", "essential": true, "weight_g": 1200 },
+        { "id": "i_warm_layer", "name": "保暖層 (羽絨/化纖)", "essential": true },
+        { "id": "i_change_clothes", "name": "換洗衣物" },
+        { "id": "i_toiletries", "name": "盥洗用品" },
+        { "id": "i_stove", "name": "爐頭 + 瓦斯" },
+        { "id": "i_food", "name": "晚餐 + 早餐", "essential": true }
+      ]
+    },
+    {
+      "id": "overnight_camp",
+      "name": "紮營過夜",
+      "matchCondition": { "minNights": 1, "camping": true },
+      "items": [
+        { "id": "i_tent", "name": "帳篷", "essential": true, "weight_g": 2500 },
+        { "id": "i_groundsheet", "name": "地布" },
+        { "id": "i_sleep_pad", "name": "睡墊", "essential": true },
+        { "id": "i_pillow", "name": "充氣枕" }
+      ]
+    }
+  ]
+}
