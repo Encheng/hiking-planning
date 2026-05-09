@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, provide, watch } from 'vue';
+import { onMounted, onBeforeUnmount, ref, shallowRef, provide, watch } from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -9,7 +9,7 @@ const props = defineProps<{
 }>();
 
 const mapEl = ref<HTMLDivElement | null>(null);
-const mapInstance = ref<L.Map | null>(null);
+const mapInstance = shallowRef<L.Map | null>(null);
 
 provide('leaflet-map', mapInstance);
 
