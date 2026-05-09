@@ -1,25 +1,45 @@
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { NCard, NButton, NSpace, NSpin } from 'naive-ui';
+import { NCard, NButton, NSpace, NSpin, NTabs, NTabPane } from 'naive-ui';
 import TableView from '@/components/schedule/TableView.vue';
+import GanttView from '@/components/schedule/GanttView.vue';
+import ElevationView from '@/components/schedule/ElevationView.vue';
+import PrintLayout from '@/components/schedule/PrintLayout.vue';
 import DayBreakEditor from '@/components/planner/DayBreakEditor.vue';
 import TripTypeBadge from '@/components/common/TripTypeBadge.vue';
 import { usePlanStore } from '@/stores/planStore';
+import { useRoutesStore } from '@/stores/routesStore';
+import { useGearStore } from '@/stores/gearStore';
 
 const props = defineProps<{ planId: string }>();
 const planStore = usePlanStore();
+const routesStore = useRoutesStore();
+const gearStore = useGearStore();
 const router = useRouter();
 
-onMounted(async () => {
-  await planStore.loadPlan(Number(props.planId));
-});
+async function loadAll(id: number) {
+  await planStore.loadPlan(id);
+  if (!planStore.currentPlan) return;
+  await gearStore.loadChecklist(id);
+  const totalMins = planStore.computedTimes.reduce((s, x) => s + x.adjustedMinutes, 0);
+  const hasOvernight = planStore.currentPlan.dayBreaks.length > 0;
+  const hasCamping = planStore.currentPlan.dayBreaks.some((b) => b.type === 'camp');
+  const lastPlanId = await gearStore.findLastPlanIdOfType(planStore.currentPlan.tripType, id);
+  await gearStore.refreshSuggestion({
+    totalHours: totalMins / 60,
+    hasOvernight,
+    hasCamping,
+    lastPlanId,
+  });
+}
 
-watch(() => props.planId, async (id) => {
-  await planStore.loadPlan(Number(id));
-});
+onMounted(() => loadAll(Number(props.planId)));
+watch(() => props.planId, (id) => loadAll(Number(id)));
 
 const plan = computed(() => planStore.currentPlan);
+const route = computed(() => plan.value ? routesStore.getById(plan.value.routeId) ?? null : null);
+const printReady = computed(() => !!gearStore.suggestion && !!plan.value && !!route.value);
 
 function printPage() {
   window.print();
@@ -27,31 +47,50 @@ function printPage() {
 </script>
 
 <template>
-  <div class="p-6 max-w-5xl mx-auto">
+  <div class="schedule-page p-6 max-w-5xl mx-auto">
     <NSpin :show="!plan">
-      <template v-if="plan">
-        <header class="mb-4 flex justify-between items-start">
-          <div>
-            <h1 class="text-2xl font-bold">{{ plan.name }}</h1>
-            <NSpace size="small" class="mt-2">
-              <TripTypeBadge :trip-type="plan.tripType" />
-              <span class="text-sm text-gray-500">
-                {{ plan.startDate }} {{ plan.startTime }} 出發 · 倍率 {{ plan.paceMultiplier }}x
-              </span>
+      <template v-if="plan && route">
+        <div class="screen-only">
+          <header class="mb-4 flex justify-between items-start">
+            <div>
+              <h1 class="text-2xl font-bold">{{ plan.name }}</h1>
+              <NSpace size="small" class="mt-2">
+                <TripTypeBadge :trip-type="plan.tripType" />
+                <span class="text-sm text-gray-500">
+                  {{ plan.startDate }} {{ plan.startTime }} 出發 · 倍率 {{ plan.paceMultiplier }}x
+                </span>
+              </NSpace>
+            </div>
+            <NSpace>
+              <NButton @click="router.push({ name: 'gear', params: { planId: plan.id } })">裝備清單</NButton>
+              <NButton :disabled="!printReady" @click="printPage">列印</NButton>
             </NSpace>
-          </div>
-          <NSpace>
-            <NButton @click="router.push({ name: 'gear', params: { planId: plan.id } })">裝備清單</NButton>
-            <NButton @click="printPage">列印</NButton>
-          </NSpace>
-        </header>
+          </header>
 
-        <NSpace vertical size="large">
-          <DayBreakEditor />
-          <NCard title="行程時刻表 (V2)">
-            <TableView :plan="plan" :segments="planStore.computedTimes" />
-          </NCard>
-        </NSpace>
+          <NSpace vertical size="large">
+            <DayBreakEditor />
+            <NCard title="行程時刻表">
+              <NTabs default-value="v2" type="line">
+                <NTabPane name="v1" tab="V1 Gantt">
+                  <GanttView :plan="plan" :segments="planStore.computedTimes" />
+                </NTabPane>
+                <NTabPane name="v2" tab="V2 表格">
+                  <TableView :plan="plan" :segments="planStore.computedTimes" />
+                </NTabPane>
+                <NTabPane name="v3" tab="V3 海拔">
+                  <ElevationView :plan="plan" :segments="planStore.computedTimes" />
+                </NTabPane>
+              </NTabs>
+            </NCard>
+          </NSpace>
+        </div>
+
+        <PrintLayout
+          :plan="plan"
+          :route="route"
+          :segments="planStore.computedTimes"
+          :gear-suggestion="gearStore.suggestion"
+        />
       </template>
     </NSpin>
   </div>

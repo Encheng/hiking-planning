@@ -5,3 +5,74 @@
 @tailwind utilities;
 
 html, body, #app { height: 100%; margin: 0; }
+
+/* ============================================ */
+/*  Print stylesheet (Phase 2)                  */
+/* ============================================ */
+
+@media screen {
+  .print-only { display: none; }
+}
+
+@media print {
+  .screen-only { display: none !important; }
+  .print-only { display: block; }
+  body { background: white; color: black; }
+
+  @page { margin: 1.5cm 1.2cm; }
+
+  .print-header h1 { margin: 0 0 4px; font-size: 16pt; }
+  .print-header dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 10pt;
+    gap: 2px 16px;
+    margin: 4px 0 16px;
+  }
+  .print-header dt { display: inline; font-weight: bold; margin-right: 6px; }
+  .print-header dd { display: inline; margin: 0; }
+
+  .print-schedule { page-break-after: always; }
+  .print-schedule h2 { font-size: 13pt; margin: 0 0 6px; }
+  .print-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+  }
+  .print-schedule th,
+  .print-schedule td {
+    border: 1px solid #999;
+    padding: 3px 5px;
+    text-align: left;
+  }
+  .print-schedule th { background: #f3f4f6; }
+  .print-schedule thead { display: table-header-group; }
+  .print-schedule tr { page-break-inside: avoid; }
+  .print-schedule tr.is-break { background: #fef3c7; }
+
+  .print-gear h2 { font-size: 13pt; margin: 0 0 6px; }
+  .print-gear h3 {
+    font-size: 11pt;
+    margin: 12px 0 4px;
+    border-bottom: 1px solid #ccc;
+  }
+  .print-gear ul {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 24px;
+  }
+  .print-gear li {
+    font-size: 10pt;
+    padding: 1px 0;
+    break-inside: avoid;
+  }
+
+  .print-footer {
+    font-size: 8pt;
+    color: #666;
+    margin-top: 16px;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+  }
+}
