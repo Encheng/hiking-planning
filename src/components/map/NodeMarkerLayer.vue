@@ -2,11 +2,17 @@
 import { inject, watch, onBeforeUnmount, type Ref } from 'vue';
 import L from 'leaflet';
 import type { RouteNode, NodeCategory } from '@/types';
-import { useMapStore } from '@/stores/mapStore';
 
-const props = defineProps<{ nodes: RouteNode[] }>();
+const props = defineProps<{
+  nodes: RouteNode[];
+  highlightedNodeIds?: string[];
+}>();
+
+const emit = defineEmits<{
+  'node-click': [{ node: RouteNode; latlng: L.LatLng }];
+}>();
+
 const map = inject<Ref<L.Map | null>>('leaflet-map')!;
-const mapStore = useMapStore();
 
 const colors: Record<NodeCategory, string> = {
   trailhead: '#22c55e',
@@ -19,26 +25,28 @@ const colors: Record<NodeCategory, string> = {
 
 let markers: L.Marker[] = [];
 
-function makeIcon(node: RouteNode, isStart: boolean, isEnd: boolean) {
+function makeIcon(node: RouteNode, highlighted: boolean) {
   const baseColor = colors[node.category];
-  const ring = isStart ? '#22c55e' : isEnd ? '#dc2626' : 'white';
-  const label = isStart ? '起' : isEnd ? '終' : '';
+  const ring = highlighted ? '#0ea5e9' : 'white';
   return L.divIcon({
     className: 'node-marker',
     iconSize: [22, 22],
-    html: `<div style="width:22px;height:22px;border-radius:50%;background:${baseColor};border:3px solid ${ring};display:flex;align-items:center;justify-content:center;color:white;font-size:10px;font-weight:bold;">${label}</div>`,
+    html: `<div style="width:22px;height:22px;border-radius:50%;background:${baseColor};border:3px solid ${ring};box-shadow:0 0 0 1px rgba(0,0,0,0.2);"></div>`,
   });
 }
 
 function rebuild() {
   if (!map.value) return;
   markers.forEach((m) => m.remove());
+  const highlighted = new Set(props.highlightedNodeIds ?? []);
   markers = props.nodes.map((node) => {
-    const isStart = mapStore.selectedStartId === node.id;
-    const isEnd = mapStore.selectedEndId === node.id;
-    const m = L.marker([node.lat, node.lng], { icon: makeIcon(node, isStart, isEnd) });
+    const m = L.marker([node.lat, node.lng], {
+      icon: makeIcon(node, highlighted.has(node.id)),
+    });
     m.bindTooltip(`${node.name} (${node.elevation}m)`);
-    m.on('click', () => mapStore.pickNode(node.id));
+    m.on('click', (e: L.LeafletMouseEvent) => {
+      emit('node-click', { node, latlng: e.latlng });
+    });
     m.addTo(map.value!);
     return m;
   });
@@ -46,7 +54,7 @@ function rebuild() {
 
 watch(map, (m) => { if (m) rebuild(); }, { immediate: true });
 watch(() => props.nodes, () => rebuild(), { deep: true });
-watch(() => [mapStore.selectedStartId, mapStore.selectedEndId], () => rebuild());
+watch(() => props.highlightedNodeIds, () => rebuild(), { deep: true });
 
 onBeforeUnmount(() => markers.forEach((m) => m.remove()));
 </script>
