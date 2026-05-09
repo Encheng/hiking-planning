@@ -22,8 +22,9 @@ async function loadAll(id: number) {
   if (!planStore.currentPlan) return;
   await gearStore.loadChecklist(id);
   const totalMins = planStore.computedTimes.reduce((s, x) => s + x.adjustedMinutes, 0);
-  const hasOvernight = planStore.currentPlan.dayBreaks.length > 0;
-  const hasCamping = planStore.currentPlan.dayBreaks.some((b) => b.type === 'camp');
+  const dailyPlans = planStore.currentPlan.dailyPlans ?? [];
+  const hasOvernight = dailyPlans.length > 1;
+  const hasCamping = dailyPlans.some((d) => d.endType === 'camp');
   const lastPlanId = await gearStore.findLastPlanIdOfType(planStore.currentPlan.tripType, id);
   await gearStore.refreshSuggestion({
     totalHours: totalMins / 60,
