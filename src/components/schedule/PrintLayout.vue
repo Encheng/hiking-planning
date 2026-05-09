@@ -131,7 +131,7 @@ const scheduleRows = computed<ScheduleRow[]>(() => {
     </section>
 
     <footer class="print-footer">
-      列印於 {{ printedAt }}　·　資料來源：上河文化《2020 高山百岳地形圖》（個人使用）
+      列印於 {{ printedAt }} · 資料來源：上河文化《2020 高山百岳地形圖》（個人使用）
     </footer>
   </article>
 </template>
