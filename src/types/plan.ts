@@ -1,3 +1,5 @@
+import type { DailyPlan } from './daily';
+
 export type TripType = 'light_summit' | 'long_day' | 'overnight_hut' | 'overnight_camp';
 export type DayBreakType = 'hut' | 'shelter' | 'camp' | 'manual';
 
@@ -21,6 +23,10 @@ export interface Plan {
   tripType: TripType;
   notes?: string;
   createdAt: string;
+
+  // Phase 2.5
+  dailyPlans?: DailyPlan[];
+  returnToStart?: boolean;
 }
 
 export interface SegmentTime {
