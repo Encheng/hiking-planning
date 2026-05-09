@@ -1,0 +1,62 @@
+# 台灣百岳登山規劃 App
+
+個人登山行程規劃工具：依上河圖步程資料自動解析路徑、套用倍率估算時間、自動建議多日切點、產生可視化行程表，並依行程類型推薦對應裝備清單。
+
+## 資料來源與版權
+
+本 App 內建的步程節點與時間數據參考自：
+
+> **上河文化《2020 高山百岳地形圖》**
+> https://www.sunriver.com.tw/step2020.htm
+
+數據著作權歸**上河文化**所有。本專案為個人學習與規劃用途，僅作為參考工具，不對外提供商業服務。如欲取得完整、最新的步程資料，請支持原版地形圖。
+
+## 技術棧
+
+- **Frontend**: Vue 3 + TypeScript + Vite 5 + Composition API
+- **State**: Pinia
+- **Routing**: Vue Router
+- **UI**: Naive UI + Tailwind CSS
+- **Map**: Leaflet 1.9 + leaflet-gpx (NLSC PHOTO_MIX / EMAP5 / OSM)
+- **Geo**: @turf/turf
+- **Storage**: IndexedDB via Dexie.js
+- **Tests**: Vitest (unit) + Playwright (E2E)
+
+## 主要功能
+
+- **行程規劃**：地圖點選起終點 → BFS 路徑解析 → 倍率時間估算
+- **多日切點**：依山屋資料庫自動建議過夜點，可手動改寫
+- **行程表呈現**：V2 表格時刻表（V1 Gantt / V3 海拔曲線於後續 phase 加入）
+- **裝備清單**：依行程類型自動分類，互動勾選，跨行程繼承
+- **PWA 離線**（Phase 3）：地圖磚與行程資料離線可用
+
+## 開發
+
+```bash
+npm install
+npm run dev          # http://localhost:5173
+npm run test:run     # 單元測試
+npm run test:e2e     # E2E 測試
+npm run typecheck
+npm run build
+```
+
+## 路線資料
+
+目前內建：
+
+| ID | 名稱 | 狀態 |
+|---|---|---|
+| G02 | 玉山主峰單攻 | ✅ 樣本（8 節點） |
+| G01, G03–G20 | 其他百岳路線 | ⏳ Phase 4 整理 |
+
+GPX 檔案來源：個人從健行筆記 / 政府開放資料平台等收集。
+
+## 文件
+
+- `docs/superpowers/specs/2026-05-09-hiking-planning-design.md` — 整體設計文件
+- `docs/superpowers/plans/2026-05-09-phase1-mvp.md` — Phase 1 實作計畫
+
+## License
+
+MIT (程式碼)。內建上河步程數據與 GPX 軌跡資料**不適用** MIT，依原始來源各自的版權條款處理。
