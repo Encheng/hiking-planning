@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import { inject, watch, onBeforeUnmount, type Ref } from 'vue';
+import { inject, watch, onBeforeUnmount, onMounted, ref, type Ref } from 'vue';
 import L from 'leaflet';
 import { useMapStore, type TileLayer } from '@/stores/mapStore';
 
 const map = inject<Ref<L.Map | null>>('leaflet-map')!;
 const mapStore = useMapStore();
+const containerEl = ref<HTMLDivElement | null>(null);
+
+onMounted(() => {
+  if (containerEl.value) {
+    L.DomEvent.disableClickPropagation(containerEl.value);
+    L.DomEvent.disableScrollPropagation(containerEl.value);
+  }
+});
 
 const tileUrls: Record<TileLayer, { url: string; attribution: string; maxZoom: number }> = {
   photo: {
@@ -47,7 +55,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="absolute top-3 right-3 z-[400] bg-white rounded shadow p-2 flex gap-1">
+  <div ref="containerEl" class="absolute top-3 right-3 z-[1000] bg-white rounded shadow p-2 flex gap-1">
     <button
       v-for="key in (['photo','nlsc','osm'] as const)"
       :key="key"
