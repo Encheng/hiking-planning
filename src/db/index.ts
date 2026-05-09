@@ -18,10 +18,22 @@ export class HikingDB extends Dexie {
       tileCache: 'url, expiresAt',
     });
 
-    // Cascade delete: override plans.delete so that removing a plan also
-    // removes all associated gearChecklists within the same transaction.
-    // This is needed because Dexie's 'deleting' hook fires inside a
-    // single-table transaction and cannot access other object stores.
+    // Cascade delete: override Table.delete so that removing a plan also
+    // removes all associated gearChecklists within the same rw transaction.
+    //
+    // Why override instead of plans.hook('deleting'):
+    //   The deleting hook fires per-record and would require every caller to
+    //   pre-enlist both `plans` and `gearChecklists` in their own outer
+    //   transaction (otherwise the cascade write throws). The override
+    //   establishes the multi-table transaction internally, so callers don't
+    //   need to know about the dependency.
+    //
+    // LIMITATION: This override covers `db.plans.delete(id)` only.
+    // The following deletion paths bypass it and will leave orphaned gearChecklists:
+    //   - db.plans.where(...).delete()      (Collection.delete)
+    //   - db.plans.bulkDelete([...])        (Table.bulkDelete)
+    //   - db.plans.clear()                  (Table.clear) — used in resetDb intentionally
+    // For bulk deletions requiring cascade, write an explicit transaction.
     this._overridePlanDelete();
   }
 
