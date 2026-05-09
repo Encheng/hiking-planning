@@ -3,7 +3,7 @@ import { ref, computed, toRaw } from 'vue';
 import { db } from '@/db';
 import type { Plan, SegmentTime, TripType } from '@/types';
 import { calculateTimes } from '@/services/TimeCalculator';
-import { suggestBreaks } from '@/services/DayBreaker';
+import { resolveDailyPlans } from '@/services/DailyPlanResolver';
 import { useRoutesStore } from './routesStore';
 import { classifyTripType } from '@/services/GearSuggester';
 
@@ -21,12 +21,12 @@ export const usePlanStore = defineStore('plan', () => {
   }
 
   async function savePlan(plan: Plan): Promise<number> {
-    const rawPlan = toRaw(plan);
-    if (rawPlan.id) {
-      await db.plans.put(rawPlan);
-      return rawPlan.id;
+    const raw = JSON.parse(JSON.stringify(toRaw(plan)));
+    if (plan.id) {
+      await db.plans.put(raw);
+      return plan.id;
     }
-    return (await db.plans.add({ ...rawPlan, createdAt: rawPlan.createdAt ?? new Date().toISOString() })) as number;
+    return (await db.plans.add({ ...raw, createdAt: raw.createdAt ?? new Date().toISOString() })) as number;
   }
 
   async function deletePlan(id: number) {
@@ -34,15 +34,45 @@ export const usePlanStore = defineStore('plan', () => {
     await loadAllPlans();
   }
 
+  const draftResolution = computed(() => {
+    if (!draft.value || !draft.value.routeId || !draft.value.startNodeId) return null;
+    const routesStore = useRoutesStore();
+    const route = routesStore.getById(draft.value.routeId);
+    if (!route) return null;
+    return resolveDailyPlans({
+      route,
+      startNodeId: draft.value.startNodeId,
+      dailyPlans: draft.value.dailyPlans ?? [],
+      returnToStart: draft.value.returnToStart ?? true,
+    });
+  });
+
+  const currentResolution = computed(() => {
+    if (!currentPlan.value) return null;
+    const routesStore = useRoutesStore();
+    const route = routesStore.getById(currentPlan.value.routeId);
+    if (!route) return null;
+    return resolveDailyPlans({
+      route,
+      startNodeId: currentPlan.value.startNodeId,
+      dailyPlans: currentPlan.value.dailyPlans ?? [],
+      returnToStart: currentPlan.value.returnToStart ?? true,
+    });
+  });
+
   const computedTimes = computed<SegmentTime[]>(() => {
     if (!currentPlan.value) return [];
     const routesStore = useRoutesStore();
     const route = routesStore.getById(currentPlan.value.routeId);
     if (!route) return [];
+    const sequence = (currentResolution.value?.nodeSequence?.length ?? 0) > 0
+      ? currentResolution.value!.nodeSequence
+      : currentPlan.value.nodeSequence;
+    if (sequence.length < 2) return [];
     try {
       return calculateTimes({
         route,
-        nodeSequence: currentPlan.value.nodeSequence,
+        nodeSequence: sequence,
         paceMultiplier: currentPlan.value.paceMultiplier,
         startDateTime: `${currentPlan.value.startDate}T${currentPlan.value.startTime}:00`,
       }).segments;
@@ -51,34 +81,25 @@ export const usePlanStore = defineStore('plan', () => {
     }
   });
 
-  function autoSuggestDayBreaks(): void {
-    if (!currentPlan.value) return;
-    const routesStore = useRoutesStore();
-    const route = routesStore.getById(currentPlan.value.routeId);
-    if (!route) return;
-    const segments = computedTimes.value;
-    const breaks = suggestBreaks({
-      route, segments, huts: routesStore.huts,
-      maxDailyHours: 8, preferredBreakType: 'auto',
-    });
-    currentPlan.value.dayBreaks = breaks;
-    refreshTripType();
-  }
-
-  function refreshTripType() {
-    if (!currentPlan.value) return;
-    const totalMins = computedTimes.value.reduce((s, x) => s + x.adjustedMinutes, 0);
-    const hasOvernight = currentPlan.value.dayBreaks.length > 0;
-    const hasCamping = currentPlan.value.dayBreaks.some((b) => b.type === 'camp');
+  function refreshTripType(target: 'draft' | 'current') {
+    const plan = target === 'draft' ? draft.value : currentPlan.value;
+    if (!plan) return;
+    const dailyPlans = plan.dailyPlans ?? [];
+    const totalMins = (target === 'current' ? computedTimes.value : []).reduce((s, x) => s + x.adjustedMinutes, 0);
+    const hasOvernight = dailyPlans.length > 1;
+    const hasCamping = dailyPlans.some((d) => d.endType === 'camp');
     const tripType: TripType = classifyTripType({
-      totalHours: totalMins / 60, hasOvernight, hasCamping,
+      totalHours: totalMins / 60,
+      hasOvernight,
+      hasCamping,
     });
-    currentPlan.value.tripType = tripType;
+    plan.tripType = tripType;
   }
 
   return {
     draft, plans, currentPlan, computedTimes,
+    draftResolution, currentResolution,
     loadAllPlans, loadPlan, savePlan, deletePlan,
-    autoSuggestDayBreaks, refreshTripType,
+    refreshTripType,
   };
 });
