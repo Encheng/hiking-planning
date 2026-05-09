@@ -63,6 +63,7 @@ async function savePlan() {
   await planStore.loadPlan(id);
   planStore.autoSuggestDayBreaks();
   await planStore.savePlan(planStore.currentPlan!);
+  planStore.draft = null;
   router.push({ name: 'schedule', params: { planId: id } });
 }
 

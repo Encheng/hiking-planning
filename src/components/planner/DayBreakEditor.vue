@@ -22,7 +22,7 @@ const nodeOptions = computed(() => {
     .filter((x): x is { label: string; value: string } => x !== null);
 });
 
-function changeBreak(idx: number, newNodeId: string) {
+async function changeBreak(idx: number, newNodeId: string) {
   if (!planStore.currentPlan) return;
   const node = route.value?.nodes.find((n) => n.id === newNodeId);
   planStore.currentPlan.dayBreaks[idx] = {
@@ -31,6 +31,7 @@ function changeBreak(idx: number, newNodeId: string) {
     hutId: node?.hutId ?? undefined,
   };
   planStore.refreshTripType();
+  await planStore.savePlan(planStore.currentPlan);
 }
 
 async function applyAuto() {

@@ -9,9 +9,18 @@ export const useGearStore = defineStore('gear', () => {
   const customItems = ref<CustomItem[]>([]);
   const currentChecklist = ref<GearChecklist | null>(null);
   const suggestion = ref<SuggestOutput | null>(null);
+  const error = ref<string | null>(null);
 
   async function loadTemplates() {
-    templates.value = await fetch('/data/gear-templates.json').then((r) => r.json());
+    try {
+      const res = await fetch('/data/gear-templates.json');
+      if (!res.ok) throw new Error(`Failed to load gear templates: ${res.status} ${res.statusText}`);
+      templates.value = await res.json();
+      error.value = null;
+    } catch (e) {
+      error.value = e instanceof Error ? e.message : String(e);
+      console.error('[gearStore] loadTemplates failed:', e);
+    }
   }
 
   async function loadCustomItems() {
@@ -74,7 +83,7 @@ export const useGearStore = defineStore('gear', () => {
   }
 
   return {
-    templates, customItems, currentChecklist, suggestion,
+    templates, customItems, currentChecklist, suggestion, error,
     loadTemplates, loadCustomItems, loadChecklist, saveChecklist,
     refreshSuggestion, toggleItem, addCustomItem, findLastPlanIdOfType,
   };
