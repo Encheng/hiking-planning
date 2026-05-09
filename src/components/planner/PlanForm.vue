@@ -44,7 +44,7 @@ watch([pace, startDateTs, startTimeTs], () => {
       <NFormItem label="出發時間">
         <NTimePicker v-model:value="startTimeTs" format="HH:mm" />
       </NFormItem>
-      <NFormItem label="腳程">
+      <NFormItem label="腳程倍率" label-placement="top">
         <PaceSlider v-model="pace" />
       </NFormItem>
     </NForm>

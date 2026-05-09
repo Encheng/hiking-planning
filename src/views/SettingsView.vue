@@ -9,8 +9,8 @@ const settings = useSettingsStore();
 const message = useMessage();
 
 const tileOptions = [
-  { label: '魯地圖', value: 'rudy' },
-  { label: '經建版二萬五', value: 'nlsc' },
+  { label: '正射影像 (NLSC PHOTO_MIX)', value: 'photo' },
+  { label: '通用版電子地圖 (NLSC EMAP5)', value: 'nlsc' },
   { label: 'OpenStreetMap', value: 'osm' },
 ];
 

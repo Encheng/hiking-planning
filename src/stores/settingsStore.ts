@@ -12,15 +12,21 @@ interface PersistedSettings {
 
 const defaults: PersistedSettings = {
   defaultPaceMultiplier: 1.2,
-  defaultTile: 'rudy',
+  defaultTile: 'photo',
   defaultDailyHours: 8,
 };
+
+const VALID_TILES: TileLayer[] = ['photo', 'nlsc', 'osm'];
 
 export const useSettingsStore = defineStore('settings', () => {
   const stored = (() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? { ...defaults, ...JSON.parse(raw) } : defaults;
+      const parsed = raw ? { ...defaults, ...JSON.parse(raw) } : defaults;
+      if (!VALID_TILES.includes(parsed.defaultTile)) {
+        parsed.defaultTile = defaults.defaultTile;
+      }
+      return parsed;
     } catch {
       return defaults;
     }

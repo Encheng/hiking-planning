@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export type TileLayer = 'rudy' | 'nlsc' | 'osm';
+export type TileLayer = 'photo' | 'nlsc' | 'osm';
 
 export const useMapStore = defineStore('map', () => {
   const selectedStartId = ref<string | null>(null);
   const selectedEndId = ref<string | null>(null);
-  const activeTile = ref<TileLayer>('rudy');
+  const activeTile = ref<TileLayer>('photo');
 
   function pickNode(nodeId: string) {
     if (!selectedStartId.value) {
