@@ -20,9 +20,11 @@ onMounted(() => {
     zoom: props.zoom,
   });
   mapInstance.value = map;
+  (window as unknown as { __leafletMap?: L.Map }).__leafletMap = map;
 });
 
 onBeforeUnmount(() => {
+  delete (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
   mapInstance.value?.remove();
   mapInstance.value = null;
 });

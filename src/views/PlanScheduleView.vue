@@ -6,7 +6,6 @@ import TableView from '@/components/schedule/TableView.vue';
 import GanttView from '@/components/schedule/GanttView.vue';
 import ElevationView from '@/components/schedule/ElevationView.vue';
 import PrintLayout from '@/components/schedule/PrintLayout.vue';
-import DayBreakEditor from '@/components/planner/DayBreakEditor.vue';
 import TripTypeBadge from '@/components/common/TripTypeBadge.vue';
 import { usePlanStore } from '@/stores/planStore';
 import { useRoutesStore } from '@/stores/routesStore';
@@ -68,7 +67,6 @@ function printPage() {
           </header>
 
           <NSpace vertical size="large">
-            <DayBreakEditor />
             <NCard title="行程時刻表">
               <NTabs default-value="v2" type="line">
                 <NTabPane name="v1" tab="V1 Gantt">
