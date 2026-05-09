@@ -41,7 +41,7 @@ function color(seg: SegmentTime): string {
         <span class="absolute right-0 top-0 text-xs">{{ day.endTime }}</span>
         <div class="absolute inset-x-0 top-5 h-5 flex gap-px bg-white">
           <div
-            v-for="(seg, idx) in day.daySegments"
+            v-for="(seg, idx) in day.daySegments.filter((s) => s.adjustedMinutes > 0)"
             :key="idx"
             data-segment-bar
             :style="{ flex: seg.adjustedMinutes, background: color(seg) }"

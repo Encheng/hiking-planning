@@ -108,4 +108,32 @@ describe('ScheduleGrouper.groupByDayBreaks', () => {
     expect(groups[0].startTime).toBe('06:00');
     expect(groups[0].endTime).toMatch(/^\d{2}:\d{2}$/);
   });
+
+  it('splits into three days for two consecutive dayBreaks', () => {
+    const plan = makePlan({
+      nodeSequence: ['n_tataka', 'n_shang_dongpu', 'n_dietshan', 'n_pailin', 'n_dachienshan', 'n_baimu', 'n_paiyun', 'n_yushan_main'],
+      dayBreaks: [
+        { afterNodeId: 'n_pailin', type: 'manual' },
+        { afterNodeId: 'n_paiyun', type: 'hut', hutId: 'hut_paiyun' },
+      ],
+    });
+    const segments = calculateTimes({
+      route,
+      nodeSequence: plan.nodeSequence,
+      paceMultiplier: 1.0,
+      startDateTime: '2026-06-15T06:00:00',
+    }).segments;
+    const groups = groupByDayBreaks({ plan, route, segments });
+    expect(groups).toHaveLength(3);
+    expect(groups[0].endNode.id).toBe('n_pailin');
+    expect(groups[0].date).toBe('2026-06-15');
+    expect(groups[1].startNode.id).toBe('n_pailin');
+    expect(groups[1].endNode.id).toBe('n_paiyun');
+    expect(groups[1].date).toBe('2026-06-16');
+    expect(groups[1].index).toBe(2);
+    expect(groups[2].startNode.id).toBe('n_paiyun');
+    expect(groups[2].endNode.id).toBe('n_yushan_main');
+    expect(groups[2].date).toBe('2026-06-17');
+    expect(groups[2].index).toBe(3);
+  });
 });
