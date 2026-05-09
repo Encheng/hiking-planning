@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hut_paiyun",
+    "name": "排雲山莊",
+    "lat": 23.4731, "lng": 120.9534, "elevation": 3402,
+    "capacity": 116,
+    "type": "hut",
+    "needPermit": true,
+    "operator": "玉管處"
+  }
+]
