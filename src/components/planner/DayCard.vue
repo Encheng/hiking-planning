@@ -80,7 +80,7 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
     <div v-if="expanded" data-day-editor class="border-t p-3 space-y-3">
       <div>
         <label class="text-xs text-gray-500 block mb-1">起點 (自動)</label>
-        <div class="text-sm bg-gray-100 px-2 py-1 rounded">{{ startNodeName }}</div>
+        <div class="text-sm bg-gray-100 px-2 py-1 rounded overflow-hidden text-ellipsis whitespace-nowrap">{{ startNodeName }}</div>
       </div>
 
       <div>

@@ -132,13 +132,16 @@ function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
     activeLeafletPopup.remove();
     activeLeafletPopup = null;
   }
-  activeLeafletPopup = L.popup({ closeButton: true, autoClose: false })
+  // Give the content div a min-width so Leaflet calculates a usable popup width
+  // before Vue mounts the Teleport content inside it.
+  activeLeafletPopup = L.popup({ closeButton: true, autoClose: false, minWidth: 180 })
     .setLatLng(latlng)
     .setContent(`<div id="${popupContainerId}"></div>`)
     .openOn(map);
   activeLeafletPopup.on('remove', () => {
     popupOpen.value = false;
     popupNode.value = null;
+    activeLeafletPopup = null;
   });
   // Wait one tick for Leaflet to inject the popup HTML into the DOM,
   // then let Vue mount the Teleport into #map-node-popup-mount.
@@ -167,7 +170,13 @@ function onPopupAddVia() {
 }
 
 function closePopup() {
-  activeLeafletPopup?.remove();
+  if (activeLeafletPopup) {
+    // Detach the remove handler first so it doesn't fire during .remove()
+    // and cause a double-reset of popupOpen/popupNode.
+    activeLeafletPopup.off('remove');
+    activeLeafletPopup.remove();
+    activeLeafletPopup = null;
+  }
   popupOpen.value = false;
   popupNode.value = null;
 }
@@ -256,7 +265,7 @@ watch(routeId, () => {
       </Teleport>
     </div>
 
-    <aside class="w-[420px] border-l bg-white overflow-auto p-4">
+    <aside class="w-[420px] border-l bg-white overflow-y-auto overflow-x-hidden p-4">
       <NSpace vertical size="medium">
         <NCard size="small" title="行程設定">
           <NSpace vertical size="small">
