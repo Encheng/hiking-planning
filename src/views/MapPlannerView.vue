@@ -30,7 +30,8 @@ const currentRoute = computed(() => routesStore.getById(routeId.value));
 
 const popupNode = ref<RouteNode | null>(null);
 const popupOpen = ref(false);
-const popupContainerId = 'map-node-popup-mount';
+const popupContainerSeq = ref(0);
+const popupContainerId = computed(() => `map-node-popup-mount-${popupContainerSeq.value}`);
 let activeLeafletPopup: L.Popup | null = null;
 
 const resolution = computed(() => {
@@ -125,34 +126,35 @@ async function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng
   const map = (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
   if (!map) return;
 
-  // Step 1: signal Vue to unmount any existing Teleport content
+  // 1. Unmount old Teleport state
   popupOpen.value = false;
   popupNode.value = null;
 
-  // Step 2: remove Leaflet popup (without triggering side-effect handler)
+  // 2. Remove old Leaflet popup (without firing handler)
   if (activeLeafletPopup) {
     activeLeafletPopup.off('remove');
     activeLeafletPopup.remove();
     activeLeafletPopup = null;
   }
 
-  // Wait for Vue to process unmount
   await nextTick();
 
-  // Step 3: create new Leaflet popup
+  // 3. Increment counter so new mount div has unique ID
+  popupContainerSeq.value++;
+
+  // 4. Create new Leaflet popup with the new ID
   activeLeafletPopup = L.popup({ closeButton: true, autoClose: false, minWidth: 180 })
     .setLatLng(latlng)
-    .setContent(`<div id="${popupContainerId}"></div>`)
+    .setContent(`<div id="${popupContainerId.value}"></div>`)
     .openOn(map);
   activeLeafletPopup.on('remove', () => {
     popupOpen.value = false;
     popupNode.value = null;
   });
 
-  // Wait for Leaflet to inject the new mount div into DOM
   await nextTick();
 
-  // Step 4: signal Vue to mount Teleport into the NEW mount div
+  // 5. Mount new Teleport into the new mount div
   popupNode.value = node;
   popupOpen.value = true;
 }
@@ -250,8 +252,8 @@ watch(routeId, () => {
 </script>
 
 <template>
-  <div class="flex h-[calc(100vh-65px)]">
-    <div class="flex-1 relative">
+  <div class="flex flex-col md:flex-row h-[calc(100vh-65px)]">
+    <div class="flex-1 relative min-h-[40vh] md:min-h-0">
       <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
         <TileSwitcher />
         <GpxLayer :url="`/data/gpx/${currentRoute.id}-sample.gpx`" />
@@ -271,7 +273,7 @@ watch(routeId, () => {
       </Teleport>
     </div>
 
-    <aside class="w-[420px] border-l bg-white overflow-y-auto overflow-x-hidden p-4">
+    <aside class="w-full md:w-[420px] border-t md:border-t-0 md:border-l bg-white overflow-y-auto overflow-x-hidden p-4">
       <NSpace vertical size="medium">
         <NCard size="small" title="行程設定">
           <NSpace vertical size="small">

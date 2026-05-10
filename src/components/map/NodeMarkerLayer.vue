@@ -30,8 +30,8 @@ function makeIcon(node: RouteNode, highlighted: boolean) {
   const ring = highlighted ? '#0ea5e9' : 'white';
   return L.divIcon({
     className: 'node-marker',
-    iconSize: [22, 22],
-    html: `<div style="width:22px;height:22px;border-radius:50%;background:${baseColor};border:3px solid ${ring};box-shadow:0 0 0 1px rgba(0,0,0,0.2);"></div>`,
+    iconSize: [28, 28],
+    html: `<div style="width:28px;height:28px;border-radius:50%;background:${baseColor};border:3px solid ${ring};box-shadow:0 0 0 1px rgba(0,0,0,0.2);"></div>`,
   });
 }
 

@@ -78,8 +78,8 @@ test('Bug 1: Map popup shows action buttons when a day is expanded', async ({ pa
   // Popup should be visible
   await expect(page.locator('.leaflet-popup')).toBeVisible();
 
-  // Mount div should have content
-  const mountContent = await page.locator('#map-node-popup-mount').innerHTML();
+  // Mount div should have content (ID is now dynamic: map-node-popup-mount-N)
+  const mountContent = await page.locator('[id^="map-node-popup-mount-"]').innerHTML();
   expect(mountContent.length).toBeGreaterThan(10);
 
   // Both action buttons should be visible
