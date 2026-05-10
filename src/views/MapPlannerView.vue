@@ -121,19 +121,25 @@ const center = computed<[number, number]>(() => {
   return [sumLat / nodes.length, sumLng / nodes.length];
 });
 
-function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
-  // Create the Leaflet popup first so #map-node-popup-mount exists in the DOM,
-  // then set popupOpen so Teleport has a valid target to mount into.
+async function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
   const map = (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
   if (!map) return;
-  // Detach the remove handler before removing, so the side-effect doesn't reset state
+
+  // Step 1: signal Vue to unmount any existing Teleport content
+  popupOpen.value = false;
+  popupNode.value = null;
+
+  // Step 2: remove Leaflet popup (without triggering side-effect handler)
   if (activeLeafletPopup) {
     activeLeafletPopup.off('remove');
     activeLeafletPopup.remove();
     activeLeafletPopup = null;
   }
-  // Give the content div a min-width so Leaflet calculates a usable popup width
-  // before Vue mounts the Teleport content inside it.
+
+  // Wait for Vue to process unmount
+  await nextTick();
+
+  // Step 3: create new Leaflet popup
   activeLeafletPopup = L.popup({ closeButton: true, autoClose: false, minWidth: 180 })
     .setLatLng(latlng)
     .setContent(`<div id="${popupContainerId}"></div>`)
@@ -141,14 +147,14 @@ function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
   activeLeafletPopup.on('remove', () => {
     popupOpen.value = false;
     popupNode.value = null;
-    activeLeafletPopup = null;
   });
-  // Wait one tick for Leaflet to inject the popup HTML into the DOM,
-  // then let Vue mount the Teleport into #map-node-popup-mount.
-  nextTick(() => {
-    popupNode.value = node;
-    popupOpen.value = true;
-  });
+
+  // Wait for Leaflet to inject the new mount div into DOM
+  await nextTick();
+
+  // Step 4: signal Vue to mount Teleport into the NEW mount div
+  popupNode.value = node;
+  popupOpen.value = true;
 }
 
 function onPopupSetTarget() {
