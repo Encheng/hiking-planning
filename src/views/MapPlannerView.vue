@@ -78,19 +78,23 @@ const center = computed<[number, number]>(() => {
 
 function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
   popupNode.value = node;
-  popupOpen.value = true;
+  // Create the Leaflet popup first so #map-node-popup-mount exists in the DOM,
+  // then set popupOpen so Teleport has a valid target to mount into.
+  const map = (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
+  if (!map) return;
+  activeLeafletPopup?.remove();
+  activeLeafletPopup = L.popup({ closeButton: true, autoClose: false })
+    .setLatLng(latlng)
+    .setContent(`<div id="${popupContainerId}"></div>`)
+    .openOn(map);
+  activeLeafletPopup.on('remove', () => {
+    popupOpen.value = false;
+    popupNode.value = null;
+  });
+  // Wait one tick for Leaflet to inject the popup HTML into the DOM,
+  // then let Vue mount the Teleport into #map-node-popup-mount.
   nextTick(() => {
-    const map = (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
-    if (!map) return;
-    activeLeafletPopup?.remove();
-    activeLeafletPopup = L.popup({ closeButton: true, autoClose: false })
-      .setLatLng(latlng)
-      .setContent(`<div id="${popupContainerId}"></div>`)
-      .openOn(map);
-    activeLeafletPopup.on('remove', () => {
-      popupOpen.value = false;
-      popupNode.value = null;
-    });
+    popupOpen.value = true;
   });
 }
 
