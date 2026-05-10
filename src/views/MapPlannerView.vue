@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch, nextTick } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { NButton, NCard, NSpace, useMessage } from 'naive-ui';
+import { NButton, NCard, NDatePicker, NSpace, NTimePicker, useMessage } from 'naive-ui';
+import PaceSlider from '@/components/planner/PaceSlider.vue';
 import L from 'leaflet';
 import MapCanvas from '@/components/map/MapCanvas.vue';
 import TileSwitcher from '@/components/map/TileSwitcher.vue';
@@ -52,19 +53,63 @@ const canSave = computed(() => {
   return true;
 });
 
+const startDateTs = computed({
+  get: () => {
+    const date = planStore.draft?.startDate;
+    if (!date) return Date.now();
+    return new Date(`${date}T00:00:00`).getTime();
+  },
+  set: (ms: number) => {
+    if (!planStore.draft) return;
+    planStore.draft.startDate = new Date(ms).toISOString().slice(0, 10);
+  },
+});
+
+const startTimeTs = computed({
+  get: () => {
+    const time = planStore.draft?.startTime ?? '06:00';
+    const [h, m] = time.split(':').map(Number);
+    const d = new Date();
+    d.setHours(h, m, 0, 0);
+    return d.getTime();
+  },
+  set: (ms: number) => {
+    if (!planStore.draft) return;
+    const d = new Date(ms);
+    const hh = String(d.getHours()).padStart(2, '0');
+    const mm = String(d.getMinutes()).padStart(2, '0');
+    planStore.draft.startTime = `${hh}:${mm}`;
+  },
+});
+
+const paceMultiplier = computed({
+  get: () => planStore.draft?.paceMultiplier ?? settings.defaultPaceMultiplier,
+  set: (val: number) => {
+    if (planStore.draft) planStore.draft.paceMultiplier = val;
+  },
+});
+
 onMounted(() => {
   if (!currentRoute.value) {
     message.error(`找不到路線 ${routeId.value}`);
     return;
   }
   if (!planStore.draft || planStore.draft.routeId !== routeId.value) {
+    const today = new Date().toISOString().slice(0, 10);
     planStore.draft = {
       routeId: routeId.value,
       startNodeId: currentRoute.value.nodes[0]?.id ?? '',
       returnToStart: true,
       dailyPlans: [],
       paceMultiplier: settings.defaultPaceMultiplier,
+      startDate: today,
+      startTime: '06:00',
     };
+  } else {
+    // Fill in defaults if missing
+    if (!planStore.draft.startDate) planStore.draft.startDate = new Date().toISOString().slice(0, 10);
+    if (!planStore.draft.startTime) planStore.draft.startTime = '06:00';
+    if (!planStore.draft.paceMultiplier) planStore.draft.paceMultiplier = settings.defaultPaceMultiplier;
   }
 });
 
@@ -77,12 +122,16 @@ const center = computed<[number, number]>(() => {
 });
 
 function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
-  popupNode.value = node;
   // Create the Leaflet popup first so #map-node-popup-mount exists in the DOM,
   // then set popupOpen so Teleport has a valid target to mount into.
   const map = (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
   if (!map) return;
-  activeLeafletPopup?.remove();
+  // Detach the remove handler before removing, so the side-effect doesn't reset state
+  if (activeLeafletPopup) {
+    activeLeafletPopup.off('remove');
+    activeLeafletPopup.remove();
+    activeLeafletPopup = null;
+  }
   activeLeafletPopup = L.popup({ closeButton: true, autoClose: false })
     .setLatLng(latlng)
     .setContent(`<div id="${popupContainerId}"></div>`)
@@ -94,6 +143,7 @@ function onNodeClick({ node, latlng }: { node: RouteNode; latlng: L.LatLng }) {
   // Wait one tick for Leaflet to inject the popup HTML into the DOM,
   // then let Vue mount the Teleport into #map-node-popup-mount.
   nextTick(() => {
+    popupNode.value = node;
     popupOpen.value = true;
   });
 }
@@ -112,9 +162,7 @@ function onPopupAddVia() {
   const idx = editor.expandedDayIndex - 1;
   const dailyPlans = planStore.draft?.dailyPlans;
   if (!dailyPlans || !dailyPlans[idx]) return;
-  if (!dailyPlans[idx].viaNodeIds.includes(popupNode.value.id)) {
-    dailyPlans[idx].viaNodeIds.push(popupNode.value.id);
-  }
+  dailyPlans[idx].viaNodeIds.push(popupNode.value.id);
   closePopup();
 }
 
@@ -210,6 +258,22 @@ watch(routeId, () => {
 
     <aside class="w-[420px] border-l bg-white overflow-auto p-4">
       <NSpace vertical size="medium">
+        <NCard size="small" title="行程設定">
+          <NSpace vertical size="small">
+            <div>
+              <label class="text-xs text-gray-500 block mb-1">出發日期</label>
+              <NDatePicker v-model:value="startDateTs" type="date" style="width: 100%" />
+            </div>
+            <div>
+              <label class="text-xs text-gray-500 block mb-1">出發時間</label>
+              <NTimePicker v-model:value="startTimeTs" format="HH:mm" style="width: 100%" />
+            </div>
+            <div>
+              <label class="text-xs text-gray-500 block mb-1">腳程倍率</label>
+              <PaceSlider v-model="paceMultiplier" />
+            </div>
+          </NSpace>
+        </NCard>
         <NCard size="small" title="行程編輯">
           <DailyPlanEditor v-if="planStore.draft" />
         </NCard>

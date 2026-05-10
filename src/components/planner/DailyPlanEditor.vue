@@ -61,11 +61,9 @@ function changeTarget(idx: number, nodeId: string) {
   if (draft.value.dailyPlans) draft.value.dailyPlans[idx].endNodeId = nodeId;
 }
 
-function removeVia(idx: number, nodeId: string) {
+function removeVia(idx: number, viaIndex: number) {
   if (!draft.value.dailyPlans) return;
-  const list = draft.value.dailyPlans[idx].viaNodeIds;
-  const i = list.indexOf(nodeId);
-  if (i >= 0) list.splice(i, 1);
+  draft.value.dailyPlans[idx].viaNodeIds.splice(viaIndex, 1);
 }
 
 function reorderVia(idx: number, from: number, to: number) {
@@ -101,7 +99,7 @@ function reorderVia(idx: number, from: number, to: number) {
       :warnings="resolution?.days[i]?.warnings ?? []"
       @toggle-expand="editor.toggleExpand(i + 1)"
       @change-target="(id: string) => changeTarget(i, id)"
-      @remove-via="(id: string) => removeVia(i, id)"
+      @remove-via="(viaIndex: number) => removeVia(i, viaIndex)"
       @reorder-via="(from: number, to: number) => reorderVia(i, from, to)"
       @remove-day="removeDay(i)"
     />

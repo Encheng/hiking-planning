@@ -21,7 +21,7 @@ const props = defineProps<{
 const emit = defineEmits<{
   'toggle-expand': [];
   'change-target': [nodeId: string];
-  'remove-via': [nodeId: string];
+  'remove-via': [index: number];
   'reorder-via': [from: number, to: number];
   'remove-day': [];
 }>();
@@ -46,7 +46,10 @@ function nodeName(id: string): string {
 }
 
 const draggableList = computed({
-  get: () => [...props.dailyPlan.viaNodeIds],
+  get: () => props.dailyPlan.viaNodeIds.map((nodeId, idx) => ({
+    nodeId,
+    _key: `${idx}__${nodeId}`,
+  })),
   set: () => { /* manual handling via @end */ },
 });
 
@@ -61,17 +64,17 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
   <div class="border rounded mb-1" :class="expanded ? 'bg-white' : 'bg-gray-50'">
     <button
       type="button"
-      class="w-full flex justify-between items-center p-2 text-left"
+      class="w-full flex justify-between items-center gap-2 p-2 text-left"
       @click="emit('toggle-expand')"
     >
-      <span class="text-xs">
+      <span class="text-xs flex-1 min-w-0 truncate">
         <strong :style="{ color: dayColor(index) }">
           {{ expanded ? '▾' : '▸' }} DAY {{ index }}
         </strong>
         <span class="ml-1">· {{ startNodeName }} → {{ endNodeName }}</span>
         <span v-if="warnings.length > 0" class="ml-1 text-red-600">⚠</span>
       </span>
-      <span class="text-xs text-gray-600">{{ fmt(totalMinutes) }}</span>
+      <span class="text-xs text-gray-600 shrink-0">{{ fmt(totalMinutes) }}</span>
     </button>
 
     <div v-if="expanded" data-day-editor class="border-t p-3 space-y-3">
@@ -89,7 +92,7 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
         <label class="text-xs text-gray-500 block mb-1">中途加爬（可拖曳排序）</label>
         <draggable
           :model-value="draggableList"
-          item-key="."
+          item-key="_key"
           @end="onDragEnd"
         >
           <template #item="{ element, index: i }">
@@ -97,9 +100,9 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
               closable
               type="info"
               class="mr-1 mb-1"
-              @close="emit('remove-via', element)"
+              @close="emit('remove-via', i)"
             >
-              {{ i + 1 }}. {{ nodeName(element) }}
+              {{ i + 1 }}. {{ nodeName(element.nodeId) }}
             </NTag>
           </template>
         </draggable>
