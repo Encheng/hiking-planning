@@ -6,6 +6,7 @@ import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import type { Route, RoutePreset, DailyPlan } from '@/types';
+import { resolvePath } from '@/services/PathResolver';
 
 const routesStore = useRoutesStore();
 const planStore = usePlanStore();
@@ -15,26 +16,38 @@ const router = useRouter();
 const routes = computed(() => routesStore.routes);
 
 function derivePresetDailyPlans(preset: RoutePreset, route: Route): DailyPlan[] {
+  function autoVia(start: string, end: string): string[] {
+    if (!start || !end || start === end) return [];
+    const p = resolvePath({ route, startNodeId: start, endNodeId: end, viaNodeIds: [] });
+    if (p.warnings.includes('no_path') || p.forward.length < 2) return [];
+    return p.forward.slice(1, -1);
+  }
+
   const breaks = preset.suggestedDayBreaks ?? [];
   if (breaks.length === 0) {
     return [{
       endNodeId: preset.endNodeId,
       endType: 'manual',
-      viaNodeIds: preset.viaNodeIds ?? [],
+      viaNodeIds: autoVia(preset.startNodeId, preset.endNodeId),
     }];
   }
-  const days: DailyPlan[] = breaks.map((b) => ({
-    endNodeId: b.atNodeId,
-    endType: b.type,
-    hutId: route.nodes.find((n) => n.id === b.atNodeId)?.hutId ?? undefined,
-    viaNodeIds: [],
-  }));
-  const usedVias = new Set(breaks.map((b) => b.atNodeId));
-  const remainingVias = (preset.viaNodeIds ?? []).filter((v) => !usedVias.has(v));
+
+  const days: DailyPlan[] = [];
+  let prevEnd = preset.startNodeId;
+  for (const b of breaks) {
+    days.push({
+      endNodeId: b.atNodeId,
+      endType: b.type,
+      hutId: route.nodes.find((n) => n.id === b.atNodeId)?.hutId ?? undefined,
+      viaNodeIds: autoVia(prevEnd, b.atNodeId),
+    });
+    prevEnd = b.atNodeId;
+  }
+  // Last day: from last break to preset.endNodeId
   days.push({
     endNodeId: preset.endNodeId,
     endType: 'manual',
-    viaNodeIds: remainingVias,
+    viaNodeIds: autoVia(prevEnd, preset.endNodeId),
   });
   return days;
 }

@@ -6,6 +6,7 @@ import NodePicker from './NodePicker.vue';
 import { usePlanStore } from '@/stores/planStore';
 import { useRoutesStore } from '@/stores/routesStore';
 import { useDailyEditorStore } from '@/stores/dailyEditorStore';
+import { resolvePath } from '@/services/PathResolver';
 
 const planStore = usePlanStore();
 const routesStore = useRoutesStore();
@@ -57,8 +58,26 @@ function removeDay(idx: number) {
   if (editor.expandedDayIndex === idx + 1) editor.expandedDayIndex = null;
 }
 
+function computeAutoViaIds(dayIdx: number, endNodeId: string): string[] {
+  if (!route.value || !endNodeId) return [];
+  const dayStart = dayIdx === 0
+    ? draft.value.startNodeId
+    : draft.value.dailyPlans?.[dayIdx - 1]?.endNodeId;
+  if (!dayStart) return [];
+  const path = resolvePath({
+    route: route.value,
+    startNodeId: dayStart,
+    endNodeId,
+    viaNodeIds: [],
+  });
+  if (path.warnings.includes('no_path') || path.forward.length < 2) return [];
+  return path.forward.slice(1, -1);
+}
+
 function changeTarget(idx: number, nodeId: string) {
-  if (draft.value.dailyPlans) draft.value.dailyPlans[idx].endNodeId = nodeId;
+  if (!draft.value.dailyPlans) return;
+  draft.value.dailyPlans[idx].endNodeId = nodeId;
+  draft.value.dailyPlans[idx].viaNodeIds = computeAutoViaIds(idx, nodeId);
 }
 
 function removeVia(idx: number, viaIndex: number) {
