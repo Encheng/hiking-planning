@@ -27,6 +27,7 @@ const dailyPlan: DailyPlan = {
 const baseProps = {
   index: 1,
   startNodeName: '塔塔加遊客中心',
+  derivedStartNodeId: 'n_tataka',
   endNodeName: '排雲山莊',
   totalMinutes: 510,
   dailyPlan,

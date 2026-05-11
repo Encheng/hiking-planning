@@ -32,6 +32,10 @@ export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
 
   for (let i = 0; i < dailyPlans.length; i++) {
     const daily = dailyPlans[i];
+    // Use explicit startNodeId if present
+    if (daily.startNodeId) {
+      dayStart = daily.startNodeId;
+    }
     let effectiveEnd = daily.endNodeId;
     let effectiveVia = daily.viaNodeIds;
 

@@ -1,6 +1,7 @@
 import type { DayBreak, DayBreakType } from './plan';
 
 export interface DailyPlan {
+  startNodeId?: string;   // explicit override; if absent, derives from previous day
   endNodeId: string;
   endType: DayBreakType;
   hutId?: string;

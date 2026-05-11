@@ -21,9 +21,15 @@ function nodeName(id: string | undefined): string {
   return route.value?.nodes.find((n) => n.id === id)?.name ?? id;
 }
 
+function getDerivedStartNodeId(dayIdx: number): string {
+  if (dayIdx === 0) return draft.value.startNodeId ?? '';
+  return draft.value.dailyPlans?.[dayIdx - 1]?.endNodeId ?? '';
+}
+
 function getDayStartName(dayIdx: number): string {
-  if (dayIdx === 0) return nodeName(draft.value.startNodeId);
-  return nodeName(draft.value.dailyPlans?.[dayIdx - 1]?.endNodeId);
+  const dp = draft.value.dailyPlans?.[dayIdx];
+  if (dp?.startNodeId) return nodeName(dp.startNodeId);
+  return nodeName(getDerivedStartNodeId(dayIdx));
 }
 
 function getDayTotalMinutes(dayIdx: number): number {
@@ -60,9 +66,10 @@ function removeDay(idx: number) {
 
 function computeAutoViaIds(dayIdx: number, endNodeId: string): string[] {
   if (!route.value || !endNodeId) return [];
-  const dayStart = dayIdx === 0
+  const dp = draft.value.dailyPlans?.[dayIdx];
+  const dayStart = dp?.startNodeId ?? (dayIdx === 0
     ? draft.value.startNodeId
-    : draft.value.dailyPlans?.[dayIdx - 1]?.endNodeId;
+    : draft.value.dailyPlans?.[dayIdx - 1]?.endNodeId);
   if (!dayStart) return [];
   const path = resolvePath({
     route: route.value,
@@ -74,10 +81,35 @@ function computeAutoViaIds(dayIdx: number, endNodeId: string): string[] {
   return path.forward.slice(1, -1);
 }
 
+function changeStart_day(idx: number, nodeId: string) {
+  if (!draft.value.dailyPlans) return;
+  const derived = getDerivedStartNodeId(idx);
+  // If user picks the derived value, clear the override; otherwise set explicit
+  draft.value.dailyPlans[idx].startNodeId = (nodeId === derived) ? undefined : nodeId;
+  // Recompute via for the changed segment
+  draft.value.dailyPlans[idx].viaNodeIds = computeAutoViaIds(idx, draft.value.dailyPlans[idx].endNodeId);
+}
+
 function changeTarget(idx: number, nodeId: string) {
   if (!draft.value.dailyPlans) return;
   draft.value.dailyPlans[idx].endNodeId = nodeId;
   draft.value.dailyPlans[idx].viaNodeIds = computeAutoViaIds(idx, nodeId);
+}
+
+function getReturnTripNodeIds(dayIdx: number): string[] {
+  // Only the last day, only if returnToStart=true and endNodeId !== startNodeId
+  if (!draft.value.dailyPlans || dayIdx !== draft.value.dailyPlans.length - 1) return [];
+  if (!draft.value.returnToStart) return [];
+  const dp = draft.value.dailyPlans[dayIdx];
+  if (!dp || dp.endNodeId === draft.value.startNodeId) return [];
+  const resolvedDay = resolution.value?.days[dayIdx];
+  if (!resolvedDay) return [];
+  // pathNodeIds = [dayStart, ..., endNodeId, ...return intermediates..., startNodeId]
+  // Find the index of original endNodeId in pathNodeIds
+  const endIdx = resolvedDay.pathNodeIds.indexOf(dp.endNodeId);
+  if (endIdx === -1) return [];
+  // Return-trip = [endNodeId+1 ... last-1] (excluding endNodeId itself and final startNodeId)
+  return resolvedDay.pathNodeIds.slice(endIdx + 1, -1);
 }
 
 function removeVia(idx: number, viaIndex: number) {
@@ -110,13 +142,16 @@ function reorderVia(idx: number, from: number, to: number) {
       :key="i"
       :index="i + 1"
       :start-node-name="getDayStartName(i)"
+      :derived-start-node-id="getDerivedStartNodeId(i)"
       :end-node-name="nodeName(daily.endNodeId)"
       :total-minutes="getDayTotalMinutes(i)"
       :daily-plan="daily"
       :expanded="editor.expandedDayIndex === i + 1"
       :is-only="(draft.dailyPlans?.length ?? 0) === 1"
       :warnings="resolution?.days[i]?.warnings ?? []"
+      :return-trip-node-ids="getReturnTripNodeIds(i)"
       @toggle-expand="editor.toggleExpand(i + 1)"
+      @change-start="(id: string) => changeStart_day(i, id)"
       @change-target="(id: string) => changeTarget(i, id)"
       @remove-via="(viaIndex: number) => removeVia(i, viaIndex)"
       @reorder-via="(from: number, to: number) => reorderVia(i, from, to)"

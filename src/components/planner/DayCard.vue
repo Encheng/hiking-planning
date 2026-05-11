@@ -10,16 +10,19 @@ import type { DailyPlan } from '@/types';
 const props = defineProps<{
   index: number;
   startNodeName: string;
+  derivedStartNodeId: string;
   endNodeName: string;
   totalMinutes: number;
   dailyPlan: DailyPlan;
   expanded: boolean;
   isOnly: boolean;
   warnings: string[];
+  returnTripNodeIds?: string[];
 }>();
 
 const emit = defineEmits<{
   'toggle-expand': [];
+  'change-start': [nodeId: string];
   'change-target': [nodeId: string];
   'remove-via': [index: number];
   'reorder-via': [from: number, to: number];
@@ -79,8 +82,13 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
 
     <div v-if="expanded" data-day-editor class="border-t p-3 space-y-3">
       <div>
-        <label class="text-xs text-gray-500 block mb-1">起點 (自動)</label>
-        <div class="text-sm bg-gray-100 px-2 py-1 rounded overflow-hidden text-ellipsis whitespace-nowrap">{{ startNodeName }}</div>
+        <label class="text-xs text-gray-500 block mb-1">
+          起點 <span class="text-gray-400">({{ dailyPlan.startNodeId ? '已自訂' : '自動 = 前日結束' }})</span>
+        </label>
+        <NodePicker
+          :value="dailyPlan.startNodeId ?? derivedStartNodeId"
+          @select="(id) => emit('change-start', id)"
+        />
       </div>
 
       <div>
@@ -109,6 +117,18 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
         <p v-if="dailyPlan.viaNodeIds.length === 0" class="text-xs text-gray-400">
           直接點地圖節點 → 選「加為加爬點」
         </p>
+      </div>
+
+      <div v-if="returnTripNodeIds && returnTripNodeIds.length > 0">
+        <label class="text-xs text-gray-500 block mb-1">↩ 回程經過（自動，不可編輯）</label>
+        <NTag
+          v-for="(nid, i) in returnTripNodeIds"
+          :key="i"
+          type="default"
+          class="mr-1 mb-1 opacity-70"
+        >
+          {{ i + 1 }}. {{ nodeName(nid) }}
+        </NTag>
       </div>
 
       <NPopconfirm v-if="!isOnly" @positive-click="emit('remove-day')">
