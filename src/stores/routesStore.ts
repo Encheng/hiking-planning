@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
-import type { Route, Hut } from '@/types';
+import type { Route, Hut, RoutesManifest } from '@/types';
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url);
@@ -13,17 +13,30 @@ export const useRoutesStore = defineStore('routes', () => {
   const huts = ref<Hut[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
+  const manifest = ref<RoutesManifest | null>(null);
 
   async function loadAll() {
     loading.value = true;
     error.value = null;
     try {
-      const [routeRes, hutsRes] = await Promise.all([
-        fetchJson<Route>('/data/routes/G02-sample.json'),
+      const [manifestData, hutsData] = await Promise.all([
+        fetchJson<RoutesManifest>('/data/routes-manifest.json'),
         fetchJson<Hut[]>('/data/huts.json'),
       ]);
-      routes.value = [routeRes];
-      huts.value = hutsRes;
+      manifest.value = manifestData;
+      huts.value = hutsData;
+
+      const doneEntries = manifestData.routes.filter((r) => r.status === 'done');
+      const routePromises = doneEntries.map((entry) =>
+        fetchJson<Route>(`/data/routes/${entry.id}.json`).catch((e) => {
+          console.warn(`[routesStore] Failed to load ${entry.id}:`, e);
+          return null;
+        }),
+      );
+      const loaded = (await Promise.all(routePromises)).filter(
+        (r): r is Route => r !== null,
+      );
+      routes.value = loaded;
     } catch (e) {
       error.value = e instanceof Error ? e.message : String(e);
       console.error('[routesStore] loadAll failed:', e);
@@ -34,5 +47,5 @@ export const useRoutesStore = defineStore('routes', () => {
 
   const getById = computed(() => (id: string) => routes.value.find((r) => r.id === id));
 
-  return { routes, huts, loading, error, loadAll, getById };
+  return { routes, huts, loading, error, manifest, loadAll, getById };
 });
