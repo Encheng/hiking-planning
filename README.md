@@ -11,6 +11,14 @@
 
 數據著作權歸**上河文化**所有。本專案為個人學習與規劃用途，僅作為參考工具，不對外提供商業服務。如欲取得完整、最新的步程資料，請支持原版地形圖。
 
+### GPS 座標資料
+
+地圖節點 GPS 座標資料衍生自 OpenStreetMap：
+
+> © OpenStreetMap contributors, licensed under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/)
+
+OSM POI 資料透過 `scripts/fetch-osm-route.ts` 從 Overpass API 抓取，快取於 `public/data/osm-pois/`。
+
 ## 技術棧
 
 - **Frontend**: Vue 3 + TypeScript + Vite 5 + Composition API
@@ -60,3 +68,41 @@ GPX 檔案來源：個人從健行筆記 / 政府開放資料平台等收集。
 ## License
 
 MIT (程式碼)。內建上河步程數據與 GPX 軌跡資料**不適用** MIT，依原始來源各自的版權條款處理。
+
+## Dev 工具
+
+### `/dev/route-editor`
+
+僅在 `npm run dev` 模式可用的路線編輯器。三欄式介面整合上河圖、節點/邊編輯、Leaflet 地圖。
+
+```
+http://localhost:5173/dev/route-editor?route=G05
+```
+
+工作流程：
+1. `npx tsx scripts/fetch-osm-route.ts --relation-id <OSM ID> --output-id G05`
+2. 開啟編輯器，看上河圖、自動匹配 OSM POI、補節點/邊
+3. 確認雙來源時間後勾選 ✓
+4. 「下載 JSON」→ 移到 `public/data/routes/G05.json`
+5. `npx tsx scripts/validate-routes.ts --route G05`
+
+### `scripts/fetch-osm-route.ts`
+
+從 OpenStreetMap Overpass API 抓 hiking route relation，輸出 `gpx/G{NN}.gpx` 與 `osm-pois/G{NN}.json`。
+
+```bash
+# 單條
+npx tsx scripts/fetch-osm-route.ts --relation-id 13678202 --output-id G02
+
+# 批次（manifest 中 status=pending 的全部）
+npx tsx scripts/fetch-osm-route.ts --batch
+```
+
+### `scripts/validate-routes.ts`
+
+`prebuild` 自動跑。手動驗證：
+
+```bash
+npx tsx scripts/validate-routes.ts --route G02
+npx tsx scripts/validate-routes.ts --all
+```
