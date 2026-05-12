@@ -256,7 +256,7 @@ watch(routeId, () => {
     <div class="flex-1 relative min-h-[40vh] md:min-h-0">
       <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
         <TileSwitcher />
-        <GpxLayer :url="`/data/gpx/${currentRoute.id}-sample.gpx`" />
+        <GpxLayer :url="`/data/gpx/${currentRoute.id}.gpx`" />
         <NodeMarkerLayer
           :nodes="currentRoute.nodes"
           :highlighted-node-ids="highlightedNodeIds"
