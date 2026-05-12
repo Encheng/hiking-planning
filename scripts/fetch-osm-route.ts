@@ -131,13 +131,25 @@ function query(relationId: number): string {
 
 async function fetchOsm(relationId: number): Promise<OsmResponse> {
   const body = `data=${encodeURIComponent(query(relationId))}`;
-  const res = await fetch(OVERPASS_URL, {
-    method: 'POST',
-    body,
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  });
-  if (!res.ok) throw new Error(`Overpass HTTP ${res.status}`);
-  return res.json() as Promise<OsmResponse>;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const res = await fetch(OVERPASS_URL, {
+      method: 'POST',
+      body,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    });
+    if (res.ok) return res.json() as Promise<OsmResponse>;
+
+    // Rate limited or transient server error → wait and retry once
+    if (attempt === 1 && (res.status === 429 || res.status >= 500)) {
+      const waitMs = res.status === 429 ? 30_000 : 60_000;
+      console.warn(`Overpass HTTP ${res.status}, waiting ${waitMs / 1000}s before retry`);
+      await sleep(waitMs);
+      continue;
+    }
+
+    throw new Error(`Overpass HTTP ${res.status}`);
+  }
+  throw new Error('Overpass: unreachable');
 }
 
 async function fetchOsmRouteOnce(relationId: number, outputId: string): Promise<void> {

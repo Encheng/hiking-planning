@@ -46,12 +46,23 @@ function removeNode(nodeId: string): void {
   }
 }
 
+const OSM_TO_NODE_CATEGORY: Record<string, NodeCategory> = {
+  trailhead: 'trailhead',
+  hut: 'hut',
+  shelter: 'hut',         // mountain shelter mapped to hut for app's category model
+  peak: 'peak',
+  junction: 'junction',
+  water: 'water',
+  waypoint: 'waypoint',
+};
+
 function selectMatchedPoi(node: RouteNode, poi: OsmPoi): void {
   node.lat = poi.lat;
   node.lng = poi.lon;
   if (poi.elevation !== null) node.elevation = poi.elevation;
   if (!node.name) node.name = poi.name;
-  if (poi.tags.category !== 'waypoint') node.category = poi.tags.category as NodeCategory;
+  const mapped = OSM_TO_NODE_CATEGORY[poi.tags.category];
+  if (mapped && mapped !== 'waypoint') node.category = mapped;
 }
 
 function addEdge(): void {
