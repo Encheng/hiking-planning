@@ -18,7 +18,8 @@ function load() {
   gpxLayer = new L.GPX(props.url, {
     async: true,
     polyline_options: { color: props.color ?? '#dc2626', weight: 3 },
-    marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+    // Disable start/end markers so they don't overlap with route node markers
+    markers: { startIcon: null, endIcon: null },
   }).on('loaded', (e: any) => {
     map.value?.fitBounds(e.target.getBounds());
   }).addTo(map.value);

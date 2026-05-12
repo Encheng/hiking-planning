@@ -1,5 +1,6 @@
 import Dexie, { type Table } from 'dexie';
 import type { Plan, GearChecklist, CustomItem, CachedTile } from './schemas';
+import { deriveDailyPlansFromLegacy } from '@/services/DailyPlanMigration';
 
 export class HikingDB extends Dexie {
   // Declare tables with explicit key type (number) so that add() returns number, not number|undefined.
@@ -16,6 +17,31 @@ export class HikingDB extends Dexie {
       gearChecklists: '++id, planId',
       customItems: '++id, name, lastUsedInPlanId',
       tileCache: 'url, expiresAt',
+    });
+
+    this.version(2).stores({
+      plans: '++id, name, routeId, startDate, createdAt',
+      gearChecklists: '++id, planId',
+      customItems: '++id, name, lastUsedInPlanId',
+      tileCache: 'url, expiresAt',
+    }).upgrade((tx) => {
+      return tx.table('plans').toCollection().modify((plan: Plan) => {
+        if ((plan as Plan & { dailyPlans?: unknown }).dailyPlans !== undefined) return;
+        try {
+          const migrated = deriveDailyPlansFromLegacy({
+            startNodeId: plan.startNodeId,
+            endNodeId: plan.endNodeId,
+            nodeSequence: plan.nodeSequence,
+            dayBreaks: plan.dayBreaks,
+          });
+          plan.dailyPlans = migrated.dailyPlans;
+          plan.returnToStart = migrated.returnToStart;
+        } catch (e) {
+          console.error('[Dexie v2 upgrade] migration failed for plan', plan.id, e);
+          plan.dailyPlans = [];
+          plan.returnToStart = true;
+        }
+      });
     });
 
     // Cascade delete: override Table.delete so that removing a plan also

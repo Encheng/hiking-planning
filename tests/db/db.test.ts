@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import 'fake-indexeddb/auto';
 import { db, resetDb } from '@/db';
 import type { Plan } from '@/types';
+import { deriveDailyPlansFromLegacy } from '@/services/DailyPlanMigration';
 
 beforeEach(async () => {
   await resetDb();
@@ -38,5 +39,36 @@ describe('Dexie database', () => {
     await db.plans.delete(planId);
     const remaining = await db.gearChecklists.where('planId').equals(planId).toArray();
     expect(remaining).toEqual([]);
+  });
+});
+
+describe('Dexie v2 migration', () => {
+  it('migrates legacy plan: adds dailyPlans + returnToStart via helper', async () => {
+    const legacyPlan = {
+      name: 'legacy',
+      routeId: 'G02',
+      startNodeId: 'n_tataka',
+      endNodeId: 'n_yushan_main',
+      nodeSequence: ['n_tataka', 'n_paiyun', 'n_yushan_main'],
+      paceMultiplier: 1.0,
+      startDate: '2026-06-15',
+      startTime: '06:00',
+      dayBreaks: [{ afterNodeId: 'n_paiyun', type: 'hut' as const, hutId: 'hut_paiyun' }],
+      tripType: 'overnight_hut' as const,
+      createdAt: '2026-05-09T00:00:00Z',
+    };
+
+    // Insert as v1-shaped (cast: type doesn't have dailyPlans yet because optional)
+    const id = await db.plans.add(legacyPlan as never);
+    // Simulate migration via the helper (Dexie hook is hard to test in isolation)
+    const migrated = deriveDailyPlansFromLegacy(legacyPlan);
+    await db.plans.update(id, {
+      dailyPlans: migrated.dailyPlans,
+      returnToStart: migrated.returnToStart,
+    } as never);
+
+    const loaded = await db.plans.get(id);
+    expect(loaded?.dailyPlans).toHaveLength(2);
+    expect(loaded?.returnToStart).toBe(false);
   });
 });

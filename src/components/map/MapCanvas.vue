@@ -18,11 +18,14 @@ onMounted(() => {
   const map = L.map(mapEl.value, {
     center: props.center,
     zoom: props.zoom,
+    closePopupOnClick: false,
   });
   mapInstance.value = map;
+  (window as unknown as { __leafletMap?: L.Map }).__leafletMap = map;
 });
 
 onBeforeUnmount(() => {
+  delete (window as unknown as { __leafletMap?: L.Map }).__leafletMap;
   mapInstance.value?.remove();
   mapInstance.value = null;
 });
