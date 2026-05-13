@@ -1,0 +1,169 @@
+{
+  "id": "G13",
+  "name": "干卓萬群峰縱走",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM relation 19930450 (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g13_wanfeng_th",
+      "name": "萬豐部落登山口",
+      "lat": 23.909,
+      "lng": 121.116,
+      "elevation": 500,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g13_ganzhuo_base",
+      "name": "干卓萬山基地營",
+      "lat": 23.892,
+      "lng": 121.124,
+      "elevation": 2300,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g13_ganzhuo",
+      "name": "干卓萬山",
+      "lat": 23.876,
+      "lng": 121.139,
+      "elevation": 3282,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g13_ganzhuo_jct",
+      "name": "干卓萬山三叉峰",
+      "lat": 23.865,
+      "lng": 121.154,
+      "elevation": 3244,
+      "category": "junction"
+    },
+    {
+      "id": "n_g13_mushan",
+      "name": "牧山",
+      "lat": 23.863,
+      "lng": 121.16,
+      "elevation": 3239,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g13_sawakino_th",
+      "name": "撒烏瓦知部落",
+      "lat": 23.845,
+      "lng": 121.175,
+      "elevation": 600,
+      "category": "trailhead",
+      "tags": [
+        "permit_check"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g13_wanfeng_th",
+      "to": "n_g13_ganzhuo_base",
+      "minutes_forward": 510,
+      "minutes_backward": 336,
+      "distance_km": 10.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_ganzhuo_base",
+      "to": "n_g13_ganzhuo",
+      "minutes_forward": 271,
+      "minutes_backward": 178,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_ganzhuo",
+      "to": "n_g13_ganzhuo_jct",
+      "minutes_forward": 29,
+      "minutes_backward": 38,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_ganzhuo_jct",
+      "to": "n_g13_mushan",
+      "minutes_forward": 13,
+      "minutes_backward": 16,
+      "distance_km": 1.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_mushan",
+      "to": "n_g13_sawakino_th",
+      "minutes_forward": 461,
+      "minutes_backward": 708,
+      "distance_km": 12.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G13-traverse",
+      "name": "干卓萬群峰縱走 (3天2夜)",
+      "startNodeId": "n_g13_wanfeng_th",
+      "endNodeId": "n_g13_sawakino_th",
+      "viaNodeIds": [
+        "n_g13_ganzhuo_base",
+        "n_g13_ganzhuo",
+        "n_g13_ganzhuo_jct",
+        "n_g13_mushan"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g13_ganzhuo_base",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g13_ganzhuo",
+          "type": "camp"
+        }
+      ]
+    },
+    {
+      "id": "G13-ganzhuo-outback",
+      "name": "干卓萬山來回 (2天1夜)",
+      "startNodeId": "n_g13_wanfeng_th",
+      "endNodeId": "n_g13_ganzhuo",
+      "viaNodeIds": [
+        "n_g13_ganzhuo_base"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g13_ganzhuo_base",
+          "type": "camp"
+        }
+      ]
+    }
+  ]
+}

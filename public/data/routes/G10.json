@@ -1,0 +1,222 @@
+{
+  "id": "G10",
+  "name": "太魯閣山列",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g10_guanyuan_th",
+      "name": "關原登山口",
+      "lat": 24.234,
+      "lng": 121.387,
+      "elevation": 1274,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g10_wuming_base",
+      "name": "無明山基地營",
+      "lat": 24.248,
+      "lng": 121.384,
+      "elevation": 2800,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g10_wuming",
+      "name": "無明山",
+      "lat": 24.255356,
+      "lng": 121.384707,
+      "elevation": 3449,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g10_patolU_camp",
+      "name": "帕托魯山鞍部營地",
+      "lat": 24.108,
+      "lng": 121.452,
+      "elevation": 2950,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g10_patoru",
+      "name": "帕托魯山",
+      "lat": 24.099458,
+      "lng": 121.466535,
+      "elevation": 3102,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g10_liwu_main",
+      "name": "立霧主山",
+      "lat": 24.124796,
+      "lng": 121.445634,
+      "elevation": 3071,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g10_taroko_main",
+      "name": "太魯閣大山",
+      "lat": 24.079071,
+      "lng": 121.421001,
+      "elevation": 3282,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g10_panshi",
+      "name": "磐石山",
+      "lat": 24.10471,
+      "lng": 121.388268,
+      "elevation": 3105,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g10_guanyuan_th",
+      "to": "n_g10_wuming_base",
+      "minutes_forward": 425,
+      "minutes_backward": 279,
+      "distance_km": 8.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_wuming_base",
+      "to": "n_g10_wuming",
+      "minutes_forward": 175,
+      "minutes_backward": 114,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_wuming",
+      "to": "n_g10_patolU_camp",
+      "minutes_forward": 180,
+      "minutes_backward": 240,
+      "distance_km": 7.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_patolU_camp",
+      "to": "n_g10_patoru",
+      "minutes_forward": 91,
+      "minutes_backward": 62,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_patoru",
+      "to": "n_g10_liwu_main",
+      "minutes_forward": 52,
+      "minutes_backward": 66,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_liwu_main",
+      "to": "n_g10_taroko_main",
+      "minutes_forward": 102,
+      "minutes_backward": 73,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_patoru",
+      "to": "n_g10_panshi",
+      "minutes_forward": 75,
+      "minutes_backward": 60,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G10-wuming-patoru",
+      "name": "無明山‧帕托魯山 (4天3夜)",
+      "startNodeId": "n_g10_guanyuan_th",
+      "endNodeId": "n_g10_taroko_main",
+      "viaNodeIds": [
+        "n_g10_wuming_base",
+        "n_g10_wuming",
+        "n_g10_patolU_camp",
+        "n_g10_patoru",
+        "n_g10_liwu_main"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g10_wuming_base",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g10_wuming",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g10_patolU_camp",
+          "type": "camp"
+        }
+      ]
+    },
+    {
+      "id": "G10-wuming-outback",
+      "name": "無明山來回 (2天1夜)",
+      "startNodeId": "n_g10_guanyuan_th",
+      "endNodeId": "n_g10_wuming",
+      "viaNodeIds": [
+        "n_g10_wuming_base"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g10_wuming_base",
+          "type": "camp"
+        }
+      ]
+    }
+  ]
+}

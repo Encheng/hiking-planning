@@ -1,0 +1,272 @@
+{
+  "id": "G09",
+  "name": "合歡‧奇萊縱走",
+  "version": "2026-05-13",
+  "source": "OSM relation 18232290 (奇萊主北), 9296111 (奇萊南華) (ODbL); estimated times from community data",
+  "nodes": [
+    {
+      "id": "n_g09_hehuan_th",
+      "name": "合歡山管理站",
+      "lat": 24.158,
+      "lng": 121.282,
+      "elevation": 3275,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "toilet",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g09_hehuan_main",
+      "name": "合歡主峰",
+      "lat": 24.149,
+      "lng": 121.279,
+      "elevation": 3417,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g09_hehuan_north",
+      "name": "合歡北峰",
+      "lat": 24.156,
+      "lng": 121.275,
+      "elevation": 3422,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g09_chenggong_hut",
+      "name": "成功山莊",
+      "lat": 24.143,
+      "lng": 121.305,
+      "elevation": 3100,
+      "category": "hut"
+    },
+    {
+      "id": "n_g09_qilai_north",
+      "name": "奇萊北峰",
+      "lat": 24.118338,
+      "lng": 121.334546,
+      "elevation": 3606,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g09_qilai_main",
+      "name": "奇萊主山",
+      "lat": 24.086458,
+      "lng": 121.323263,
+      "elevation": 3562,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g09_qilai_hut",
+      "name": "奇萊山莊",
+      "lat": 24.078,
+      "lng": 121.315,
+      "elevation": 3200,
+      "category": "hut"
+    },
+    {
+      "id": "n_g09_tianchi_hut",
+      "name": "天池山莊",
+      "lat": 24.058,
+      "lng": 121.3,
+      "elevation": 3090,
+      "category": "hut"
+    },
+    {
+      "id": "n_g09_qilai_south",
+      "name": "奇萊南峰",
+      "lat": 24.061299,
+      "lng": 121.279975,
+      "elevation": 3357,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g09_nanhua",
+      "name": "南華山",
+      "lat": 24.039345,
+      "lng": 121.285931,
+      "elevation": 3182,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g09_hehuan_th",
+      "to": "n_g09_hehuan_main",
+      "minutes_forward": 51,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_hehuan_th",
+      "to": "n_g09_hehuan_north",
+      "minutes_forward": 59,
+      "minutes_backward": 24,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_hehuan_north",
+      "to": "n_g09_chenggong_hut",
+      "minutes_forward": 53,
+      "minutes_backward": 81,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_chenggong_hut",
+      "to": "n_g09_qilai_north",
+      "minutes_forward": 139,
+      "minutes_backward": 30,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_north",
+      "to": "n_g09_qilai_main",
+      "minutes_forward": 60,
+      "minutes_backward": 53,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_main",
+      "to": "n_g09_qilai_hut",
+      "minutes_forward": 30,
+      "minutes_backward": 67,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_hut",
+      "to": "n_g09_tianchi_hut",
+      "minutes_forward": 45,
+      "minutes_backward": 49,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_tianchi_hut",
+      "to": "n_g09_qilai_south",
+      "minutes_forward": 106,
+      "minutes_backward": 42,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_south",
+      "to": "n_g09_nanhua",
+      "minutes_forward": 38,
+      "minutes_backward": 51,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G09-classic-3day",
+      "name": "合歡奇萊縱走 (3天2夜)",
+      "startNodeId": "n_g09_hehuan_th",
+      "endNodeId": "n_g09_nanhua",
+      "viaNodeIds": [
+        "n_g09_hehuan_main",
+        "n_g09_hehuan_north",
+        "n_g09_chenggong_hut",
+        "n_g09_qilai_north",
+        "n_g09_qilai_main",
+        "n_g09_qilai_hut",
+        "n_g09_tianchi_hut",
+        "n_g09_qilai_south"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g09_chenggong_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g09_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G09-north-only",
+      "name": "奇萊北主二峰 (2天1夜)",
+      "startNodeId": "n_g09_hehuan_th",
+      "endNodeId": "n_g09_qilai_main",
+      "viaNodeIds": [
+        "n_g09_hehuan_north",
+        "n_g09_chenggong_hut",
+        "n_g09_qilai_north"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g09_chenggong_hut",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G09-south-nanhua",
+      "name": "奇萊南峰‧南華山 (2天1夜)",
+      "startNodeId": "n_g09_tianchi_hut",
+      "endNodeId": "n_g09_nanhua",
+      "viaNodeIds": [
+        "n_g09_qilai_south"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g09_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    }
+  ]
+}

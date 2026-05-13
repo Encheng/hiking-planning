@@ -1,0 +1,398 @@
+{
+  "id": "G15",
+  "name": "丹大‧東郡橫斷縱走",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g15_danda_50k",
+      "name": "丹大林道50K登山口",
+      "lat": 23.61,
+      "lng": 121.235,
+      "elevation": 1800,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g15_danda_hut",
+      "name": "丹大山屋",
+      "lat": 23.616,
+      "lng": 121.228,
+      "elevation": 2450,
+      "category": "hut"
+    },
+    {
+      "id": "n_g15_danda_camp",
+      "name": "丹大溪源頭營地",
+      "lat": 23.618,
+      "lng": 121.218,
+      "elevation": 2900,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g15_dongjun",
+      "name": "東郡大山",
+      "lat": 23.626807,
+      "lng": 121.091867,
+      "elevation": 3617,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g15_dongjun_camp",
+      "name": "東郡大山南鞍營地",
+      "lat": 23.62,
+      "lng": 121.095,
+      "elevation": 3350,
+      "category": "waypoint",
+      "tags": [
+        "camp"
+      ]
+    },
+    {
+      "id": "n_g15_central_ridge_jct",
+      "name": "中央山脈稜線岔路",
+      "lat": 23.613,
+      "lng": 121.155,
+      "elevation": 3200,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_danda_mt",
+      "name": "丹大山",
+      "lat": 23.6004,
+      "lng": 121.2134,
+      "elevation": 3329,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g15_danda_mt_camp",
+      "name": "丹大山西鞍營地",
+      "lat": 23.601,
+      "lng": 121.2,
+      "elevation": 3100,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g15_liushun_jct",
+      "name": "六順山岔路",
+      "lat": 23.6,
+      "lng": 121.175,
+      "elevation": 3050,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_liushun",
+      "name": "六順山",
+      "lat": 23.612,
+      "lng": 121.189,
+      "elevation": 3006,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g15_south_ridge_camp",
+      "name": "南稜營地",
+      "lat": 23.545,
+      "lng": 121.185,
+      "elevation": 2900,
+      "category": "waypoint",
+      "tags": [
+        "camp"
+      ]
+    },
+    {
+      "id": "n_g15_maxi_approach",
+      "name": "馬西山接近路",
+      "lat": 23.51,
+      "lng": 121.178,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_maxi",
+      "name": "馬西山",
+      "lat": 23.4838,
+      "lng": 121.174,
+      "elevation": 3443,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g15_maxi_camp",
+      "name": "馬西山基地營",
+      "lat": 23.49,
+      "lng": 121.168,
+      "elevation": 3000,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g15_danda_50k",
+      "to": "n_g15_danda_hut",
+      "minutes_forward": 147,
+      "minutes_backward": 86,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_hut",
+      "to": "n_g15_danda_camp",
+      "minutes_forward": 138,
+      "minutes_backward": 79,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_camp",
+      "to": "n_g15_danda_mt",
+      "minutes_forward": 99,
+      "minutes_backward": 60,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_mt",
+      "to": "n_g15_danda_mt_camp",
+      "minutes_forward": 45,
+      "minutes_backward": 33,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_mt_camp",
+      "to": "n_g15_central_ridge_jct",
+      "minutes_forward": 60,
+      "minutes_backward": 53,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_central_ridge_jct",
+      "to": "n_g15_dongjun",
+      "minutes_forward": 95,
+      "minutes_backward": 59,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_dongjun",
+      "to": "n_g15_dongjun_camp",
+      "minutes_forward": 47,
+      "minutes_backward": 32,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_mt_camp",
+      "to": "n_g15_liushun_jct",
+      "minutes_forward": 63,
+      "minutes_backward": 51,
+      "distance_km": 3.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_liushun_jct",
+      "to": "n_g15_liushun",
+      "minutes_forward": 60,
+      "minutes_backward": 53,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_liushun_jct",
+      "to": "n_g15_south_ridge_camp",
+      "minutes_forward": 60,
+      "minutes_backward": 62,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_south_ridge_camp",
+      "to": "n_g15_maxi_approach",
+      "minutes_forward": 91,
+      "minutes_backward": 68,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_maxi_approach",
+      "to": "n_g15_maxi",
+      "minutes_forward": 81,
+      "minutes_backward": 47,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_maxi",
+      "to": "n_g15_maxi_camp",
+      "minutes_forward": 52,
+      "minutes_backward": 38,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G15-full-traverse",
+      "name": "丹大‧東郡完整縱走 (12天11夜)",
+      "startNodeId": "n_g15_danda_50k",
+      "endNodeId": "n_g15_maxi_camp",
+      "viaNodeIds": [
+        "n_g15_danda_hut",
+        "n_g15_danda_camp",
+        "n_g15_danda_mt",
+        "n_g15_danda_mt_camp",
+        "n_g15_central_ridge_jct",
+        "n_g15_dongjun",
+        "n_g15_dongjun_camp",
+        "n_g15_liushun_jct",
+        "n_g15_south_ridge_camp",
+        "n_g15_maxi_approach",
+        "n_g15_maxi"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g15_danda_hut",
+          "type": "hut",
+          "label": "第一夜：丹大山屋"
+        },
+        {
+          "atNodeId": "n_g15_danda_camp",
+          "type": "camp",
+          "label": "第二夜：丹大溪源頭"
+        },
+        {
+          "atNodeId": "n_g15_danda_mt",
+          "type": "camp",
+          "label": "第三夜：丹大山頂附近"
+        },
+        {
+          "atNodeId": "n_g15_danda_mt_camp",
+          "type": "camp",
+          "label": "第四夜：丹大山西鞍"
+        },
+        {
+          "atNodeId": "n_g15_dongjun_camp",
+          "type": "camp",
+          "label": "第五夜：東郡南鞍"
+        },
+        {
+          "atNodeId": "n_g15_liushun_jct",
+          "type": "camp",
+          "label": "第六夜：六順山岔路"
+        },
+        {
+          "atNodeId": "n_g15_south_ridge_camp",
+          "type": "camp",
+          "label": "第七夜：南稜"
+        },
+        {
+          "atNodeId": "n_g15_maxi_camp",
+          "type": "camp",
+          "label": "第八夜：馬西山基地"
+        }
+      ]
+    },
+    {
+      "id": "G15-dantu",
+      "name": "丹大山來回 (5天4夜)",
+      "startNodeId": "n_g15_danda_50k",
+      "endNodeId": "n_g15_danda_50k",
+      "viaNodeIds": [
+        "n_g15_danda_hut",
+        "n_g15_danda_camp",
+        "n_g15_danda_mt",
+        "n_g15_danda_mt_camp",
+        "n_g15_danda_camp",
+        "n_g15_danda_hut"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g15_danda_hut",
+          "type": "hut",
+          "label": "第一夜：丹大山屋"
+        },
+        {
+          "atNodeId": "n_g15_danda_camp",
+          "type": "camp",
+          "label": "第二夜：溪源營地"
+        },
+        {
+          "atNodeId": "n_g15_danda_mt_camp",
+          "type": "camp",
+          "label": "第三夜：丹大西鞍"
+        },
+        {
+          "atNodeId": "n_g15_danda_hut",
+          "type": "hut",
+          "label": "第四夜：丹大山屋"
+        }
+      ]
+    }
+  ]
+}

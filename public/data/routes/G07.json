@@ -1,0 +1,311 @@
+{
+  "id": "G07",
+  "name": "北一段縱走",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g07_cuifeng_th",
+      "name": "翠峰登山口",
+      "lat": 24.387,
+      "lng": 121.464,
+      "elevation": 2600,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g07_shenmachen",
+      "name": "審馬陣山",
+      "lat": 24.380164,
+      "lng": 121.417492,
+      "elevation": 3140,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_nanhu_north_camp",
+      "name": "南湖北山附近營地",
+      "lat": 24.393,
+      "lng": 121.43,
+      "elevation": 3536,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g07_nanhu_main",
+      "name": "南湖大山",
+      "lat": 24.361812,
+      "lng": 121.439377,
+      "elevation": 3741,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_nanhu_east",
+      "name": "南湖大山東峰",
+      "lat": 24.365594,
+      "lng": 121.450853,
+      "elevation": 3639,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_mabisan",
+      "name": "馬比杉山",
+      "lat": 24.348225,
+      "lng": 121.485638,
+      "elevation": 3211,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_zhongyangj_base",
+      "name": "中央尖山基地營",
+      "lat": 24.326,
+      "lng": 121.458,
+      "elevation": 2900,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g07_zhongyangj",
+      "name": "中央尖山",
+      "lat": 24.310224,
+      "lng": 121.416266,
+      "elevation": 3698,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_bilu",
+      "name": "畢祿山",
+      "lat": 24.213577,
+      "lng": 121.347187,
+      "elevation": 3370,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_yangtou",
+      "name": "羊頭山",
+      "lat": 24.20869,
+      "lng": 121.37973,
+      "elevation": 3033,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g07_lishan_th",
+      "name": "梨山",
+      "lat": 24.252,
+      "lng": 121.332,
+      "elevation": 1950,
+      "category": "trailhead",
+      "tags": [
+        "bus",
+        "accommodation"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g07_cuifeng_th",
+      "to": "n_g07_shenmachen",
+      "minutes_forward": 183,
+      "minutes_backward": 125,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shenmachen",
+      "to": "n_g07_nanhu_north_camp",
+      "minutes_forward": 154,
+      "minutes_backward": 107,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_north_camp",
+      "to": "n_g07_nanhu_main",
+      "minutes_forward": 71,
+      "minutes_backward": 49,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_main",
+      "to": "n_g07_nanhu_east",
+      "minutes_forward": 36,
+      "minutes_backward": 50,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_east",
+      "to": "n_g07_mabisan",
+      "minutes_forward": 111,
+      "minutes_backward": 161,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_mabisan",
+      "to": "n_g07_zhongyangj_base",
+      "minutes_forward": 109,
+      "minutes_backward": 152,
+      "distance_km": 6.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhongyangj_base",
+      "to": "n_g07_zhongyangj",
+      "minutes_forward": 212,
+      "minutes_backward": 138,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhongyangj_base",
+      "to": "n_g07_bilu",
+      "minutes_forward": 199,
+      "minutes_backward": 140,
+      "distance_km": 7.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_bilu",
+      "to": "n_g07_yangtou",
+      "minutes_forward": 100,
+      "minutes_backward": 142,
+      "distance_km": 5.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_yangtou",
+      "to": "n_g07_lishan_th",
+      "minutes_forward": 226,
+      "minutes_backward": 336,
+      "distance_km": 8.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G07-north-first-section",
+      "name": "北一段縱走 (7天6夜)",
+      "startNodeId": "n_g07_cuifeng_th",
+      "endNodeId": "n_g07_lishan_th",
+      "viaNodeIds": [
+        "n_g07_shenmachen",
+        "n_g07_nanhu_north_camp",
+        "n_g07_nanhu_main",
+        "n_g07_nanhu_east",
+        "n_g07_mabisan",
+        "n_g07_zhongyangj_base",
+        "n_g07_zhongyangj",
+        "n_g07_bilu",
+        "n_g07_yangtou"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g07_nanhu_north_camp",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_nanhu_east",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_zhongyangj_base",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_zhongyangj",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_bilu",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_yangtou",
+          "type": "camp"
+        }
+      ]
+    },
+    {
+      "id": "G07-nanhu-outback",
+      "name": "南湖大山雙峰來回 (3天2夜)",
+      "startNodeId": "n_g07_cuifeng_th",
+      "endNodeId": "n_g07_nanhu_east",
+      "viaNodeIds": [
+        "n_g07_shenmachen",
+        "n_g07_nanhu_north_camp",
+        "n_g07_nanhu_main"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g07_nanhu_north_camp",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g07_nanhu_main",
+          "type": "camp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "G03",
+  "name": "郡大山‧西巒大山",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g03_danda_th",
+      "name": "丹大林道登山口",
+      "lat": 23.735,
+      "lng": 120.934,
+      "elevation": 1800,
+      "category": "trailhead",
+      "tags": [
+        "parking"
+      ]
+    },
+    {
+      "id": "n_g03_xiluan_camp",
+      "name": "西巒大山中繼營地",
+      "lat": 23.718,
+      "lng": 120.938,
+      "elevation": 2400,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g03_xiluan",
+      "name": "西巒大山",
+      "lat": 23.694012,
+      "lng": 120.947221,
+      "elevation": 3085,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g03_junda_th",
+      "name": "郡大林道7K登山口",
+      "lat": 23.614,
+      "lng": 120.946,
+      "elevation": 2500,
+      "category": "trailhead",
+      "tags": [
+        "parking"
+      ]
+    },
+    {
+      "id": "n_g03_junda_camp",
+      "name": "郡大山營地",
+      "lat": 23.597,
+      "lng": 120.952,
+      "elevation": 2900,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g03_junda_north",
+      "name": "郡大山北峰",
+      "lat": 23.588054,
+      "lng": 120.957005,
+      "elevation": 3252,
+      "category": "peak"
+    },
+    {
+      "id": "n_g03_junda",
+      "name": "郡大山",
+      "lat": 23.57733,
+      "lng": 120.962518,
+      "elevation": 3278,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g03_danda_th",
+      "to": "n_g03_xiluan_camp",
+      "minutes_forward": 180,
+      "minutes_backward": 120,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g03_xiluan_camp",
+      "to": "n_g03_xiluan",
+      "minutes_forward": 197,
+      "minutes_backward": 130,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g03_junda_th",
+      "to": "n_g03_junda_camp",
+      "minutes_forward": 168,
+      "minutes_backward": 108,
+      "distance_km": 4.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g03_junda_camp",
+      "to": "n_g03_junda_north",
+      "minutes_forward": 143,
+      "minutes_backward": 93,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g03_junda_north",
+      "to": "n_g03_junda",
+      "minutes_forward": 28,
+      "minutes_backward": 21,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G03-xiluan",
+      "name": "西巒大山 (2天1夜)",
+      "startNodeId": "n_g03_danda_th",
+      "endNodeId": "n_g03_xiluan",
+      "viaNodeIds": [
+        "n_g03_xiluan_camp"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g03_xiluan_camp",
+          "type": "camp"
+        }
+      ]
+    },
+    {
+      "id": "G03-junda",
+      "name": "郡大山 (2天1夜)",
+      "startNodeId": "n_g03_junda_th",
+      "endNodeId": "n_g03_junda",
+      "viaNodeIds": [
+        "n_g03_junda_camp",
+        "n_g03_junda_north"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g03_junda_camp",
+          "type": "camp"
+        }
+      ]
+    }
+  ]
+}

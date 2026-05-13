@@ -1,0 +1,318 @@
+{
+  "id": "G12",
+  "name": "能高安東軍縱走",
+  "version": "2026-05-13",
+  "source": "OSM relation 14522297 (能高安東軍縱走) (ODbL); estimated times from community data",
+  "nodes": [
+    {
+      "id": "n_g12_tunyuan_th",
+      "name": "屯原登山口",
+      "lat": 23.985,
+      "lng": 121.19,
+      "elevation": 1740,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g12_yunhai_hut",
+      "name": "雲海保線所",
+      "lat": 23.989,
+      "lng": 121.218,
+      "elevation": 2365,
+      "category": "hut"
+    },
+    {
+      "id": "n_g12_tianchi_hut",
+      "name": "天池山莊",
+      "lat": 23.992,
+      "lng": 121.245,
+      "elevation": 3090,
+      "category": "hut"
+    },
+    {
+      "id": "n_g12_nenggao_jct",
+      "name": "能高山岔路",
+      "lat": 23.992,
+      "lng": 121.255,
+      "elevation": 3180,
+      "category": "junction"
+    },
+    {
+      "id": "n_g12_nenggao",
+      "name": "能高山",
+      "lat": 23.992321,
+      "lng": 121.260238,
+      "elevation": 3261,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g12_nenggao_south",
+      "name": "能高山南峰",
+      "lat": 23.965366,
+      "lng": 121.278112,
+      "elevation": 3348,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g12_guangtou",
+      "name": "光頭山",
+      "lat": 23.939083,
+      "lng": 121.273102,
+      "elevation": 3077,
+      "category": "peak"
+    },
+    {
+      "id": "n_g12_andong_north",
+      "name": "安東軍山北峰",
+      "lat": 23.88358,
+      "lng": 121.268596,
+      "elevation": 3022,
+      "category": "peak"
+    },
+    {
+      "id": "n_g12_andong",
+      "name": "安東軍山",
+      "lat": 23.872707,
+      "lng": 121.266114,
+      "elevation": 3067,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g12_andong_shelter",
+      "name": "安東軍山避難小屋",
+      "lat": 23.865,
+      "lng": 121.26,
+      "elevation": 2900,
+      "category": "hut"
+    },
+    {
+      "id": "n_g12_tongmen_th",
+      "name": "銅門登山口",
+      "lat": 23.82,
+      "lng": 121.37,
+      "elevation": 800,
+      "category": "trailhead",
+      "tags": [
+        "parking"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g12_tunyuan_th",
+      "to": "n_g12_yunhai_hut",
+      "minutes_forward": 208,
+      "minutes_backward": 66,
+      "distance_km": 5.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_yunhai_hut",
+      "to": "n_g12_tianchi_hut",
+      "minutes_forward": 257,
+      "minutes_backward": 90,
+      "distance_km": 7.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_tianchi_hut",
+      "to": "n_g12_nenggao_jct",
+      "minutes_forward": 41,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_nenggao_jct",
+      "to": "n_g12_nenggao",
+      "minutes_forward": 39,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_nenggao",
+      "to": "n_g12_nenggao_south",
+      "minutes_forward": 70,
+      "minutes_backward": 42,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_nenggao_south",
+      "to": "n_g12_guangtou",
+      "minutes_forward": 90,
+      "minutes_backward": 105,
+      "distance_km": 6.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_guangtou",
+      "to": "n_g12_andong_north",
+      "minutes_forward": 38,
+      "minutes_backward": 37,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_andong_north",
+      "to": "n_g12_andong",
+      "minutes_forward": 32,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_andong",
+      "to": "n_g12_andong_shelter",
+      "minutes_forward": 30,
+      "minutes_backward": 44,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_andong_shelter",
+      "to": "n_g12_tongmen_th",
+      "minutes_forward": 210,
+      "minutes_backward": 420,
+      "distance_km": 14.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G12-classic-6day",
+      "name": "能高安東軍縱走 (6天5夜)",
+      "startNodeId": "n_g12_tunyuan_th",
+      "endNodeId": "n_g12_tongmen_th",
+      "viaNodeIds": [
+        "n_g12_yunhai_hut",
+        "n_g12_tianchi_hut",
+        "n_g12_nenggao_jct",
+        "n_g12_nenggao",
+        "n_g12_nenggao_south",
+        "n_g12_guangtou",
+        "n_g12_andong_north",
+        "n_g12_andong",
+        "n_g12_andong_shelter"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g12_yunhai_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g12_tianchi_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g12_nenggao_south",
+          "type": "waypoint"
+        },
+        {
+          "atNodeId": "n_g12_guangtou",
+          "type": "waypoint"
+        },
+        {
+          "atNodeId": "n_g12_andong_shelter",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G12-fast-4day",
+      "name": "能高安東軍縱走快攻 (4天3夜)",
+      "startNodeId": "n_g12_tunyuan_th",
+      "endNodeId": "n_g12_tongmen_th",
+      "viaNodeIds": [
+        "n_g12_yunhai_hut",
+        "n_g12_tianchi_hut",
+        "n_g12_nenggao_jct",
+        "n_g12_nenggao",
+        "n_g12_nenggao_south",
+        "n_g12_guangtou",
+        "n_g12_andong_north",
+        "n_g12_andong",
+        "n_g12_andong_shelter"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g12_tianchi_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g12_guangtou",
+          "type": "waypoint"
+        },
+        {
+          "atNodeId": "n_g12_andong_shelter",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G12-nenggao-only",
+      "name": "能高二峰 (3天2夜)",
+      "startNodeId": "n_g12_tunyuan_th",
+      "endNodeId": "n_g12_nenggao_south",
+      "viaNodeIds": [
+        "n_g12_yunhai_hut",
+        "n_g12_tianchi_hut",
+        "n_g12_nenggao_jct",
+        "n_g12_nenggao"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g12_yunhai_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g12_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "G11",
+  "name": "能高越嶺",
+  "version": "2026-05-13",
+  "source": "OSM relation 10609897 (能高越嶺道) (ODbL); estimated times from community data",
+  "nodes": [
+    {
+      "id": "n_g11_tunyuan_th",
+      "name": "屯原登山口",
+      "lat": 23.985,
+      "lng": 121.19,
+      "elevation": 1740,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g11_yunhai_hut",
+      "name": "雲海保線所",
+      "lat": 23.989,
+      "lng": 121.218,
+      "elevation": 2365,
+      "category": "hut"
+    },
+    {
+      "id": "n_g11_tianchi_hut",
+      "name": "天池山莊",
+      "lat": 23.992,
+      "lng": 121.245,
+      "elevation": 3090,
+      "category": "hut"
+    },
+    {
+      "id": "n_g11_nenggao_jct",
+      "name": "能高山岔路",
+      "lat": 23.992,
+      "lng": 121.255,
+      "elevation": 3180,
+      "category": "junction"
+    },
+    {
+      "id": "n_g11_nenggao",
+      "name": "能高山",
+      "lat": 23.992321,
+      "lng": 121.260238,
+      "elevation": 3261,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g11_nenggao_east",
+      "name": "能高山東峰",
+      "lat": 24.005391,
+      "lng": 121.2836,
+      "elevation": 2782,
+      "category": "peak"
+    },
+    {
+      "id": "n_g11_nenggao_south",
+      "name": "能高山南峰",
+      "lat": 23.965366,
+      "lng": 121.278112,
+      "elevation": 3348,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g11_tunyuan_th",
+      "to": "n_g11_yunhai_hut",
+      "minutes_forward": 208,
+      "minutes_backward": 66,
+      "distance_km": 5.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_yunhai_hut",
+      "to": "n_g11_tianchi_hut",
+      "minutes_forward": 257,
+      "minutes_backward": 90,
+      "distance_km": 7.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_tianchi_hut",
+      "to": "n_g11_nenggao_jct",
+      "minutes_forward": 41,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_nenggao_jct",
+      "to": "n_g11_nenggao",
+      "minutes_forward": 39,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_nenggao_jct",
+      "to": "n_g11_nenggao_east",
+      "minutes_forward": 30,
+      "minutes_backward": 72,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_nenggao",
+      "to": "n_g11_nenggao_south",
+      "minutes_forward": 70,
+      "minutes_backward": 42,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G11-classic-2day",
+      "name": "能高越嶺·能高山 (2天1夜)",
+      "startNodeId": "n_g11_tunyuan_th",
+      "endNodeId": "n_g11_nenggao",
+      "viaNodeIds": [
+        "n_g11_yunhai_hut",
+        "n_g11_tianchi_hut",
+        "n_g11_nenggao_jct"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g11_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G11-two-peaks-3day",
+      "name": "能高二峰 (3天2夜)",
+      "startNodeId": "n_g11_tunyuan_th",
+      "endNodeId": "n_g11_nenggao_south",
+      "viaNodeIds": [
+        "n_g11_yunhai_hut",
+        "n_g11_tianchi_hut",
+        "n_g11_nenggao_jct",
+        "n_g11_nenggao"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g11_yunhai_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g11_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G11-east-peak",
+      "name": "能高山‧東峰 (2天1夜)",
+      "startNodeId": "n_g11_tunyuan_th",
+      "endNodeId": "n_g11_nenggao_east",
+      "viaNodeIds": [
+        "n_g11_yunhai_hut",
+        "n_g11_tianchi_hut",
+        "n_g11_nenggao_jct",
+        "n_g11_nenggao"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g11_tianchi_hut",
+          "type": "hut"
+        }
+      ]
+    }
+  ]
+}
