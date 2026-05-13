@@ -17,7 +17,6 @@ const props = defineProps<{
   expanded: boolean;
   isOnly: boolean;
   warnings: string[];
-  returnTripNodeIds?: string[];
 }>();
 
 const emit = defineEmits<{
@@ -117,18 +116,6 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
         <p v-if="dailyPlan.viaNodeIds.length === 0" class="text-xs text-gray-400">
           直接點地圖節點 → 選「加為加爬點」
         </p>
-      </div>
-
-      <div v-if="returnTripNodeIds && returnTripNodeIds.length > 0">
-        <label class="text-xs text-gray-500 block mb-1">↩ 回程經過（自動，不可編輯）</label>
-        <NTag
-          v-for="(nid, i) in returnTripNodeIds"
-          :key="i"
-          type="default"
-          class="mr-1 mb-1 opacity-70"
-        >
-          {{ i + 1 }}. {{ nodeName(nid) }}
-        </NTag>
       </div>
 
       <NPopconfirm v-if="!isOnly" @positive-click="emit('remove-day')">

@@ -20,7 +20,9 @@ describe('resolveDailyPlans', () => {
     expect(result.warnings).toEqual([]);
   });
 
-  it('single-day plan, returnToStart=true, end != start: rewrites with end pushed to via', () => {
+  it('single-day plan, returnToStart=true is now ignored by resolver: ends at daily.endNodeId', () => {
+    // The resolver no longer rewrites the last day. returnToStart auto-fill is done
+    // by the DailyPlanEditor toggle (onToggleReturnToStart) before the data reaches here.
     const result = resolveDailyPlans({
       route,
       startNodeId: 'n_tataka',
@@ -28,8 +30,7 @@ describe('resolveDailyPlans', () => {
       returnToStart: true,
     });
     expect(result.nodeSequence[0]).toBe('n_tataka');
-    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_tataka');
-    expect(result.nodeSequence).toContain('n_paiyun');
+    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_paiyun');
   });
 
   it('single-day plan, returnToStart=true, end == start: no rewrite, returns single-node path', () => {
@@ -76,7 +77,8 @@ describe('resolveDailyPlans', () => {
     expect(result.dayBreaks.map((b) => b.afterNodeId)).toEqual(['n_pailin', 'n_paiyun']);
   });
 
-  it('returnToStart=true on multi-day: nodeSequence ends at startNodeId', () => {
+  it('returnToStart=true on multi-day: resolver no longer rewrites, ends at last daily.endNodeId', () => {
+    // Resolver is now pass-through; auto-fill is done by DailyPlanEditor.onToggleReturnToStart
     const result = resolveDailyPlans({
       route,
       startNodeId: 'n_tataka',
@@ -86,7 +88,7 @@ describe('resolveDailyPlans', () => {
       ],
       returnToStart: true,
     });
-    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_tataka');
+    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_yushan_main');
   });
 
   it('unreachable day: returns warning, still emits other days', () => {

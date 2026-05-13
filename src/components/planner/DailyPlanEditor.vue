@@ -96,20 +96,29 @@ function changeTarget(idx: number, nodeId: string) {
   draft.value.dailyPlans[idx].viaNodeIds = computeAutoViaIds(idx, nodeId);
 }
 
-function getReturnTripNodeIds(dayIdx: number): string[] {
-  // Only the last day, only if returnToStart=true and endNodeId !== startNodeId
-  if (!draft.value.dailyPlans || dayIdx !== draft.value.dailyPlans.length - 1) return [];
-  if (!draft.value.returnToStart) return [];
-  const dp = draft.value.dailyPlans[dayIdx];
-  if (!dp || dp.endNodeId === draft.value.startNodeId) return [];
-  const resolvedDay = resolution.value?.days[dayIdx];
-  if (!resolvedDay) return [];
-  // pathNodeIds = [dayStart, ..., endNodeId, ...return intermediates..., startNodeId]
-  // Find the index of original endNodeId in pathNodeIds
-  const endIdx = resolvedDay.pathNodeIds.indexOf(dp.endNodeId);
-  if (endIdx === -1) return [];
-  // Return-trip = [endNodeId+1 ... last-1] (excluding endNodeId itself and final startNodeId)
-  return resolvedDay.pathNodeIds.slice(endIdx + 1, -1);
+function onToggleReturnToStart(checked: boolean) {
+  if (!draft.value.dailyPlans) draft.value.dailyPlans = [];
+  draft.value.returnToStart = checked;
+
+  if (!checked || draft.value.dailyPlans.length === 0 || !route.value) return;
+
+  const lastIdx = draft.value.dailyPlans.length - 1;
+  const lastDay = draft.value.dailyPlans[lastIdx];
+  if (!lastDay.endNodeId || lastDay.endNodeId === draft.value.startNodeId) return;
+
+  // Compute BFS return path from current lastDay end → startNodeId
+  const path = resolvePath({
+    route: route.value,
+    startNodeId: lastDay.endNodeId,
+    endNodeId: draft.value.startNodeId!,
+    viaNodeIds: [],
+  });
+  if (path.warnings.includes('no_path') || path.forward.length < 2) return;
+
+  // Push: [...existing via, original endNode, ...return intermediates excluding startNode]
+  const returnIntermediates = path.forward.slice(1, -1);
+  lastDay.viaNodeIds = [...lastDay.viaNodeIds, lastDay.endNodeId, ...returnIntermediates];
+  lastDay.endNodeId = draft.value.startNodeId!;
 }
 
 function removeVia(idx: number, viaIndex: number) {
@@ -134,7 +143,12 @@ function reorderVia(idx: number, from: number, to: number) {
           <NodePicker :value="draft.startNodeId" @select="changeStart" />
         </div>
       </div>
-      <NCheckbox v-model:checked="draft.returnToStart">回到起點</NCheckbox>
+      <NCheckbox
+        :checked="draft.returnToStart ?? true"
+        @update:checked="onToggleReturnToStart"
+      >
+        回到起點（一次性自動填回程路徑）
+      </NCheckbox>
     </div>
 
     <DayCard
@@ -149,7 +163,6 @@ function reorderVia(idx: number, from: number, to: number) {
       :expanded="editor.expandedDayIndex === i + 1"
       :is-only="(draft.dailyPlans?.length ?? 0) === 1"
       :warnings="resolution?.days[i]?.warnings ?? []"
-      :return-trip-node-ids="getReturnTripNodeIds(i)"
       @toggle-expand="editor.toggleExpand(i + 1)"
       @change-start="(id: string) => changeStart_day(i, id)"
       @change-target="(id: string) => changeTarget(i, id)"

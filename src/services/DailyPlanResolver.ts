@@ -17,7 +17,10 @@ function makeSegments(pathNodeIds: string[]): Array<{ from: string; to: string }
 }
 
 export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
-  const { route, startNodeId, dailyPlans, returnToStart } = input;
+  // NOTE: returnToStart is accepted for backward-compat but no longer used by the resolver.
+  // The toggle in DailyPlanEditor performs a one-time auto-fill into viaNodeIds instead,
+  // so dailyPlans is always fully explicit here.
+  const { route, startNodeId, dailyPlans } = input;
 
   const days: DayResolution[] = [];
   const dayBreaks: DayBreak[] = [];
@@ -32,18 +35,13 @@ export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
 
   for (let i = 0; i < dailyPlans.length; i++) {
     const daily = dailyPlans[i];
-    // Use explicit startNodeId if present
     if (daily.startNodeId) {
       dayStart = daily.startNodeId;
     }
-    let effectiveEnd = daily.endNodeId;
-    let effectiveVia = daily.viaNodeIds;
+    const effectiveEnd = daily.endNodeId;
+    const effectiveVia = daily.viaNodeIds;
 
     const isLast = i === dailyPlans.length - 1;
-    if (isLast && returnToStart && daily.endNodeId !== startNodeId) {
-      effectiveEnd = startNodeId;
-      effectiveVia = [...daily.viaNodeIds, daily.endNodeId];
-    }
 
     const path = resolvePath({
       route,
