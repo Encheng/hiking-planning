@@ -33,12 +33,19 @@ function midLatLng(a: L.LatLng, b: L.LatLng): L.LatLng {
   return L.latLng((a.lat + b.lat) / 2, (a.lng + b.lng) / 2);
 }
 
-function arrowIcon(color: string, angle: number, opacity = 1): L.DivIcon {
+function arrowIcon(color: string, angle: number): L.DivIcon {
+  // SVG arrow: tip points up at angle=0 (north); rotated around its center
+  const svg = `<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+    <g transform="rotate(${angle},9,9)">
+      <polygon points="9,1 17,17 9,12 1,17"
+        fill="${color}" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+  </svg>`;
   return L.divIcon({
-    html: `<div style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:12px solid ${color};transform:rotate(${angle}deg);opacity:${opacity}"></div>`,
+    html: svg,
     className: '',
-    iconSize: [10, 12],
-    iconAnchor: [5, 6],
+    iconSize: [18, 18],
+    iconAnchor: [9, 9],
   });
 }
 
@@ -102,7 +109,7 @@ function rebuild(): void {
 
     // Arrows: only draw for active (or all-equal) days to avoid ghost clutter
     if (isActive) {
-      const step = Math.max(1, Math.floor((latlngs.length - 1) / 3));
+      const step = Math.max(1, Math.floor((latlngs.length - 1) / 2));
       for (let i = step - 1; i < latlngs.length - 1; i += step) {
         const a = latlngs[i];
         const b = latlngs[i + 1];
