@@ -2,6 +2,7 @@
 import { inject, watch, onBeforeUnmount, type Ref } from 'vue';
 import L from 'leaflet';
 import type { RouteNode, DayBreak } from '@/types';
+import { dayColor, dayDashArray } from '@/services/DayColors';
 
 const props = defineProps<{
   nodes: RouteNode[];
@@ -10,8 +11,6 @@ const props = defineProps<{
 }>();
 
 const map = inject<Ref<L.Map | null>>('leaflet-map')!;
-
-const DAY_COLORS = ['#2563eb', '#d97706', '#7c3aed', '#059669', '#db2777'];
 
 const layers: L.Layer[] = [];
 
@@ -75,7 +74,8 @@ function rebuild(): void {
   const daySegs = splitByDays(props.nodeIds, props.dayBreaks ?? []);
 
   daySegs.forEach((seg, dayIdx) => {
-    const color = DAY_COLORS[dayIdx % DAY_COLORS.length];
+    const color = dayColor(dayIdx);
+    const dash = dayDashArray(dayIdx);
     const latlngs = seg
       .map((id) => nodeMap.get(id))
       .filter((n): n is RouteNode => !!n)
@@ -89,6 +89,7 @@ function rebuild(): void {
       opacity: 0.9,
       lineCap: 'round',
       lineJoin: 'round',
+      ...(dash ? { dashArray: dash } : {}),
     }).addTo(map.value!);
     layers.push(pl);
 

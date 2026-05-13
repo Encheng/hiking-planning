@@ -121,6 +121,11 @@ function onToggleReturnToStart(checked: boolean) {
   lastDay.endNodeId = draft.value.startNodeId!;
 }
 
+function addVia(idx: number, nodeId: string) {
+  if (!draft.value.dailyPlans) return;
+  draft.value.dailyPlans[idx].viaNodeIds.push(nodeId);
+}
+
 function removeVia(idx: number, viaIndex: number) {
   if (!draft.value.dailyPlans) return;
   draft.value.dailyPlans[idx].viaNodeIds.splice(viaIndex, 1);
@@ -166,6 +171,7 @@ function reorderVia(idx: number, from: number, to: number) {
       @toggle-expand="editor.toggleExpand(i + 1)"
       @change-start="(id: string) => changeStart_day(i, id)"
       @change-target="(id: string) => changeTarget(i, id)"
+      @add-via="(nodeId: string) => addVia(i, nodeId)"
       @remove-via="(viaIndex: number) => removeVia(i, viaIndex)"
       @reorder-via="(from: number, to: number) => reorderVia(i, from, to)"
       @remove-day="removeDay(i)"
