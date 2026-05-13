@@ -134,7 +134,12 @@ function nodeOptions() {
             </div>
             <NInputNumber v-model:value="n.elevation" placeholder="elevation" size="small" />
             <NSelect v-model:value="n.category" :options="categoryOptions" size="small" />
-            <NInput v-model:value="n.hutId" placeholder="hutId (optional)" size="small" />
+            <NInput
+              :value="n.hutId ?? ''"
+              placeholder="hutId (optional)"
+              size="small"
+              @update:value="(v) => { n.hutId = v || undefined; }"
+            />
             <RouteEditorMatcher
               :node-name="n.name"
               :pois="osmPois"
@@ -147,9 +152,9 @@ function nodeOptions() {
 
       <NCollapseItem :title="`邊 (${route.edges.length})`" name="edges">
         <div v-for="(e, i) in route.edges" :key="i" class="border rounded p-2 mb-2">
-          <div class="flex justify-between items-center mb-1">
-            <span class="text-xs">{{ e.from }} → {{ e.to }}</span>
-            <div class="flex gap-1">
+          <div class="flex justify-between items-center mb-1 gap-1 min-w-0">
+            <span class="text-xs truncate min-w-0 flex-1">{{ e.from }} → {{ e.to }}</span>
+            <div class="flex gap-1 shrink-0">
               <NButton size="tiny" @click="editingEdgeIndex = editingEdgeIndex === i ? null : i">
                 {{ editingEdgeIndex === i ? '收起' : '編輯' }}
               </NButton>
@@ -163,9 +168,9 @@ function nodeOptions() {
             <NTag v-if="isEdgeInconsistent(e)" type="error" size="small">⚠ 來源不一致</NTag>
           </div>
           <div v-if="editingEdgeIndex === i" class="mt-2 space-y-2">
-            <div class="flex gap-1">
-              <NSelect v-model:value="e.from" :options="nodeOptions()" size="small" />
-              <NSelect v-model:value="e.to" :options="nodeOptions()" size="small" />
+            <div class="flex gap-1 min-w-0">
+              <NSelect v-model:value="e.from" :options="nodeOptions()" size="small" class="flex-1 min-w-0" />
+              <NSelect v-model:value="e.to" :options="nodeOptions()" size="small" class="flex-1 min-w-0" />
             </div>
             <div class="flex gap-1">
               <NInputNumber v-model:value="e.minutes_forward" placeholder="去程分鐘" size="small" />

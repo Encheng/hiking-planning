@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { NSpin, useMessage } from 'naive-ui';
+import { useMessage } from 'naive-ui';
 import RouteEditorImageView from './RouteEditorImageView.vue';
 import RouteEditorSidebar from './RouteEditorSidebar.vue';
 import RouteEditorMap from './RouteEditorMap.vue';
@@ -74,36 +74,48 @@ function downloadJson() {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col">
-    <header class="border-b p-2 flex gap-3 items-center">
+  <div class="h-screen flex flex-col overflow-hidden">
+    <header class="shrink-0 border-b px-3 py-2 flex gap-3 items-center">
       <h1 class="text-lg font-bold">/dev/route-editor</h1>
-      <span v-if="manifestEntry" class="text-sm">{{ manifestEntry.id }} · {{ manifestEntry.name }}</span>
-      <span v-if="loading" class="text-sm text-gray-500">載入中…</span>
+      <span v-if="manifestEntry" class="text-sm text-gray-600">{{ manifestEntry.id }} · {{ manifestEntry.name }}</span>
+      <span v-if="loading" class="text-sm text-gray-400">載入中…</span>
     </header>
-    <div class="flex-1 grid grid-cols-[420px_420px_1fr] overflow-hidden">
-      <NSpin :show="loading">
+    <div class="flex-1 min-h-0 grid grid-cols-[380px_380px_1fr]">
+      <!-- Column 1: Image viewer -->
+      <div class="h-full min-h-0 overflow-hidden border-r relative">
+        <div v-if="loading" class="absolute inset-0 flex items-center justify-center bg-white/70 z-10">
+          <span class="text-sm text-gray-400">載入中…</span>
+        </div>
         <RouteEditorImageView
           v-if="manifestEntry"
           :sunriver-image="manifestEntry.sunriverImage"
           :elevation-images="manifestEntry.elevationImages"
         />
-      </NSpin>
-      <NSpin :show="loading">
+      </div>
+      <!-- Column 2: Sidebar -->
+      <div class="h-full min-h-0 overflow-hidden border-r relative">
+        <div v-if="loading" class="absolute inset-0 flex items-center justify-center bg-white/70 z-10">
+          <span class="text-sm text-gray-400">載入中…</span>
+        </div>
         <RouteEditorSidebar
           v-if="editingRoute && osmPois"
           :route="editingRoute"
           :osm-pois="osmPois.pois"
           @save="downloadJson"
         />
-      </NSpin>
-      <NSpin :show="loading">
+      </div>
+      <!-- Column 3: Map -->
+      <div class="h-full min-h-0 overflow-hidden relative">
+        <div v-if="loading" class="absolute inset-0 flex items-center justify-center bg-white/70 z-10">
+          <span class="text-sm text-gray-400">載入中…</span>
+        </div>
         <RouteEditorMap
           v-if="editingRoute && osmPois && manifestEntry"
           :gpx-url="`/data/gpx/${manifestEntry.id}.gpx`"
           :pois="osmPois.pois"
           :route="editingRoute"
         />
-      </NSpin>
+      </div>
     </div>
   </div>
 </template>
