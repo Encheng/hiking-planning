@@ -45,6 +45,7 @@ const resolution = computed(() => {
 });
 
 const highlightedNodeIds = computed(() => resolution.value?.nodeSequence ?? []);
+const plannedDayBreaks = computed(() => resolution.value?.dayBreaks ?? []);
 
 const canSave = computed(() => {
   if (!planStore.draft || !planStore.draft.startNodeId) return false;
@@ -262,6 +263,7 @@ watch(routeId, () => {
         <PlannedRouteLayer
           :nodes="currentRoute.nodes"
           :node-ids="highlightedNodeIds"
+          :day-breaks="plannedDayBreaks"
         />
         <NodeMarkerLayer
           :nodes="currentRoute.nodes"
