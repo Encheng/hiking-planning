@@ -32,6 +32,18 @@ function color(seg: SegmentTime): string {
 
 <template>
   <div v-if="route" class="space-y-6">
+    <div class="flex gap-4 text-xs text-gray-500 mb-1">
+      <span class="flex items-center gap-1">
+        <span class="inline-block w-3 h-3 rounded-sm" style="background:#fb923c" />上坡
+      </span>
+      <span class="flex items-center gap-1">
+        <span class="inline-block w-3 h-3 rounded-sm" style="background:#86efac" />下坡
+      </span>
+      <span class="flex items-center gap-1">
+        <span class="inline-block w-3 h-3 rounded-sm" style="background:#fcd34d" />平緩
+      </span>
+      <span class="ml-auto text-gray-400">區塊寬度 ∝ 時間長度</span>
+    </div>
     <section v-for="day in days" :key="day.index">
       <h3 class="text-sm font-bold text-emerald-600 mb-2">
         DAY {{ day.index }} · {{ day.date }} · 總計 {{ fmt(day.totalAdjustedMinutes) }}
