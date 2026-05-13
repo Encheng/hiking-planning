@@ -1,152 +1,1378 @@
 {
   "id": "G02",
-  "name": "玉山群峰縱走 (樣本)",
-  "version": "2026-05-13-phase4",
-  "source": "上河文化《2020高山百岳地形圖》(樣本資料)",
+  "name": "玉山群峰縱走",
+  "version": "2026-05-13-phase4-full",
+  "source": "上河文化《高山百岳地形圖》G02; OSM relation 13678202 (ODbL)",
   "nodes": [
     {
-      "id": "n_tataka",
+      "id": "n_g02_shuili",
+      "name": "水里",
+      "lat": 23.8103,
+      "lng": 120.8560,
+      "elevation": 326,
+      "category": "trailhead",
+      "tags": ["access", "bus"]
+    },
+    {
+      "id": "n_g02_heshe",
+      "name": "和社",
+      "lat": 23.6550,
+      "lng": 120.8420,
+      "elevation": 891,
+      "category": "waypoint",
+      "tags": ["access", "bus"]
+    },
+    {
+      "id": "n_g02_dongpu_hotspring",
+      "name": "東埔溫泉",
+      "lat": 23.5100,
+      "lng": 120.8730,
+      "elevation": 1150,
+      "category": "waypoint",
+      "tags": ["bus", "accommodation"]
+    },
+    {
+      "id": "n_g02_tataka_vc",
       "name": "塔塔加遊客中心",
-      "lat": 23.4756,
-      "lng": 120.8932,
+      "lat": 23.5020,
+      "lng": 120.8680,
       "elevation": 2610,
       "category": "trailhead",
-      "tags": [
-        "parking",
-        "toilet"
-      ]
+      "tags": ["parking", "toilet", "permit_check"]
     },
     {
-      "id": "n_shang_dongpu",
+      "id": "n_g02_shang_dongpu",
       "name": "上東埔停車場",
-      "lat": 23.4773,
-      "lng": 120.8955,
+      "lat": 23.4958,
+      "lng": 120.8720,
       "elevation": 2580,
-      "category": "trailhead"
+      "category": "trailhead",
+      "tags": ["parking"]
     },
     {
-      "id": "n_dietshan",
-      "name": "鹿林山莊",
-      "lat": 23.4795,
-      "lng": 120.8978,
-      "elevation": 2845,
-      "category": "waypoint"
-    },
-    {
-      "id": "n_pailin",
+      "id": "n_g02_paiyun_admin",
       "name": "排雲管理站",
-      "lat": 23.481,
-      "lng": 120.902,
-      "elevation": 2830,
-      "category": "junction"
+      "lat": 23.4870,
+      "lng": 120.8810,
+      "elevation": 2685,
+      "category": "junction",
+      "tags": ["permit_check"]
     },
     {
-      "id": "n_dachienshan",
+      "id": "n_g02_lulin",
+      "name": "鹿林山莊",
+      "lat": 23.4820,
+      "lng": 120.8870,
+      "elevation": 2790,
+      "category": "hut",
+      "hutId": "hut_lulin"
+    },
+    {
+      "id": "n_g02_big_hemlock",
       "name": "大鐵杉",
-      "lat": 23.4748,
-      "lng": 120.9145,
-      "elevation": 2920,
+      "lat": 23.4760,
+      "lng": 120.8940,
+      "elevation": 2870,
       "category": "waypoint"
     },
     {
-      "id": "n_baimu",
-      "name": "白木林",
-      "lat": 23.4742,
-      "lng": 120.9305,
-      "elevation": 3180,
+      "id": "n_g02_tataka_saddle",
+      "name": "塔塔加鞍部",
+      "lat": 23.4758,
+      "lng": 120.8999,
+      "elevation": 2610,
+      "category": "junction",
+      "tags": ["osm_matched:osm_node_746259734"]
+    },
+    {
+      "id": "n_g02_menlu",
+      "name": "孟祿亭",
+      "lat": 23.4740,
+      "lng": 120.9050,
+      "elevation": 2780,
       "category": "waypoint"
     },
     {
-      "id": "n_paiyun",
+      "id": "n_g02_yushan_north_north",
+      "name": "玉山北北峰",
+      "lat": 23.4940,
+      "lng": 120.9060,
+      "elevation": 3649,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_yushan_front",
+      "name": "玉山前峰",
+      "lat": 23.4780,
+      "lng": 120.9140,
+      "elevation": 3239,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_qianfeng_th",
+      "name": "前峰登山口",
+      "lat": 23.4705,
+      "lng": 120.9181,
+      "elevation": 2860,
+      "category": "junction",
+      "tags": ["osm_matched:osm_node_746260035"]
+    },
+    {
+      "id": "n_g02_xifeng_viewpoint",
+      "name": "西峰下觀景台",
+      "lat": 23.4690,
+      "lng": 120.9230,
+      "elevation": 3060,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_big_cliff",
+      "name": "大峭壁",
+      "lat": 23.4680,
+      "lng": 120.9310,
+      "elevation": 3160,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_yushan_north",
+      "name": "玉山北峰",
+      "lat": 23.4810,
+      "lng": 120.9400,
+      "elevation": 3858,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_yushan_west",
+      "name": "玉山西峰",
+      "lat": 23.4650,
+      "lng": 120.9400,
+      "elevation": 3518,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_fengkou",
+      "name": "風口",
+      "lat": 23.4660,
+      "lng": 120.9450,
+      "elevation": 3400,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_laonong_camp",
+      "name": "老農溪營地",
+      "lat": 23.4610,
+      "lng": 120.9510,
+      "elevation": 3200,
+      "category": "waypoint",
+      "tags": ["camp"]
+    },
+    {
+      "id": "n_g02_paiyun",
       "name": "排雲山莊",
-      "lat": 23.4731,
-      "lng": 120.9534,
+      "lat": 23.4680,
+      "lng": 120.9520,
       "elevation": 3402,
       "category": "hut",
       "hutId": "hut_paiyun"
     },
     {
-      "id": "n_yushan_main",
+      "id": "n_g02_main_south_jct",
+      "name": "主南岔路",
+      "lat": 23.4690,
+      "lng": 120.9540,
+      "elevation": 3550,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_yushan_main",
       "name": "玉山主峰",
       "lat": 23.4707,
       "lng": 120.9572,
       "elevation": 3952,
       "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "tags": ["100mt", "highest_taiwan"]
+    },
+    {
+      "id": "n_g02_main_north_jct",
+      "name": "主北岔路",
+      "lat": 23.4720,
+      "lng": 120.9555,
+      "elevation": 3402,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_yushan_east",
+      "name": "玉山東峰",
+      "lat": 23.4740,
+      "lng": 120.9620,
+      "elevation": 3869,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_yuanfeng_hut",
+      "name": "圓峰山屋",
+      "lat": 23.4600,
+      "lng": 120.9490,
+      "elevation": 3685,
+      "category": "hut",
+      "hutId": "hut_yuanfeng"
+    },
+    {
+      "id": "n_g02_three_jct",
+      "name": "三岔路口",
+      "lat": 23.4530,
+      "lng": 120.9480,
+      "elevation": 3750,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_sancha",
+      "name": "三叉峰",
+      "lat": 23.4510,
+      "lng": 120.9460,
+      "elevation": 3818,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_yushan_south",
+      "name": "玉山南峰",
+      "lat": 23.4490,
+      "lng": 120.9490,
+      "elevation": 3852,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_four_jct",
+      "name": "四岔路口",
+      "lat": 23.4470,
+      "lng": 120.9520,
+      "elevation": 3770,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_east_xiaonan",
+      "name": "東小南山",
+      "lat": 23.4400,
+      "lng": 120.9560,
+      "elevation": 3709,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_2k_jct",
+      "name": "2K三岔路口",
+      "lat": 23.4330,
+      "lng": 120.9580,
+      "elevation": 3500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_yushan_xiaonan",
+      "name": "玉山小南山",
+      "lat": 23.4200,
+      "lng": 120.9560,
+      "elevation": 3384,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_nan_yushan",
+      "name": "南玉山",
+      "lat": 23.4020,
+      "lng": 120.9510,
+      "elevation": 3379,
+      "category": "peak",
+      "tags": ["100mt"]
+    },
+    {
+      "id": "n_g02_lu_shan",
+      "name": "鹿山",
+      "lat": 23.3810,
+      "lng": 120.9600,
+      "elevation": 2981,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_batongkuan_th",
+      "name": "八通關登山口",
+      "lat": 23.5290,
+      "lng": 120.9750,
+      "elevation": 1150,
+      "category": "trailhead",
+      "tags": ["parking"]
+    },
+    {
+      "id": "n_g02_sanshen",
+      "name": "三聖宮",
+      "lat": 23.5260,
+      "lng": 120.9750,
+      "elevation": 1295,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_lele_jct",
+      "name": "樂樂溫泉岔路",
+      "lat": 23.5180,
+      "lng": 120.9820,
+      "elevation": 1640,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_yunlong_falls",
+      "name": "雲龍瀑布",
+      "lat": 23.5100,
+      "lng": 120.9880,
+      "elevation": 1800,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_lele_hut",
+      "name": "樂樂山屋",
+      "lat": 23.5050,
+      "lng": 120.9950,
+      "elevation": 1976,
+      "category": "hut",
+      "hutId": "hut_lele"
+    },
+    {
+      "id": "n_g02_otome_falls",
+      "name": "乙女瀑布",
+      "lat": 23.4980,
+      "lng": 121.0020,
+      "elevation": 2260,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_duiguan",
+      "name": "對觀",
+      "lat": 23.4880,
+      "lng": 121.0120,
+      "elevation": 2635,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_guanggao_ping",
+      "name": "觀高坪",
+      "lat": 23.4800,
+      "lng": 121.0200,
+      "elevation": 2805,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_guanggao_station",
+      "name": "觀高登山服務站",
+      "lat": 23.4790,
+      "lng": 121.0220,
+      "elevation": 2850,
+      "category": "waypoint",
+      "tags": ["service_station"]
+    },
+    {
+      "id": "n_g02_ancient_trail_jct",
+      "name": "古道崩斷岔路",
+      "lat": 23.4760,
+      "lng": 121.0260,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_stream_camp",
+      "name": "溪水營地",
+      "lat": 23.4700,
+      "lng": 121.0200,
+      "elevation": 3050,
+      "category": "waypoint",
+      "tags": ["camp", "water"]
+    },
+    {
+      "id": "n_g02_xifeng_jct",
+      "name": "西峰岔路",
+      "lat": 23.4660,
+      "lng": 121.0100,
+      "elevation": 3100,
+      "category": "junction"
+    },
+    {
+      "id": "n_g02_batongkuan_prairie",
+      "name": "八通關草原",
+      "lat": 23.4620,
+      "lng": 120.9950,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g02_batongkuan_mt",
+      "name": "八通關山",
+      "lat": 23.4580,
+      "lng": 120.9900,
+      "elevation": 3217,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_batongkuan_west",
+      "name": "八通關西峰",
+      "lat": 23.4680,
+      "lng": 120.9850,
+      "elevation": 3518,
+      "category": "peak"
+    },
+    {
+      "id": "n_g02_two_jct",
+      "name": "二岔路口",
+      "lat": 23.4820,
+      "lng": 120.9780,
+      "elevation": 3600,
+      "category": "junction"
     }
   ],
   "edges": [
     {
-      "from": "n_tataka",
-      "to": "n_shang_dongpu",
+      "from": "n_g02_shuili",
+      "to": "n_g02_heshe",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 50,
+          "minutes_backward": 50,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_dongpu_hotspring",
+      "to": "n_g02_heshe",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_heshe",
+      "to": "n_g02_tataka_vc",
+      "minutes_forward": 105,
+      "minutes_backward": 105,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 105,
+          "minutes_backward": 105,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_tataka_vc",
+      "to": "n_g02_shang_dongpu",
       "minutes_forward": 10,
       "minutes_backward": 10,
       "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 10,
+          "minutes_backward": 10,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_shang_dongpu",
-      "to": "n_dietshan",
+      "from": "n_g02_shang_dongpu",
+      "to": "n_g02_paiyun_admin",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 10,
+          "minutes_backward": 10,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_paiyun_admin",
+      "to": "n_g02_lulin",
       "minutes_forward": 20,
       "minutes_backward": 25,
       "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 20,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-2.jpg",
+          "minutes_forward": 40,
+          "minutes_backward": 35,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_dietshan",
-      "to": "n_pailin",
-      "minutes_forward": 15,
-      "minutes_backward": 15,
+      "from": "n_g02_lulin",
+      "to": "n_g02_big_hemlock",
+      "minutes_forward": 30,
+      "minutes_backward": 25,
       "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_pailin",
-      "to": "n_dachienshan",
-      "minutes_forward": 50,
+      "from": "n_g02_big_hemlock",
+      "to": "n_g02_tataka_saddle",
+      "minutes_forward": 35,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 35,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_tataka_saddle",
+      "to": "n_g02_menlu",
+      "minutes_forward": 35,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 35,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_lulin",
+      "to": "n_g02_yushan_north_north",
+      "minutes_forward": 35,
+      "minutes_backward": 35,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 35,
+          "minutes_backward": 35,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_yushan_north_north",
+      "to": "n_g02_yushan_front",
+      "minutes_forward": 25,
+      "minutes_backward": 25,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 25,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_menlu",
+      "to": "n_g02_yushan_front",
+      "minutes_forward": 75,
+      "minutes_backward": 60,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 75,
+          "minutes_backward": 60,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_menlu",
+      "to": "n_g02_qianfeng_th",
+      "minutes_forward": 35,
       "minutes_backward": 40,
       "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 35,
+          "minutes_backward": 40,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_dachienshan",
-      "to": "n_baimu",
-      "minutes_forward": 75,
+      "from": "n_g02_qianfeng_th",
+      "to": "n_g02_xifeng_viewpoint",
+      "minutes_forward": 40,
+      "minutes_backward": 50,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 40,
+          "minutes_backward": 50,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_xifeng_viewpoint",
+      "to": "n_g02_big_cliff",
+      "minutes_forward": 50,
+      "minutes_backward": 70,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 50,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_big_cliff",
+      "to": "n_g02_paiyun",
+      "minutes_forward": 70,
       "minutes_backward": 45,
-      "source": "xG02-2.jpg",
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 70,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_baimu",
-      "to": "n_paiyun",
-      "minutes_forward": 90,
-      "minutes_backward": 60,
-      "source": "xG02-2.jpg",
+      "from": "n_g02_paiyun",
+      "to": "n_g02_yushan_west",
+      "minutes_forward": 70,
+      "minutes_backward": 70,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 70,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     },
     {
-      "from": "n_paiyun",
-      "to": "n_yushan_main",
+      "from": "n_g02_yushan_west",
+      "to": "n_g02_fengkou",
+      "minutes_forward": 70,
+      "minutes_backward": 45,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 70,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_fengkou",
+      "to": "n_g02_laonong_camp",
+      "minutes_forward": 130,
+      "minutes_backward": 200,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 130,
+          "minutes_backward": 200,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_paiyun",
+      "to": "n_g02_main_south_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 45,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-1.jpg",
+          "minutes_forward": 45,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_main_south_jct",
+      "to": "n_g02_yushan_main",
       "minutes_forward": 90,
+      "minutes_backward": 50,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 90,
+          "minutes_backward": 50,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_yushan_main",
+      "to": "n_g02_main_north_jct",
+      "minutes_forward": 25,
+      "minutes_backward": 15,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 25,
+          "minutes_backward": 15,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_main_north_jct",
+      "to": "n_g02_yushan_east",
+      "minutes_forward": 80,
+      "minutes_backward": 90,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 80,
+          "minutes_backward": 90,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-2.jpg",
+          "minutes_forward": 66,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_main_north_jct",
+      "to": "n_g02_yushan_north",
+      "minutes_forward": 90,
+      "minutes_backward": 50,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 90,
+          "minutes_backward": 50,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-2.jpg",
+          "minutes_forward": 70,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_main_south_jct",
+      "to": "n_g02_yuanfeng_hut",
+      "minutes_forward": 90,
+      "minutes_backward": 70,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 90,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-1.jpg",
+          "minutes_forward": 90,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-3.jpg",
+          "minutes_forward": 90,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_yuanfeng_hut",
+      "to": "n_g02_three_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 25,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-1.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-3.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_three_jct",
+      "to": "n_g02_sancha",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 20,
+          "minutes_backward": 20,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_three_jct",
+      "to": "n_g02_yushan_south",
+      "minutes_forward": 50,
+      "minutes_backward": 35,
+      "source": "xG02-3.jpg",
+      "sources": [
+        {
+          "file": "xG02-3.jpg",
+          "minutes_forward": 50,
+          "minutes_backward": 35,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_sancha",
+      "to": "n_g02_yushan_south",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 20,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_yushan_south",
+      "to": "n_g02_four_jct",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 5,
+          "minutes_backward": 5,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-3.jpg",
+          "minutes_forward": 40,
+          "minutes_backward": 60,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_four_jct",
+      "to": "n_g02_east_xiaonan",
+      "minutes_forward": 60,
       "minutes_backward": 60,
-      "source": "xG02-2.jpg",
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 60,
+          "minutes_backward": 60,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_east_xiaonan",
+      "to": "n_g02_2k_jct",
+      "minutes_forward": 180,
+      "minutes_backward": 280,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 180,
+          "minutes_backward": 280,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_2k_jct",
+      "to": "n_g02_yushan_xiaonan",
+      "minutes_forward": 80,
+      "minutes_backward": 70,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 80,
+          "minutes_backward": 70,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_2k_jct",
+      "to": "n_g02_nan_yushan",
+      "minutes_forward": 70,
+      "minutes_backward": 80,
+      "source": "xG02-1.jpg",
+      "sources": [
+        {
+          "file": "xG02-1.jpg",
+          "minutes_forward": 70,
+          "minutes_backward": 80,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_four_jct",
+      "to": "n_g02_lu_shan",
+      "minutes_forward": 180,
+      "minutes_backward": 280,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 180,
+          "minutes_backward": 280,
+          "notedBy": "ai"
+        },
+        {
+          "file": "xG02-3.jpg",
+          "minutes_forward": 180,
+          "minutes_backward": 280,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_batongkuan_th",
+      "to": "n_g02_sanshen",
+      "minutes_forward": 10,
+      "minutes_backward": 15,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 10,
+          "minutes_backward": 15,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_sanshen",
+      "to": "n_g02_lele_jct",
+      "minutes_forward": 45,
+      "minutes_backward": 45,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 45,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_lele_jct",
+      "to": "n_g02_yunlong_falls",
+      "minutes_forward": 45,
+      "minutes_backward": 45,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 45,
+          "minutes_backward": 45,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_yunlong_falls",
+      "to": "n_g02_lele_hut",
+      "minutes_forward": 55,
+      "minutes_backward": 60,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 55,
+          "minutes_backward": 60,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_lele_hut",
+      "to": "n_g02_otome_falls",
+      "minutes_forward": 25,
+      "minutes_backward": 25,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 25,
+          "minutes_backward": 25,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_otome_falls",
+      "to": "n_g02_duiguan",
+      "minutes_forward": 80,
+      "minutes_backward": 100,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 80,
+          "minutes_backward": 100,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_duiguan",
+      "to": "n_g02_guanggao_ping",
+      "minutes_forward": 110,
+      "minutes_backward": 150,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 110,
+          "minutes_backward": 150,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_guanggao_ping",
+      "to": "n_g02_guanggao_station",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 5,
+          "minutes_backward": 5,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_guanggao_station",
+      "to": "n_g02_ancient_trail_jct",
+      "minutes_forward": 40,
+      "minutes_backward": 60,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 40,
+          "minutes_backward": 60,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_ancient_trail_jct",
+      "to": "n_g02_stream_camp",
+      "minutes_forward": 35,
+      "minutes_backward": 40,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 35,
+          "minutes_backward": 40,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_stream_camp",
+      "to": "n_g02_xifeng_jct",
+      "minutes_forward": 80,
+      "minutes_backward": 80,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 80,
+          "minutes_backward": 80,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_xifeng_jct",
+      "to": "n_g02_batongkuan_prairie",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 50,
+          "minutes_backward": 50,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_batongkuan_prairie",
+      "to": "n_g02_batongkuan_mt",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_xifeng_jct",
+      "to": "n_g02_batongkuan_west",
+      "minutes_forward": 50,
+      "minutes_backward": 20,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 50,
+          "minutes_backward": 20,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_batongkuan_west",
+      "to": "n_g02_two_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g02_two_jct",
+      "to": "n_g02_yushan_north",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "G02_hiking.jpg",
+      "sources": [
+        {
+          "file": "G02_hiking.jpg",
+          "minutes_forward": 30,
+          "minutes_backward": 30,
+          "notedBy": "ai"
+        }
+      ],
       "confirmed": true
     }
   ],
   "presets": [
     {
       "id": "G02-main",
-      "name": "玉山主峰單攻 (2天1夜)",
-      "startNodeId": "n_tataka",
-      "endNodeId": "n_yushan_main",
+      "name": "玉山主峰 (2天1夜)",
+      "startNodeId": "n_g02_tataka_vc",
+      "endNodeId": "n_g02_yushan_main",
       "viaNodeIds": [
-        "n_paiyun"
+        "n_g02_paiyun_admin",
+        "n_g02_lulin",
+        "n_g02_big_hemlock",
+        "n_g02_tataka_saddle",
+        "n_g02_menlu",
+        "n_g02_qianfeng_th",
+        "n_g02_xifeng_viewpoint",
+        "n_g02_big_cliff",
+        "n_g02_paiyun",
+        "n_g02_main_south_jct"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_paiyun",
+          "atNodeId": "n_g02_paiyun",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G02-five-peaks",
+      "name": "玉山五峰縱走 (3天2夜)",
+      "startNodeId": "n_g02_tataka_vc",
+      "endNodeId": "n_g02_yushan_south",
+      "viaNodeIds": [
+        "n_g02_paiyun",
+        "n_g02_yushan_west",
+        "n_g02_main_south_jct",
+        "n_g02_yushan_main",
+        "n_g02_main_north_jct",
+        "n_g02_yushan_east",
+        "n_g02_yuanfeng_hut",
+        "n_g02_three_jct",
+        "n_g02_sancha"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g02_paiyun",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g02_yuanfeng_hut",
+          "type": "hut"
+        }
+      ]
+    },
+    {
+      "id": "G02-south-traverse",
+      "name": "玉山南峰縱走 (2天1夜)",
+      "startNodeId": "n_g02_tataka_vc",
+      "endNodeId": "n_g02_yushan_south",
+      "viaNodeIds": [
+        "n_g02_paiyun",
+        "n_g02_main_south_jct",
+        "n_g02_yuanfeng_hut",
+        "n_g02_three_jct",
+        "n_g02_sancha"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g02_yuanfeng_hut",
           "type": "hut"
         }
       ]
