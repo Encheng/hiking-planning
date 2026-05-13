@@ -128,6 +128,22 @@
         "bus",
         "accommodation"
       ]
+    },
+    {
+      "id": "n_g07_nanhu_north",
+      "name": "南湖大山北峰",
+      "lat": 24.3740058,
+      "lng": 121.4417124,
+      "elevation": 3563,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_taosei",
+      "name": "陶塞峰",
+      "lat": 24.3590926,
+      "lng": 121.4600372,
+      "elevation": 3519,
+      "category": "peak"
     }
   ],
   "edges": [
@@ -154,33 +170,11 @@
       "confirmed": true
     },
     {
-      "from": "n_g07_nanhu_north_camp",
-      "to": "n_g07_nanhu_main",
-      "minutes_forward": 71,
-      "minutes_backward": 49,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
       "from": "n_g07_nanhu_main",
       "to": "n_g07_nanhu_east",
       "minutes_forward": 36,
       "minutes_backward": 50,
       "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g07_nanhu_east",
-      "to": "n_g07_mabisan",
-      "minutes_forward": 111,
-      "minutes_backward": 161,
-      "distance_km": 5.0,
       "sources": [
         "estimated"
       ],
@@ -239,6 +233,38 @@
       "sources": [
         "estimated"
       ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_north_camp",
+      "to": "n_g07_nanhu_north",
+      "minutes_forward": 40,
+      "minutes_backward": 50,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_north",
+      "to": "n_g07_nanhu_main",
+      "minutes_forward": 35,
+      "minutes_backward": 45,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_east",
+      "to": "n_g07_taosei",
+      "minutes_forward": 30,
+      "minutes_backward": 35,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_taosei",
+      "to": "n_g07_mabisan",
+      "minutes_forward": 70,
+      "minutes_backward": 60,
+      "source": "estimated",
       "confirmed": true
     }
   ],

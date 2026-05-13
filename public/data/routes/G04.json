@@ -146,6 +146,14 @@
       "tags": [
         "100mt"
       ]
+    },
+    {
+      "id": "n_g04_beling",
+      "name": "北稜角",
+      "lat": 24.3875106,
+      "lng": 121.2311408,
+      "elevation": 3882,
+      "category": "peak"
     }
   ],
   "edges": [
@@ -238,17 +246,6 @@
       "confirmed": true
     },
     {
-      "from": "n_g04_xuebei_hut",
-      "to": "n_g04_xueshan_hut",
-      "minutes_forward": 88,
-      "minutes_backward": 66,
-      "distance_km": 4.4,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
       "from": "n_g04_xueshan_hut",
       "to": "n_g04_xueshan",
       "minutes_forward": 57,
@@ -290,6 +287,30 @@
       "sources": [
         "estimated"
       ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xuebei_hut",
+      "to": "n_g04_beling",
+      "minutes_forward": 65,
+      "minutes_backward": 80,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_beling",
+      "to": "n_g04_xueshan",
+      "minutes_forward": 20,
+      "minutes_backward": 25,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_beling",
+      "to": "n_g04_xueshan_hut",
+      "minutes_forward": 45,
+      "minutes_backward": 60,
+      "source": "estimated",
       "confirmed": true
     }
   ],
