@@ -1,0 +1,409 @@
+{
+  "id": "G16",
+  "name": "馬博拉斯橫斷縱走",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g16_walami_th",
+      "name": "瓦拉米登山口 (玉里)",
+      "lat": 23.388,
+      "lng": 121.247,
+      "elevation": 380,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check",
+        "bus"
+      ]
+    },
+    {
+      "id": "n_g16_walami_hut",
+      "name": "瓦拉米山屋",
+      "lat": 23.4,
+      "lng": 121.178,
+      "elevation": 1150,
+      "category": "hut"
+    },
+    {
+      "id": "n_g16_shangpu_hut",
+      "name": "上部落山屋",
+      "lat": 23.418,
+      "lng": 121.13,
+      "elevation": 1900,
+      "category": "hut"
+    },
+    {
+      "id": "n_g16_mahengheng_prairie",
+      "name": "馬亨亨大草原",
+      "lat": 23.44,
+      "lng": 121.098,
+      "elevation": 2650,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g16_mahenghen_camp",
+      "name": "馬亨亨高地營地",
+      "lat": 23.45,
+      "lng": 121.075,
+      "elevation": 3100,
+      "category": "waypoint",
+      "tags": [
+        "camp"
+      ]
+    },
+    {
+      "id": "n_g16_dashuiku",
+      "name": "大水窟山",
+      "lat": 23.474,
+      "lng": 121.0385,
+      "elevation": 3643,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g16_dashuiku_hut",
+      "name": "大水窟山屋",
+      "lat": 23.476,
+      "lng": 121.04,
+      "elevation": 3520,
+      "category": "hut"
+    },
+    {
+      "id": "n_g16_xiuguluan_jct",
+      "name": "秀姑巒岔路",
+      "lat": 23.488,
+      "lng": 121.05,
+      "elevation": 3700,
+      "category": "junction"
+    },
+    {
+      "id": "n_g16_xiuguluan",
+      "name": "秀姑巒山",
+      "lat": 23.4969,
+      "lng": 121.0575,
+      "elevation": 3829,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g16_mabolas_jct",
+      "name": "馬博拉斯岔路",
+      "lat": 23.51,
+      "lng": 121.06,
+      "elevation": 3650,
+      "category": "junction"
+    },
+    {
+      "id": "n_g16_mabolas",
+      "name": "馬博拉斯山",
+      "lat": 23.5204,
+      "lng": 121.0671,
+      "elevation": 3776,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g16_mabolas_camp",
+      "name": "馬博拉斯東鞍營地",
+      "lat": 23.521,
+      "lng": 121.08,
+      "elevation": 3550,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g16_malijianan",
+      "name": "馬利加南山",
+      "lat": 23.5216,
+      "lng": 121.1172,
+      "elevation": 3561,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g16_malijianan_camp",
+      "name": "馬利加南東側營地",
+      "lat": 23.52,
+      "lng": 121.13,
+      "elevation": 3200,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g16_walami_th",
+      "to": "n_g16_walami_hut",
+      "minutes_forward": 166,
+      "minutes_backward": 99,
+      "distance_km": 12.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_walami_hut",
+      "to": "n_g16_shangpu_hut",
+      "minutes_forward": 166,
+      "minutes_backward": 96,
+      "distance_km": 10.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_shangpu_hut",
+      "to": "n_g16_mahengheng_prairie",
+      "minutes_forward": 150,
+      "minutes_backward": 85,
+      "distance_km": 7.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_mahengheng_prairie",
+      "to": "n_g16_mahenghen_camp",
+      "minutes_forward": 116,
+      "minutes_backward": 65,
+      "distance_km": 4.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_mahenghen_camp",
+      "to": "n_g16_dashuiku_hut",
+      "minutes_forward": 107,
+      "minutes_backward": 62,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_dashuiku_hut",
+      "to": "n_g16_dashuiku",
+      "minutes_forward": 33,
+      "minutes_backward": 21,
+      "distance_km": 0.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_dashuiku_hut",
+      "to": "n_g16_xiuguluan_jct",
+      "minutes_forward": 76,
+      "minutes_backward": 44,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_xiuguluan_jct",
+      "to": "n_g16_xiuguluan",
+      "minutes_forward": 31,
+      "minutes_backward": 20,
+      "distance_km": 1.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_xiuguluan_jct",
+      "to": "n_g16_mabolas_jct",
+      "minutes_forward": 53,
+      "minutes_backward": 42,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_mabolas_jct",
+      "to": "n_g16_mabolas",
+      "minutes_forward": 37,
+      "minutes_backward": 23,
+      "distance_km": 1.2,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_mabolas_jct",
+      "to": "n_g16_mabolas_camp",
+      "minutes_forward": 40,
+      "minutes_backward": 37,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_mabolas_camp",
+      "to": "n_g16_malijianan",
+      "minutes_forward": 92,
+      "minutes_backward": 58,
+      "distance_km": 4.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g16_malijianan",
+      "to": "n_g16_malijianan_camp",
+      "minutes_forward": 45,
+      "minutes_backward": 40,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G16-full-traverse",
+      "name": "馬博拉斯完整橫斷 (10天9夜)",
+      "startNodeId": "n_g16_walami_th",
+      "endNodeId": "n_g16_malijianan_camp",
+      "viaNodeIds": [
+        "n_g16_walami_hut",
+        "n_g16_shangpu_hut",
+        "n_g16_mahengheng_prairie",
+        "n_g16_mahenghen_camp",
+        "n_g16_dashuiku_hut",
+        "n_g16_dashuiku",
+        "n_g16_dashuiku_hut",
+        "n_g16_xiuguluan_jct",
+        "n_g16_xiuguluan",
+        "n_g16_xiuguluan_jct",
+        "n_g16_mabolas_jct",
+        "n_g16_mabolas",
+        "n_g16_mabolas_jct",
+        "n_g16_mabolas_camp",
+        "n_g16_malijianan"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g16_walami_hut",
+          "type": "hut",
+          "label": "第一夜：瓦拉米山屋"
+        },
+        {
+          "atNodeId": "n_g16_shangpu_hut",
+          "type": "hut",
+          "label": "第二夜：上部落山屋"
+        },
+        {
+          "atNodeId": "n_g16_mahengheng_prairie",
+          "type": "camp",
+          "label": "第三夜：馬亨亨大草原"
+        },
+        {
+          "atNodeId": "n_g16_mahenghen_camp",
+          "type": "camp",
+          "label": "第四夜：馬亨亨高地"
+        },
+        {
+          "atNodeId": "n_g16_dashuiku_hut",
+          "type": "hut",
+          "label": "第五夜：大水窟山屋"
+        },
+        {
+          "atNodeId": "n_g16_dashuiku_hut",
+          "type": "hut",
+          "label": "第六夜：大水窟山屋 (秀姑巒往返日)"
+        },
+        {
+          "atNodeId": "n_g16_mabolas_camp",
+          "type": "camp",
+          "label": "第七夜：馬博拉斯東鞍"
+        },
+        {
+          "atNodeId": "n_g16_malijianan_camp",
+          "type": "camp",
+          "label": "第八夜：馬利加南東側"
+        }
+      ]
+    },
+    {
+      "id": "G16-xiuguluan-mabolas",
+      "name": "秀姑巒‧馬博拉斯核心段 (7天6夜)",
+      "startNodeId": "n_g16_walami_th",
+      "endNodeId": "n_g16_mabolas_camp",
+      "viaNodeIds": [
+        "n_g16_walami_hut",
+        "n_g16_shangpu_hut",
+        "n_g16_mahengheng_prairie",
+        "n_g16_mahenghen_camp",
+        "n_g16_dashuiku_hut",
+        "n_g16_xiuguluan_jct",
+        "n_g16_xiuguluan",
+        "n_g16_xiuguluan_jct",
+        "n_g16_mabolas_jct",
+        "n_g16_mabolas"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g16_walami_hut",
+          "type": "hut",
+          "label": "第一夜：瓦拉米山屋"
+        },
+        {
+          "atNodeId": "n_g16_shangpu_hut",
+          "type": "hut",
+          "label": "第二夜：上部落山屋"
+        },
+        {
+          "atNodeId": "n_g16_mahengheng_prairie",
+          "type": "camp",
+          "label": "第三夜：馬亨亨大草原"
+        },
+        {
+          "atNodeId": "n_g16_dashuiku_hut",
+          "type": "hut",
+          "label": "第四夜：大水窟山屋"
+        },
+        {
+          "atNodeId": "n_g16_mabolas_camp",
+          "type": "camp",
+          "label": "第五夜：馬博拉斯東鞍"
+        }
+      ]
+    }
+  ]
+}

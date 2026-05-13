@@ -1,0 +1,382 @@
+{
+  "id": "G17",
+  "name": "南二段縱走",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g17_xiangyang_th",
+      "name": "向陽登山口",
+      "lat": 23.278,
+      "lng": 120.954,
+      "elevation": 2370,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check",
+        "toilet"
+      ]
+    },
+    {
+      "id": "n_g17_xiangyang_hut",
+      "name": "向陽山屋",
+      "lat": 23.281,
+      "lng": 120.968,
+      "elevation": 2850,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_xiangyang",
+      "name": "向陽山",
+      "lat": 23.2844,
+      "lng": 120.9924,
+      "elevation": 3602,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g17_sancha_jct",
+      "name": "三叉山岔路",
+      "lat": 23.291,
+      "lng": 121.01,
+      "elevation": 3380,
+      "category": "junction"
+    },
+    {
+      "id": "n_g17_sancha",
+      "name": "三叉山",
+      "lat": 23.2972,
+      "lng": 121.0287,
+      "elevation": 3495,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g17_jiaming_lake",
+      "name": "嘉明湖",
+      "lat": 23.2934,
+      "lng": 121.0341,
+      "elevation": 3310,
+      "category": "water",
+      "tags": [
+        "lake",
+        "100mt_adjacent"
+      ]
+    },
+    {
+      "id": "n_g17_jiaming_hut",
+      "name": "嘉明湖避難山屋",
+      "lat": 23.284,
+      "lng": 120.997,
+      "elevation": 3150,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_guanshan_jct",
+      "name": "關山岔路",
+      "lat": 23.255,
+      "lng": 120.93,
+      "elevation": 3300,
+      "category": "junction"
+    },
+    {
+      "id": "n_g17_guanshan",
+      "name": "關山",
+      "lat": 23.2282,
+      "lng": 120.9117,
+      "elevation": 3667,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g17_guanshan_hut",
+      "name": "關山山屋",
+      "lat": 23.238,
+      "lng": 120.921,
+      "elevation": 3350,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_taguanshan",
+      "name": "塔關山",
+      "lat": 23.2519,
+      "lng": 120.9412,
+      "elevation": 3219,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g17_kuhanoxin",
+      "name": "庫哈諾辛山",
+      "lat": 23.2627,
+      "lng": 120.9,
+      "elevation": 3114,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g17_kuhanoxin_jct",
+      "name": "庫哈諾辛岔路",
+      "lat": 23.258,
+      "lng": 120.91,
+      "elevation": 3050,
+      "category": "junction"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g17_xiangyang_th",
+      "to": "n_g17_xiangyang_hut",
+      "minutes_forward": 103,
+      "minutes_backward": 59,
+      "distance_km": 3.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_xiangyang_hut",
+      "to": "n_g17_xiangyang",
+      "minutes_forward": 156,
+      "minutes_backward": 81,
+      "distance_km": 5.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_xiangyang",
+      "to": "n_g17_sancha_jct",
+      "minutes_forward": 58,
+      "minutes_backward": 46,
+      "distance_km": 3.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_sancha_jct",
+      "to": "n_g17_sancha",
+      "minutes_forward": 39,
+      "minutes_backward": 27,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_sancha",
+      "to": "n_g17_jiaming_lake",
+      "minutes_forward": 28,
+      "minutes_backward": 24,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_sancha_jct",
+      "to": "n_g17_jiaming_hut",
+      "minutes_forward": 42,
+      "minutes_backward": 42,
+      "distance_km": 2.2,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_jiaming_hut",
+      "to": "n_g17_taguanshan",
+      "minutes_forward": 75,
+      "minutes_backward": 56,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_taguanshan",
+      "to": "n_g17_guanshan_jct",
+      "minutes_forward": 60,
+      "minutes_backward": 55,
+      "distance_km": 3.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_guanshan_jct",
+      "to": "n_g17_guanshan_hut",
+      "minutes_forward": 35,
+      "minutes_backward": 40,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_guanshan_hut",
+      "to": "n_g17_guanshan",
+      "minutes_forward": 71,
+      "minutes_backward": 43,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_guanshan_jct",
+      "to": "n_g17_kuhanoxin_jct",
+      "minutes_forward": 42,
+      "minutes_backward": 39,
+      "distance_km": 2.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_kuhanoxin_jct",
+      "to": "n_g17_kuhanoxin",
+      "minutes_forward": 42,
+      "minutes_backward": 30,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G17-main",
+      "name": "南二段完整縱走 (5天4夜)",
+      "startNodeId": "n_g17_xiangyang_th",
+      "endNodeId": "n_g17_guanshan_hut",
+      "viaNodeIds": [
+        "n_g17_xiangyang_hut",
+        "n_g17_xiangyang",
+        "n_g17_sancha_jct",
+        "n_g17_sancha",
+        "n_g17_jiaming_lake",
+        "n_g17_sancha_jct",
+        "n_g17_jiaming_hut",
+        "n_g17_taguanshan",
+        "n_g17_guanshan_jct",
+        "n_g17_guanshan"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g17_xiangyang_hut",
+          "type": "hut",
+          "label": "第一夜：向陽山屋"
+        },
+        {
+          "atNodeId": "n_g17_jiaming_hut",
+          "type": "hut",
+          "label": "第二夜：嘉明湖避難山屋 (三叉山、嘉明湖側遊)"
+        },
+        {
+          "atNodeId": "n_g17_jiaming_hut",
+          "type": "hut",
+          "label": "第三夜：嘉明湖避難山屋"
+        },
+        {
+          "atNodeId": "n_g17_guanshan_hut",
+          "type": "hut",
+          "label": "第四夜：關山山屋 (關山攻頂後)"
+        }
+      ]
+    },
+    {
+      "id": "G17-jiaming-classic",
+      "name": "嘉明湖‧三叉山 (3天2夜)",
+      "startNodeId": "n_g17_xiangyang_th",
+      "endNodeId": "n_g17_xiangyang_th",
+      "viaNodeIds": [
+        "n_g17_xiangyang_hut",
+        "n_g17_xiangyang",
+        "n_g17_sancha_jct",
+        "n_g17_sancha",
+        "n_g17_jiaming_lake",
+        "n_g17_sancha_jct",
+        "n_g17_jiaming_hut",
+        "n_g17_xiangyang_hut"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g17_xiangyang_hut",
+          "type": "hut",
+          "label": "第一夜：向陽山屋"
+        },
+        {
+          "atNodeId": "n_g17_jiaming_hut",
+          "type": "hut",
+          "label": "第二夜：嘉明湖避難山屋"
+        }
+      ]
+    },
+    {
+      "id": "G17-guanshan-loop",
+      "name": "關山‧庫哈諾辛延伸 (5天4夜含側遊)",
+      "startNodeId": "n_g17_xiangyang_th",
+      "endNodeId": "n_g17_guanshan_hut",
+      "viaNodeIds": [
+        "n_g17_xiangyang_hut",
+        "n_g17_xiangyang",
+        "n_g17_sancha_jct",
+        "n_g17_jiaming_hut",
+        "n_g17_taguanshan",
+        "n_g17_guanshan_jct",
+        "n_g17_kuhanoxin_jct",
+        "n_g17_kuhanoxin",
+        "n_g17_kuhanoxin_jct",
+        "n_g17_guanshan_jct",
+        "n_g17_guanshan_hut",
+        "n_g17_guanshan"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g17_xiangyang_hut",
+          "type": "hut",
+          "label": "第一夜：向陽山屋"
+        },
+        {
+          "atNodeId": "n_g17_jiaming_hut",
+          "type": "hut",
+          "label": "第二夜：嘉明湖避難山屋"
+        },
+        {
+          "atNodeId": "n_g17_jiaming_hut",
+          "type": "hut",
+          "label": "第三夜：嘉明湖避難山屋"
+        },
+        {
+          "atNodeId": "n_g17_guanshan_hut",
+          "type": "hut",
+          "label": "第四夜：關山山屋"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "id": "G06",
+  "name": "白姑大山",
+  "version": "2026-05-13",
+  "source": "OSM relation 10742618 (ODbL); estimated times from community data",
+  "nodes": [
+    {
+      "id": "n_g06_hongxiang",
+      "name": "紅香部落",
+      "lat": 24.159722,
+      "lng": 121.176389,
+      "elevation": 1400,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "access"
+      ],
+      "notes": "OSM node 4178266422 (紅香 Knaziy); 紅香派出所 at 24.160417, 121.176617; staging village before trail"
+    },
+    {
+      "id": "n_g06_trailhead",
+      "name": "白姑大山登山口",
+      "lat": 24.181671,
+      "lng": 121.169142,
+      "elevation": 1620,
+      "category": "trailhead",
+      "tags": [
+        "parking"
+      ],
+      "notes": "OSM node 2298632042; end of road, start of mountain trail proper"
+    },
+    {
+      "id": "n_g06_camp_baitong",
+      "name": "白桐山屋營地",
+      "lat": 24.188,
+      "lng": 121.135,
+      "elevation": 2700,
+      "category": "hut",
+      "notes": "Estimated position mid-route; common overnight camp for 2-day itinerary; no OSM node found; elevation estimated ~2700m"
+    },
+    {
+      "id": "n_g06_caiqingchi",
+      "name": "草青池",
+      "lat": 24.199038,
+      "lng": 121.108545,
+      "elevation": 3200,
+      "category": "water",
+      "notes": "OSM node 9116041382; alpine pond, water source near summit ridge"
+    },
+    {
+      "id": "n_g06_xifeng",
+      "name": "白姑西峰",
+      "lat": 24.190627,
+      "lng": 121.093736,
+      "elevation": 3252,
+      "category": "peak",
+      "notes": "OSM node 5529531158; subsidiary peak on route to main summit"
+    },
+    {
+      "id": "n_g06_sancha",
+      "name": "白姑大山三叉峰",
+      "lat": 24.198758,
+      "lng": 121.10724,
+      "elevation": 3216,
+      "category": "peak",
+      "notes": "OSM node 5886009609; junction peak, route splits here toward main summit"
+    },
+    {
+      "id": "n_g06_summit",
+      "name": "白姑大山",
+      "lat": 24.202678,
+      "lng": 121.108957,
+      "elevation": 3341,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ],
+      "notes": "OSM node 2268441052; ele 3341.3m; 百岳 #17"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g06_hongxiang",
+      "to": "n_g06_trailhead",
+      "minutes_forward": 85,
+      "minutes_backward": 60,
+      "distance_km": 3.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "紅香部落 (1400m) to 白姑大山登山口 (1620m); gain 220m over ~3km forest road/trail; formula: round((220/300+3.0/4)*60)"
+    },
+    {
+      "from": "n_g06_trailhead",
+      "to": "n_g06_camp_baitong",
+      "minutes_forward": 280,
+      "minutes_backward": 180,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "登山口 (1620m) to 白桐山屋營地 (~2700m); gain ~1080m over ~4km; formula: round((1080/300+4.0/4)*60)"
+    },
+    {
+      "from": "n_g06_camp_baitong",
+      "to": "n_g06_xifeng",
+      "minutes_forward": 133,
+      "minutes_backward": 86,
+      "distance_km": 2.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "白桐山屋營地 (~2700m) to 白姑西峰 (3252m); gain ~552m over ~2km; formula: round((552/300+2.0/4)*60)"
+    },
+    {
+      "from": "n_g06_xifeng",
+      "to": "n_g06_sancha",
+      "minutes_forward": 20,
+      "minutes_backward": 18,
+      "distance_km": 1.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "白姑西峰 (3252m) to 白姑三叉峰 (3216m); mostly flat ridge traverse with slight descent, ~1.5km; ~15min/km"
+    },
+    {
+      "from": "n_g06_sancha",
+      "to": "n_g06_caiqingchi",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "distance_km": 0.6,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "白姑三叉峰 (3216m) to 草青池 (~3200m); mostly flat, short traverse; ~15min/km"
+    },
+    {
+      "from": "n_g06_caiqingchi",
+      "to": "n_g06_summit",
+      "minutes_forward": 33,
+      "minutes_backward": 21,
+      "distance_km": 0.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true,
+      "notes": "草青池 (~3200m) to 白姑大山 (3341m); gain ~141m over ~0.5km; formula: round((141/300+0.5/4)*60)"
+    }
+  ],
+  "presets": [
+    {
+      "id": "p_g06_standard_2d",
+      "name": "白姑大山標準行程 (2天1夜)",
+      "startNodeId": "n_g06_hongxiang",
+      "endNodeId": "n_g06_summit",
+      "viaNodeIds": [
+        "n_g06_trailhead",
+        "n_g06_camp_baitong",
+        "n_g06_xifeng",
+        "n_g06_sancha",
+        "n_g06_caiqingchi"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g06_camp_baitong",
+          "type": "hut"
+        }
+      ],
+      "roundTrip": true
+    },
+    {
+      "id": "p_g06_summit_only",
+      "name": "白姑大山登頂 (含西峰)",
+      "startNodeId": "n_g06_trailhead",
+      "endNodeId": "n_g06_summit",
+      "viaNodeIds": [
+        "n_g06_camp_baitong",
+        "n_g06_xifeng",
+        "n_g06_sancha",
+        "n_g06_caiqingchi"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g06_camp_baitong",
+          "type": "hut"
+        }
+      ],
+      "roundTrip": true
+    }
+  ]
+}

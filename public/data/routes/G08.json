@@ -1,0 +1,306 @@
+{
+  "id": "G08",
+  "name": "北二段縱走",
+  "version": "2026-05-13",
+  "source": "OSM relation 8247581 (大霸線) (ODbL); estimated times from community data",
+  "nodes": [
+    {
+      "id": "n_g08_guanwu_th",
+      "name": "觀霧登山口",
+      "lat": 24.515,
+      "lng": 121.167,
+      "elevation": 2000,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g08_madala_hut",
+      "name": "馬達拉溪山屋",
+      "lat": 24.484,
+      "lng": 121.193,
+      "elevation": 2600,
+      "category": "hut",
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "n_g08_jiali",
+      "name": "加利山",
+      "lat": 24.459477,
+      "lng": 121.2162,
+      "elevation": 3112,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_jiujiu",
+      "name": "九九山莊",
+      "lat": 24.469222,
+      "lng": 121.208284,
+      "elevation": 3100,
+      "category": "hut",
+      "tags": []
+    },
+    {
+      "id": "n_g08_yize",
+      "name": "伊澤山",
+      "lat": 24.469981,
+      "lng": 121.243612,
+      "elevation": 3296,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_daba",
+      "name": "大霸尖山",
+      "lat": 24.457742,
+      "lng": 121.257999,
+      "elevation": 3490,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_xiaoba",
+      "name": "小霸尖山",
+      "lat": 24.4556,
+      "lng": 121.252122,
+      "elevation": 3419,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_sumida_hut",
+      "name": "素密達山屋",
+      "lat": 24.423337,
+      "lng": 121.250901,
+      "elevation": 3500,
+      "category": "hut",
+      "tags": []
+    },
+    {
+      "id": "n_g08_sumida",
+      "name": "素密達山",
+      "lat": 24.4251,
+      "lng": 121.253554,
+      "elevation": 3517,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_pinta",
+      "name": "品田山",
+      "lat": 24.4283,
+      "lng": 121.266766,
+      "elevation": 3524,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    },
+    {
+      "id": "n_g08_wuling_th",
+      "name": "武陵農場登山口",
+      "lat": 24.363,
+      "lng": 121.302,
+      "elevation": 1750,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check",
+        "bus"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g08_guanwu_th",
+      "to": "n_g08_madala_hut",
+      "minutes_forward": 185,
+      "minutes_backward": 124,
+      "distance_km": 4.34,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_madala_hut",
+      "to": "n_g08_jiali",
+      "minutes_forward": 156,
+      "minutes_backward": 105,
+      "distance_km": 3.6,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_jiali",
+      "to": "n_g08_jiujiu",
+      "minutes_forward": 18,
+      "minutes_backward": 23,
+      "distance_km": 1.35,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_jiujiu",
+      "to": "n_g08_yize",
+      "minutes_forward": 93,
+      "minutes_backward": 66,
+      "distance_km": 3.58,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_yize",
+      "to": "n_g08_daba",
+      "minutes_forward": 69,
+      "minutes_backward": 47,
+      "distance_km": 1.99,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_daba",
+      "to": "n_g08_xiaoba",
+      "minutes_forward": 16,
+      "minutes_backward": 24,
+      "distance_km": 0.64,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_xiaoba",
+      "to": "n_g08_sumida_hut",
+      "minutes_forward": 70,
+      "minutes_backward": 53,
+      "distance_km": 3.59,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_sumida_hut",
+      "to": "n_g08_sumida",
+      "minutes_forward": 8,
+      "minutes_backward": 6,
+      "distance_km": 0.33,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_sumida",
+      "to": "n_g08_pinta",
+      "minutes_forward": 22,
+      "minutes_backward": 17,
+      "distance_km": 1.38,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_pinta",
+      "to": "n_g08_wuling_th",
+      "minutes_forward": 310,
+      "minutes_backward": 476,
+      "distance_km": 8.09,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "p_g08_standard",
+      "name": "北二段標準縱走（觀霧進、武陵出）",
+      "startNodeId": "n_g08_guanwu_th",
+      "endNodeId": "n_g08_wuling_th",
+      "viaNodeIds": [
+        "n_g08_madala_hut",
+        "n_g08_jiali",
+        "n_g08_jiujiu",
+        "n_g08_yize",
+        "n_g08_daba",
+        "n_g08_xiaoba",
+        "n_g08_sumida_hut",
+        "n_g08_sumida",
+        "n_g08_pinta"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g08_madala_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g08_jiujiu",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g08_sumida_hut",
+          "type": "hut"
+        }
+      ],
+      "roundTrip": false
+    },
+    {
+      "id": "p_g08_reverse",
+      "name": "北二段反向縱走（武陵進、觀霧出）",
+      "startNodeId": "n_g08_wuling_th",
+      "endNodeId": "n_g08_guanwu_th",
+      "viaNodeIds": [
+        "n_g08_pinta",
+        "n_g08_sumida",
+        "n_g08_sumida_hut",
+        "n_g08_xiaoba",
+        "n_g08_daba",
+        "n_g08_yize",
+        "n_g08_jiujiu",
+        "n_g08_jiali",
+        "n_g08_madala_hut"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g08_sumida_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g08_jiujiu",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g08_madala_hut",
+          "type": "hut"
+        }
+      ],
+      "roundTrip": false
+    }
+  ]
+}

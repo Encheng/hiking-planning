@@ -1,0 +1,177 @@
+{
+  "id": "G14",
+  "name": "七彩湖‧六順山",
+  "version": "2026-05-13",
+  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "nodes": [
+    {
+      "id": "n_g14_wanrong_th",
+      "name": "萬榮林道登山口",
+      "lat": 23.745,
+      "lng": 121.217,
+      "elevation": 1400,
+      "category": "trailhead",
+      "tags": [
+        "parking",
+        "permit_check"
+      ]
+    },
+    {
+      "id": "n_g14_ridge_camp",
+      "name": "稜線營地",
+      "lat": 23.738,
+      "lng": 121.22,
+      "elevation": 2100,
+      "category": "waypoint",
+      "tags": [
+        "camp",
+        "water"
+      ]
+    },
+    {
+      "id": "n_g14_high_camp",
+      "name": "高地營地",
+      "lat": 23.73,
+      "lng": 121.218,
+      "elevation": 2600,
+      "category": "waypoint",
+      "tags": [
+        "camp"
+      ]
+    },
+    {
+      "id": "n_g14_qicai_lake",
+      "name": "七彩湖",
+      "lat": 23.72,
+      "lng": 121.215,
+      "elevation": 2850,
+      "category": "water",
+      "tags": [
+        "lake",
+        "camp"
+      ]
+    },
+    {
+      "id": "n_g14_qicai_jct",
+      "name": "七彩湖岔路",
+      "lat": 23.722,
+      "lng": 121.22,
+      "elevation": 2800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_liushun",
+      "name": "六順山",
+      "lat": 23.7245,
+      "lng": 121.2396,
+      "elevation": 3006,
+      "category": "peak",
+      "tags": [
+        "100mt"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_g14_wanrong_th",
+      "to": "n_g14_ridge_camp",
+      "minutes_forward": 166,
+      "minutes_backward": 100,
+      "distance_km": 4.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_ridge_camp",
+      "to": "n_g14_high_camp",
+      "minutes_forward": 140,
+      "minutes_backward": 76,
+      "distance_km": 4.0,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_high_camp",
+      "to": "n_g14_qicai_jct",
+      "minutes_forward": 70,
+      "minutes_backward": 42,
+      "distance_km": 2.5,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_qicai_jct",
+      "to": "n_g14_qicai_lake",
+      "minutes_forward": 26,
+      "minutes_backward": 20,
+      "distance_km": 1.2,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_qicai_jct",
+      "to": "n_g14_liushun",
+      "minutes_forward": 62,
+      "minutes_backward": 39,
+      "distance_km": 2.8,
+      "sources": [
+        "estimated"
+      ],
+      "confirmed": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "G14-main",
+      "name": "七彩湖‧六順山 (3天2夜)",
+      "startNodeId": "n_g14_wanrong_th",
+      "endNodeId": "n_g14_wanrong_th",
+      "viaNodeIds": [
+        "n_g14_ridge_camp",
+        "n_g14_high_camp",
+        "n_g14_qicai_jct",
+        "n_g14_qicai_lake",
+        "n_g14_qicai_jct",
+        "n_g14_liushun"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g14_ridge_camp",
+          "type": "camp",
+          "label": "第一夜：稜線營地"
+        },
+        {
+          "atNodeId": "n_g14_qicai_lake",
+          "type": "camp",
+          "label": "第二夜：七彩湖畔"
+        }
+      ]
+    },
+    {
+      "id": "G14-express",
+      "name": "七彩湖速攻 (2天1夜)",
+      "startNodeId": "n_g14_wanrong_th",
+      "endNodeId": "n_g14_qicai_lake",
+      "viaNodeIds": [
+        "n_g14_ridge_camp",
+        "n_g14_high_camp",
+        "n_g14_qicai_jct"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g14_high_camp",
+          "type": "camp",
+          "label": "第一夜：高地營地"
+        }
+      ]
+    }
+  ]
+}
