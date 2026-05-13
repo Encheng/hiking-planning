@@ -11,12 +11,21 @@ export interface RouteNode {
   tags?: string[];
 }
 
+export interface RouteEdgeSource {
+  file: string;
+  minutes_forward: number | null;
+  minutes_backward: number | null;
+  notedBy: 'ai' | 'manual';
+}
+
 export interface RouteEdge {
   from: string;
   to: string;
   minutes_forward: number;
   minutes_backward: number;
   source: string;
+  sources?: RouteEdgeSource[];
+  confirmed?: boolean;
 }
 
 export interface RoutePreset {
@@ -26,6 +35,7 @@ export interface RoutePreset {
   endNodeId: string;
   viaNodeIds?: string[];
   suggestedDayBreaks?: Array<{ atNodeId: string; type: 'hut' | 'shelter' | 'camp' }>;
+  roundTrip?: boolean;   // defaults to true if undefined
 }
 
 export interface Route {

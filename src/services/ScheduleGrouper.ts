@@ -53,9 +53,23 @@ export function groupByDayBreaks(input: GrouperInput): DayGroup[] {
   const { plan, route, segments } = input;
   if (segments.length === 0) return [];
 
-  const breakSet = new Set(plan.dayBreaks.map((b) => b.afterNodeId));
-  const groups: DayGroup[] = [];
+  // Build break segment indices from nodeSequence position, not just nodeId.
+  // A round-trip route can pass through the same node twice; matching by nodeId
+  // would fire on the second occurrence too, creating a spurious extra day.
+  // Instead, find each break's FIRST occurrence in nodeSequence after the
+  // previous break, and record the corresponding segment index.
+  const seq = plan.nodeSequence;
+  const breakSegmentIndices = new Set<number>();
+  let searchFrom = 0;
+  for (const db of plan.dayBreaks) {
+    const nodeIdx = seq.indexOf(db.afterNodeId, searchFrom);
+    if (nodeIdx >= 1) {
+      breakSegmentIndices.add(nodeIdx - 1); // segment[i] ends at seq[i+1]
+      searchFrom = nodeIdx + 1;
+    }
+  }
 
+  const groups: DayGroup[] = [];
   let dayIdx = 1;
   let dayStartIdx = 0;
   let dayStartNodeId = plan.startNodeId;
@@ -79,7 +93,7 @@ export function groupByDayBreaks(input: GrouperInput): DayGroup[] {
 
   for (let i = 0; i < segments.length; i++) {
     const seg = segments[i];
-    if (breakSet.has(seg.toNodeId)) {
+    if (breakSegmentIndices.has(i)) {
       flushDay(i, seg.toNodeId);
       dayIdx += 1;
       dayStartIdx = i + 1;

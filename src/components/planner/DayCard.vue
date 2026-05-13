@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { NTag, NButton, NPopconfirm } from 'naive-ui';
 import draggable from 'vuedraggable';
 import NodePicker from './NodePicker.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
+import { dayColor } from '@/services/DayColors';
 import type { DailyPlan } from '@/types';
 
 const props = defineProps<{
@@ -17,13 +18,13 @@ const props = defineProps<{
   expanded: boolean;
   isOnly: boolean;
   warnings: string[];
-  returnTripNodeIds?: string[];
 }>();
 
 const emit = defineEmits<{
   'toggle-expand': [];
   'change-start': [nodeId: string];
   'change-target': [nodeId: string];
+  'add-via': [nodeId: string];
   'remove-via': [index: number];
   'reorder-via': [from: number, to: number];
   'remove-day': [];
@@ -40,8 +41,11 @@ function fmt(min: number): string {
   return m > 0 ? `${h}h${String(m).padStart(2, '0')}` : `${h}h`;
 }
 
-function dayColor(idx: number): string {
-  return ['#22c55e', '#a855f7', '#ec4899', '#10b981', '#f59e0b'][(idx - 1) % 5];
+// via search
+const viaPickerKey = ref(0);
+function onAddVia(nodeId: string) {
+  emit('add-via', nodeId);
+  viaPickerKey.value++;
 }
 
 function nodeName(id: string): string {
@@ -71,7 +75,7 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
       @click="emit('toggle-expand')"
     >
       <span class="text-xs flex-1 min-w-0 truncate">
-        <strong :style="{ color: dayColor(index) }">
+        <strong :style="{ color: dayColor(index - 1) }">
           {{ expanded ? '▾' : '▸' }} DAY {{ index }}
         </strong>
         <span class="ml-1">· {{ startNodeName }} → {{ endNodeName }}</span>
@@ -114,21 +118,12 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
             </NTag>
           </template>
         </draggable>
-        <p v-if="dailyPlan.viaNodeIds.length === 0" class="text-xs text-gray-400">
-          直接點地圖節點 → 選「加為加爬點」
+        <div class="mt-2">
+          <NodePicker :key="viaPickerKey" :value="undefined" placeholder="搜尋加入中途點…" @select="onAddVia" />
+        </div>
+        <p v-if="dailyPlan.viaNodeIds.length === 0" class="text-xs text-gray-400 mt-1">
+          從下拉選單搜尋加入，或直接點地圖節點 → 選「加為加爬點」
         </p>
-      </div>
-
-      <div v-if="returnTripNodeIds && returnTripNodeIds.length > 0">
-        <label class="text-xs text-gray-500 block mb-1">↩ 回程經過（自動，不可編輯）</label>
-        <NTag
-          v-for="(nid, i) in returnTripNodeIds"
-          :key="i"
-          type="default"
-          class="mr-1 mb-1 opacity-70"
-        >
-          {{ i + 1 }}. {{ nodeName(nid) }}
-        </NTag>
       </div>
 
       <NPopconfirm v-if="!isOnly" @positive-click="emit('remove-day')">

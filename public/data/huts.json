@@ -2,8 +2,43 @@
   {
     "id": "hut_paiyun",
     "name": "排雲山莊",
-    "lat": 23.4731, "lng": 120.9534, "elevation": 3402,
+    "lat": 23.4680,
+    "lng": 120.9520,
+    "elevation": 3402,
     "capacity": 116,
+    "type": "hut",
+    "needPermit": true,
+    "operator": "玉管處"
+  },
+  {
+    "id": "hut_yuanfeng",
+    "name": "圓峰山屋",
+    "lat": 23.4600,
+    "lng": 120.9490,
+    "elevation": 3685,
+    "capacity": 30,
+    "type": "hut",
+    "needPermit": true,
+    "operator": "玉管處"
+  },
+  {
+    "id": "hut_lulin",
+    "name": "鹿林山莊",
+    "lat": 23.4820,
+    "lng": 120.8870,
+    "elevation": 2790,
+    "capacity": 24,
+    "type": "hut",
+    "needPermit": false,
+    "operator": "玉管處"
+  },
+  {
+    "id": "hut_lele",
+    "name": "樂樂山屋",
+    "lat": 23.5050,
+    "lng": 120.9950,
+    "elevation": 1976,
+    "capacity": 20,
     "type": "hut",
     "needPermit": true,
     "operator": "玉管處"

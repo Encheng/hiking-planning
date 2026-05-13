@@ -6,7 +6,7 @@ import PaceSlider from '@/components/planner/PaceSlider.vue';
 import L from 'leaflet';
 import MapCanvas from '@/components/map/MapCanvas.vue';
 import TileSwitcher from '@/components/map/TileSwitcher.vue';
-import GpxLayer from '@/components/map/GpxLayer.vue';
+import PlannedRouteLayer from '@/components/map/PlannedRouteLayer.vue';
 import NodeMarkerLayer from '@/components/map/NodeMarkerLayer.vue';
 import DailyPlanEditor from '@/components/planner/DailyPlanEditor.vue';
 import MapNodePopup from '@/components/planner/MapNodePopup.vue';
@@ -45,6 +45,11 @@ const resolution = computed(() => {
 });
 
 const highlightedNodeIds = computed(() => resolution.value?.nodeSequence ?? []);
+const plannedDayBreaks = computed(() => resolution.value?.dayBreaks ?? []);
+// editor.expandedDayIndex is 1-based; PlannedRouteLayer wants 0-based (null = no highlight)
+const activeDayIndex = computed(() =>
+  editor.expandedDayIndex != null ? editor.expandedDayIndex - 1 : null,
+);
 
 const canSave = computed(() => {
   if (!planStore.draft || !planStore.draft.startNodeId) return false;
@@ -213,7 +218,7 @@ async function savePlan() {
     : hasOvernight ? 'overnight_hut'
     : totalMins / 60 > 4 ? 'long_day' : 'light_summit';
 
-  const id = await planStore.savePlan({
+  const planPayload: Parameters<typeof planStore.savePlan>[0] = {
     name: `${nodeName(draft.startNodeId!)} → ${nodeName(lastDay.endNodeId)}`,
     routeId: routeId.value,
     startNodeId: draft.startNodeId!,
@@ -224,10 +229,13 @@ async function savePlan() {
     startTime: draft.startTime ?? '06:00',
     dayBreaks: resolution.value.dayBreaks,
     tripType,
-    createdAt: new Date().toISOString(),
+    createdAt: draft.createdAt ?? new Date().toISOString(),
     dailyPlans,
     returnToStart: draft.returnToStart ?? true,
-  });
+  };
+  if (draft.id) planPayload.id = draft.id;
+  const id = await planStore.savePlan(planPayload);
+  planStore.draft = null;
   router.push({ name: 'schedule', params: { planId: id } });
 }
 
@@ -256,7 +264,12 @@ watch(routeId, () => {
     <div class="flex-1 relative min-h-[40vh] md:min-h-0">
       <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
         <TileSwitcher />
-        <GpxLayer :url="`/data/gpx/${currentRoute.id}-sample.gpx`" />
+        <PlannedRouteLayer
+          :nodes="currentRoute.nodes"
+          :node-ids="highlightedNodeIds"
+          :day-breaks="plannedDayBreaks"
+          :active-day-index="activeDayIndex"
+        />
         <NodeMarkerLayer
           :nodes="currentRoute.nodes"
           :highlighted-node-ids="highlightedNodeIds"

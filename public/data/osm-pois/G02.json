@@ -1,0 +1,325 @@
+{
+  "sourceRelation": 13678202,
+  "fetchedAt": "2026-05-13T01:54:00Z",
+  "pois": [
+    {
+      "id": "osm_node_746259535",
+      "name": "5K",
+      "lat": 23.463945,
+      "lon": 120.9303446,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746259734",
+      "name": "玉山塔塔加鞍部登山口",
+      "lat": 23.4757522,
+      "lon": 120.8999713,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "highway": "trailhead",
+          "name": "玉山塔塔加鞍部登山口",
+          "name:en": "Yushan Trailhead",
+          "name:zh": "玉山塔塔加鞍部登山口"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746259861",
+      "name": "4.5K",
+      "lat": 23.466688,
+      "lon": 120.9269486,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "4.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746259917",
+      "name": "0.5K",
+      "lat": 23.4739008,
+      "lon": 120.9049979,
+      "elevation": 2675,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "ele": "2675",
+          "information": "guidepost",
+          "name": "0.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746259930",
+      "name": "1K",
+      "lat": 23.4744132,
+      "lon": 120.9057315,
+      "elevation": 2755,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "ele": "2755",
+          "information": "guidepost",
+          "name": "1K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746259987",
+      "name": "1.5K",
+      "lat": 23.4726978,
+      "lon": 120.9093029,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "1.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746260035",
+      "name": "玉山前峰登山口",
+      "lat": 23.4704775,
+      "lon": 120.9180747,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "highway": "trailhead",
+          "name": "玉山前峰登山口",
+          "name:en": "Yushan Front Peak Trailhead",
+          "name:zh": "玉山前峰登山口"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746260499",
+      "name": "6K",
+      "lat": 23.4670605,
+      "lon": 120.935304,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "6K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746260703",
+      "name": "6.5K",
+      "lat": 23.4692432,
+      "lon": 120.9386144,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "6.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_746260781",
+      "name": "玉山主峰南峰岔路口",
+      "lat": 23.4669122,
+      "lon": 120.9539815,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "玉山主峰南峰岔路口",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_3428432909",
+      "name": "←排雲1.4K●主峰1.0K→",
+      "lat": 23.4673953,
+      "lon": 120.9542692,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "←排雲1.4K●主峰1.0K→",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_3428432949",
+      "name": "←排雲1.5K●主峰0.9K→",
+      "lat": 23.4686611,
+      "lon": 120.9552194,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "←排雲1.5K●主峰0.9K→",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7173929490",
+      "name": "←排雲0.5K●主峰1.9K→",
+      "lat": 23.4667024,
+      "lon": 120.9525914,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "←排雲0.5K●主峰1.9K→",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304663",
+      "name": "8K",
+      "lat": 23.4659472,
+      "lon": 120.9461404,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "8K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304664",
+      "name": "7.5K",
+      "lat": 23.4656805,
+      "lon": 120.9442985,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "7.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304665",
+      "name": "7K",
+      "lat": 23.4661035,
+      "lon": 120.9414141,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "7K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304666",
+      "name": "5.5K",
+      "lat": 23.4662569,
+      "lon": 120.9323752,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "5.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304672",
+      "name": "3.5K",
+      "lat": 23.4720456,
+      "lon": 120.9225657,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "3.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304674",
+      "name": "3K",
+      "lat": 23.4713874,
+      "lon": 120.9197523,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "3K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304675",
+      "name": "2.5K",
+      "lat": 23.4710685,
+      "lon": 120.91611,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "2.5K",
+          "tourism": "information"
+        }
+      }
+    },
+    {
+      "id": "osm_node_7174304676",
+      "name": "2K",
+      "lat": 23.4710623,
+      "lon": 120.9126771,
+      "elevation": null,
+      "tags": {
+        "category": "trailhead",
+        "raw": {
+          "information": "guidepost",
+          "name": "2K",
+          "tourism": "information"
+        }
+      }
+    }
+  ]
+}

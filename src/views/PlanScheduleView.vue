@@ -44,6 +44,12 @@ const printReady = computed(() => !!gearStore.suggestion && !!plan.value && !!ro
 function printPage() {
   window.print();
 }
+
+function editPlan() {
+  if (!planStore.currentPlan) return;
+  planStore.draft = JSON.parse(JSON.stringify(planStore.currentPlan));
+  router.push({ name: 'map', query: { route: planStore.currentPlan.routeId } });
+}
 </script>
 
 <template>
@@ -62,6 +68,7 @@ function printPage() {
               </NSpace>
             </div>
             <NSpace>
+              <NButton @click="editPlan">編輯行程</NButton>
               <NButton @click="router.push({ name: 'gear', params: { planId: plan.id } })">裝備清單</NButton>
               <NButton :disabled="!printReady" @click="printPage">列印</NButton>
             </NSpace>
