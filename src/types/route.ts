@@ -35,6 +35,7 @@ export interface RoutePreset {
   endNodeId: string;
   viaNodeIds?: string[];
   suggestedDayBreaks?: Array<{ atNodeId: string; type: 'hut' | 'shelter' | 'camp' }>;
+  roundTrip?: boolean;   // defaults to true if undefined
 }
 
 export interface Route {
