@@ -213,7 +213,7 @@ async function savePlan() {
     : hasOvernight ? 'overnight_hut'
     : totalMins / 60 > 4 ? 'long_day' : 'light_summit';
 
-  const id = await planStore.savePlan({
+  const planPayload: Parameters<typeof planStore.savePlan>[0] = {
     name: `${nodeName(draft.startNodeId!)} → ${nodeName(lastDay.endNodeId)}`,
     routeId: routeId.value,
     startNodeId: draft.startNodeId!,
@@ -224,10 +224,13 @@ async function savePlan() {
     startTime: draft.startTime ?? '06:00',
     dayBreaks: resolution.value.dayBreaks,
     tripType,
-    createdAt: new Date().toISOString(),
+    createdAt: draft.createdAt ?? new Date().toISOString(),
     dailyPlans,
     returnToStart: draft.returnToStart ?? true,
-  });
+  };
+  if (draft.id) planPayload.id = draft.id;
+  const id = await planStore.savePlan(planPayload);
+  planStore.draft = null;
   router.push({ name: 'schedule', params: { planId: id } });
 }
 
