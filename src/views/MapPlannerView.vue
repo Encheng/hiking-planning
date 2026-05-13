@@ -46,6 +46,10 @@ const resolution = computed(() => {
 
 const highlightedNodeIds = computed(() => resolution.value?.nodeSequence ?? []);
 const plannedDayBreaks = computed(() => resolution.value?.dayBreaks ?? []);
+// editor.expandedDayIndex is 1-based; PlannedRouteLayer wants 0-based (null = no highlight)
+const activeDayIndex = computed(() =>
+  editor.expandedDayIndex != null ? editor.expandedDayIndex - 1 : null,
+);
 
 const canSave = computed(() => {
   if (!planStore.draft || !planStore.draft.startNodeId) return false;
@@ -264,6 +268,7 @@ watch(routeId, () => {
           :nodes="currentRoute.nodes"
           :node-ids="highlightedNodeIds"
           :day-breaks="plannedDayBreaks"
+          :active-day-index="activeDayIndex"
         />
         <NodeMarkerLayer
           :nodes="currentRoute.nodes"
