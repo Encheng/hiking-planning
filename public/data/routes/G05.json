@@ -24,7 +24,7 @@
       "id": "n_g05_seven_hut",
       "name": "七卡山莊",
       "lat": 24.4,
-      "lng": 121.295,
+      "lng": 121.3,
       "elevation": 2463,
       "category": "hut"
     },
@@ -278,7 +278,7 @@
     },
     {
       "id": "n_g05_daxue_jct",
-      "name": "岔路口",
+      "name": "大雪山岔路口",
       "lat": 24.33,
       "lng": 121.123,
       "elevation": 3500,
@@ -462,7 +462,7 @@
     },
     {
       "id": "n_g05_yueshan_check",
-      "name": "出雲山檢查哨",
+      "name": "武陵出雲山檢查哨",
       "lat": 24.3,
       "lng": 121.27,
       "elevation": 1400,

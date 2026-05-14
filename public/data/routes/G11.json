@@ -7,9 +7,9 @@
     {
       "id": "n_g11_tunyuan_th",
       "name": "屯原登山口",
-      "lat": 23.985,
-      "lng": 121.19,
-      "elevation": 1740,
+      "lat": 24.052,
+      "lng": 121.215,
+      "elevation": 2050,
       "category": "trailhead",
       "tags": [
         "parking",
@@ -19,24 +19,24 @@
     {
       "id": "n_g11_yunhai_hut",
       "name": "雲海保線所",
-      "lat": 23.989,
-      "lng": 121.218,
-      "elevation": 2365,
+      "lat": 24.042,
+      "lng": 121.255,
+      "elevation": 2360,
       "category": "hut"
     },
     {
       "id": "n_g11_tianchi_hut",
       "name": "天池山莊",
-      "lat": 23.992,
-      "lng": 121.245,
-      "elevation": 3090,
+      "lat": 24.045,
+      "lng": 121.2793,
+      "elevation": 2860,
       "category": "hut"
     },
     {
       "id": "n_g11_nenggao_jct",
       "name": "能高山岔路",
-      "lat": 23.992,
-      "lng": 121.255,
+      "lat": 24.02,
+      "lng": 121.27,
       "elevation": 3180,
       "category": "junction"
     },

@@ -41,18 +41,18 @@
     {
       "id": "n_g08_jiujiu",
       "name": "九九山莊",
-      "lat": 24.469222,
-      "lng": 121.208284,
-      "elevation": 3100,
+      "lat": 24.4692,
+      "lng": 121.2083,
+      "elevation": 2700,
       "category": "hut",
       "tags": []
     },
     {
       "id": "n_g08_yize",
       "name": "伊澤山",
-      "lat": 24.469981,
-      "lng": 121.243612,
-      "elevation": 3296,
+      "lat": 24.4614,
+      "lng": 121.2427,
+      "elevation": 3297,
       "category": "peak",
       "tags": [
         "100mt"
@@ -72,9 +72,9 @@
     {
       "id": "n_g08_xiaoba",
       "name": "小霸尖山",
-      "lat": 24.4556,
-      "lng": 121.252122,
-      "elevation": 3419,
+      "lat": 24.4616,
+      "lng": 121.2518,
+      "elevation": 3445,
       "category": "peak",
       "tags": [
         "100mt"

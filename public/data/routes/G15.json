@@ -91,22 +91,11 @@
     },
     {
       "id": "n_g15_liushun_jct",
-      "name": "六順山岔路",
+      "name": "丹大東郡南北岔路",
       "lat": 23.6,
       "lng": 121.175,
       "elevation": 3050,
       "category": "junction"
-    },
-    {
-      "id": "n_g15_liushun",
-      "name": "六順山",
-      "lat": 23.612,
-      "lng": 121.189,
-      "elevation": 3006,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
     },
     {
       "id": "n_g15_south_ridge_camp",
@@ -235,17 +224,6 @@
       "minutes_forward": 51,
       "minutes_backward": 63,
       "distance_km": 3.8,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g15_liushun_jct",
-      "to": "n_g15_liushun",
-      "minutes_forward": 60,
-      "minutes_backward": 53,
-      "distance_km": 3.0,
       "sources": [
         "estimated"
       ],

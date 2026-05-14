@@ -31,8 +31,8 @@
     {
       "id": "n_g04_jiujiu_hut",
       "name": "九九山莊",
-      "lat": 24.47,
-      "lng": 121.2,
+      "lat": 24.4692,
+      "lng": 121.2083,
       "elevation": 2700,
       "category": "hut"
     },
@@ -47,8 +47,8 @@
     {
       "id": "n_g04_jiali",
       "name": "加利山",
-      "lat": 24.465,
-      "lng": 121.215,
+      "lat": 24.4595,
+      "lng": 121.2162,
       "elevation": 3112,
       "category": "peak"
     },
@@ -231,9 +231,9 @@
     {
       "id": "n_g04_susmida_hut",
       "name": "素密達山屋",
-      "lat": 24.423,
-      "lng": 121.252,
-      "elevation": 3450,
+      "lat": 24.4233,
+      "lng": 121.2509,
+      "elevation": 3500,
       "category": "hut"
     },
     {
@@ -254,7 +254,7 @@
     },
     {
       "id": "n_g04_susmida_water",
-      "name": "水源",
+      "name": "素密達水源",
       "lat": 24.422,
       "lng": 121.254,
       "elevation": 3400,
@@ -422,7 +422,7 @@
     },
     {
       "id": "n_g04_xueshan_jct",
-      "name": "岔路口",
+      "name": "雪山岔路口",
       "lat": 24.385,
       "lng": 121.232,
       "elevation": 3850,
@@ -794,8 +794,8 @@
     {
       "from": "n_g04_susmida",
       "to": "n_g04_susmida_hut",
-      "minutes_forward": 70,
-      "minutes_backward": 90,
+      "minutes_forward": 8,
+      "minutes_backward": 6,
       "source": "上河圖",
       "confirmed": true
     },

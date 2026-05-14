@@ -198,7 +198,7 @@
     },
     {
       "id": "n_g09_low_saddle",
-      "name": "最低鞍部",
+      "name": "合歡西峰最低鞍部",
       "lat": 24.178,
       "lng": 121.265,
       "elevation": 2950,
@@ -318,7 +318,7 @@
     },
     {
       "id": "n_g09_zhubei_jct",
-      "name": "主北岔路",
+      "name": "奇萊主北岔路",
       "lat": 24.118,
       "lng": 121.33,
       "elevation": 3250,
@@ -1161,16 +1161,16 @@
     {
       "from": "n_g09_tunyuan_th",
       "to": "n_g09_yunhai",
-      "minutes_forward": 120,
-      "minutes_backward": 100,
+      "minutes_forward": 208,
+      "minutes_backward": 66,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_yunhai",
       "to": "n_g09_tianchi_hut",
-      "minutes_forward": 210,
-      "minutes_backward": 180,
+      "minutes_forward": 257,
+      "minutes_backward": 90,
       "source": "上河圖",
       "confirmed": true
     },

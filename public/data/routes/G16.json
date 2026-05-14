@@ -70,9 +70,9 @@
     {
       "id": "n_g16_dashuiku_hut",
       "name": "大水窟山屋",
-      "lat": 23.476,
-      "lng": 121.04,
-      "elevation": 3520,
+      "lat": 23.4593,
+      "lng": 121.0563,
+      "elevation": 3227,
       "category": "hut"
     },
     {
@@ -208,8 +208,8 @@
     {
       "from": "n_g16_dashuiku_hut",
       "to": "n_g16_dashuiku",
-      "minutes_forward": 33,
-      "minutes_backward": 21,
+      "minutes_forward": 120,
+      "minutes_backward": 80,
       "distance_km": 0.8,
       "sources": [
         "estimated"
