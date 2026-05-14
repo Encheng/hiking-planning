@@ -201,7 +201,7 @@
       "name": "最低鞍部",
       "lat": 24.178,
       "lng": 121.265,
-      "elevation": 3000,
+      "elevation": 2950,
       "category": "junction"
     },
     {
@@ -209,7 +209,7 @@
       "name": "水池營地",
       "lat": 24.1768,
       "lng": 121.255,
-      "elevation": 3050,
+      "elevation": 3000,
       "category": "waypoint"
     },
     {
@@ -217,7 +217,7 @@
       "name": "華岡叉路口",
       "lat": 24.176,
       "lng": 121.25,
-      "elevation": 3100,
+      "elevation": 3200,
       "category": "junction"
     },
     {
@@ -617,8 +617,8 @@
     {
       "from": "n_g09_wuling",
       "to": "n_g09_hehuan_main",
-      "minutes_forward": 40,
-      "minutes_backward": 60,
+      "minutes_forward": 60,
+      "minutes_backward": 40,
       "source": "上河圖",
       "confirmed": true
     },
@@ -697,16 +697,16 @@
     {
       "from": "n_g09_kenan_pass",
       "to": "n_g09_shimen",
-      "minutes_forward": 20,
-      "minutes_backward": 30,
+      "minutes_forward": 30,
+      "minutes_backward": 20,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_kenan_pass",
       "to": "n_g09_shimen_north",
-      "minutes_forward": 15,
-      "minutes_backward": 30,
+      "minutes_forward": 30,
+      "minutes_backward": 15,
       "source": "上河圖",
       "confirmed": true
     },
@@ -753,32 +753,32 @@
     {
       "from": "n_g09_shimen",
       "to": "n_g09_hehuan_east",
-      "minutes_forward": 50,
-      "minutes_backward": 60,
+      "minutes_forward": 60,
+      "minutes_backward": 50,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_th_north",
       "to": "n_g09_reflector",
-      "minutes_forward": 45,
-      "minutes_backward": 70,
+      "minutes_forward": 70,
+      "minutes_backward": 45,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_reflector",
       "to": "n_g09_hehuan_north",
-      "minutes_forward": 15,
-      "minutes_backward": 20,
+      "minutes_forward": 20,
+      "minutes_backward": 15,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_reflector",
       "to": "n_g09_bichi",
-      "minutes_forward": 10,
-      "minutes_backward": 5,
+      "minutes_forward": 5,
+      "minutes_backward": 10,
       "source": "上河圖",
       "confirmed": true
     },
@@ -809,8 +809,8 @@
     {
       "from": "n_g09_huagang_jct",
       "to": "n_g09_hehuan_west",
-      "minutes_forward": 45,
-      "minutes_backward": 35,
+      "minutes_forward": 35,
+      "minutes_backward": 45,
       "source": "上河圖",
       "confirmed": true
     },
