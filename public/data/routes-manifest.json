@@ -14,7 +14,7 @@
     { "id": "G05", "name": "雪山西‧南稜縱走", "osmRelationId": null, "sunriverImage": "G05_hiking.jpg", "elevationImages": ["xG05-1.jpg", "xG05-2.jpg", "xG05-3.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G06", "name": "白姑大山單登", "osmRelationId": null, "sunriverImage": "G06_hiking.jpg", "elevationImages": ["xG06.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G07", "name": "北一段縱走", "osmRelationId": null, "sunriverImage": "G07_hiking_new.jpg", "elevationImages": ["xG07.jpg"], "status": "done", "verification": "sunriver_pending" },
-    { "id": "G08", "name": "北二段縱走", "osmRelationId": null, "sunriverImage": "G08_hiking.jpg", "elevationImages": ["xG08-1.jpg", "xG08-2.jpg"], "status": "done", "verification": "estimated" },
+    { "id": "G08", "name": "北二段‧畢祿羊頭連峰", "osmRelationId": null, "sunriverImage": "G08_hiking.jpg", "elevationImages": ["xG08-1.jpg", "xG08-2.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G09", "name": "合歡‧奇萊縱走", "osmRelationId": null, "sunriverImage": "G09_hiking_new.jpg", "elevationImages": ["xG09-1.jpg", "xG09-2.jpg", "xG09-3.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G10", "name": "太魯閣山列", "osmRelationId": null, "sunriverImage": "G10_hiking.jpg", "elevationImages": ["xG10.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G11", "name": "能高越嶺", "osmRelationId": null, "sunriverImage": "G11_hiking.jpg", "elevationImages": ["xG11.jpg"], "status": "done", "verification": "estimated" },

@@ -1,303 +1,782 @@
 {
   "id": "G08",
-  "name": "北二段縱走",
-  "version": "2026-05-13",
-  "source": "OSM relation 8247581 (大霸線) (ODbL); estimated times from community data",
+  "name": "北二段‧畢祿羊頭連峰",
+  "version": "2026-05-14",
+  "source": "上河文化 G08 北二段+畢祿羊頭步程示意圖 (G08_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g08_guanwu_th",
-      "name": "觀霧登山口",
-      "lat": 24.515,
-      "lng": 121.167,
-      "elevation": 2000,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "id": "n_g08_820_road",
+      "name": "820林道0K",
+      "lat": 24.215,
+      "lng": 121.305,
+      "elevation": 2370,
+      "category": "trailhead"
     },
     {
-      "id": "n_g08_madala_hut",
-      "name": "馬達拉溪山屋",
-      "lat": 24.484,
-      "lng": 121.193,
-      "elevation": 2600,
-      "category": "hut",
-      "tags": [
-        "water"
-      ]
+      "id": "n_g08_8_4k_camp",
+      "name": "8.4K登山口營地",
+      "lat": 24.218,
+      "lng": 121.325,
+      "elevation": 2800,
+      "category": "trailhead"
     },
     {
-      "id": "n_g08_jiali",
-      "name": "加利山",
-      "lat": 24.459477,
-      "lng": 121.2162,
-      "elevation": 3112,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_rope_cliff",
+      "name": "拉繩垂直岩壁",
+      "lat": 24.215,
+      "lng": 121.335,
+      "elevation": 3100,
+      "category": "waypoint"
     },
     {
-      "id": "n_g08_jiujiu",
-      "name": "九九山莊",
-      "lat": 24.4692,
-      "lng": 121.2083,
-      "elevation": 2700,
-      "category": "hut",
-      "tags": []
+      "id": "n_g08_main_3jct",
+      "name": "主稜三岔路口",
+      "lat": 24.215,
+      "lng": 121.345,
+      "elevation": 3320,
+      "category": "junction"
     },
     {
-      "id": "n_g08_yize",
-      "name": "伊澤山",
-      "lat": 24.4614,
-      "lng": 121.2427,
-      "elevation": 3297,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_bilu",
+      "name": "畢祿山",
+      "lat": 24.21358,
+      "lng": 121.34719,
+      "elevation": 3370,
+      "category": "peak"
     },
     {
-      "id": "n_g08_daba",
-      "name": "大霸尖山",
-      "lat": 24.457742,
-      "lng": 121.257999,
-      "elevation": 3490,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_bilu_south",
+      "name": "畢祿山南峰",
+      "lat": 24.20272,
+      "lng": 121.34882,
+      "elevation": 3029,
+      "category": "peak"
     },
     {
-      "id": "n_g08_xiaoba",
-      "name": "小霸尖山",
-      "lat": 24.4616,
-      "lng": 121.2518,
-      "elevation": 3445,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_bilu_north",
+      "name": "北畢祿山",
+      "lat": 24.22399,
+      "lng": 121.34231,
+      "elevation": 3197,
+      "category": "peak"
     },
     {
-      "id": "n_g08_sumida_hut",
-      "name": "素密達山屋",
-      "lat": 24.423337,
-      "lng": 121.250901,
-      "elevation": 3500,
-      "category": "hut",
-      "tags": []
+      "id": "n_g08_1st_peak_camp",
+      "name": "第一峰(畢祿營地)",
+      "lat": 24.211,
+      "lng": 121.3495,
+      "elevation": 3358,
+      "category": "waypoint"
     },
     {
-      "id": "n_g08_sumida",
-      "name": "素密達山",
-      "lat": 24.4251,
-      "lng": 121.253554,
-      "elevation": 3517,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_zhushan_4",
+      "name": "鋸山(第四峰)",
+      "lat": 24.21112,
+      "lng": 121.35502,
+      "elevation": 3338,
+      "category": "peak"
     },
     {
-      "id": "n_g08_pinta",
-      "name": "品田山",
-      "lat": 24.4283,
-      "lng": 121.266766,
-      "elevation": 3524,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g08_east_front_camp",
+      "name": "東峰前營地",
+      "lat": 24.211,
+      "lng": 121.363,
+      "elevation": 3200,
+      "category": "waypoint"
     },
     {
-      "id": "n_g08_wuling_th",
-      "name": "武陵農場登山口",
-      "lat": 24.363,
-      "lng": 121.302,
+      "id": "n_g08_zhushan_east",
+      "name": "鋸山東峰",
+      "lat": 24.2067,
+      "lng": 121.37034,
+      "elevation": 3060,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_3jct",
+      "name": "三岔路口(羊頭)",
+      "lat": 24.208,
+      "lng": 121.375,
+      "elevation": 3000,
+      "category": "junction"
+    },
+    {
+      "id": "n_g08_yangtou",
+      "name": "羊頭山",
+      "lat": 24.20869,
+      "lng": 121.37973,
+      "elevation": 3033,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_yangtou_th",
+      "name": "羊頭山登山口",
+      "lat": 24.195,
+      "lng": 121.415,
+      "elevation": 1900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_zhushan_1",
+      "name": "鋸山一峰",
+      "lat": 24.2105,
+      "lng": 121.35056,
+      "elevation": 3361,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_zhushan_2",
+      "name": "鋸山二峰",
+      "lat": 24.2107,
+      "lng": 121.35169,
+      "elevation": 3350,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_zhushan_3",
+      "name": "鋸山三峰",
+      "lat": 24.21061,
+      "lng": 121.35361,
+      "elevation": 3322,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_zhushan_5",
+      "name": "鋸山五峰",
+      "lat": 24.21148,
+      "lng": 121.35716,
+      "elevation": 3271,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_zhushan_6",
+      "name": "鋸山六峰",
+      "lat": 24.21059,
+      "lng": 121.36033,
+      "elevation": 3203,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_qingquanqiao",
+      "name": "清泉橋",
+      "lat": 24.27,
+      "lng": 121.27,
+      "elevation": 1700,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_checkpost",
+      "name": "檢查哨",
+      "lat": 24.272,
+      "lng": 121.28,
       "elevation": 1750,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check",
-        "bus"
-      ]
+      "category": "junction"
+    },
+    {
+      "id": "n_g08_end_road",
+      "name": "行車終點",
+      "lat": 24.275,
+      "lng": 121.295,
+      "elevation": 2200,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_17_5k_th",
+      "name": "17.5K登山口",
+      "lat": 24.27,
+      "lng": 121.3,
+      "elevation": 2400,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_23_2k_th",
+      "name": "23.2K登山口",
+      "lat": 24.275,
+      "lng": 121.315,
+      "elevation": 2700,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_25k_workshop",
+      "name": "25K工寮",
+      "lat": 24.275,
+      "lng": 121.318,
+      "elevation": 2800,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g08_27_5k_th",
+      "name": "27.5K林道登山口",
+      "lat": 24.27,
+      "lng": 121.325,
+      "elevation": 2900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g08_rendai_ridge_jct",
+      "name": "人待山稜線岔路",
+      "lat": 24.26,
+      "lng": 121.335,
+      "elevation": 3050,
+      "category": "junction"
+    },
+    {
+      "id": "n_g08_rain_jct",
+      "name": "雨量計前岔路口",
+      "lat": 24.255,
+      "lng": 121.32,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g08_shanshan",
+      "name": "閂山",
+      "lat": 24.2587,
+      "lng": 121.30987,
+      "elevation": 3168,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_rendai",
+      "name": "人待山",
+      "lat": 24.25123,
+      "lng": 121.33979,
+      "elevation": 3114,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_rendai_north",
+      "name": "人待山北峰",
+      "lat": 24.25601,
+      "lng": 121.33832,
+      "elevation": 3074,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_lingming",
+      "name": "鈴鳴山",
+      "lat": 24.24437,
+      "lng": 121.35166,
+      "elevation": 3271,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_dongling_camp",
+      "name": "東稜營地",
+      "lat": 24.255,
+      "lng": 121.365,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g08_water_source",
+      "name": "北二段水源",
+      "lat": 24.272,
+      "lng": 121.327,
+      "elevation": 3300,
+      "category": "water"
+    },
+    {
+      "id": "n_g08_wuming_west",
+      "name": "無明山西峰",
+      "lat": 24.25429,
+      "lng": 121.37199,
+      "elevation": 3232,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_wuming",
+      "name": "無明山",
+      "lat": 24.25536,
+      "lng": 121.38471,
+      "elevation": 3449,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_wuming_east",
+      "name": "無明山東峰",
+      "lat": 24.25525,
+      "lng": 121.39345,
+      "elevation": 3190,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_wumingchi",
+      "name": "無明池",
+      "lat": 24.26,
+      "lng": 121.385,
+      "elevation": 3300,
+      "category": "water"
+    },
+    {
+      "id": "n_g08_guimen",
+      "name": "鬼門關峰",
+      "lat": 24.26565,
+      "lng": 121.38447,
+      "elevation": 3374,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_an_pass",
+      "name": "鞍部",
+      "lat": 24.275,
+      "lng": 121.385,
+      "elevation": 3200,
+      "category": "junction"
+    },
+    {
+      "id": "n_g08_ganshu_south",
+      "name": "甘薯南峰",
+      "lat": 24.28003,
+      "lng": 121.37999,
+      "elevation": 3160,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_ganshu",
+      "name": "甘薯峰",
+      "lat": 24.29048,
+      "lng": 121.38986,
+      "elevation": 3157,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_yi_zhishan",
+      "name": "遺名志山",
+      "lat": 24.265,
+      "lng": 121.34,
+      "elevation": 3200,
+      "category": "peak"
+    },
+    {
+      "id": "n_g08_ear_no_creek",
+      "name": "耳無溪百流點",
+      "lat": 24.26,
+      "lng": 121.335,
+      "elevation": 3000,
+      "category": "waypoint"
     }
   ],
   "edges": [
     {
-      "from": "n_g08_guanwu_th",
-      "to": "n_g08_madala_hut",
-      "minutes_forward": 185,
-      "minutes_backward": 124,
-      "distance_km": 4.34,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_820_road",
+      "to": "n_g08_8_4k_camp",
+      "minutes_forward": 230,
+      "minutes_backward": 200,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_madala_hut",
-      "to": "n_g08_jiali",
-      "minutes_forward": 156,
-      "minutes_backward": 105,
-      "distance_km": 3.6,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_8_4k_camp",
+      "to": "n_g08_rope_cliff",
+      "minutes_forward": 110,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_jiali",
-      "to": "n_g08_jiujiu",
-      "minutes_forward": 18,
-      "minutes_backward": 23,
-      "distance_km": 1.35,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_rope_cliff",
+      "to": "n_g08_main_3jct",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_jiujiu",
-      "to": "n_g08_yize",
-      "minutes_forward": 93,
-      "minutes_backward": 66,
-      "distance_km": 3.58,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_main_3jct",
+      "to": "n_g08_bilu",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_yize",
-      "to": "n_g08_daba",
-      "minutes_forward": 69,
-      "minutes_backward": 47,
-      "distance_km": 1.99,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_main_3jct",
+      "to": "n_g08_1st_peak_camp",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_daba",
-      "to": "n_g08_xiaoba",
-      "minutes_forward": 16,
-      "minutes_backward": 24,
-      "distance_km": 0.64,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_1st_peak_camp",
+      "to": "n_g08_zhushan_4",
+      "minutes_forward": 105,
+      "minutes_backward": 120,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_xiaoba",
-      "to": "n_g08_sumida_hut",
+      "from": "n_g08_zhushan_4",
+      "to": "n_g08_zhushan_1",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_1",
+      "to": "n_g08_zhushan_2",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_2",
+      "to": "n_g08_zhushan_3",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_3",
+      "to": "n_g08_zhushan_5",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_5",
+      "to": "n_g08_zhushan_6",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_4",
+      "to": "n_g08_east_front_camp",
+      "minutes_forward": 110,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_east_front_camp",
+      "to": "n_g08_zhushan_east",
+      "minutes_forward": 40,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_zhushan_east",
+      "to": "n_g08_3jct",
+      "minutes_forward": 25,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_3jct",
+      "to": "n_g08_yangtou",
+      "minutes_forward": 50,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_3jct",
+      "to": "n_g08_yangtou_th",
+      "minutes_forward": 180,
+      "minutes_backward": 350,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_qingquanqiao",
+      "to": "n_g08_checkpost",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g08_checkpost",
+      "to": "n_g08_end_road",
+      "minutes_forward": 40,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g08_end_road",
+      "to": "n_g08_17_5k_th",
+      "minutes_forward": 160,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_17_5k_th",
+      "to": "n_g08_23_2k_th",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_23_2k_th",
+      "to": "n_g08_25k_workshop",
+      "minutes_forward": 40,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_25k_workshop",
+      "to": "n_g08_27_5k_th",
+      "minutes_forward": 110,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_27_5k_th",
+      "to": "n_g08_rendai_ridge_jct",
+      "minutes_forward": 100,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_rendai_ridge_jct",
+      "to": "n_g08_rendai",
+      "minutes_forward": 60,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_rendai_ridge_jct",
+      "to": "n_g08_rain_jct",
+      "minutes_forward": 15,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_rain_jct",
+      "to": "n_g08_shanshan",
+      "minutes_forward": 120,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_25k_workshop",
+      "to": "n_g08_lingming",
+      "minutes_forward": 180,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_rendai",
+      "to": "n_g08_lingming",
+      "minutes_forward": 60,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_lingming",
+      "to": "n_g08_dongling_camp",
+      "minutes_forward": 20,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_dongling_camp",
+      "to": "n_g08_wuming_west",
+      "minutes_forward": 350,
+      "minutes_backward": 190,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_wuming_west",
+      "to": "n_g08_wuming",
+      "minutes_forward": 200,
+      "minutes_backward": 160,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_wuming",
+      "to": "n_g08_wuming_east",
+      "minutes_forward": 45,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_wuming",
+      "to": "n_g08_wumingchi",
+      "minutes_forward": 15,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_wumingchi",
+      "to": "n_g08_guimen",
       "minutes_forward": 70,
-      "minutes_backward": 53,
-      "distance_km": 3.59,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 45,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_sumida_hut",
-      "to": "n_g08_sumida",
-      "minutes_forward": 8,
-      "minutes_backward": 6,
-      "distance_km": 0.33,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_guimen",
+      "to": "n_g08_an_pass",
+      "minutes_forward": 70,
+      "minutes_backward": 90,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_sumida",
-      "to": "n_g08_pinta",
-      "minutes_forward": 22,
-      "minutes_backward": 17,
-      "distance_km": 1.38,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_an_pass",
+      "to": "n_g08_ganshu_south",
+      "minutes_forward": 140,
+      "minutes_backward": 70,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g08_pinta",
-      "to": "n_g08_wuling_th",
-      "minutes_forward": 310,
-      "minutes_backward": 476,
-      "distance_km": 8.09,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g08_ganshu_south",
+      "to": "n_g08_ganshu",
+      "minutes_forward": 140,
+      "minutes_backward": 140,
+      "source": "上河圖",
       "confirmed": true
+    },
+    {
+      "from": "n_g08_27_5k_th",
+      "to": "n_g08_water_source",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_bilu",
+      "to": "n_g08_bilu_south",
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_bilu",
+      "to": "n_g08_bilu_north",
+      "minutes_forward": 70,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_rendai",
+      "to": "n_g08_rendai_north",
+      "minutes_forward": 15,
+      "minutes_backward": 12,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_25k_workshop",
+      "to": "n_g08_yi_zhishan",
+      "minutes_forward": 80,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_yi_zhishan",
+      "to": "n_g08_ear_no_creek",
+      "minutes_forward": 30,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_ear_no_creek",
+      "to": "n_g08_lingming",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g08_820_road",
+      "to": "n_g08_qingquanqiao",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
     }
   ],
   "presets": [
     {
-      "id": "p_g08_standard",
-      "name": "北二段標準縱走（觀霧進、武陵出）",
-      "startNodeId": "n_g08_guanwu_th",
-      "endNodeId": "n_g08_wuling_th",
+      "id": "G08-bilu-yangtou",
+      "name": "畢祿羊頭連峰縱走 (2天1夜)",
+      "startNodeId": "n_g08_820_road",
+      "endNodeId": "n_g08_yangtou_th",
       "viaNodeIds": [
-        "n_g08_madala_hut",
-        "n_g08_jiali",
-        "n_g08_jiujiu",
-        "n_g08_yize",
-        "n_g08_daba",
-        "n_g08_xiaoba",
-        "n_g08_sumida_hut",
-        "n_g08_sumida",
-        "n_g08_pinta"
+        "n_g08_8_4k_camp",
+        "n_g08_rope_cliff",
+        "n_g08_main_3jct",
+        "n_g08_bilu",
+        "n_g08_1st_peak_camp",
+        "n_g08_zhushan_4",
+        "n_g08_east_front_camp",
+        "n_g08_zhushan_east",
+        "n_g08_3jct",
+        "n_g08_yangtou"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g08_madala_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g08_jiujiu",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g08_sumida_hut",
-          "type": "hut"
+          "atNodeId": "n_g08_1st_peak_camp",
+          "type": "camp"
         }
       ],
       "roundTrip": false
     },
     {
-      "id": "p_g08_reverse",
-      "name": "北二段反向縱走（武陵進、觀霧出）",
-      "startNodeId": "n_g08_wuling_th",
-      "endNodeId": "n_g08_guanwu_th",
+      "id": "G08-north-2nd",
+      "name": "北二段標準縱走 (4天3夜)",
+      "startNodeId": "n_g08_27_5k_th",
+      "endNodeId": "n_g08_ganshu",
       "viaNodeIds": [
-        "n_g08_pinta",
-        "n_g08_sumida",
-        "n_g08_sumida_hut",
-        "n_g08_xiaoba",
-        "n_g08_daba",
-        "n_g08_yize",
-        "n_g08_jiujiu",
-        "n_g08_jiali",
-        "n_g08_madala_hut"
+        "n_g08_rendai_ridge_jct",
+        "n_g08_rendai",
+        "n_g08_lingming",
+        "n_g08_dongling_camp",
+        "n_g08_wuming_west",
+        "n_g08_wuming",
+        "n_g08_wumingchi",
+        "n_g08_guimen",
+        "n_g08_an_pass",
+        "n_g08_ganshu_south"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g08_sumida_hut",
-          "type": "hut"
+          "atNodeId": "n_g08_dongling_camp",
+          "type": "camp"
         },
         {
-          "atNodeId": "n_g08_jiujiu",
-          "type": "hut"
+          "atNodeId": "n_g08_wumingchi",
+          "type": "water"
         },
         {
-          "atNodeId": "n_g08_madala_hut",
-          "type": "hut"
+          "atNodeId": "n_g08_an_pass",
+          "type": "camp"
         }
       ],
       "roundTrip": false
