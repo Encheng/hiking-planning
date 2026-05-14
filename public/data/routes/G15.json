@@ -1,27 +1,103 @@
 {
   "id": "G15",
-  "name": "丹大‧東郡橫斷縱走",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "name": "丹大東郡橫斷縱走",
+  "version": "2026-05-14",
+  "source": "上河文化 G15 丹大東郡步程示意圖 (G15_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g15_danda_50k",
-      "name": "丹大林道50K登山口",
-      "lat": 23.61,
-      "lng": 121.235,
-      "elevation": 1800,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "id": "n_g15_lindao_th",
+      "name": "丹大林道登山口",
+      "lat": 23.745,
+      "lng": 121.217,
+      "elevation": 1400,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g15_qixinhu_jct",
+      "name": "七彩湖岔路",
+      "lat": 23.722,
+      "lng": 121.22,
+      "elevation": 2800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_43_workshop",
+      "name": "43工寮",
+      "lat": 23.71,
+      "lng": 121.215,
+      "elevation": 2200,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g15_29_6k_camp",
+      "name": "29.6K擴稜營地",
+      "lat": 23.69,
+      "lng": 121.205,
+      "elevation": 2400,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_29_6k_water",
+      "name": "最後水源",
+      "lat": 23.691,
+      "lng": 121.203,
+      "elevation": 2380,
+      "category": "water"
+    },
+    {
+      "id": "n_g15_29_4k_camp",
+      "name": "29.4K擴稜營地",
+      "lat": 23.692,
+      "lng": 121.204,
+      "elevation": 2410,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_33_5k_park",
+      "name": "33.5K大圓圈",
+      "lat": 23.675,
+      "lng": 121.2,
+      "elevation": 2580,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_23_uba_lujian",
+      "name": "23K螺旋路徑",
+      "lat": 23.7,
+      "lng": 121.208,
+      "elevation": 2300,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_haematitla",
+      "name": "海諾螺絲山",
+      "lat": 23.715,
+      "lng": 121.21,
+      "elevation": 2500,
+      "category": "peak"
+    },
+    {
+      "id": "n_g15_3kshigao",
+      "name": "3K石膏礦",
+      "lat": 23.74,
+      "lng": 121.213,
+      "elevation": 1500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_18_dongo_creek",
+      "name": "十八重溪谷",
+      "lat": 23.79,
+      "lng": 121.3,
+      "elevation": 700,
+      "category": "trailhead"
     },
     {
       "id": "n_g15_danda_hut",
       "name": "丹大山屋",
       "lat": 23.616,
       "lng": 121.228,
-      "elevation": 2450,
+      "elevation": 2900,
       "category": "hut"
     },
     {
@@ -29,92 +105,80 @@
       "name": "丹大溪源頭營地",
       "lat": 23.618,
       "lng": 121.218,
-      "elevation": 2900,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_danda",
+      "name": "丹大山",
+      "lat": 23.6004,
+      "lng": 121.2134,
+      "elevation": 3329,
+      "category": "peak"
+    },
+    {
+      "id": "n_g15_danda_west_an",
+      "name": "丹大山西鞍營地",
+      "lat": 23.601,
+      "lng": 121.2,
+      "elevation": 3100,
+      "category": "waypoint"
     },
     {
       "id": "n_g15_dongjun",
       "name": "東郡大山",
-      "lat": 23.626807,
-      "lng": 121.091867,
-      "elevation": 3617,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "lat": 23.62681,
+      "lng": 121.09187,
+      "elevation": 3619,
+      "category": "peak"
     },
     {
-      "id": "n_g15_dongjun_camp",
+      "id": "n_g15_dongjun_south",
       "name": "東郡大山南鞍營地",
       "lat": 23.62,
       "lng": 121.095,
       "elevation": 3350,
-      "category": "waypoint",
-      "tags": [
-        "camp"
-      ]
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_dongjun_east",
+      "name": "東郡大山東峰",
+      "lat": 23.625,
+      "lng": 121.1,
+      "elevation": 3500,
+      "category": "peak"
+    },
+    {
+      "id": "n_g15_dongjun_nean",
+      "name": "東郡東北鞍營地",
+      "lat": 23.628,
+      "lng": 121.098,
+      "elevation": 3300,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_yixiqiu",
+      "name": "義西請馬至山",
+      "lat": 23.58672,
+      "lng": 121.15326,
+      "elevation": 3252,
+      "category": "peak"
+    },
+    {
+      "id": "n_g15_tianranxin",
+      "name": "天南可蘭山",
+      "lat": 23.60863,
+      "lng": 121.13036,
+      "elevation": 3412,
+      "category": "peak"
     },
     {
       "id": "n_g15_central_ridge_jct",
       "name": "中央山脈稜線岔路",
       "lat": 23.613,
       "lng": 121.155,
-      "elevation": 3200,
+      "elevation": 3300,
       "category": "junction"
-    },
-    {
-      "id": "n_g15_danda_mt",
-      "name": "丹大山",
-      "lat": 23.6004,
-      "lng": 121.2134,
-      "elevation": 3329,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g15_danda_mt_camp",
-      "name": "丹大山西鞍營地",
-      "lat": 23.601,
-      "lng": 121.2,
-      "elevation": 3100,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
-    },
-    {
-      "id": "n_g15_liushun_jct",
-      "name": "丹大東郡南北岔路",
-      "lat": 23.6,
-      "lng": 121.175,
-      "elevation": 3050,
-      "category": "junction"
-    },
-    {
-      "id": "n_g15_south_ridge_camp",
-      "name": "南稜營地",
-      "lat": 23.545,
-      "lng": 121.185,
-      "elevation": 2900,
-      "category": "waypoint",
-      "tags": [
-        "camp"
-      ]
-    },
-    {
-      "id": "n_g15_maxi_approach",
-      "name": "馬西山接近路",
-      "lat": 23.51,
-      "lng": 121.178,
-      "elevation": 3100,
-      "category": "waypoint"
     },
     {
       "id": "n_g15_maxi",
@@ -122,255 +186,297 @@
       "lat": 23.4838,
       "lng": 121.174,
       "elevation": 3443,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g15_maxi_camp",
+      "id": "n_g15_maxi_base",
       "name": "馬西山基地營",
       "lat": 23.49,
       "lng": 121.168,
       "elevation": 3000,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_maxi_approach",
+      "name": "馬西山接近路",
+      "lat": 23.51,
+      "lng": 121.178,
+      "elevation": 3050,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_malijianan",
+      "name": "馬利加南山",
+      "lat": 23.52157,
+      "lng": 121.11717,
+      "elevation": 3561,
+      "category": "peak"
+    },
+    {
+      "id": "n_g15_malijianan_east",
+      "name": "馬利加南東側營地",
+      "lat": 23.52,
+      "lng": 121.12,
+      "elevation": 3200,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g15_3jct",
+      "name": "丹大東郡南北岔路",
+      "lat": 23.6,
+      "lng": 121.175,
+      "elevation": 3050,
+      "category": "junction"
+    },
+    {
+      "id": "n_g15_south_camp",
+      "name": "南稜營地",
+      "lat": 23.545,
+      "lng": 121.185,
+      "elevation": 2950,
+      "category": "waypoint"
     }
   ],
   "edges": [
     {
-      "from": "n_g15_danda_50k",
+      "from": "n_g15_lindao_th",
+      "to": "n_g15_43_workshop",
+      "minutes_forward": 90,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_43_workshop",
+      "to": "n_g15_29_4k_camp",
+      "minutes_forward": 240,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_29_4k_camp",
+      "to": "n_g15_29_6k_camp",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_29_6k_camp",
+      "to": "n_g15_29_6k_water",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_29_6k_camp",
+      "to": "n_g15_33_5k_park",
+      "minutes_forward": 180,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_33_5k_park",
       "to": "n_g15_danda_hut",
-      "minutes_forward": 147,
-      "minutes_backward": 86,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 120,
+      "minutes_backward": 90,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_danda_hut",
       "to": "n_g15_danda_camp",
-      "minutes_forward": 138,
-      "minutes_backward": 79,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_danda_camp",
-      "to": "n_g15_danda_mt",
-      "minutes_forward": 99,
+      "to": "n_g15_danda",
+      "minutes_forward": 130,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda",
+      "to": "n_g15_danda_west_an",
+      "minutes_forward": 40,
       "minutes_backward": 60,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g15_danda_mt",
-      "to": "n_g15_danda_mt_camp",
-      "minutes_forward": 33,
-      "minutes_backward": 45,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g15_danda_mt_camp",
+      "from": "n_g15_danda_west_an",
       "to": "n_g15_central_ridge_jct",
-      "minutes_forward": 60,
-      "minutes_backward": 53,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 150,
+      "minutes_backward": 100,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_central_ridge_jct",
       "to": "n_g15_dongjun",
-      "minutes_forward": 95,
-      "minutes_backward": 59,
-      "distance_km": 4.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 180,
+      "minutes_backward": 130,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_dongjun",
-      "to": "n_g15_dongjun_camp",
-      "minutes_forward": 32,
-      "minutes_backward": 47,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g15_dongjun_south",
+      "minutes_forward": 40,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g15_danda_mt_camp",
-      "to": "n_g15_liushun_jct",
-      "minutes_forward": 51,
-      "minutes_backward": 63,
-      "distance_km": 3.8,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g15_dongjun",
+      "to": "n_g15_dongjun_east",
+      "minutes_forward": 30,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g15_liushun_jct",
-      "to": "n_g15_south_ridge_camp",
+      "from": "n_g15_dongjun_east",
+      "to": "n_g15_dongjun_nean",
+      "minutes_forward": 25,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_dongjun_nean",
+      "to": "n_g15_central_ridge_jct",
+      "minutes_forward": 120,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_central_ridge_jct",
+      "to": "n_g15_yixiqiu",
+      "minutes_forward": 240,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_central_ridge_jct",
+      "to": "n_g15_tianranxin",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_danda_west_an",
+      "to": "n_g15_3jct",
       "minutes_forward": 60,
-      "minutes_backward": 62,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 70,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g15_south_ridge_camp",
+      "from": "n_g15_3jct",
+      "to": "n_g15_south_camp",
+      "minutes_forward": 100,
+      "minutes_backward": 120,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_south_camp",
       "to": "n_g15_maxi_approach",
-      "minutes_forward": 91,
-      "minutes_backward": 68,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 110,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_maxi_approach",
       "to": "n_g15_maxi",
-      "minutes_forward": 81,
-      "minutes_backward": 47,
-      "distance_km": 3.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 100,
+      "minutes_backward": 70,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g15_maxi",
-      "to": "n_g15_maxi_camp",
-      "minutes_forward": 38,
-      "minutes_backward": 52,
-      "distance_km": 2.5,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g15_maxi_base",
+      "minutes_forward": 40,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_maxi",
+      "to": "n_g15_malijianan",
+      "minutes_forward": 240,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_malijianan",
+      "to": "n_g15_malijianan_east",
+      "minutes_forward": 40,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g15_lindao_th",
+      "to": "n_g15_qixinhu_jct",
+      "minutes_forward": 120,
+      "minutes_backward": 100,
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "G15-full-traverse",
-      "name": "丹大‧東郡完整縱走 (12天11夜)",
-      "startNodeId": "n_g15_danda_50k",
-      "endNodeId": "n_g15_maxi_camp",
+      "id": "G15-danda-dongjun",
+      "name": "丹大東郡橫斷 (8天7夜)",
+      "startNodeId": "n_g15_lindao_th",
+      "endNodeId": "n_g15_dongjun",
       "viaNodeIds": [
+        "n_g15_43_workshop",
+        "n_g15_29_6k_camp",
+        "n_g15_33_5k_park",
         "n_g15_danda_hut",
-        "n_g15_danda_camp",
-        "n_g15_danda_mt",
-        "n_g15_danda_mt_camp",
-        "n_g15_central_ridge_jct",
-        "n_g15_dongjun",
-        "n_g15_dongjun_camp",
-        "n_g15_liushun_jct",
-        "n_g15_south_ridge_camp",
-        "n_g15_maxi_approach",
-        "n_g15_maxi"
+        "n_g15_danda",
+        "n_g15_danda_west_an",
+        "n_g15_central_ridge_jct"
       ],
       "suggestedDayBreaks": [
         {
+          "atNodeId": "n_g15_43_workshop",
+          "type": "shelter"
+        },
+        {
+          "atNodeId": "n_g15_29_6k_camp",
+          "type": "camp"
+        },
+        {
           "atNodeId": "n_g15_danda_hut",
-          "type": "hut",
-          "label": "第一夜：丹大山屋"
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g15_danda_camp",
-          "type": "camp",
-          "label": "第二夜：丹大溪源頭"
+          "atNodeId": "n_g15_danda_west_an",
+          "type": "camp"
         },
         {
-          "atNodeId": "n_g15_danda_mt",
-          "type": "camp",
-          "label": "第三夜：丹大山頂附近"
-        },
-        {
-          "atNodeId": "n_g15_danda_mt_camp",
-          "type": "camp",
-          "label": "第四夜：丹大山西鞍"
-        },
-        {
-          "atNodeId": "n_g15_dongjun_camp",
-          "type": "camp",
-          "label": "第五夜：東郡南鞍"
-        },
-        {
-          "atNodeId": "n_g15_liushun_jct",
-          "type": "camp",
-          "label": "第六夜：六順山岔路"
-        },
-        {
-          "atNodeId": "n_g15_south_ridge_camp",
-          "type": "camp",
-          "label": "第七夜：南稜"
-        },
-        {
-          "atNodeId": "n_g15_maxi_camp",
-          "type": "camp",
-          "label": "第八夜：馬西山基地"
+          "atNodeId": "n_g15_dongjun_south",
+          "type": "camp"
         }
-      ]
-    },
-    {
-      "id": "G15-dantu",
-      "name": "丹大山來回 (5天4夜)",
-      "startNodeId": "n_g15_danda_50k",
-      "endNodeId": "n_g15_danda_50k",
-      "viaNodeIds": [
-        "n_g15_danda_hut",
-        "n_g15_danda_camp",
-        "n_g15_danda_mt",
-        "n_g15_danda_mt_camp",
-        "n_g15_danda_camp",
-        "n_g15_danda_hut"
       ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g15_danda_hut",
-          "type": "hut",
-          "label": "第一夜：丹大山屋"
-        },
-        {
-          "atNodeId": "n_g15_danda_camp",
-          "type": "camp",
-          "label": "第二夜：溪源營地"
-        },
-        {
-          "atNodeId": "n_g15_danda_mt_camp",
-          "type": "camp",
-          "label": "第三夜：丹大西鞍"
-        },
-        {
-          "atNodeId": "n_g15_danda_hut",
-          "type": "hut",
-          "label": "第四夜：丹大山屋"
-        }
-      ]
+      "roundTrip": false
     }
   ]
 }

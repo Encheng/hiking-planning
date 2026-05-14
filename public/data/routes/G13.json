@@ -1,169 +1,555 @@
 {
   "id": "G13",
   "name": "干卓萬群峰縱走",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM relation 19930450 (ODbL)",
+  "version": "2026-05-14",
+  "source": "上河文化 G13 干卓萬群峰步程示意圖 (G13_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g13_wanfeng_th",
-      "name": "萬豐部落登山口",
-      "lat": 23.909,
-      "lng": 121.116,
-      "elevation": 500,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "id": "n_g13_puli",
+      "name": "埔里",
+      "lat": 23.97,
+      "lng": 120.97,
+      "elevation": 450,
+      "category": "trailhead"
     },
     {
-      "id": "n_g13_ganzhuo_base",
-      "name": "干卓萬山基地營",
-      "lat": 23.892,
-      "lng": 121.124,
+      "id": "n_g13_wushe",
+      "name": "霧社",
+      "lat": 23.97,
+      "lng": 121.16,
+      "elevation": 1150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g13_wanwei_xiaoju",
+      "name": "武界霸頭瀑",
+      "lat": 23.9,
+      "lng": 121.1,
+      "elevation": 800,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_liyuan_creek",
+      "name": "栗園溪",
+      "lat": 23.895,
+      "lng": 121.105,
+      "elevation": 900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_lindao_xishuiyuan",
+      "name": "林道溪水源",
+      "lat": 23.89,
+      "lng": 121.11,
+      "elevation": 1100,
+      "category": "water"
+    },
+    {
+      "id": "n_g13_zuolin_dayuanjian",
+      "name": "造林大圓圈",
+      "lat": 23.885,
+      "lng": 121.115,
+      "elevation": 1500,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_lindao_th",
+      "name": "萬大林道登山口",
+      "lat": 23.88,
+      "lng": 121.12,
+      "elevation": 1900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g13_46k_brick",
+      "name": "46K紅磚屋",
+      "lat": 23.87,
+      "lng": 121.125,
+      "elevation": 2400,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g13_wanyou_lindao",
+      "name": "武界林道",
+      "lat": 23.875,
+      "lng": 121.123,
       "elevation": 2300,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "category": "junction"
+    },
+    {
+      "id": "n_g13_zhuoshe",
+      "name": "卓社山",
+      "lat": 23.84,
+      "lng": 121.09115,
+      "elevation": 2652,
+      "category": "peak"
+    },
+    {
+      "id": "n_g13_zhuoshe_dayuxian",
+      "name": "卓社大山",
+      "lat": 23.83453,
+      "lng": 121.11585,
+      "elevation": 3368,
+      "category": "peak"
+    },
+    {
+      "id": "n_g13_28_camp",
+      "name": "289鞍部營地",
+      "lat": 23.835,
+      "lng": 121.105,
+      "elevation": 2895,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_qireng",
+      "name": "其儂",
+      "lat": "23.86000",
+      "lng": 121.13,
+      "elevation": 2500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g13_7_8k_park",
+      "name": "7.8K停車處",
+      "lat": 23.87,
+      "lng": 121.14,
+      "elevation": 2400,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g13_v_xinhouwu",
+      "name": "V型新箱屋",
+      "lat": 23.865,
+      "lng": 121.145,
+      "elevation": 2300,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g13_5_3k_workshop",
+      "name": "5.3K廢工寮",
+      "lat": 23.86,
+      "lng": 121.15,
+      "elevation": 2150,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g13_lijiezi",
+      "name": "理捷子",
+      "lat": 23.875,
+      "lng": 121.145,
+      "elevation": 2500,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_yingzhai_camp",
+      "name": "螢寨營地",
+      "lat": 23.88,
+      "lng": 121.15,
+      "elevation": 2700,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_th",
+      "name": "干卓萬登山口",
+      "lat": 23.875,
+      "lng": 121.155,
+      "elevation": 2800,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g13_dengshan_jct",
+      "name": "登山口岔路",
+      "lat": 23.878,
+      "lng": 121.158,
+      "elevation": 2850,
+      "category": "junction"
+    },
+    {
+      "id": "n_g13_7zhuo_lai_camp",
+      "name": "七卓萊源營地",
+      "lat": 23.885,
+      "lng": 121.165,
+      "elevation": 2900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_rope_camp",
+      "name": "扁形營地",
+      "lat": 23.888,
+      "lng": 121.168,
+      "elevation": 3050,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_ganzhuowan_baseN",
+      "name": "千卓萬山基地營北",
+      "lat": 23.885,
+      "lng": 121.168,
+      "elevation": 3050,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_3198",
+      "name": "3198公尺峰",
+      "lat": 23.882,
+      "lng": 121.168,
+      "elevation": 3198,
+      "category": "peak"
     },
     {
       "id": "n_g13_ganzhuo",
       "name": "干卓萬山",
-      "lat": 23.876,
-      "lng": 121.139,
+      "lat": 23.87605,
+      "lng": 121.13896,
       "elevation": 3282,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g13_ganzhuo_jct",
+      "id": "n_g13_ganzhuo_3jct",
       "name": "干卓萬山三叉峰",
-      "lat": 23.865,
-      "lng": 121.154,
+      "lat": 23.8651,
+      "lng": 121.15394,
       "elevation": 3244,
-      "category": "junction"
+      "category": "peak"
     },
     {
       "id": "n_g13_mushan",
       "name": "牧山",
-      "lat": 23.863,
-      "lng": 121.16,
+      "lat": 23.8629,
+      "lng": 121.16021,
       "elevation": 3239,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g13_sawakino_th",
-      "name": "撒烏瓦知部落",
-      "lat": 23.845,
+      "id": "n_g13_mushan_east",
+      "name": "牧山東北鞍營地",
+      "lat": 23.863,
+      "lng": 121.165,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_mushan_chi",
+      "name": "牧山池",
+      "lat": 23.862,
+      "lng": 121.167,
+      "elevation": 3100,
+      "category": "water"
+    },
+    {
+      "id": "n_g13_wanlishan_west",
+      "name": "萬里山西峰",
+      "lat": 23.865,
       "lng": 121.175,
-      "elevation": 600,
-      "category": "trailhead",
-      "tags": [
-        "permit_check"
-      ]
+      "elevation": 3200,
+      "category": "peak"
+    },
+    {
+      "id": "n_g13_dongnan_camp",
+      "name": "東南鞍營地",
+      "lat": 23.863,
+      "lng": 121.17,
+      "elevation": 3050,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_dongbei_camp",
+      "name": "東北下營地",
+      "lat": 23.865,
+      "lng": 121.166,
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g13_yufengshan_jct",
+      "name": "卓社大山東峰交叉口",
+      "lat": 23.83,
+      "lng": 121.115,
+      "elevation": 3250,
+      "category": "junction"
     }
   ],
   "edges": [
     {
-      "from": "n_g13_wanfeng_th",
-      "to": "n_g13_ganzhuo_base",
-      "minutes_forward": 510,
-      "minutes_backward": 336,
-      "distance_km": 10.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g13_puli",
+      "to": "n_g13_wushe",
+      "minutes_forward": 40,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g13_wushe",
+      "to": "n_g13_wanwei_xiaoju",
+      "minutes_forward": 45,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g13_wanwei_xiaoju",
+      "to": "n_g13_liyuan_creek",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g13_ganzhuo_base",
+      "from": "n_g13_liyuan_creek",
+      "to": "n_g13_lindao_xishuiyuan",
+      "minutes_forward": 100,
+      "minutes_backward": 65,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_lindao_xishuiyuan",
+      "to": "n_g13_zuolin_dayuanjian",
+      "minutes_forward": 100,
+      "minutes_backward": 65,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_zuolin_dayuanjian",
+      "to": "n_g13_lindao_th",
+      "minutes_forward": 180,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_lindao_th",
+      "to": "n_g13_46k_brick",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_46k_brick",
+      "to": "n_g13_28_camp",
+      "minutes_forward": 180,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_28_camp",
+      "to": "n_g13_zhuoshe_dayuxian",
+      "minutes_forward": 130,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_zhuoshe_dayuxian",
+      "to": "n_g13_zhuoshe",
+      "minutes_forward": 200,
+      "minutes_backward": 240,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_zhuoshe_dayuxian",
+      "to": "n_g13_yufengshan_jct",
+      "minutes_forward": 200,
+      "minutes_backward": 320,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_7_8k_park",
+      "to": "n_g13_v_xinhouwu",
+      "minutes_forward": 50,
+      "minutes_backward": 65,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_v_xinhouwu",
+      "to": "n_g13_5_3k_workshop",
+      "minutes_forward": 50,
+      "minutes_backward": 75,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_7_8k_park",
+      "to": "n_g13_lijiezi",
+      "minutes_forward": 140,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_lijiezi",
+      "to": "n_g13_yingzhai_camp",
+      "minutes_forward": 50,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_yingzhai_camp",
+      "to": "n_g13_th",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_th",
+      "to": "n_g13_dengshan_jct",
+      "minutes_forward": 70,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_dengshan_jct",
+      "to": "n_g13_7zhuo_lai_camp",
+      "minutes_forward": 90,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_7zhuo_lai_camp",
+      "to": "n_g13_rope_camp",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_rope_camp",
+      "to": "n_g13_ganzhuowan_baseN",
+      "minutes_forward": 40,
+      "minutes_backward": 35,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_ganzhuowan_baseN",
       "to": "n_g13_ganzhuo",
-      "minutes_forward": 271,
-      "minutes_backward": 178,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g13_ganzhuo",
-      "to": "n_g13_ganzhuo_jct",
-      "minutes_forward": 29,
-      "minutes_backward": 38,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g13_ganzhuo_3jct",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g13_ganzhuo_jct",
+      "from": "n_g13_ganzhuo_3jct",
       "to": "n_g13_mushan",
-      "minutes_forward": 13,
-      "minutes_backward": 16,
-      "distance_km": 1.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g13_mushan",
-      "to": "n_g13_sawakino_th",
-      "minutes_forward": 461,
-      "minutes_backward": 708,
-      "distance_km": 12.0,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g13_mushan_east",
+      "minutes_forward": 50,
+      "minutes_backward": 65,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_mushan_east",
+      "to": "n_g13_mushan_chi",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_mushan_east",
+      "to": "n_g13_wanlishan_west",
+      "minutes_forward": 200,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_mushan",
+      "to": "n_g13_dongnan_camp",
+      "minutes_forward": 35,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_dongnan_camp",
+      "to": "n_g13_dongbei_camp",
+      "minutes_forward": 30,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g13_dongbei_camp",
+      "to": "n_g13_3198",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "G13-traverse",
-      "name": "干卓萬群峰縱走 (3天2夜)",
-      "startNodeId": "n_g13_wanfeng_th",
-      "endNodeId": "n_g13_sawakino_th",
+      "id": "G13-ganzhuowan",
+      "name": "干卓萬群峰縱走 (4天3夜)",
+      "startNodeId": "n_g13_7_8k_park",
+      "endNodeId": "n_g13_mushan",
       "viaNodeIds": [
-        "n_g13_ganzhuo_base",
+        "n_g13_lijiezi",
+        "n_g13_yingzhai_camp",
+        "n_g13_th",
         "n_g13_ganzhuo",
-        "n_g13_ganzhuo_jct",
-        "n_g13_mushan"
+        "n_g13_ganzhuo_3jct"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g13_ganzhuo_base",
+          "atNodeId": "n_g13_yingzhai_camp",
           "type": "camp"
         },
         {
-          "atNodeId": "n_g13_ganzhuo",
+          "atNodeId": "n_g13_7zhuo_lai_camp",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g13_mushan_east",
           "type": "camp"
         }
-      ]
+      ],
+      "roundTrip": true
     },
     {
-      "id": "G13-ganzhuo-outback",
-      "name": "干卓萬山來回 (2天1夜)",
-      "startNodeId": "n_g13_wanfeng_th",
-      "endNodeId": "n_g13_ganzhuo",
+      "id": "G13-zhuoshe",
+      "name": "卓社大山 (3天2夜)",
+      "startNodeId": "n_g13_lindao_th",
+      "endNodeId": "n_g13_zhuoshe_dayuxian",
       "viaNodeIds": [
-        "n_g13_ganzhuo_base"
+        "n_g13_46k_brick",
+        "n_g13_28_camp"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g13_ganzhuo_base",
-          "type": "camp"
+          "atNodeId": "n_g13_46k_brick",
+          "type": "shelter"
         }
-      ]
+      ],
+      "roundTrip": true
     }
   ]
 }

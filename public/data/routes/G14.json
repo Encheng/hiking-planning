@@ -1,177 +1,553 @@
 {
   "id": "G14",
-  "name": "七彩湖‧六順山",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "name": "丹大山列縱走 (七彩湖‧六順山)",
+  "version": "2026-05-14",
+  "source": "上河文化 G14 丹大山列縱走步程示意圖 (G14_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g14_wanrong_th",
-      "name": "萬榮林道登山口",
+      "id": "n_g14_thuiyuan",
+      "name": "水里",
+      "lat": 23.8103,
+      "lng": 120.856,
+      "elevation": 326,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g14_dongguanbridge",
+      "name": "瑞穗",
+      "lat": 23.5,
+      "lng": 121.37,
+      "elevation": 100,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g14_lindao_admin",
+      "name": "林道管制",
+      "lat": 23.74,
+      "lng": 121.215,
+      "elevation": 1400,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_lindao_th",
+      "name": "丹大林道登山口",
       "lat": 23.745,
       "lng": 121.217,
       "elevation": 1400,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "category": "trailhead"
     },
     {
-      "id": "n_g14_ridge_camp",
-      "name": "稜線營地",
-      "lat": 23.738,
-      "lng": 121.22,
-      "elevation": 2100,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
-    },
-    {
-      "id": "n_g14_high_camp",
-      "name": "高地營地",
-      "lat": 23.73,
+      "id": "n_g14_linji_th",
+      "name": "林道入口",
+      "lat": 23.747,
       "lng": 121.218,
-      "elevation": 2600,
-      "category": "waypoint",
-      "tags": [
-        "camp"
-      ]
+      "elevation": 1450,
+      "category": "junction"
     },
     {
-      "id": "n_g14_qicai_lake",
-      "name": "七彩湖",
+      "id": "n_g14_lindao_xiaohu",
+      "name": "彩湖",
       "lat": 23.72,
       "lng": 121.215,
-      "elevation": 2850,
-      "category": "water",
-      "tags": [
-        "lake",
-        "camp"
-      ]
+      "elevation": 2820,
+      "category": "water"
     },
     {
-      "id": "n_g14_qicai_jct",
-      "name": "七彩湖岔路",
+      "id": "n_g14_qixin_jct",
+      "name": "看雲樹下岔路",
       "lat": 23.722,
       "lng": 121.22,
       "elevation": 2800,
       "category": "junction"
     },
     {
+      "id": "n_g14_lindao_dongkou",
+      "name": "林道盡頭",
+      "lat": 23.725,
+      "lng": 121.225,
+      "elevation": 2800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_qixin_lake",
+      "name": "七彩湖",
+      "lat": 23.72,
+      "lng": 121.215,
+      "elevation": 2820,
+      "category": "water"
+    },
+    {
+      "id": "n_g14_yundao_bridge",
+      "name": "運煤之橋",
+      "lat": 23.725,
+      "lng": 121.225,
+      "elevation": 2820,
+      "category": "waypoint"
+    },
+    {
       "id": "n_g14_liushun",
       "name": "六順山",
       "lat": 23.7245,
-      "lng": 121.2396,
+      "lng": 121.23957,
       "elevation": 3006,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_2917",
+      "name": "2917公尺峰",
+      "lat": 23.72,
+      "lng": 121.235,
+      "elevation": 2917,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_2897",
+      "name": "2897公尺峰",
+      "lat": 23.718,
+      "lng": 121.24,
+      "elevation": 2897,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_2813_camp",
+      "name": "2813裝箱地",
+      "lat": 23.716,
+      "lng": 121.237,
+      "elevation": 2813,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g14_2761_low_an",
+      "name": "2761最低鞍部",
+      "lat": 23.715,
+      "lng": 121.235,
+      "elevation": 2761,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_3265",
+      "name": "3265公尺峰",
+      "lat": 23.7,
+      "lng": 121.235,
+      "elevation": 3265,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_anshan",
+      "name": "鞍山",
+      "lat": 23.695,
+      "lng": 121.235,
+      "elevation": 3260,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_3255",
+      "name": "3255公尺峰",
+      "lat": 23.69,
+      "lng": 121.238,
+      "elevation": 3255,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_2833",
+      "name": "2833公尺峰",
+      "lat": 23.685,
+      "lng": 121.24,
+      "elevation": 2833,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_xiaoshigong",
+      "name": "小石公山",
+      "lat": 23.632,
+      "lng": 121.2248,
+      "elevation": 2940,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_dashigong",
+      "name": "大石公山",
+      "lat": 23.6336,
+      "lng": 121.22426,
+      "elevation": 3054,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_guanmen_west",
+      "name": "關門山西峰",
+      "lat": 23.6771,
+      "lng": 121.22797,
+      "elevation": 2912,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_guanmen_jct",
+      "name": "關門西山口",
+      "lat": 23.675,
+      "lng": 121.23,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_guanmen_north",
+      "name": "關門北山",
+      "lat": 23.69378,
+      "lng": 121.23922,
+      "elevation": 3044,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_guanmen",
+      "name": "關門山",
+      "lat": 23.67661,
+      "lng": 121.23233,
+      "elevation": 2992,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_danda",
+      "name": "丹大山",
+      "lat": 23.6004,
+      "lng": 121.2134,
+      "elevation": 3329,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_danda_east",
+      "name": "丹大山東峰",
+      "lat": 23.6023,
+      "lng": 121.22454,
+      "elevation": 3143,
+      "category": "peak"
+    },
+    {
+      "id": "n_g14_danda_west_an",
+      "name": "丹大山西鞍營地",
+      "lat": 23.601,
+      "lng": 121.2,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g14_taken_chizu",
+      "name": "塔可機停機坪",
+      "lat": 23.62,
+      "lng": 121.21,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_qiyu_workshop",
+      "name": "七矽工寮",
+      "lat": 23.65,
+      "lng": 121.2,
+      "elevation": 2700,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g14_3jct",
+      "name": "丹大三岔路口",
+      "lat": 23.655,
+      "lng": 121.215,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g14_to_danda",
+      "name": "往丹大東郡橫斷",
+      "lat": 23.59,
+      "lng": 121.21,
+      "elevation": 3200,
+      "category": "junction"
     }
   ],
   "edges": [
     {
-      "from": "n_g14_wanrong_th",
-      "to": "n_g14_ridge_camp",
-      "minutes_forward": 166,
+      "from": "n_g14_lindao_admin",
+      "to": "n_g14_lindao_th",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g14_lindao_th",
+      "to": "n_g14_linji_th",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_linji_th",
+      "to": "n_g14_lindao_dongkou",
+      "minutes_forward": 120,
       "minutes_backward": 100,
-      "distance_km": 4.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g14_ridge_camp",
-      "to": "n_g14_high_camp",
-      "minutes_forward": 140,
-      "minutes_backward": 76,
-      "distance_km": 4.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g14_high_camp",
-      "to": "n_g14_qicai_jct",
+      "from": "n_g14_lindao_dongkou",
+      "to": "n_g14_qixin_jct",
       "minutes_forward": 70,
-      "minutes_backward": 42,
-      "distance_km": 2.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 70,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g14_qicai_jct",
-      "to": "n_g14_qicai_lake",
+      "from": "n_g14_qixin_jct",
+      "to": "n_g14_qixin_lake",
       "minutes_forward": 26,
-      "minutes_backward": 20,
-      "distance_km": 1.2,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 30,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g14_qicai_jct",
+      "from": "n_g14_qixin_jct",
       "to": "n_g14_liushun",
       "minutes_forward": 62,
-      "minutes_backward": 39,
-      "distance_km": 2.8,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 55,
+      "source": "上河圖",
       "confirmed": true
+    },
+    {
+      "from": "n_g14_liushun",
+      "to": "n_g14_2917",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_2917",
+      "to": "n_g14_2897",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_2897",
+      "to": "n_g14_2813_camp",
+      "minutes_forward": 80,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_2813_camp",
+      "to": "n_g14_2761_low_an",
+      "minutes_forward": 80,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_2761_low_an",
+      "to": "n_g14_3265",
+      "minutes_forward": 100,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_3265",
+      "to": "n_g14_anshan",
+      "minutes_forward": 100,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_anshan",
+      "to": "n_g14_3255",
+      "minutes_forward": 100,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_3255",
+      "to": "n_g14_2833",
+      "minutes_forward": 240,
+      "minutes_backward": 260,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_2833",
+      "to": "n_g14_dashigong",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_dashigong",
+      "to": "n_g14_xiaoshigong",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_dashigong",
+      "to": "n_g14_guanmen_north",
+      "minutes_forward": 130,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_guanmen_north",
+      "to": "n_g14_guanmen",
+      "minutes_forward": 100,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_guanmen",
+      "to": "n_g14_guanmen_west",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_guanmen_west",
+      "to": "n_g14_guanmen_jct",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_guanmen",
+      "to": "n_g14_qiyu_workshop",
+      "minutes_forward": 60,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_qiyu_workshop",
+      "to": "n_g14_3jct",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_3jct",
+      "to": "n_g14_taken_chizu",
+      "minutes_forward": 90,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_taken_chizu",
+      "to": "n_g14_danda_west_an",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_danda_west_an",
+      "to": "n_g14_danda",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_danda",
+      "to": "n_g14_danda_east",
+      "minutes_forward": 30,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_danda",
+      "to": "n_g14_to_danda",
+      "minutes_forward": 60,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g14_thuiyuan",
+      "to": "n_g14_lindao_admin",
+      "minutes_forward": 240,
+      "minutes_backward": 240,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g14_dongguanbridge",
+      "to": "n_g14_lindao_admin",
+      "minutes_forward": 360,
+      "minutes_backward": 360,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
     }
   ],
   "presets": [
     {
-      "id": "G14-main",
-      "name": "七彩湖‧六順山 (3天2夜)",
-      "startNodeId": "n_g14_wanrong_th",
-      "endNodeId": "n_g14_wanrong_th",
+      "id": "G14-qicaihu-liushun",
+      "name": "七彩湖六順山 (2天1夜)",
+      "startNodeId": "n_g14_lindao_th",
+      "endNodeId": "n_g14_liushun",
       "viaNodeIds": [
-        "n_g14_ridge_camp",
-        "n_g14_high_camp",
-        "n_g14_qicai_jct",
-        "n_g14_qicai_lake",
-        "n_g14_qicai_jct",
-        "n_g14_liushun"
+        "n_g14_linji_th",
+        "n_g14_lindao_dongkou",
+        "n_g14_qixin_jct",
+        "n_g14_qixin_lake"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g14_ridge_camp",
-          "type": "camp",
-          "label": "第一夜：稜線營地"
-        },
-        {
-          "atNodeId": "n_g14_qicai_lake",
-          "type": "camp",
-          "label": "第二夜：七彩湖畔"
+          "atNodeId": "n_g14_qixin_jct",
+          "type": "water"
         }
-      ]
+      ],
+      "roundTrip": true
     },
     {
-      "id": "G14-express",
-      "name": "七彩湖速攻 (2天1夜)",
-      "startNodeId": "n_g14_wanrong_th",
-      "endNodeId": "n_g14_qicai_lake",
+      "id": "G14-danda-traverse",
+      "name": "丹大山列縱走 (5天4夜)",
+      "startNodeId": "n_g14_lindao_th",
+      "endNodeId": "n_g14_danda",
       "viaNodeIds": [
-        "n_g14_ridge_camp",
-        "n_g14_high_camp",
-        "n_g14_qicai_jct"
+        "n_g14_liushun",
+        "n_g14_anshan",
+        "n_g14_dashigong",
+        "n_g14_guanmen"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g14_high_camp",
-          "type": "camp",
-          "label": "第一夜：高地營地"
+          "atNodeId": "n_g14_2813_camp",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g14_xiaoshigong",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g14_guanmen",
+          "type": "camp"
+        },
+        {
+          "atNodeId": "n_g14_danda_west_an",
+          "type": "camp"
         }
-      ]
+      ],
+      "roundTrip": false
     }
   ]
 }

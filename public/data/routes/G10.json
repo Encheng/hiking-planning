@@ -1,222 +1,565 @@
 {
   "id": "G10",
   "name": "太魯閣山列",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "version": "2026-05-14",
+  "source": "上河文化 G10 太魯閣山列步程示意圖 (G10_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g10_guanyuan_th",
-      "name": "關原登山口",
-      "lat": 24.234,
-      "lng": 121.387,
-      "elevation": 1274,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "id": "n_g10_dayuling",
+      "name": "大禹嶺",
+      "lat": 24.1855,
+      "lng": 121.3046,
+      "elevation": 2565,
+      "category": "trailhead"
     },
     {
-      "id": "n_g10_wuming_base",
-      "name": "無明山基地營",
-      "lat": 24.248,
-      "lng": 121.384,
-      "elevation": 2800,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "id": "n_g10_zhongheng_jct",
+      "name": "中橫霧社支線",
+      "lat": 24.18,
+      "lng": 121.3,
+      "elevation": 2500,
+      "category": "junction"
     },
     {
-      "id": "n_g10_wuming",
-      "name": "無明山",
-      "lat": 24.255356,
-      "lng": 121.384707,
-      "elevation": 3449,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g10_heshui_ridge",
+      "name": "太魯閣黑水塘山屋",
+      "lat": 24.14762,
+      "lng": 121.3423,
+      "elevation": 2400,
+      "category": "hut"
     },
     {
-      "id": "n_g10_patolU_camp",
-      "name": "帕托魯山鞍部營地",
-      "lat": 24.108,
-      "lng": 121.452,
-      "elevation": 2950,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "id": "n_g10_chenggong_hut",
+      "name": "成功山屋",
+      "lat": 24.122,
+      "lng": 121.324,
+      "elevation": 3000,
+      "category": "hut"
     },
     {
-      "id": "n_g10_patoru",
-      "name": "帕托魯山",
-      "lat": 24.099458,
-      "lng": 121.466535,
-      "elevation": 3102,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g10_zhuling_3jct",
+      "name": "太魯閣主稜三岔路口",
+      "lat": 24.15,
+      "lng": 121.345,
+      "elevation": 3300,
+      "category": "junction"
     },
     {
-      "id": "n_g10_liwu_main",
-      "name": "立霧主山",
-      "lat": 24.124796,
-      "lng": 121.445634,
-      "elevation": 3071,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g10_qilai_lodge",
+      "name": "奇萊山莊",
+      "lat": 24.10871,
+      "lng": 121.32692,
+      "elevation": 3200,
+      "category": "hut"
     },
     {
-      "id": "n_g10_taroko_main",
-      "name": "太魯閣大山",
-      "lat": 24.079071,
-      "lng": 121.421001,
-      "elevation": 3282,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g10_yuexing_camp",
+      "name": "月形池營地",
+      "lat": 24.11754,
+      "lng": 121.34544,
+      "elevation": 2900,
+      "category": "waypoint"
     },
     {
-      "id": "n_g10_panshi",
+      "id": "n_g10_qixinlong_pond",
+      "name": "驚嘆號池營地",
+      "lat": 24.1095,
+      "lng": 121.3571,
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_pingshi_west",
+      "name": "磐石山西峰",
+      "lat": 24.10993,
+      "lng": 121.35783,
+      "elevation": 3337,
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_pingshi_mid",
+      "name": "磐石山中峰",
+      "lat": 24.10482,
+      "lng": 121.37075,
+      "elevation": 3149,
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_pingshi",
       "name": "磐石山",
       "lat": 24.10471,
-      "lng": 121.388268,
+      "lng": 121.38827,
       "elevation": 3105,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_pingshi_camp",
+      "name": "磐石中峰營地",
+      "lat": 24.105,
+      "lng": 121.375,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_lihuo_main",
+      "name": "立霧主山",
+      "lat": 24.1248,
+      "lng": 121.44563,
+      "elevation": 3071,
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_lihuo_camp",
+      "name": "立霧主山營地",
+      "lat": 24.123,
+      "lng": 121.443,
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_2687",
+      "name": "2687峰三岔口",
+      "lat": 24.115,
+      "lng": 121.435,
+      "elevation": 2687,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_paturu",
+      "name": "帕托魯山",
+      "lat": 24.09946,
+      "lng": 121.46653,
+      "elevation": 3102,
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_pingan_camp",
+      "name": "平安池",
+      "lat": 24.09,
+      "lng": 121.465,
+      "elevation": 3000,
+      "category": "water"
+    },
+    {
+      "id": "n_g10_3en_camp",
+      "name": "三宕營地",
+      "lat": 24.085,
+      "lng": 121.462,
+      "elevation": 2950,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_taluge_main",
+      "name": "太魯閣大山",
+      "lat": 24.07907,
+      "lng": 121.421,
+      "elevation": 3282,
+      "category": "peak"
+    },
+    {
+      "id": "n_g10_yueya_pool",
+      "name": "月牙池營地",
+      "lat": 24.085,
+      "lng": 121.418,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_yueya_pool_2",
+      "name": "月牙池",
+      "lat": 24.08,
+      "lng": 121.415,
+      "elevation": 3050,
+      "category": "water"
+    },
+    {
+      "id": "n_g10_pangsha_temp",
+      "name": "磐中營地",
+      "lat": 24.085,
+      "lng": 121.4,
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_pangmu",
+      "name": "磐木中峰營地",
+      "lat": 24.088,
+      "lng": 121.395,
+      "elevation": 2900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g10_paturu_main_jct",
+      "name": "三岔三叉路口",
+      "lat": 24.1,
+      "lng": 121.4,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_taige_3jct",
+      "name": "太閣大山三岔路口",
+      "lat": 24.075,
+      "lng": 121.42,
+      "elevation": 3150,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_wang_taige",
+      "name": "往太魯閣",
+      "lat": 24.1,
+      "lng": 121.5,
+      "elevation": 1000,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_tianxiang",
+      "name": "天祥",
+      "lat": 24.18,
+      "lng": 121.5,
+      "elevation": 500,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g10_taluge_park",
+      "name": "太魯閣國家公園",
+      "lat": 24.158,
+      "lng": 121.6,
+      "elevation": 100,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g10_wangwang_pavilion",
+      "name": "岳王亭",
+      "lat": 24.165,
+      "lng": 121.52,
+      "elevation": 800,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g10_qilai_main_lodge",
+      "name": "奇萊主山往",
+      "lat": 24.08646,
+      "lng": 121.32326,
+      "elevation": 3562,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_to_qilai",
+      "name": "往奇萊主山",
+      "lat": 24.08,
+      "lng": 121.32,
+      "elevation": 3500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g10_qingjing",
+      "name": "往清境霧社",
+      "lat": 23.99,
+      "lng": 121.2,
+      "elevation": 1100,
+      "category": "junction"
     }
   ],
   "edges": [
     {
-      "from": "n_g10_guanyuan_th",
-      "to": "n_g10_wuming_base",
-      "minutes_forward": 425,
-      "minutes_backward": 279,
-      "distance_km": 8.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
+      "from": "n_g10_dayuling",
+      "to": "n_g10_zhongheng_jct",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
     },
     {
-      "from": "n_g10_wuming_base",
-      "to": "n_g10_wuming",
-      "minutes_forward": 175,
-      "minutes_backward": 114,
-      "distance_km": 3.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g10_wuming",
-      "to": "n_g10_patolU_camp",
-      "minutes_forward": 180,
-      "minutes_backward": 240,
-      "distance_km": 7.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g10_patolU_camp",
-      "to": "n_g10_patoru",
-      "minutes_forward": 91,
-      "minutes_backward": 62,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g10_patoru",
-      "to": "n_g10_liwu_main",
-      "minutes_forward": 52,
-      "minutes_backward": 66,
-      "distance_km": 4.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g10_liwu_main",
-      "to": "n_g10_taroko_main",
-      "minutes_forward": 102,
-      "minutes_backward": 73,
-      "distance_km": 4.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g10_patoru",
-      "to": "n_g10_panshi",
-      "minutes_forward": 75,
+      "from": "n_g10_zhongheng_jct",
+      "to": "n_g10_qingjing",
+      "minutes_forward": 60,
       "minutes_backward": 60,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g10_dayuling",
+      "to": "n_g10_heshui_ridge",
+      "minutes_forward": 25,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g10_heshui_ridge",
+      "to": "n_g10_chenggong_hut",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "confirmed": true
+    },
+    {
+      "from": "n_g10_chenggong_hut",
+      "to": "n_g10_zhuling_3jct",
+      "minutes_forward": 100,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_zhuling_3jct",
+      "to": "n_g10_qilai_lodge",
+      "minutes_forward": 70,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_qilai_lodge",
+      "to": "n_g10_to_qilai",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_qilai_lodge",
+      "to": "n_g10_yuexing_camp",
+      "minutes_forward": 100,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_yuexing_camp",
+      "to": "n_g10_qixinlong_pond",
+      "minutes_forward": 90,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_qixinlong_pond",
+      "to": "n_g10_pingshi_west",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pingshi_west",
+      "to": "n_g10_pingshi_camp",
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pingshi_camp",
+      "to": "n_g10_pingshi_mid",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pingshi_mid",
+      "to": "n_g10_pingshi",
+      "minutes_forward": 80,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pingshi",
+      "to": "n_g10_lihuo_camp",
+      "minutes_forward": 70,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_lihuo_camp",
+      "to": "n_g10_lihuo_main",
+      "minutes_forward": 40,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_lihuo_main",
+      "to": "n_g10_2687",
+      "minutes_forward": 70,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_2687",
+      "to": "n_g10_paturu",
+      "minutes_forward": 110,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_paturu",
+      "to": "n_g10_pingan_camp",
+      "minutes_forward": 50,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pingan_camp",
+      "to": "n_g10_3en_camp",
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_paturu",
+      "to": "n_g10_paturu_main_jct",
+      "minutes_forward": 100,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_paturu_main_jct",
+      "to": "n_g10_pangmu",
+      "minutes_forward": 70,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pangmu",
+      "to": "n_g10_pangsha_temp",
+      "minutes_forward": 70,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_pangsha_temp",
+      "to": "n_g10_yueya_pool_2",
+      "minutes_forward": 80,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_yueya_pool_2",
+      "to": "n_g10_yueya_pool",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_yueya_pool",
+      "to": "n_g10_taige_3jct",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_taige_3jct",
+      "to": "n_g10_taluge_main",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_3en_camp",
+      "to": "n_g10_taluge_main",
+      "minutes_forward": 130,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_3en_camp",
+      "to": "n_g10_wang_taige",
+      "minutes_forward": 360,
+      "minutes_backward": 480,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g10_wang_taige",
+      "to": "n_g10_tianxiang",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g10_tianxiang",
+      "to": "n_g10_taluge_park",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g10_tianxiang",
+      "to": "n_g10_wangwang_pavilion",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
     }
   ],
   "presets": [
     {
-      "id": "G10-wuming-patoru",
-      "name": "無明山‧帕托魯山 (4天3夜)",
-      "startNodeId": "n_g10_guanyuan_th",
-      "endNodeId": "n_g10_taroko_main",
+      "id": "G10-traverse",
+      "name": "太魯閣山列縱走 (8天7夜)",
+      "startNodeId": "n_g10_dayuling",
+      "endNodeId": "n_g10_taluge_park",
       "viaNodeIds": [
-        "n_g10_wuming_base",
-        "n_g10_wuming",
-        "n_g10_patolU_camp",
-        "n_g10_patoru",
-        "n_g10_liwu_main"
+        "n_g10_heshui_ridge",
+        "n_g10_chenggong_hut",
+        "n_g10_qilai_lodge",
+        "n_g10_pingshi",
+        "n_g10_lihuo_main",
+        "n_g10_paturu",
+        "n_g10_taluge_main",
+        "n_g10_tianxiang"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g10_wuming_base",
+          "atNodeId": "n_g10_chenggong_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g10_qilai_lodge",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g10_pingshi_camp",
           "type": "camp"
         },
         {
-          "atNodeId": "n_g10_wuming",
+          "atNodeId": "n_g10_lihuo_camp",
           "type": "camp"
         },
         {
-          "atNodeId": "n_g10_patolU_camp",
-          "type": "camp"
+          "atNodeId": "n_g10_pingan_camp",
+          "type": "water"
+        },
+        {
+          "atNodeId": "n_g10_yueya_pool_2",
+          "type": "water"
         }
-      ]
-    },
-    {
-      "id": "G10-wuming-outback",
-      "name": "無明山來回 (2天1夜)",
-      "startNodeId": "n_g10_guanyuan_th",
-      "endNodeId": "n_g10_wuming",
-      "viaNodeIds": [
-        "n_g10_wuming_base"
       ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g10_wuming_base",
-          "type": "camp"
-        }
-      ]
+      "roundTrip": false
     }
   ]
 }
