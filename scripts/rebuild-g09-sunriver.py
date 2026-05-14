@@ -43,9 +43,9 @@ NODES = [
     ("n_g09_hehuan_north",   "合歡北峰",          24.18151, 121.28159, 3422, "peak"),       #OSM
     ("n_g09_hehuan_west",    "合歡西峰",          24.17764, 121.24454, 3144, "peak"),       #OSM
     ("n_g09_bichi",          "碧池",              24.17750, 121.28200, 3250, "water"),      #EST (near reflector)
-    ("n_g09_low_saddle",     "最低鞍部",          24.17800, 121.26500, 3000, "junction"),   #EST
-    ("n_g09_pool_camp",      "水池營地",          24.17680, 121.25500, 3050, "waypoint"),   #EST
-    ("n_g09_huagang_jct",    "華岡叉路口",        24.17600, 121.25000, 3100, "junction"),   #EST
+    ("n_g09_low_saddle",     "最低鞍部",          24.17800, 121.26500, 2950, "junction"),   #EST (lowest point on ridge)
+    ("n_g09_pool_camp",      "水池營地",          24.17680, 121.25500, 3000, "waypoint"),   #EST
+    ("n_g09_huagang_jct",    "華岡叉路口",        24.17600, 121.25000, 3200, "junction"),   #EST (high ridge jct, above 西峰)
     ("n_g09_west_camp",      "西峰營地",          24.17782, 121.24557, 3123, "waypoint"),   #OSM
     ("n_g09_xiaoxi_camp",    "小溪營地",          24.17500, 121.24800, 2800, "waypoint"),   #EST
     ("n_g09_yuanhuan_jct",   "叉路（小溪）",      24.17400, 121.24700, 2800, "junction"),   #EST
@@ -116,7 +116,8 @@ EDGES = [
     # 武嶺 hub (公路時間 walking speed)
     ("n_g09_wuling", "n_g09_hehuan_lodge", 15, 15),       # 武嶺 → 合歡山莊 (1.2km walking)
     ("n_g09_wuling", "n_g09_kunyang", 30, 30),            # 武嶺 → 昆陽 (2km walking)
-    ("n_g09_wuling", "n_g09_hehuan_main", 40, 60),        # 武嶺 ↔ 合歡主峰 (40/60分)
+    # 武嶺(3275) → 主峰(3417): UP 60分, DOWN 40分
+    ("n_g09_wuling", "n_g09_hehuan_main", 60, 40),        # 武嶺 ↔ 合歡主峰 (上河 60UP/40DOWN)
     ("n_g09_wuling", "n_g09_th_main", 5, 5),              # 武嶺 → 合歡主峰登山口
 
     # 合歡山莊 area
@@ -128,10 +129,12 @@ EDGES = [
     ("n_g09_hehuan_jianshan", "n_g09_th_jianshan_s", 5, 5),
     ("n_g09_th_jianshan_n", "n_g09_th_jianshan_s", 3, 3),
 
-    # 石門山 area
+    # 石門山 area (上河圖 convention: forward direction A→B; UP times are larger)
     ("n_g09_old_ski", "n_g09_kenan_pass", 20, 20),        # 舊滑訓中心 → 克難關 (walking 1.5km)
-    ("n_g09_kenan_pass", "n_g09_shimen", 20, 30),         # 克難關 → 石門山 (20/30分)
-    ("n_g09_kenan_pass", "n_g09_shimen_north", 15, 30),   # 克難關 → 石門北峰
+    # 克難關(3179) → 石門山(3236): UP 30, DOWN 20
+    ("n_g09_kenan_pass", "n_g09_shimen", 30, 20),         # 克難關 → 石門山 (上河 30UP/20DOWN)
+    # 克難關(3179) → 石門北峰(3280): UP 30, DOWN 15
+    ("n_g09_kenan_pass", "n_g09_shimen_north", 30, 15),   # 克難關 → 石門北峰 (上河 30UP/15DOWN)
     ("n_g09_shimen_th", "n_g09_shimen", 20, 15),          # 石門山登山口 → 石門山
     ("n_g09_th_shimen_n", "n_g09_shimen_north", 30, 25),  # 石門北登山口 → 石門北峰
 
@@ -141,18 +144,27 @@ EDGES = [
 
     # 合歡東峰
     ("n_g09_th_east", "n_g09_hehuan_east", 40, 30),
-    ("n_g09_shimen", "n_g09_hehuan_east", 50, 60),
+    # 石門山(3236) → 東峰(3421): UP 60, DOWN 50
+    ("n_g09_shimen", "n_g09_hehuan_east", 60, 50),
 
-    # 合歡北峰 trail
-    ("n_g09_th_north", "n_g09_reflector", 45, 70),        # 北登山口 → 反射板 (45/70分)
-    ("n_g09_reflector", "n_g09_hehuan_north", 15, 20),    # 反射板 → 北合歡 (15/20分)
-    ("n_g09_reflector", "n_g09_bichi", 10, 5),            # 反射板 → 碧池 (10/5分)
-    ("n_g09_hehuan_north", "n_g09_low_saddle", 75, 110),  # 北合歡 → 最低鞍部 (75/110分)
+    # === 合歡北峰 → 合歡西峰 chain (上河圖 user-verified) ===
+    # fwd = forward direction time (A→B); UP times are LARGER, DOWN smaller
+    # 登山口(3275) → 反射板(~3320): UP 70, DOWN 45
+    ("n_g09_th_north", "n_g09_reflector", 70, 45),        # 北登山口 → 反射板 (上河 70UP/45DOWN)
+    # 反射板(~3320) → 北合歡(3422): UP 20, DOWN 15
+    ("n_g09_reflector", "n_g09_hehuan_north", 20, 15),    # 反射板 → 北合歡 (上河 20UP/15DOWN)
+    # 反射板(~3320) → 碧池(~3250): DOWN 5, UP 10
+    ("n_g09_reflector", "n_g09_bichi", 5, 10),            # 反射板 → 碧池 (上河 5DOWN/10UP)
+    # 北合歡(3422) → 最低鞍部(~2950): DOWN 75, UP 110
+    ("n_g09_hehuan_north", "n_g09_low_saddle", 75, 110),  # 北合歡 → 最低鞍部 (上河 75DOWN/110UP)
 
     # 合歡西峰 trail
-    ("n_g09_low_saddle", "n_g09_pool_camp", 30, 20),      # 最低鞍 → 水池營地 (30/20分)
-    ("n_g09_pool_camp", "n_g09_huagang_jct", 40, 30),     # 水池 → 華岡叉路口 (40/30分)
-    ("n_g09_huagang_jct", "n_g09_hehuan_west", 45, 35),   # 華岡叉路 → 西合歡 (45/35分)
+    # 鞍部(~2950) → 水池(~3000): UP 30, DOWN 20
+    ("n_g09_low_saddle", "n_g09_pool_camp", 30, 20),      # 最低鞍 → 水池營地
+    # 水池(~3000) → 華岡叉路口(~3200): UP 40, DOWN 30
+    ("n_g09_pool_camp", "n_g09_huagang_jct", 40, 30),     # 水池 → 華岡叉路口
+    # 華岡(~3200) → 西峰(3144): DOWN 35, UP 45
+    ("n_g09_huagang_jct", "n_g09_hehuan_west", 35, 45),   # 華岡叉路 → 西合歡 (上河 35DOWN/45UP)
     ("n_g09_hehuan_west", "n_g09_west_camp", 10, 10),
     ("n_g09_yuanhuan_jct", "n_g09_xiaoxi_camp", 5, 10),
     ("n_g09_huagang_jct", "n_g09_yuanhuan_jct", 15, 30),
