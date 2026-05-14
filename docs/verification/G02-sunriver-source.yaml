@@ -1,0 +1,177 @@
+# G02 玉山群峰 — 上河圖步程示意圖時間參考資料
+#
+# 來源: https://www.sunriver.com.tw/images/hiking/G02_hiking.jpg
+# 約定: 每段邊以「較高海拔節點」與「較低海拔節點」標示
+#   - up_min: 從低→高 (上行) 分鐘
+#   - down_min: 從高→低 (下行) 分鐘
+#   - 上河圖兩個數值，較大的是上行 (UP)，較小的是下行 (DOWN)
+#
+# 重要: 部分節點是上河圖有但目前 G02.json 沒有的，先註記但不在此驗證
+# 已驗證可能含視覺判讀誤差，需人類覆核
+
+route: G02
+source_url: https://www.sunriver.com.tw/images/hiking/G02_hiking.jpg
+
+# 塔塔加→排雲→玉山主峰 主要路線
+segments:
+  - from: 上東埔停車場
+    to: 排雲管理站
+    up_min: 10
+    down_min: 10
+    notes: 短程公路
+
+  - from: 排雲管理站
+    to: 大鐵杉
+    up_min: 25
+    down_min: 20
+
+  - from: 大鐵杉
+    to: 塔塔加鞍部
+    up_min: 30
+    down_min: 25
+    # 注意: 大鐵杉 (2870m) > 塔塔加鞍部 (2610m)，所以 鞍部→大鐵杉 才是上行
+    # 上河 30↑↓25: 30 是 鞍部→大鐵杉 UP, 25 是 大鐵杉→鞍部 DOWN
+
+  - from: 塔塔加鞍部
+    to: 孟祿亭
+    up_min: 50
+    down_min: 40
+    # 孟祿亭(2780) > 鞍部(2610)，鞍部→孟祿亭 為 UP=50
+
+  - from: 孟祿亭
+    to: 前峰登山口
+    up_min: 40
+    down_min: 35
+    # 前峰登山口(2860) > 孟祿亭(2780)，孟祿亭→前峰登山口 為 UP=40
+
+  - from: 前峰登山口
+    to: 西峰下觀景台
+    up_min: 50
+    down_min: 40
+
+  - from: 西峰下觀景台
+    to: 大峭壁
+    up_min: 50
+    down_min: 40
+
+  - from: 大峭壁
+    to: 排雲山莊
+    up_min: 70
+    down_min: 50
+
+  - from: 排雲山莊
+    to: 主南岔路
+    up_min: 45
+    down_min: 30
+
+  - from: 主南岔路
+    to: 圓峰山屋
+    up_min: 90
+    down_min: 70
+    # 圓峰山屋 是 主南岔路 之後往下走的山屋
+
+  - from: 圓峰山屋
+    to: 三岔路口
+    up_min: 30
+    down_min: 25
+
+  - from: 三岔路口
+    to: 2K三岔路口
+    up_min: 180
+    down_min: 155
+
+  - from: 2K三岔路口
+    to: 南玉山
+    up_min: 80
+    down_min: 70
+
+# 玉山主峰群 邊
+  - from: 主北岔路
+    to: 玉山主峰
+    up_min: 25
+    down_min: 15
+    # 25↑↓15 between 主峰 and 主北岔路
+
+  - from: 風口
+    to: 主北岔路
+    up_min: 20
+    down_min: 10
+    # 10/20 between 主北岔路 and 風口
+
+# 三叉峰 area
+  - from: 三叉峰
+    to: 玉山南峰
+    up_min: 30
+    down_min: 20
+
+  - from: 玉山南峰
+    to: 四岔路口
+    up_min: 5
+    down_min: 5
+
+  - from: 四岔路口
+    to: 東小南山
+    up_min: 60
+    down_min: 40
+
+# 八通關古道 (附加路線, 多數節點可能不在 G02.json 中)
+  - from: 八通關登山口
+    to: 三聖宮
+    up_min: 25
+    down_min: 15
+
+  - from: 三聖宮
+    to: 樂樂溫泉岔路
+    up_min: 50
+    down_min: 45
+
+  - from: 樂樂溫泉岔路
+    to: 雲龍瀑布
+    up_min: 45
+    down_min: 45
+
+  - from: 雲龍瀑布
+    to: 樂樂山屋
+    up_min: 60
+    down_min: 55
+
+  - from: 樂樂山屋
+    to: 乙女瀑布
+    up_min: 25
+    down_min: 25
+
+  - from: 乙女瀑布
+    to: 對觀
+    up_min: 100
+    down_min: 80
+
+  - from: 對觀
+    to: 觀高坪
+    up_min: 150
+    down_min: 110
+
+# 鹿山 (south extension)
+  - from: 南玉山
+    to: 鹿山
+    up_min: 280
+    down_min: 180
+    # 鹿山 一般比 南玉山 還南，海拔較低，可能要再核對方向
+
+# 阿里山連結
+  - from: 阿里山
+    to: 上東埔停車場
+    up_min: 45
+    down_min: 45
+    type: vehicle
+    notes: 公路 45分
+
+  - from: 塔塔加遊客中心
+    to: 上東埔停車場
+    up_min: 3
+    down_min: 3
+    type: vehicle
+
+# 待補/不確定的邊 (留待人工核對):
+# - 北北峰、北峰、西峰、東峰 之間的連結
+# - 八通關草原、八通關山西峰、八通關山 系列
+# - 鹿林山系列

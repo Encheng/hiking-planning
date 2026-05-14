@@ -528,9 +528,9 @@
     {
       "from": "n_g02_tataka_vc",
       "to": "n_g02_shang_dongpu",
-      "minutes_forward": 10,
-      "minutes_backward": 10,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -598,9 +598,9 @@
     {
       "from": "n_g02_big_hemlock",
       "to": "n_g02_tataka_saddle",
-      "minutes_forward": 35,
+      "minutes_forward": 25,
       "minutes_backward": 30,
-      "source": "G02_hiking.jpg",
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -614,9 +614,9 @@
     {
       "from": "n_g02_tataka_saddle",
       "to": "n_g02_menlu",
-      "minutes_forward": 35,
-      "minutes_backward": 30,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -678,9 +678,9 @@
     {
       "from": "n_g02_menlu",
       "to": "n_g02_qianfeng_th",
-      "minutes_forward": 35,
-      "minutes_backward": 40,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 40,
+      "minutes_backward": 35,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -694,9 +694,9 @@
     {
       "from": "n_g02_qianfeng_th",
       "to": "n_g02_xifeng_viewpoint",
-      "minutes_forward": 40,
-      "minutes_backward": 50,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -711,8 +711,8 @@
       "from": "n_g02_xifeng_viewpoint",
       "to": "n_g02_big_cliff",
       "minutes_forward": 50,
-      "minutes_backward": 70,
-      "source": "G02_hiking.jpg",
+      "minutes_backward": 40,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -727,8 +727,8 @@
       "from": "n_g02_big_cliff",
       "to": "n_g02_paiyun",
       "minutes_forward": 70,
-      "minutes_backward": 45,
-      "source": "G02_hiking.jpg",
+      "minutes_backward": 50,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -790,9 +790,9 @@
     {
       "from": "n_g02_paiyun",
       "to": "n_g02_main_south_jct",
-      "minutes_forward": 30,
-      "minutes_backward": 45,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 45,
+      "minutes_backward": 30,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -828,9 +828,9 @@
     {
       "from": "n_g02_yushan_main",
       "to": "n_g02_main_north_jct",
-      "minutes_forward": 25,
-      "minutes_backward": 15,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 15,
+      "minutes_backward": 25,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1014,9 +1014,9 @@
     {
       "from": "n_g02_four_jct",
       "to": "n_g02_east_xiaonan",
-      "minutes_forward": 60,
+      "minutes_forward": 40,
       "minutes_backward": 60,
-      "source": "G02_hiking.jpg",
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1100,9 +1100,9 @@
     {
       "from": "n_g02_batongkuan_th",
       "to": "n_g02_sanshen",
-      "minutes_forward": 10,
+      "minutes_forward": 25,
       "minutes_backward": 15,
-      "source": "G02_hiking.jpg",
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1116,9 +1116,9 @@
     {
       "from": "n_g02_sanshen",
       "to": "n_g02_lele_jct",
-      "minutes_forward": 45,
+      "minutes_forward": 50,
       "minutes_backward": 45,
-      "source": "G02_hiking.jpg",
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1148,9 +1148,9 @@
     {
       "from": "n_g02_yunlong_falls",
       "to": "n_g02_lele_hut",
-      "minutes_forward": 55,
-      "minutes_backward": 60,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 60,
+      "minutes_backward": 55,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1180,9 +1180,9 @@
     {
       "from": "n_g02_otome_falls",
       "to": "n_g02_duiguan",
-      "minutes_forward": 80,
-      "minutes_backward": 100,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 100,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
@@ -1196,9 +1196,9 @@
     {
       "from": "n_g02_duiguan",
       "to": "n_g02_guanggao_ping",
-      "minutes_forward": 110,
-      "minutes_backward": 150,
-      "source": "G02_hiking.jpg",
+      "minutes_forward": 150,
+      "minutes_backward": 110,
+      "source": "上河圖",
       "sources": [
         {
           "file": "G02_hiking.jpg",
