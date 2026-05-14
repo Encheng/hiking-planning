@@ -1,23 +1,35 @@
 {
   "id": "G11",
   "name": "能高越嶺",
-  "version": "2026-05-13",
-  "source": "OSM relation 10609897 (能高越嶺道) (ODbL); estimated times from community data",
+  "version": "2026-05-14",
+  "source": "上河文化 G11 能高越嶺步程示意圖 (G11_hiking.jpg)",
   "nodes": [
+    {
+      "id": "n_g11_wushe",
+      "name": "霧社",
+      "lat": 23.97,
+      "lng": 121.16,
+      "elevation": 1150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g11_lushan",
+      "name": "廬山部落",
+      "lat": 23.99,
+      "lng": 121.2,
+      "elevation": 1100,
+      "category": "trailhead"
+    },
     {
       "id": "n_g11_tunyuan_th",
       "name": "屯原登山口",
       "lat": 24.052,
       "lng": 121.215,
       "elevation": 2050,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "category": "trailhead"
     },
     {
-      "id": "n_g11_yunhai_hut",
+      "id": "n_g11_yunhai",
       "name": "雲海保線所",
       "lat": 24.042,
       "lng": 121.255,
@@ -25,177 +37,343 @@
       "category": "hut"
     },
     {
+      "id": "n_g11_tianchi_jct",
+      "name": "天池岔路口",
+      "lat": 24.055,
+      "lng": 121.287,
+      "elevation": 3150,
+      "category": "junction"
+    },
+    {
       "id": "n_g11_tianchi_hut",
       "name": "天池山莊",
       "lat": 24.045,
-      "lng": 121.2793,
+      "lng": 121.27931,
       "elevation": 2860,
       "category": "hut"
     },
     {
-      "id": "n_g11_nenggao_jct",
-      "name": "能高山岔路",
-      "lat": 24.02,
-      "lng": 121.27,
-      "elevation": 3180,
-      "category": "junction"
-    },
-    {
-      "id": "n_g11_nenggao",
-      "name": "能高山",
-      "lat": 23.992321,
-      "lng": 121.260238,
-      "elevation": 3261,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g11_nenggao_east",
-      "name": "能高山東峰",
-      "lat": 24.005391,
-      "lng": 121.2836,
-      "elevation": 2782,
+      "id": "n_g11_nanhua",
+      "name": "南華山",
+      "lat": 24.03935,
+      "lng": 121.28593,
+      "elevation": 3182,
       "category": "peak"
     },
     {
-      "id": "n_g11_nenggao_south",
-      "name": "能高山南峰",
-      "lat": 23.965366,
-      "lng": 121.278112,
-      "elevation": 3348,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g11_kahuanguan",
+      "name": "卡賀爾山",
+      "lat": 24.05,
+      "lng": 121.3,
+      "elevation": 3010,
+      "category": "peak"
+    },
+    {
+      "id": "n_g11_nenggao",
+      "name": "能高主峰",
+      "lat": 23.99232,
+      "lng": 121.26024,
+      "elevation": 3262,
+      "category": "peak"
+    },
+    {
+      "id": "n_g11_xianjie",
+      "name": "縣界埡口",
+      "lat": 24.048,
+      "lng": 121.288,
+      "elevation": 2800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g11_kuilin",
+      "name": "檜林保線所",
+      "lat": 24.065,
+      "lng": 121.305,
+      "elevation": 2900,
+      "category": "hut"
+    },
+    {
+      "id": "n_g11_5jia_north",
+      "name": "五甲崩山",
+      "lat": 24.07,
+      "lng": 121.315,
+      "elevation": 2780,
+      "category": "peak"
+    },
+    {
+      "id": "n_g11_qilai",
+      "name": "奇萊保線所",
+      "lat": 24.075,
+      "lng": 121.325,
+      "elevation": 2670,
+      "category": "hut"
+    },
+    {
+      "id": "n_g11_tongmen",
+      "name": "銅門",
+      "lat": 24.08,
+      "lng": 121.55,
+      "elevation": 200,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g11_renshou",
+      "name": "仁壽橋",
+      "lat": 24.085,
+      "lng": 121.57,
+      "elevation": 150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g11_liyutan",
+      "name": "鯉魚潭",
+      "lat": 24.08,
+      "lng": 121.555,
+      "elevation": 150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g11_hualian",
+      "name": "花蓮",
+      "lat": 23.99,
+      "lng": 121.61,
+      "elevation": 50,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g11_to_buling",
+      "name": "往埔里",
+      "lat": 23.975,
+      "lng": 121.14,
+      "elevation": 600,
+      "category": "junction"
+    },
+    {
+      "id": "n_g11_qilai_south",
+      "name": "奇萊主山南峰",
+      "lat": 24.0613,
+      "lng": 121.27997,
+      "elevation": 3357,
+      "category": "peak"
+    },
+    {
+      "id": "n_g11_south_peak_th",
+      "name": "南峰登山口",
+      "lat": 24.065,
+      "lng": 121.285,
+      "elevation": 3100,
+      "category": "junction"
     }
   ],
   "edges": [
     {
+      "from": "n_g11_wushe",
+      "to": "n_g11_to_buling",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g11_wushe",
+      "to": "n_g11_lushan",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g11_lushan",
+      "to": "n_g11_tunyuan_th",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
       "from": "n_g11_tunyuan_th",
-      "to": "n_g11_yunhai_hut",
+      "to": "n_g11_yunhai",
       "minutes_forward": 208,
       "minutes_backward": 66,
-      "distance_km": 5.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g11_yunhai_hut",
+      "from": "n_g11_yunhai",
       "to": "n_g11_tianchi_hut",
       "minutes_forward": 257,
       "minutes_backward": 90,
-      "distance_km": 7.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g11_tianchi_hut",
-      "to": "n_g11_nenggao_jct",
-      "minutes_forward": 41,
-      "minutes_backward": 18,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g11_tianchi_jct",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g11_nenggao_jct",
+      "from": "n_g11_tianchi_jct",
+      "to": "n_g11_nanhua",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_tianchi_jct",
+      "to": "n_g11_south_peak_th",
+      "minutes_forward": 15,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_south_peak_th",
+      "to": "n_g11_qilai_south",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_tianchi_hut",
+      "to": "n_g11_xianjie",
+      "minutes_forward": 50,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_xianjie",
+      "to": "n_g11_nanhua",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_tianchi_hut",
+      "to": "n_g11_kahuanguan",
+      "minutes_forward": 170,
+      "minutes_backward": 140,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_kahuanguan",
       "to": "n_g11_nenggao",
-      "minutes_forward": 39,
-      "minutes_backward": 18,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 160,
+      "minutes_backward": 140,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g11_nenggao_jct",
-      "to": "n_g11_nenggao_east",
+      "from": "n_g11_tianchi_hut",
+      "to": "n_g11_kuilin",
+      "minutes_forward": 240,
+      "minutes_backward": 170,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_kuilin",
+      "to": "n_g11_5jia_north",
+      "minutes_forward": 170,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_5jia_north",
+      "to": "n_g11_qilai",
+      "minutes_forward": 180,
+      "minutes_backward": 260,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g11_qilai",
+      "to": "n_g11_renshou",
+      "minutes_forward": 120,
+      "minutes_backward": 120,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g11_renshou",
+      "to": "n_g11_tongmen",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g11_tongmen",
+      "to": "n_g11_liyutan",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g11_liyutan",
+      "to": "n_g11_hualian",
       "minutes_forward": 30,
-      "minutes_backward": 72,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g11_nenggao",
-      "to": "n_g11_nenggao_south",
-      "minutes_forward": 70,
-      "minutes_backward": 42,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
     }
   ],
   "presets": [
     {
-      "id": "G11-classic-2day",
-      "name": "能高越嶺·能高山 (2天1夜)",
+      "id": "G11-traverse",
+      "name": "能高越嶺道 (3天2夜，屯原→奇萊)",
       "startNodeId": "n_g11_tunyuan_th",
-      "endNodeId": "n_g11_nenggao",
+      "endNodeId": "n_g11_qilai",
       "viaNodeIds": [
-        "n_g11_yunhai_hut",
+        "n_g11_yunhai",
         "n_g11_tianchi_hut",
-        "n_g11_nenggao_jct"
+        "n_g11_kuilin",
+        "n_g11_5jia_north"
       ],
       "suggestedDayBreaks": [
         {
           "atNodeId": "n_g11_tianchi_hut",
-          "type": "hut"
-        }
-      ]
-    },
-    {
-      "id": "G11-two-peaks-3day",
-      "name": "能高二峰 (3天2夜)",
-      "startNodeId": "n_g11_tunyuan_th",
-      "endNodeId": "n_g11_nenggao_south",
-      "viaNodeIds": [
-        "n_g11_yunhai_hut",
-        "n_g11_tianchi_hut",
-        "n_g11_nenggao_jct",
-        "n_g11_nenggao"
-      ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g11_yunhai_hut",
           "type": "hut"
         },
         {
-          "atNodeId": "n_g11_tianchi_hut",
+          "atNodeId": "n_g11_kuilin",
           "type": "hut"
         }
-      ]
+      ],
+      "roundTrip": false
     },
     {
-      "id": "G11-east-peak",
-      "name": "能高山‧東峰 (2天1夜)",
+      "id": "G11-nanhua",
+      "name": "能高南華 (2天1夜)",
       "startNodeId": "n_g11_tunyuan_th",
-      "endNodeId": "n_g11_nenggao_east",
+      "endNodeId": "n_g11_nanhua",
       "viaNodeIds": [
-        "n_g11_yunhai_hut",
-        "n_g11_tianchi_hut",
-        "n_g11_nenggao_jct",
-        "n_g11_nenggao"
+        "n_g11_yunhai",
+        "n_g11_tianchi_hut"
       ],
       "suggestedDayBreaks": [
         {
           "atNodeId": "n_g11_tianchi_hut",
           "type": "hut"
         }
-      ]
+      ],
+      "roundTrip": true
     }
   ]
 }

@@ -1,23 +1,35 @@
 {
   "id": "G12",
   "name": "能高安東軍縱走",
-  "version": "2026-05-13",
-  "source": "OSM relation 14522297 (能高安東軍縱走) (ODbL); estimated times from community data",
+  "version": "2026-05-14",
+  "source": "上河文化 G12 能高安東軍步程示意圖 (G12_hiking.jpg)",
   "nodes": [
+    {
+      "id": "n_g12_wushe",
+      "name": "霧社",
+      "lat": 23.97,
+      "lng": 121.16,
+      "elevation": 1150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g12_lushan_tribe",
+      "name": "廬山部落",
+      "lat": 23.99,
+      "lng": 121.2,
+      "elevation": 1100,
+      "category": "trailhead"
+    },
     {
       "id": "n_g12_tunyuan_th",
       "name": "屯原登山口",
       "lat": 24.052,
       "lng": 121.215,
       "elevation": 2050,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "category": "trailhead"
     },
     {
-      "id": "n_g12_yunhai_hut",
+      "id": "n_g12_yunhai",
       "name": "雲海保線所",
       "lat": 24.042,
       "lng": 121.255,
@@ -28,254 +40,666 @@
       "id": "n_g12_tianchi_hut",
       "name": "天池山莊",
       "lat": 24.045,
-      "lng": 121.2793,
+      "lng": 121.27931,
       "elevation": 2860,
       "category": "hut"
     },
     {
-      "id": "n_g12_nenggao_jct",
-      "name": "能高山岔路",
-      "lat": 24.02,
-      "lng": 121.27,
-      "elevation": 3180,
+      "id": "n_g12_xianjie",
+      "name": "縣界埡口",
+      "lat": 24.048,
+      "lng": 121.288,
+      "elevation": 2800,
       "category": "junction"
     },
     {
-      "id": "n_g12_nenggao",
-      "name": "能高山",
-      "lat": 23.992321,
-      "lng": 121.260238,
-      "elevation": 3261,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g12_kahuanguan",
+      "name": "卡賀爾山",
+      "lat": 24.05,
+      "lng": 121.3,
+      "elevation": 3010,
+      "category": "peak"
+    },
+    {
+      "id": "n_g12_nenggao_main",
+      "name": "能高主峰",
+      "lat": 23.99232,
+      "lng": 121.26024,
+      "elevation": 3262,
+      "category": "peak"
     },
     {
       "id": "n_g12_nenggao_south",
       "name": "能高山南峰",
-      "lat": 23.965366,
-      "lng": 121.278112,
+      "lat": 23.96537,
+      "lng": 121.27811,
       "elevation": 3348,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g12_old_hut",
+      "name": "能高小屋舊址",
+      "lat": 23.95,
+      "lng": 121.275,
+      "elevation": 3000,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g12_taiwan_pool",
+      "name": "台灣池營地",
+      "lat": 23.945,
+      "lng": 121.273,
+      "elevation": 2900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_dalu_pool",
+      "name": "大陸池營地",
+      "lat": 23.94,
+      "lng": 121.272,
+      "elevation": 2880,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_rope_cliff",
+      "name": "垂直岩壁拉繩",
+      "lat": 23.935,
+      "lng": 121.27,
+      "elevation": 2950,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_nenggao_southnorth",
+      "name": "能高南峰北嶺",
+      "lat": 23.93,
+      "lng": 121.27,
+      "elevation": 3100,
+      "category": "peak"
+    },
+    {
+      "id": "n_g12_southpeak_jct",
+      "name": "南峰岔路口",
+      "lat": 23.938,
+      "lng": 121.275,
+      "elevation": 3200,
+      "category": "junction"
+    },
+    {
+      "id": "n_g12_southpeak_camp",
+      "name": "南峰南鞍營地",
+      "lat": 23.928,
+      "lng": 121.273,
+      "elevation": 3050,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_3039",
+      "name": "3039鞍營地",
+      "lat": 23.923,
+      "lng": 121.276,
+      "elevation": 3039,
+      "category": "waypoint"
     },
     {
       "id": "n_g12_guangtou",
       "name": "光頭山",
-      "lat": 23.939083,
-      "lng": 121.273102,
+      "lat": 23.93908,
+      "lng": 121.2731,
       "elevation": 3077,
       "category": "peak"
     },
     {
-      "id": "n_g12_andong_north",
-      "name": "安東軍山北峰",
-      "lat": 23.88358,
-      "lng": 121.268596,
-      "elevation": 3022,
+      "id": "n_g12_baishichi",
+      "name": "白石池",
+      "lat": 23.925,
+      "lng": 121.278,
+      "elevation": 2900,
+      "category": "water"
+    },
+    {
+      "id": "n_g12_baishi",
+      "name": "白石山",
+      "lat": 23.915,
+      "lng": 121.275,
+      "elevation": 3110,
       "category": "peak"
+    },
+    {
+      "id": "n_g12_wanlichi",
+      "name": "萬里池",
+      "lat": 23.905,
+      "lng": 121.275,
+      "elevation": 2780,
+      "category": "water"
+    },
+    {
+      "id": "n_g12_tunluchi",
+      "name": "屯鹿池",
+      "lat": 23.895,
+      "lng": 121.275,
+      "elevation": 2700,
+      "category": "water"
+    },
+    {
+      "id": "n_g12_3jct",
+      "name": "三岔路口",
+      "lat": 23.885,
+      "lng": 121.275,
+      "elevation": 2950,
+      "category": "junction"
     },
     {
       "id": "n_g12_andong",
       "name": "安東軍山",
-      "lat": 23.872707,
-      "lng": 121.266114,
-      "elevation": 3067,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "lat": 23.88105,
+      "lng": 121.28072,
+      "elevation": 3068,
+      "category": "peak"
     },
     {
-      "id": "n_g12_andong_shelter",
-      "name": "安東軍山避難小屋",
-      "lat": 23.865,
+      "id": "n_g12_visitor_park",
+      "name": "遊客中心停車場",
+      "lat": 23.965,
+      "lng": 121.185,
+      "elevation": 1100,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g12_aowanda_bridge",
+      "name": "奧萬大吊橋",
+      "lat": 23.955,
+      "lng": 121.21,
+      "elevation": 1000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_3rd_ridge_pinguai",
+      "name": "第三越嶺點/松風嶺",
+      "lat": 23.92,
+      "lng": 121.22,
+      "elevation": 1800,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_2nd_ridge",
+      "name": "第二越嶺點",
+      "lat": 23.915,
+      "lng": 121.225,
+      "elevation": 2000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_1st_ridge",
+      "name": "第一越嶺點",
+      "lat": 23.91,
+      "lng": 121.23,
+      "elevation": 2100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_4_tributary",
+      "name": "第四支流合匯點",
+      "lat": 23.905,
+      "lng": 121.235,
+      "elevation": 1800,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_3_tributary",
+      "name": "第三支流合匯點",
+      "lat": 23.9,
+      "lng": 121.24,
+      "elevation": 1700,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_jianan_camp",
+      "name": "建安下三支流會合點",
+      "lat": 23.895,
+      "lng": 121.245,
+      "elevation": 1650,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_2_tributary",
+      "name": "第二支流合匯點",
+      "lat": 23.89,
+      "lng": 121.25,
+      "elevation": 1600,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_wanda_river",
+      "name": "萬大南溪合匯點",
+      "lat": 23.885,
+      "lng": 121.255,
+      "elevation": 1500,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_jinxin_jct",
+      "name": "金杏真路岔路口",
+      "lat": 23.88,
       "lng": 121.26,
-      "elevation": 2900,
-      "category": "hut"
+      "elevation": 1700,
+      "category": "junction"
     },
     {
-      "id": "n_g12_tongmen_th",
-      "name": "銅門登山口",
-      "lat": 23.82,
-      "lng": 121.37,
-      "elevation": 800,
-      "category": "trailhead",
-      "tags": [
-        "parking"
-      ]
+      "id": "n_g12_xichuan_camp",
+      "name": "溪床營地",
+      "lat": 23.875,
+      "lng": 121.262,
+      "elevation": 1800,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_dabengbi",
+      "name": "大崩壁",
+      "lat": 23.878,
+      "lng": 121.27,
+      "elevation": 2200,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_2nd_liaoshe",
+      "name": "第二獵寮",
+      "lat": 23.882,
+      "lng": 121.275,
+      "elevation": 2500,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g12_hongxiao",
+      "name": "紅檜巨木",
+      "lat": 23.885,
+      "lng": 121.277,
+      "elevation": 2700,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_1st_creek_cross",
+      "name": "萬大南溪第一次過溪",
+      "lat": 23.888,
+      "lng": 121.278,
+      "elevation": 2750,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_1st_liaoshe_camp",
+      "name": "第一獵寮營地",
+      "lat": 23.883,
+      "lng": 121.276,
+      "elevation": 2600,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g12_to_buling",
+      "name": "往埔里",
+      "lat": 23.975,
+      "lng": 121.14,
+      "elevation": 600,
+      "category": "junction"
     }
   ],
   "edges": [
     {
+      "from": "n_g12_wushe",
+      "to": "n_g12_to_buling",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g12_wushe",
+      "to": "n_g12_lushan_tribe",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g12_lushan_tribe",
+      "to": "n_g12_tunyuan_th",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g12_wushe",
+      "to": "n_g12_visitor_park",
+      "minutes_forward": 40,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
       "from": "n_g12_tunyuan_th",
-      "to": "n_g12_yunhai_hut",
+      "to": "n_g12_yunhai",
       "minutes_forward": 208,
       "minutes_backward": 66,
-      "distance_km": 5.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_yunhai_hut",
+      "from": "n_g12_yunhai",
       "to": "n_g12_tianchi_hut",
       "minutes_forward": 257,
       "minutes_backward": 90,
-      "distance_km": 7.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g12_tianchi_hut",
-      "to": "n_g12_nenggao_jct",
-      "minutes_forward": 41,
-      "minutes_backward": 18,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g12_xianjie",
+      "minutes_forward": 50,
+      "minutes_backward": 55,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_nenggao_jct",
-      "to": "n_g12_nenggao",
-      "minutes_forward": 39,
-      "minutes_backward": 18,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g12_xianjie",
+      "to": "n_g12_kahuanguan",
+      "minutes_forward": 170,
+      "minutes_backward": 140,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_nenggao",
+      "from": "n_g12_kahuanguan",
+      "to": "n_g12_nenggao_main",
+      "minutes_forward": 160,
+      "minutes_backward": 140,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_nenggao_main",
       "to": "n_g12_nenggao_south",
-      "minutes_forward": 70,
-      "minutes_backward": 42,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g12_nenggao_south",
-      "to": "n_g12_guangtou",
+      "to": "n_g12_old_hut",
+      "minutes_forward": 15,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_old_hut",
+      "to": "n_g12_taiwan_pool",
+      "minutes_forward": 20,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_taiwan_pool",
+      "to": "n_g12_dalu_pool",
+      "minutes_forward": 35,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_dalu_pool",
+      "to": "n_g12_rope_cliff",
+      "minutes_forward": 100,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_rope_cliff",
+      "to": "n_g12_nenggao_southnorth",
+      "minutes_forward": 70,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_nenggao_southnorth",
+      "to": "n_g12_southpeak_jct",
+      "minutes_forward": 85,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_southpeak_jct",
+      "to": "n_g12_southpeak_camp",
+      "minutes_forward": 60,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_southpeak_camp",
+      "to": "n_g12_3039",
       "minutes_forward": 90,
-      "minutes_backward": 105,
-      "distance_km": 6.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_3039",
+      "to": "n_g12_guangtou",
+      "minutes_forward": 70,
+      "minutes_backward": 70,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g12_guangtou",
-      "to": "n_g12_andong_north",
-      "minutes_forward": 37,
-      "minutes_backward": 38,
-      "distance_km": 2.5,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g12_baishichi",
+      "minutes_forward": 20,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_andong_north",
+      "from": "n_g12_baishichi",
+      "to": "n_g12_baishi",
+      "minutes_forward": 130,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_baishichi",
+      "to": "n_g12_wanlichi",
+      "minutes_forward": 60,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_wanlichi",
+      "to": "n_g12_tunluchi",
+      "minutes_forward": 110,
+      "minutes_backward": 120,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_tunluchi",
+      "to": "n_g12_3jct",
+      "minutes_forward": 45,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_3jct",
       "to": "n_g12_andong",
-      "minutes_forward": 32,
-      "minutes_backward": 18,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 80,
+      "minutes_backward": 35,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_andong",
-      "to": "n_g12_andong_shelter",
-      "minutes_forward": 30,
-      "minutes_backward": 44,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g12_visitor_park",
+      "to": "n_g12_aowanda_bridge",
+      "minutes_forward": 70,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g12_andong_shelter",
-      "to": "n_g12_tongmen_th",
-      "minutes_forward": 210,
-      "minutes_backward": 420,
-      "distance_km": 14.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g12_aowanda_bridge",
+      "to": "n_g12_3rd_ridge_pinguai",
+      "minutes_forward": 55,
+      "minutes_backward": 35,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_3rd_ridge_pinguai",
+      "to": "n_g12_2nd_ridge",
+      "minutes_forward": 55,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_2nd_ridge",
+      "to": "n_g12_1st_ridge",
+      "minutes_forward": 60,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_1st_ridge",
+      "to": "n_g12_4_tributary",
+      "minutes_forward": 35,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_4_tributary",
+      "to": "n_g12_3_tributary",
+      "minutes_forward": 45,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_3_tributary",
+      "to": "n_g12_jianan_camp",
+      "minutes_forward": 40,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_jianan_camp",
+      "to": "n_g12_2_tributary",
+      "minutes_forward": 35,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_2_tributary",
+      "to": "n_g12_wanda_river",
+      "minutes_forward": 35,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_wanda_river",
+      "to": "n_g12_jinxin_jct",
+      "minutes_forward": 120,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_jinxin_jct",
+      "to": "n_g12_xichuan_camp",
+      "minutes_forward": 35,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_xichuan_camp",
+      "to": "n_g12_dabengbi",
+      "minutes_forward": 110,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_dabengbi",
+      "to": "n_g12_2nd_liaoshe",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_2nd_liaoshe",
+      "to": "n_g12_hongxiao",
+      "minutes_forward": 110,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_hongxiao",
+      "to": "n_g12_1st_creek_cross",
+      "minutes_forward": 70,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_1st_creek_cross",
+      "to": "n_g12_1st_liaoshe_camp",
+      "minutes_forward": 80,
+      "minutes_backward": 150,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g12_1st_liaoshe_camp",
+      "to": "n_g12_3jct",
+      "minutes_forward": 80,
+      "minutes_backward": 80,
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "G12-classic-6day",
-      "name": "能高安東軍縱走 (6天5夜)",
+      "id": "G12-andong-traverse",
+      "name": "能高安東軍縱走 (5天4夜)",
       "startNodeId": "n_g12_tunyuan_th",
-      "endNodeId": "n_g12_tongmen_th",
+      "endNodeId": "n_g12_andong",
       "viaNodeIds": [
-        "n_g12_yunhai_hut",
+        "n_g12_yunhai",
         "n_g12_tianchi_hut",
-        "n_g12_nenggao_jct",
-        "n_g12_nenggao",
+        "n_g12_kahuanguan",
+        "n_g12_nenggao_main",
         "n_g12_nenggao_south",
+        "n_g12_taiwan_pool",
         "n_g12_guangtou",
-        "n_g12_andong_north",
-        "n_g12_andong",
-        "n_g12_andong_shelter"
-      ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g12_yunhai_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g12_tianchi_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g12_nenggao_south",
-          "type": "waypoint"
-        },
-        {
-          "atNodeId": "n_g12_guangtou",
-          "type": "waypoint"
-        },
-        {
-          "atNodeId": "n_g12_andong_shelter",
-          "type": "hut"
-        }
-      ]
-    },
-    {
-      "id": "G12-fast-4day",
-      "name": "能高安東軍縱走快攻 (4天3夜)",
-      "startNodeId": "n_g12_tunyuan_th",
-      "endNodeId": "n_g12_tongmen_th",
-      "viaNodeIds": [
-        "n_g12_yunhai_hut",
-        "n_g12_tianchi_hut",
-        "n_g12_nenggao_jct",
-        "n_g12_nenggao",
-        "n_g12_nenggao_south",
-        "n_g12_guangtou",
-        "n_g12_andong_north",
-        "n_g12_andong",
-        "n_g12_andong_shelter"
+        "n_g12_baishichi",
+        "n_g12_wanlichi",
+        "n_g12_tunluchi"
       ],
       "suggestedDayBreaks": [
         {
@@ -283,36 +707,19 @@
           "type": "hut"
         },
         {
-          "atNodeId": "n_g12_guangtou",
-          "type": "waypoint"
+          "atNodeId": "n_g12_taiwan_pool",
+          "type": "camp"
         },
         {
-          "atNodeId": "n_g12_andong_shelter",
-          "type": "hut"
+          "atNodeId": "n_g12_baishichi",
+          "type": "water"
+        },
+        {
+          "atNodeId": "n_g12_tunluchi",
+          "type": "water"
         }
-      ]
-    },
-    {
-      "id": "G12-nenggao-only",
-      "name": "能高二峰 (3天2夜)",
-      "startNodeId": "n_g12_tunyuan_th",
-      "endNodeId": "n_g12_nenggao_south",
-      "viaNodeIds": [
-        "n_g12_yunhai_hut",
-        "n_g12_tianchi_hut",
-        "n_g12_nenggao_jct",
-        "n_g12_nenggao"
       ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g12_yunhai_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g12_tianchi_hut",
-          "type": "hut"
-        }
-      ]
+      "roundTrip": false
     }
   ]
 }
