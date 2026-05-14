@@ -231,17 +231,17 @@
     {
       "id": "n_g09_xiaoxi_camp",
       "name": "小溪營地",
-      "lat": 24.175,
-      "lng": 121.248,
-      "elevation": 2800,
+      "lat": 24.193,
+      "lng": 121.273,
+      "elevation": 3200,
       "category": "waypoint"
     },
     {
       "id": "n_g09_yuanhuan_jct",
       "name": "叉路（小溪）",
-      "lat": 24.174,
-      "lng": 121.247,
-      "elevation": 2800,
+      "lat": 24.19,
+      "lng": 121.275,
+      "elevation": 3300,
       "category": "junction"
     },
     {
@@ -825,16 +825,16 @@
     {
       "from": "n_g09_yuanhuan_jct",
       "to": "n_g09_xiaoxi_camp",
-      "minutes_forward": 5,
-      "minutes_backward": 10,
+      "minutes_forward": 10,
+      "minutes_backward": 5,
       "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g09_huagang_jct",
-      "to": "n_g09_yuanhuan_jct",
-      "minutes_forward": 15,
-      "minutes_backward": 30,
+      "from": "n_g09_yuanhuan_jct",
+      "to": "n_g09_hehuan_north",
+      "minutes_forward": 30,
+      "minutes_backward": 15,
       "source": "上河圖",
       "confirmed": true
     },
@@ -873,16 +873,8 @@
     {
       "from": "n_g09_orchard_th",
       "to": "n_g09_yuanhuan_jct",
-      "minutes_forward": 60,
-      "minutes_backward": 60,
-      "source": "上河圖",
-      "confirmed": true
-    },
-    {
-      "from": "n_g09_yuanhuan_jct",
-      "to": "n_g09_hehuan_north",
-      "minutes_forward": 30,
-      "minutes_backward": 15,
+      "minutes_forward": 120,
+      "minutes_backward": 90,
       "source": "上河圖",
       "confirmed": true
     },
@@ -1001,32 +993,32 @@
     {
       "from": "n_g09_north_peak_jct",
       "to": "n_g09_zhubei3_jct",
-      "minutes_forward": 40,
-      "minutes_backward": 30,
+      "minutes_forward": 30,
+      "minutes_backward": 40,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_zhubei3_jct",
       "to": "n_g09_zhubei_jct",
-      "minutes_forward": 90,
-      "minutes_backward": 70,
+      "minutes_forward": 70,
+      "minutes_backward": 90,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_zhubei3_jct",
       "to": "n_g09_qilai_lodge",
-      "minutes_forward": 15,
-      "minutes_backward": 10,
+      "minutes_forward": 10,
+      "minutes_backward": 15,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_qilai_lodge",
       "to": "n_g09_qilai_main_th",
-      "minutes_forward": 70,
-      "minutes_backward": 90,
+      "minutes_forward": 90,
+      "minutes_backward": 70,
       "source": "上河圖",
       "confirmed": true
     },
@@ -1073,24 +1065,24 @@
     {
       "from": "n_g09_qilai_main_th",
       "to": "n_g09_kaxi_camp",
-      "minutes_forward": 110,
-      "minutes_backward": 90,
+      "minutes_forward": 90,
+      "minutes_backward": 110,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_kaxi_camp",
       "to": "n_g09_kadong_camp",
-      "minutes_forward": 270,
-      "minutes_backward": 230,
+      "minutes_forward": 230,
+      "minutes_backward": 270,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_kadong_camp",
       "to": "n_g09_lishan_forest",
-      "minutes_forward": 40,
-      "minutes_backward": 30,
+      "minutes_forward": 30,
+      "minutes_backward": 40,
       "source": "上河圖",
       "confirmed": true
     },
@@ -1105,8 +1097,8 @@
     {
       "from": "n_g09_south_peak_th",
       "to": "n_g09_qilai_south",
-      "minutes_forward": 40,
-      "minutes_backward": 60,
+      "minutes_forward": 60,
+      "minutes_backward": 40,
       "source": "上河圖",
       "confirmed": true
     },
@@ -1121,8 +1113,8 @@
     {
       "from": "n_g09_tianchi_jct",
       "to": "n_g09_tianchi_hut",
-      "minutes_forward": 60,
-      "minutes_backward": 40,
+      "minutes_forward": 40,
+      "minutes_backward": 60,
       "source": "上河圖",
       "confirmed": true
     },

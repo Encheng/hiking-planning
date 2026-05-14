@@ -47,8 +47,10 @@ NODES = [
     ("n_g09_pool_camp",      "水池營地",          24.17680, 121.25500, 3000, "waypoint"),   #EST
     ("n_g09_huagang_jct",    "華岡叉路口",        24.17600, 121.25000, 3200, "junction"),   #EST (high ridge jct, above 西峰)
     ("n_g09_west_camp",      "西峰營地",          24.17782, 121.24557, 3123, "waypoint"),   #OSM
-    ("n_g09_xiaoxi_camp",    "小溪營地",          24.17500, 121.24800, 2800, "waypoint"),   #EST
-    ("n_g09_yuanhuan_jct",   "叉路（小溪）",      24.17400, 121.24700, 2800, "junction"),   #EST
+    # 上河圖: 中橫104K→果園→武法奈尾/天巒池→叉路→小溪營地→北合歡
+    # 叉路 在高稜線 (~3300m, 連 北合歡 約 15/30 分鐘ridge walk)
+    ("n_g09_xiaoxi_camp",    "小溪營地",          24.19300, 121.27300, 3200, "waypoint"),   #EST (high ridge stream camp, N of 北合歡)
+    ("n_g09_yuanhuan_jct",   "叉路（小溪）",      24.19000, 121.27500, 3300, "junction"),   #EST (high ridge jct ~1km N of 北合歡)
     ("n_g09_orchard_th",     "果園登山口",        24.17900, 121.26900, 2900, "trailhead"),  #EST
     ("n_g09_songquan_th",    "松泉崗·天巒池登山口", 24.19500, 121.26200, 2050, "trailhead"),  #EST (中橫104K)
     ("n_g09_tianluanchi",    "天巒池",            24.19200, 121.26000, 2820, "water"),      #EST
@@ -166,16 +168,19 @@ EDGES = [
     # 華岡(~3200) → 西峰(3144): DOWN 35, UP 45
     ("n_g09_huagang_jct", "n_g09_hehuan_west", 35, 45),   # 華岡叉路 → 西合歡 (上河 35DOWN/45UP)
     ("n_g09_hehuan_west", "n_g09_west_camp", 10, 10),
-    ("n_g09_yuanhuan_jct", "n_g09_xiaoxi_camp", 5, 10),
-    ("n_g09_huagang_jct", "n_g09_yuanhuan_jct", 15, 30),
+    # 叉路 ↔ 小溪營地 (短稜線): 上河 5/10
+    ("n_g09_yuanhuan_jct", "n_g09_xiaoxi_camp", 10, 5),  # 叉路→小溪營地 UP 10, DOWN 5
+    # 叉路 ↔ 北合歡 (高稜線連結): 上河 15/30 (15 DOWN, 30 UP)
+    ("n_g09_yuanhuan_jct", "n_g09_hehuan_north", 30, 15),  # 叉路→北合歡 UP 30, DOWN 15
 
     # 中橫104K access
     ("n_g09_songquan_th", "n_g09_tianluanchi", 30, 45),
     ("n_g09_songquan_th", "n_g09_orchard_th", 15, 15),    # 松泉崗 → 果園登山口
     ("n_g09_orchard_th", "n_g09_wufana", 60, 80),         # 果園 → 武法奈尾山
     ("n_g09_wufana", "n_g09_tianluanchi", 20, 10),
-    ("n_g09_orchard_th", "n_g09_yuanhuan_jct", 60, 60),   # 果園 → 叉路 (連到 合歡西峰 path)
-    ("n_g09_yuanhuan_jct", "n_g09_hehuan_north", 30, 15), # 叉路 → 北合歡 (上河 30/15)
+    # 中橫104K → 果園 → 武法奈尾/天巒池 → 叉路 (高稜線)。
+    # 果園→叉路 是 ~1.4km horizontal + ~400m climb, 估 120 UP / 90 DOWN
+    ("n_g09_orchard_th", "n_g09_yuanhuan_jct", 120, 90),   # 果園 → 叉路 (long ridge climb)
 
     # 北合歡山登山口 access
     ("n_g09_th_north", "n_g09_th_shimen_n", 15, 15),      # 沿公路
@@ -193,26 +198,36 @@ EDGES = [
     ("n_g09_chenggong_hut", "n_g09_chenggong1", 50, 40),  # 成功山屋 → 成功一號堡 (50/40分)
     ("n_g09_chenggong1", "n_g09_zhubei_jct", 30, 15),     # 成功一號 → 主北岔路 (30/15分)
     ("n_g09_zhubei_jct", "n_g09_north_peak_jct", 100, 80),  # 主北岔路 → 奇萊北峰岔路 (100/80分)
-    ("n_g09_north_peak_jct", "n_g09_qilai_north", 55, 35),  # 奇萊北峰岔路 → 北峰 (55/35分)
-    ("n_g09_north_peak_jct", "n_g09_zhubei3_jct", 40, 30),  # 北峰岔路 → 主北三岔路 (40/30分)
-    ("n_g09_zhubei3_jct", "n_g09_zhubei_jct", 90, 70),    # 主北三岔 → 主北岔路 (90/70分)
-    ("n_g09_zhubei3_jct", "n_g09_qilai_lodge", 15, 10),   # 主北三岔 → 奇萊山莊 (15/10分)
-    ("n_g09_qilai_lodge", "n_g09_qilai_main_th", 70, 90), # 奇萊山莊 → 主山登山口 (70/90分)
-    ("n_g09_qilai_main_th", "n_g09_qilai_main", 25, 15),  # 主山登山口 → 奇萊主山 (25/15分)
-    ("n_g09_qilai_lodge", "n_g09_qilaichi", 60, 50),
-    ("n_g09_qilai_main", "n_g09_qilai_main_east", 30, 35),
+    ("n_g09_north_peak_jct", "n_g09_qilai_north", 55, 35),  # 北峰岔路(↑)→主山北峰 UP 55, DOWN 35
+    # 北峰岔路(3550) → 主北三岔路(3460): DOWN 30 (smaller), UP 40
+    ("n_g09_north_peak_jct", "n_g09_zhubei3_jct", 30, 40),  # 北峰岔路→三岔路 DOWN 30
+    # 主北三岔路(3460) → 主北岔路(3250): DOWN 70 (smaller), UP 90
+    ("n_g09_zhubei3_jct", "n_g09_zhubei_jct", 70, 90),    # 三岔路→主北岔路 DOWN 70
+    # 主北三岔路(3460) → 奇萊山莊(3200): DOWN 10, UP 15
+    ("n_g09_zhubei3_jct", "n_g09_qilai_lodge", 10, 15),   # 三岔路→山莊 DOWN 10
+    # 奇萊山莊(3200) → 主山登山口(3450): UP 90, DOWN 70
+    ("n_g09_qilai_lodge", "n_g09_qilai_main_th", 90, 70), # 山莊→登山口 UP 90
+    ("n_g09_qilai_main_th", "n_g09_qilai_main", 25, 15),  # 登山口→主山 UP 25
+    ("n_g09_qilai_lodge", "n_g09_qilaichi", 60, 50),      # 山莊→池山 UP 60
+    ("n_g09_qilai_main", "n_g09_qilai_main_east", 30, 35),# 主山→主東 DOWN 30
     ("n_g09_qilai_main", "n_g09_karolou", 60, 60),
-    ("n_g09_qilaichi", "n_g09_qilai_main", 70, 75),
+    ("n_g09_qilaichi", "n_g09_qilai_main", 70, 75),       # 池山→主山 (estimate)
 
     # === 奇萊主南華 (卡西/卡東 routes) ===
-    ("n_g09_qilai_main_th", "n_g09_kaxi_camp", 110, 90),  # 主山登山口 → 卡西營地
-    ("n_g09_kaxi_camp", "n_g09_kadong_camp", 270, 230),
-    ("n_g09_kadong_camp", "n_g09_lishan_forest", 40, 30),
+    # 主山登山口(3450) → 卡西營地(3100): DOWN 90, UP 110
+    ("n_g09_qilai_main_th", "n_g09_kaxi_camp", 90, 110),  # 登山口→卡西 DOWN 90
+    # 卡西(3100) → 卡東(2400): DOWN 230, UP 270
+    ("n_g09_kaxi_camp", "n_g09_kadong_camp", 230, 270),   # 卡西→卡東 DOWN 230
+    # 卡東(2400) → 裡山(2200): DOWN 30, UP 40
+    ("n_g09_kadong_camp", "n_g09_lishan_forest", 30, 40), # 卡東→裡山 DOWN 30
+    # 裡山(2200) → 南峰登山口(3100): UP 185, DOWN 150
     ("n_g09_lishan_forest", "n_g09_south_peak_th", 185, 150),
-    ("n_g09_south_peak_th", "n_g09_qilai_south", 40, 60),
+    # 南峰登山口(3100) → 奇萊南峰(3357): UP 60, DOWN 40
+    ("n_g09_south_peak_th", "n_g09_qilai_south", 60, 40),
     ("n_g09_south_peak_th", "n_g09_tianchi_jct", 20, 15),
-    ("n_g09_tianchi_jct", "n_g09_tianchi_hut", 60, 40),
-    ("n_g09_tianchi_jct", "n_g09_nanhua", 40, 30),
+    # 天池岔路口(3150) → 天池山莊(2860): DOWN 40, UP 60
+    ("n_g09_tianchi_jct", "n_g09_tianchi_hut", 40, 60),
+    ("n_g09_tianchi_jct", "n_g09_nanhua", 40, 30),         # 岔路→南華 UP 40
     ("n_g09_tianchi_hut", "n_g09_xianjie_pass", 50, 55),
     ("n_g09_xianjie_pass", "n_g09_nanhua", 120, 80),
     ("n_g09_qilai_south", "n_g09_deepkutsu", 90, 100),
