@@ -150,6 +150,7 @@ export function validateRoute(input: ValidateInput): ValidationReport {
   }
 
   for (const e of route.edges) {
+    if (e.transport === 'vehicle') continue;  // vehicle drives have road speed, not hiking speed
     const from = nodesById.get(e.from);
     const to = nodesById.get(e.to);
     if (!from || !to) continue;

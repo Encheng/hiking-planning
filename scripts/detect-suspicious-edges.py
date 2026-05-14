@@ -41,6 +41,8 @@ def check_route(route_id: str) -> list[str]:
     findings: list[str] = []
 
     for e in route["edges"]:
+        if e.get("transport") == "vehicle":
+            continue  # Vehicle drives have road speeds, not hiking
         n_from = nodes_by_id.get(e["from"])
         n_to = nodes_by_id.get(e["to"])
         if not n_from or not n_to:

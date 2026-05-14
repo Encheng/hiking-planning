@@ -18,6 +18,8 @@ export interface RouteEdgeSource {
   notedBy: 'ai' | 'manual';
 }
 
+export type EdgeTransport = 'foot' | 'vehicle';
+
 export interface RouteEdge {
   from: string;
   to: string;
@@ -26,6 +28,8 @@ export interface RouteEdge {
   source: string;
   sources?: RouteEdgeSource[];
   confirmed?: boolean;
+  /** "vehicle" indicates road/drive segment; defaults to "foot" if omitted. */
+  transport?: EdgeTransport;
 }
 
 export interface RoutePreset {

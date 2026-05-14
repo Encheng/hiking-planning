@@ -491,7 +491,8 @@
           "notedBy": "ai"
         }
       ],
-      "confirmed": true
+      "confirmed": true,
+      "transport": "vehicle"
     },
     {
       "from": "n_g02_dongpu_hotspring",
@@ -507,7 +508,8 @@
           "notedBy": "ai"
         }
       ],
-      "confirmed": true
+      "confirmed": true,
+      "transport": "vehicle"
     },
     {
       "from": "n_g02_heshe",
@@ -523,7 +525,8 @@
           "notedBy": "ai"
         }
       ],
-      "confirmed": true
+      "confirmed": true,
+      "transport": "vehicle"
     },
     {
       "from": "n_g02_tataka_vc",
@@ -539,7 +542,8 @@
           "notedBy": "ai"
         }
       ],
-      "confirmed": true
+      "confirmed": true,
+      "transport": "vehicle"
     },
     {
       "from": "n_g02_shang_dongpu",
