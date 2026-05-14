@@ -1,110 +1,384 @@
 {
   "id": "G07",
   "name": "北一段縱走",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "version": "2026-05-14",
+  "source": "上河文化 G07 北一段步程示意圖 (G07_hiking_new.jpg)",
   "nodes": [
     {
-      "id": "n_g07_cuifeng_th",
-      "name": "翠峰登山口",
-      "lat": 24.387,
-      "lng": 121.464,
+      "id": "n_g07_siyuan_pass",
+      "name": "思源埡口",
+      "lat": 24.3969,
+      "lng": 121.3566,
+      "elevation": 1948,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g07_siyuan_th",
+      "name": "南湖大山思源登山口",
+      "lat": 24.39139,
+      "lng": 121.35254,
+      "elevation": 1900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g07_4_8k_jct",
+      "name": "4.8K岔路口",
+      "lat": 24.38,
+      "lng": 121.363,
+      "elevation": 2400,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_6_8k_th",
+      "name": "6.8K登山口",
+      "lat": 24.37,
+      "lng": 121.37,
       "elevation": 2600,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
+      "category": "trailhead"
     },
     {
-      "id": "n_g07_shenmachen",
+      "id": "n_g07_duojiatun",
+      "name": "多加屯山",
+      "lat": 24.36774,
+      "lng": 121.38115,
+      "elevation": 2795,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_duojiatun_shelter",
+      "name": "多加屯避難小屋",
+      "lat": 24.36821,
+      "lng": 121.37332,
+      "elevation": 2705,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g07_mugan_pass",
+      "name": "木杆鞍部",
+      "lat": 24.37611,
+      "lng": 121.39291,
+      "elevation": 2515,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_xinyunleng_hut",
+      "name": "新雲稜山莊",
+      "lat": 24.378,
+      "lng": 121.404,
+      "elevation": 2800,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_shenma_th",
+      "name": "審馬陣山登山口",
+      "lat": 24.38,
+      "lng": 121.416,
+      "elevation": 3130,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_shenma",
       "name": "審馬陣山",
-      "lat": 24.380164,
-      "lng": 121.417492,
+      "lat": 24.38016,
+      "lng": 121.41749,
       "elevation": 3140,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g07_nanhu_north_camp",
-      "name": "南湖北山附近營地",
-      "lat": 24.393,
-      "lng": 121.43,
-      "elevation": 3536,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "id": "n_g07_shenma_lodge_jct",
+      "name": "審馬陣山莊岔路口",
+      "lat": 24.381,
+      "lng": 121.425,
+      "elevation": 3250,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_shenma_lodge",
+      "name": "審馬陣山莊",
+      "lat": 24.3805,
+      "lng": 121.424,
+      "elevation": 3200,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_beishan_th",
+      "name": "北山登山口",
+      "lat": 24.383,
+      "lng": 121.435,
+      "elevation": 3450,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_nanhu_north",
+      "name": "南湖北山",
+      "lat": 24.38367,
+      "lng": 121.43726,
+      "elevation": 3534,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_shengguang_th",
+      "name": "南湖大山勝光登山口",
+      "lat": 24.36992,
+      "lng": 121.34057,
+      "elevation": 1900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g07_dashuichi_th",
+      "name": "大水池登山口",
+      "lat": 24.365,
+      "lng": 121.355,
+      "elevation": 2150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g07_lishan_th",
+      "name": "往梨山(中橫7甲)",
+      "lat": 24.258,
+      "lng": 121.275,
+      "elevation": 1950,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g07_nanhu_north_peak",
+      "name": "南湖大山北峰",
+      "lat": 24.37401,
+      "lng": 121.44171,
+      "elevation": 3563,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_nanhu_circle_hut",
+      "name": "南湖圈谷山莊",
+      "lat": 24.368,
+      "lng": 121.439,
+      "elevation": 3380,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_upper_circle",
+      "name": "上圈谷",
+      "lat": 24.365,
+      "lng": 121.441,
+      "elevation": 3450,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_zhudong_jct",
+      "name": "主東岔路",
+      "lat": 24.364,
+      "lng": 121.443,
+      "elevation": 3550,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_four_jct",
+      "name": "四岔路口",
+      "lat": 24.365,
+      "lng": 121.446,
+      "elevation": 3600,
+      "category": "junction"
     },
     {
       "id": "n_g07_nanhu_main",
       "name": "南湖大山",
-      "lat": 24.361812,
-      "lng": 121.439377,
+      "lat": 24.36181,
+      "lng": 121.43938,
       "elevation": 3741,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_main_south_jct",
+      "name": "主峰南峰三岔路口",
+      "lat": 24.36,
+      "lng": 121.438,
+      "elevation": 3650,
+      "category": "junction"
     },
     {
       "id": "n_g07_nanhu_east",
       "name": "南湖大山東峰",
-      "lat": 24.365594,
-      "lng": 121.450853,
+      "lat": 24.36559,
+      "lng": 121.45085,
       "elevation": 3639,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_east_peak_th",
+      "name": "東峰登山口",
+      "lat": 24.365,
+      "lng": 121.452,
+      "elevation": 3580,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_chishanwu_hut",
+      "name": "南湖池山屋",
+      "lat": 24.355,
+      "lng": 121.435,
+      "elevation": 3350,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_nanhu_south_jct",
+      "name": "南湖大山南峰岔路",
+      "lat": 24.35,
+      "lng": 121.435,
+      "elevation": 3480,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_nanhu_south",
+      "name": "南湖大山南峰",
+      "lat": 24.3477,
+      "lng": 121.43476,
+      "elevation": 3505,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_baba",
+      "name": "巴巴山",
+      "lat": 24.34239,
+      "lng": 121.43783,
+      "elevation": 3448,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_taosei_ruins",
+      "name": "陶塞山屋遺址",
+      "lat": 24.362,
+      "lng": 121.458,
+      "elevation": 3450,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g07_dazhuoshui_jct",
+      "name": "大濁水南溪岔路",
+      "lat": 24.365,
+      "lng": 121.463,
+      "elevation": 3300,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_lieliao_jct",
+      "name": "獵寮岔路",
+      "lat": 24.368,
+      "lng": 121.466,
+      "elevation": 3200,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_shidong_lieliao",
+      "name": "石洞獵寮",
+      "lat": 24.37,
+      "lng": 121.468,
+      "elevation": 3180,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g07_taosei_th",
+      "name": "陶塞峰登山口",
+      "lat": 24.359,
+      "lng": 121.461,
+      "elevation": 3500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_taosei",
+      "name": "陶塞峰",
+      "lat": 24.35909,
+      "lng": 121.46004,
+      "elevation": 3519,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_nanhu_southeast",
+      "name": "南湖大山東南峰",
+      "lat": 24.35583,
+      "lng": 121.46493,
+      "elevation": 3478,
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_marker_2_2k",
+      "name": "指標2.2K岔路口",
+      "lat": 24.352,
+      "lng": 121.471,
+      "elevation": 3350,
+      "category": "junction"
+    },
+    {
+      "id": "n_g07_marker_1k",
+      "name": "指標1.0K",
+      "lat": 24.35,
+      "lng": 121.478,
+      "elevation": 3100,
+      "category": "junction"
     },
     {
       "id": "n_g07_mabisan",
       "name": "馬比杉山",
-      "lat": 24.348225,
-      "lng": 121.485638,
+      "lat": 24.34823,
+      "lng": 121.48564,
       "elevation": 3211,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g07_zhongyangj_base",
-      "name": "中央尖山基地營",
-      "lat": 24.326,
-      "lng": 121.458,
-      "elevation": 2900,
-      "category": "waypoint",
-      "tags": [
-        "camp",
-        "water"
-      ]
+      "id": "n_g07_nanhuxi_hut",
+      "name": "南湖溪山屋",
+      "lat": 24.37019,
+      "lng": 121.39709,
+      "elevation": 2209,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_xianggu_camp",
+      "name": "香菇寮營地",
+      "lat": 24.34378,
+      "lng": 121.4067,
+      "elevation": 2200,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g07_zhongyangj_hut",
+      "name": "中央尖溪山屋",
+      "lat": 24.33553,
+      "lng": 121.41827,
+      "elevation": 2430,
+      "category": "hut"
+    },
+    {
+      "id": "n_g07_zhongyangj_pass",
+      "name": "中央尖鞍部",
+      "lat": 24.315,
+      "lng": 121.417,
+      "elevation": 3450,
+      "category": "junction"
     },
     {
       "id": "n_g07_zhongyangj",
       "name": "中央尖山",
-      "lat": 24.310224,
-      "lng": 121.416266,
+      "lat": 24.31022,
+      "lng": 121.41627,
       "elevation": 3698,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
+    },
+    {
+      "id": "n_g07_zhongyangj_east",
+      "name": "中央尖山東峰",
+      "lat": 24.30817,
+      "lng": 121.4236,
+      "elevation": 3581,
+      "category": "peak"
     },
     {
       "id": "n_g07_bilu",
       "name": "畢祿山",
-      "lat": 24.213577,
-      "lng": 121.347187,
+      "lat": 24.21358,
+      "lng": 121.34719,
       "elevation": 3370,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
       "id": "n_g07_yangtou",
@@ -112,116 +386,384 @@
       "lat": 24.20869,
       "lng": 121.37973,
       "elevation": 3033,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g07_lishan_th",
-      "name": "梨山",
-      "lat": 24.252,
-      "lng": 121.332,
-      "elevation": 1950,
-      "category": "trailhead",
-      "tags": [
-        "bus",
-        "accommodation"
-      ]
-    },
-    {
-      "id": "n_g07_nanhu_north",
-      "name": "南湖大山北峰",
-      "lat": 24.3740058,
-      "lng": 121.4417124,
-      "elevation": 3563,
-      "category": "peak"
-    },
-    {
-      "id": "n_g07_taosei",
-      "name": "陶塞峰",
-      "lat": 24.3590926,
-      "lng": 121.4600372,
-      "elevation": 3519,
       "category": "peak"
     }
   ],
   "edges": [
     {
-      "from": "n_g07_cuifeng_th",
-      "to": "n_g07_shenmachen",
-      "minutes_forward": 183,
-      "minutes_backward": 125,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g07_siyuan_pass",
+      "to": "n_g07_siyuan_th",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g07_shenmachen",
-      "to": "n_g07_nanhu_north_camp",
-      "minutes_forward": 154,
-      "minutes_backward": 107,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g07_siyuan_th",
+      "to": "n_g07_4_8k_jct",
+      "minutes_forward": 145,
+      "minutes_backward": 100,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g07_nanhu_main",
+      "from": "n_g07_4_8k_jct",
+      "to": "n_g07_6_8k_th",
+      "minutes_forward": 45,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_6_8k_th",
+      "to": "n_g07_duojiatun",
+      "minutes_forward": 100,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_duojiatun",
+      "to": "n_g07_duojiatun_shelter",
+      "minutes_forward": 8,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_duojiatun",
+      "to": "n_g07_mugan_pass",
+      "minutes_forward": 90,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_mugan_pass",
+      "to": "n_g07_xinyunleng_hut",
+      "minutes_forward": 40,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_xinyunleng_hut",
+      "to": "n_g07_shenma_th",
+      "minutes_forward": 170,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shenma_th",
+      "to": "n_g07_shenma",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shenma_th",
+      "to": "n_g07_shenma_lodge_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shenma_lodge_jct",
+      "to": "n_g07_shenma_lodge",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shenma_lodge_jct",
+      "to": "n_g07_beishan_th",
+      "minutes_forward": 100,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_beishan_th",
+      "to": "n_g07_nanhu_north",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_beishan_th",
+      "to": "n_g07_nanhu_north_peak",
+      "minutes_forward": 80,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_shengguang_th",
+      "to": "n_g07_dashuichi_th",
+      "minutes_forward": 30,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_dashuichi_th",
+      "to": "n_g07_4_8k_jct",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_north_peak",
+      "to": "n_g07_nanhu_circle_hut",
+      "minutes_forward": 35,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_circle_hut",
+      "to": "n_g07_upper_circle",
+      "minutes_forward": 15,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_circle_hut",
+      "to": "n_g07_zhudong_jct",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_upper_circle",
+      "to": "n_g07_four_jct",
+      "minutes_forward": 50,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhudong_jct",
+      "to": "n_g07_four_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_four_jct",
       "to": "n_g07_nanhu_east",
-      "minutes_forward": 36,
+      "minutes_forward": 60,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_east",
+      "to": "n_g07_east_peak_th",
+      "minutes_forward": 10,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhudong_jct",
+      "to": "n_g07_main_south_jct",
+      "minutes_forward": 20,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_main_south_jct",
+      "to": "n_g07_nanhu_main",
+      "minutes_forward": 45,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_main_south_jct",
+      "to": "n_g07_chishanwu_hut",
+      "minutes_forward": 35,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_chishanwu_hut",
+      "to": "n_g07_nanhu_south_jct",
+      "minutes_forward": 120,
+      "minutes_backward": 95,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_south_jct",
+      "to": "n_g07_nanhu_south",
+      "minutes_forward": 15,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_south",
+      "to": "n_g07_baba",
+      "minutes_forward": 55,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_four_jct",
+      "to": "n_g07_taosei_ruins",
+      "minutes_forward": 40,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_taosei_ruins",
+      "to": "n_g07_dazhuoshui_jct",
+      "minutes_forward": 40,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_dazhuoshui_jct",
+      "to": "n_g07_lieliao_jct",
+      "minutes_forward": 10,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_lieliao_jct",
+      "to": "n_g07_shidong_lieliao",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_taosei_ruins",
+      "to": "n_g07_taosei_th",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_taosei_th",
+      "to": "n_g07_taosei",
+      "minutes_forward": 20,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_taosei_th",
+      "to": "n_g07_nanhu_southeast",
+      "minutes_forward": 70,
+      "minutes_backward": 75,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhu_southeast",
+      "to": "n_g07_marker_2_2k",
+      "minutes_forward": 55,
+      "minutes_backward": 75,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_marker_2_2k",
+      "to": "n_g07_marker_1k",
+      "minutes_forward": 35,
       "minutes_backward": 50,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g07_mabisan",
-      "to": "n_g07_zhongyangj_base",
-      "minutes_forward": 109,
-      "minutes_backward": 152,
-      "distance_km": 6.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g07_marker_1k",
+      "to": "n_g07_mabisan",
+      "minutes_forward": 40,
+      "minutes_backward": 20,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g07_zhongyangj_base",
+      "from": "n_g07_shenma_lodge",
+      "to": "n_g07_nanhuxi_hut",
+      "minutes_forward": 65,
+      "minutes_backward": 75,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_nanhuxi_hut",
+      "to": "n_g07_xianggu_camp",
+      "minutes_forward": 170,
+      "minutes_backward": 220,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_xianggu_camp",
+      "to": "n_g07_zhongyangj_hut",
+      "minutes_forward": 180,
+      "minutes_backward": 150,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhongyangj_hut",
+      "to": "n_g07_zhongyangj_pass",
+      "minutes_forward": 240,
+      "minutes_backward": 200,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhongyangj_pass",
       "to": "n_g07_zhongyangj",
-      "minutes_forward": 212,
-      "minutes_backward": 138,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 50,
+      "minutes_backward": 35,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g07_zhongyangj_base",
+      "from": "n_g07_zhongyangj_pass",
+      "to": "n_g07_zhongyangj_east",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g07_zhongyangj",
       "to": "n_g07_bilu",
-      "minutes_forward": 199,
-      "minutes_backward": 140,
-      "distance_km": 7.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 540,
+      "minutes_backward": 600,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g07_bilu",
       "to": "n_g07_yangtou",
-      "minutes_forward": 100,
-      "minutes_backward": 142,
-      "distance_km": 5.0,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 90,
+      "minutes_backward": 100,
+      "source": "上河圖",
       "confirmed": true
     },
     {
@@ -229,109 +771,89 @@
       "to": "n_g07_lishan_th",
       "minutes_forward": 226,
       "minutes_backward": 336,
-      "distance_km": 8.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g07_nanhu_north_camp",
-      "to": "n_g07_nanhu_north",
-      "minutes_forward": 40,
-      "minutes_backward": 50,
-      "source": "estimated",
-      "confirmed": true
-    },
-    {
-      "from": "n_g07_nanhu_north",
-      "to": "n_g07_nanhu_main",
-      "minutes_forward": 45,
-      "minutes_backward": 35,
-      "source": "estimated",
-      "confirmed": true
-    },
-    {
-      "from": "n_g07_nanhu_east",
-      "to": "n_g07_taosei",
-      "minutes_forward": 30,
-      "minutes_backward": 35,
-      "source": "estimated",
-      "confirmed": true
-    },
-    {
-      "from": "n_g07_taosei",
-      "to": "n_g07_mabisan",
-      "minutes_forward": 60,
-      "minutes_backward": 70,
-      "source": "estimated",
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "G07-north-first-section",
-      "name": "北一段縱走 (7天6夜)",
-      "startNodeId": "n_g07_cuifeng_th",
+      "id": "G07-classic-traverse",
+      "name": "北一段標準縱走 (5天4夜)",
+      "startNodeId": "n_g07_siyuan_pass",
       "endNodeId": "n_g07_lishan_th",
       "viaNodeIds": [
-        "n_g07_shenmachen",
-        "n_g07_nanhu_north_camp",
-        "n_g07_nanhu_main",
-        "n_g07_nanhu_east",
-        "n_g07_mabisan",
-        "n_g07_zhongyangj_base",
+        "n_g07_siyuan_th",
+        "n_g07_4_8k_jct",
+        "n_g07_6_8k_th",
+        "n_g07_duojiatun",
+        "n_g07_mugan_pass",
+        "n_g07_xinyunleng_hut",
+        "n_g07_shenma_th",
+        "n_g07_shenma",
+        "n_g07_shenma_lodge_jct",
+        "n_g07_shenma_lodge",
+        "n_g07_nanhuxi_hut",
+        "n_g07_xianggu_camp",
+        "n_g07_zhongyangj_hut",
+        "n_g07_zhongyangj_pass",
         "n_g07_zhongyangj",
         "n_g07_bilu",
         "n_g07_yangtou"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g07_nanhu_north_camp",
-          "type": "camp"
+          "atNodeId": "n_g07_xinyunleng_hut",
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g07_nanhu_east",
-          "type": "camp"
+          "atNodeId": "n_g07_shenma_lodge",
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g07_zhongyangj_base",
-          "type": "camp"
+          "atNodeId": "n_g07_nanhuxi_hut",
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g07_zhongyangj",
-          "type": "camp"
-        },
-        {
-          "atNodeId": "n_g07_bilu",
-          "type": "camp"
-        },
-        {
-          "atNodeId": "n_g07_yangtou",
-          "type": "camp"
+          "atNodeId": "n_g07_zhongyangj_hut",
+          "type": "hut"
         }
-      ]
+      ],
+      "roundTrip": false
     },
     {
-      "id": "G07-nanhu-outback",
-      "name": "南湖大山雙峰來回 (3天2夜)",
-      "startNodeId": "n_g07_cuifeng_th",
-      "endNodeId": "n_g07_nanhu_east",
+      "id": "G07-nanhu-only",
+      "name": "南湖大山 (4天3夜)",
+      "startNodeId": "n_g07_siyuan_pass",
+      "endNodeId": "n_g07_nanhu_main",
       "viaNodeIds": [
-        "n_g07_shenmachen",
-        "n_g07_nanhu_north_camp",
-        "n_g07_nanhu_main"
+        "n_g07_siyuan_th",
+        "n_g07_4_8k_jct",
+        "n_g07_6_8k_th",
+        "n_g07_duojiatun",
+        "n_g07_mugan_pass",
+        "n_g07_xinyunleng_hut",
+        "n_g07_shenma_th",
+        "n_g07_shenma_lodge_jct",
+        "n_g07_beishan_th",
+        "n_g07_nanhu_north_peak",
+        "n_g07_nanhu_circle_hut",
+        "n_g07_main_south_jct"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g07_nanhu_north_camp",
-          "type": "camp"
+          "atNodeId": "n_g07_xinyunleng_hut",
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g07_nanhu_main",
-          "type": "camp"
+          "atNodeId": "n_g07_nanhu_circle_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g07_nanhu_circle_hut",
+          "type": "hut"
         }
-      ]
+      ],
+      "roundTrip": true
     }
   ]
 }

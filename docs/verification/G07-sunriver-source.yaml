@@ -1,0 +1,210 @@
+# G07 北一段 — 上河圖步程示意圖時間參考資料
+# 來源: https://www.sunriver.com.tw/images/hiking/G07_hiking_new.jpg
+# 約定: smaller=DOWN, larger=UP (依海拔差判斷方向)
+
+route: G07
+source_url: https://www.sunriver.com.tw/images/hiking/G07_hiking_new.jpg
+
+segments:
+  # ─── 思源埡口 → 審馬陣山 主要進場 ───
+  - from: 南湖大山思源登山口
+    to: 4.8K岔路口
+    up_min: 145
+    down_min: 100
+
+  - from: 4.8K岔路口
+    to: 6.8K登山口
+    up_min: 45
+    down_min: 40
+
+  - from: 6.8K登山口
+    to: 多加屯山
+    up_min: 100
+    down_min: 60
+
+  - from: 多加屯山
+    to: 木杆鞍部
+    up_min: 100
+    down_min: 90
+
+  - from: 木杆鞍部
+    to: 新雲稜山莊
+    up_min: 40
+    down_min: 25
+
+  - from: 新雲稜山莊
+    to: 審馬陣山登山口
+    up_min: 170
+    down_min: 100
+
+  - from: 審馬陣山登山口
+    to: 審馬陣山
+    up_min: 3
+    down_min: 3
+
+  - from: 審馬陣山登山口
+    to: 審馬陣山莊岔路口
+    up_min: 30
+    down_min: 20
+
+  - from: 審馬陣山莊岔路口
+    to: 北山登山口
+    up_min: 100
+    down_min: 60
+
+  - from: 北山登山口
+    to: 南湖北山
+    up_min: 10
+    down_min: 10
+
+  - from: 北山登山口
+    to: 南湖大山北峰
+    up_min: 80
+    down_min: 70
+
+  # ─── 南湖圈谷 area ───
+  - from: 南湖圈谷山莊
+    to: 南湖大山北峰
+    up_min: 55
+    down_min: 35
+
+  - from: 南湖圈谷山莊
+    to: 上圈谷
+    up_min: 15
+    down_min: 10
+
+  - from: 南湖圈谷山莊
+    to: 主東岔路
+    up_min: 50
+    down_min: 40
+
+  - from: 上圈谷
+    to: 四岔路口
+    up_min: 50
+    down_min: 30
+
+  - from: 主東岔路
+    to: 四岔路口
+    up_min: 30
+    down_min: 30
+
+  - from: 四岔路口
+    to: 南湖大山東峰
+    up_min: 60
+    down_min: 30
+
+  - from: 南湖大山東峰
+    to: 東峰登山口
+    up_min: 15
+    down_min: 10
+
+  # ─── 主峰、南峰、池山屋 系列 ───
+  - from: 主東岔路
+    to: 主峰南峰三岔路口
+    up_min: 20
+    down_min: 15
+
+  - from: 主峰南峰三岔路口
+    to: 南湖大山
+    up_min: 45
+    down_min: 30
+
+  - from: 主峰南峰三岔路口
+    to: 南湖池山屋
+    up_min: 55
+    down_min: 35
+
+  - from: 南湖池山屋
+    to: 南湖大山南峰岔路
+    up_min: 120
+    down_min: 95
+
+  - from: 南湖大山南峰岔路
+    to: 南湖大山南峰
+    up_min: 15
+    down_min: 10
+
+  - from: 南湖大山南峰
+    to: 巴巴山
+    up_min: 60
+    down_min: 55
+
+  # ─── 陶塞峰 ↔ 馬比杉 chain ───
+  - from: 四岔路口
+    to: 陶塞山屋遺址
+    up_min: 70
+    down_min: 40
+
+  - from: 陶塞山屋遺址
+    to: 大濁水南溪岔路
+    up_min: 60
+    down_min: 40
+
+  - from: 大濁水南溪岔路
+    to: 獵寮岔路
+    up_min: 15
+    down_min: 10
+
+  - from: 獵寮岔路
+    to: 石洞獵寮
+    up_min: 5
+    down_min: 5
+
+  - from: 陶塞峰登山口
+    to: 南湖大山東南峰
+    up_min: 75
+    down_min: 70
+
+  - from: 南湖大山東南峰
+    to: 指標2.2K岔路口
+    up_min: 75
+    down_min: 55
+
+  - from: 指標2.2K岔路口
+    to: 指標1.0K
+    up_min: 50
+    down_min: 35
+
+  - from: 指標1.0K
+    to: 馬比杉山
+    up_min: 40
+    down_min: 20
+
+  # ─── 中央尖 chain (q3) ───
+  - from: 審馬陣山莊
+    to: 南湖溪山屋
+    up_min: 75
+    down_min: 65
+    # 注意: 南湖溪山屋 在較低海拔 (~2700m)，審馬陣山莊在較高 (~3140m)
+    # 此邊 fwd 是審馬陣→南湖溪 (DOWN), 應為 65；上河也讀 75/65
+
+  - from: 南湖溪山屋
+    to: 香菇寮營地
+    up_min: 220
+    down_min: 170
+
+  - from: 香菇寮營地
+    to: 中央尖溪山屋
+    up_min: 180
+    down_min: 150
+
+  - from: 中央尖溪山屋
+    to: 中央尖鞍部
+    up_min: 240
+    down_min: 200
+
+  - from: 中央尖鞍部
+    to: 中央尖山
+    up_min: 50
+    down_min: 35
+
+  - from: 中央尖鞍部
+    to: 中央尖山東峰
+    up_min: 40
+    down_min: 30
+
+  # ─── 7甲 alternative access ───
+  - from: 南湖大山勝光登山口
+    to: 大水池登山口
+    up_min: 30
+    down_min: 25
