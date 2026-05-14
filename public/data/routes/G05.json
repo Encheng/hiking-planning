@@ -29,6 +29,22 @@
       "category": "hut"
     },
     {
+      "id": "n_g05_kupo_view",
+      "name": "哭坡觀景台",
+      "lat": 24.398,
+      "lng": 121.285,
+      "elevation": 2750,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g05_xueshan_east",
+      "name": "雪山東峰",
+      "lat": 24.38873,
+      "lng": 121.27196,
+      "elevation": 3199,
+      "category": "peak"
+    },
+    {
       "id": "n_g05_369_hut",
       "name": "三六九山莊",
       "lat": 24.395,
@@ -496,9 +512,25 @@
     },
     {
       "from": "n_g05_seven_hut",
+      "to": "n_g05_kupo_view",
+      "minutes_forward": 120,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g05_kupo_view",
+      "to": "n_g05_xueshan_east",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g05_xueshan_east",
       "to": "n_g05_369_hut",
-      "minutes_forward": 255,
-      "minutes_backward": 210,
+      "minutes_forward": 40,
+      "minutes_backward": 80,
       "source": "上河圖",
       "confirmed": true
     },
@@ -972,6 +1004,8 @@
       "viaNodeIds": [
         "n_g05_xueshan_th",
         "n_g05_seven_hut",
+        "n_g05_kupo_view",
+        "n_g05_xueshan_east",
         "n_g05_369_hut",
         "n_g05_xueshan",
         "n_g05_cuichi_hut",

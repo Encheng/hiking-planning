@@ -10,6 +10,8 @@ NODES = [
     ("n_g05_wuling_th",        "武陵山莊",          24.40500, 121.30500, 1745, "trailhead"),  #EST
     ("n_g05_xueshan_th",       "雪山登山口",        24.40300, 121.30300, 2150, "trailhead"),  #EST
     ("n_g05_seven_hut",        "七卡山莊",          24.40000, 121.29500, 2463, "hut"),        #EST
+    ("n_g05_kupo_view",        "哭坡觀景台",        24.39800, 121.28500, 2750, "waypoint"),   #EST
+    ("n_g05_xueshan_east",     "雪山東峰",          24.38873, 121.27196, 3199, "peak"),       #OSM
     ("n_g05_369_hut",          "三六九山莊",        24.39500, 121.27500, 3100, "hut"),        #EST
 
     # === 雪山主峰 area ===
@@ -85,7 +87,10 @@ EDGES = [
     # === 武陵 access ===
     ("n_g05_wuling_th", "n_g05_xueshan_th", 20, 20),
     ("n_g05_xueshan_th", "n_g05_seven_hut", 70, 55),
-    ("n_g05_seven_hut", "n_g05_369_hut", 255, 210),
+    # 雪東 chain (上河 七卡 → 哭坡 → 雪東 → 369):
+    ("n_g05_seven_hut", "n_g05_kupo_view", 120, 60),       # 七卡→哭坡 UP 120
+    ("n_g05_kupo_view", "n_g05_xueshan_east", 90, 60),     # 哭坡→雪東 UP 90
+    ("n_g05_xueshan_east", "n_g05_369_hut", 40, 80),       # 雪東→369 DOWN 40
     ("n_g05_369_hut", "n_g05_xueshan", 240, 210),
 
     # === 翠池 chain (西稜起點) ===
@@ -177,7 +182,8 @@ PRESETS = [
         "startNodeId": "n_g05_wuling_th",
         "endNodeId": "n_g05_dananshan_th",
         "viaNodeIds": [
-            "n_g05_xueshan_th", "n_g05_seven_hut", "n_g05_369_hut",
+            "n_g05_xueshan_th", "n_g05_seven_hut", "n_g05_kupo_view",
+            "n_g05_xueshan_east", "n_g05_369_hut",
             "n_g05_xueshan", "n_g05_cuichi_hut",
             "n_g05_wanmei_camp", "n_g05_xueshan_xinan",
             "n_g05_daxian", "n_g05_youbo", "n_g05_tuilun",
