@@ -118,8 +118,8 @@
     {
       "id": "n_g09_shimen_th",
       "name": "石門山登山口",
-      "lat": 24.1473,
-      "lng": 121.287,
+      "lat": 24.14607,
+      "lng": 121.2843,
       "elevation": 3275,
       "category": "trailhead"
     },
@@ -138,6 +138,201 @@
       "lng": 121.2811125,
       "elevation": 3421,
       "category": "peak"
+    },
+    {
+      "id": "n_g09_wuling",
+      "name": "武嶺",
+      "lat": 24.13711,
+      "lng": 121.27614,
+      "elevation": 3275,
+      "category": "junction",
+      "tags": [
+        "road_highest_point"
+      ]
+    },
+    {
+      "id": "n_g09_th_main",
+      "name": "合歡主峰登山口",
+      "lat": 24.13364,
+      "lng": 121.27159,
+      "elevation": 3275,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_north",
+      "name": "合歡北峰登山口",
+      "lat": 24.16569,
+      "lng": 121.28934,
+      "elevation": 3275,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_east",
+      "name": "合歡東峰登山口",
+      "lat": 24.13978,
+      "lng": 121.28731,
+      "elevation": 3275,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_jianshan_s",
+      "name": "合歡尖山南登山口",
+      "lat": 24.14258,
+      "lng": 121.28454,
+      "elevation": 3210,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_jianshan_n",
+      "name": "合歡尖山北登山口",
+      "lat": 24.1457,
+      "lng": 121.28403,
+      "elevation": 3210,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_shimen_n",
+      "name": "石門北峰登山口",
+      "lat": 24.15375,
+      "lng": 121.28293,
+      "elevation": 3210,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_pingfeng",
+      "name": "屏風山登山口",
+      "lat": 24.17968,
+      "lng": 121.31781,
+      "elevation": 2400,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_th_qilai_main",
+      "name": "奇萊主峰登山口",
+      "lat": 24.08726,
+      "lng": 121.32141,
+      "elevation": 2350,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g09_kenan_pass",
+      "name": "克難關",
+      "lat": 24.15365,
+      "lng": 121.28305,
+      "elevation": 3179,
+      "category": "junction"
+    },
+    {
+      "id": "n_g09_hehuan_south",
+      "name": "合歡南峰",
+      "lat": 24.12421,
+      "lng": 121.26896,
+      "elevation": 3218,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_hehuan_jianshan",
+      "name": "合歡尖山",
+      "lat": 24.14441,
+      "lng": 121.2836,
+      "elevation": 3218,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_shimen_north",
+      "name": "石門山北峰",
+      "lat": 24.1576,
+      "lng": 121.27956,
+      "elevation": 3280,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_xiaoqilai",
+      "name": "小奇萊",
+      "lat": 24.13224,
+      "lng": 121.29536,
+      "elevation": 3153,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_heishuitang",
+      "name": "黑水塘",
+      "lat": 24.14762,
+      "lng": 121.3423,
+      "elevation": 2400,
+      "category": "water"
+    },
+    {
+      "id": "n_g09_karolou",
+      "name": "卡羅樓山",
+      "lat": 24.0783,
+      "lng": 121.31584,
+      "elevation": 3413,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_qilaichi",
+      "name": "奇萊池山",
+      "lat": 24.10015,
+      "lng": 121.32341,
+      "elevation": 3436,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_qilai_main_east",
+      "name": "奇萊主山東峰",
+      "lat": 24.0839,
+      "lng": 121.33473,
+      "elevation": 3394,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_qilaijian",
+      "name": "奇萊尖",
+      "lat": 24.12657,
+      "lng": 121.30026,
+      "elevation": 3163,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_pingfeng",
+      "name": "屏風山",
+      "lat": 24.14923,
+      "lng": 121.34301,
+      "elevation": 3247,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_deepkutsu",
+      "name": "深堀山",
+      "lat": 24.05298,
+      "lng": 121.27464,
+      "elevation": 3313,
+      "category": "peak"
+    },
+    {
+      "id": "n_g09_yuexing_camp",
+      "name": "月形池營地",
+      "lat": 24.11754,
+      "lng": 121.34544,
+      "elevation": 2900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g09_songzhen_camp",
+      "name": "松針營地",
+      "lat": 24.1621,
+      "lng": 121.32494,
+      "elevation": 2700,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g09_west_camp",
+      "name": "西峰營地",
+      "lat": 24.17782,
+      "lng": 121.24557,
+      "elevation": 3123,
+      "category": "waypoint"
     }
   ],
   "edges": [
@@ -158,17 +353,6 @@
       "minutes_forward": 59,
       "minutes_backward": 24,
       "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g09_hehuan_north",
-      "to": "n_g09_chenggong_hut",
-      "minutes_forward": 53,
-      "minutes_backward": 81,
-      "distance_km": 3.5,
       "sources": [
         "estimated"
       ],
@@ -287,6 +471,294 @@
       "minutes_backward": 40,
       "source": "estimated",
       "confirmed": true
+    },
+    {
+      "from": "n_g09_wuling",
+      "to": "n_g09_hehuan_th",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_wuling",
+      "to": "n_g09_th_main",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_wuling",
+      "to": "n_g09_th_jianshan_s",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_jianshan_s",
+      "to": "n_g09_th_jianshan_n",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_jianshan_n",
+      "to": "n_g09_shimen_th",
+      "minutes_forward": 2,
+      "minutes_backward": 2,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_shimen_th",
+      "to": "n_g09_th_east",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_east",
+      "to": "n_g09_th_shimen_n",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_shimen_n",
+      "to": "n_g09_th_north",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_kenan_pass",
+      "to": "n_g09_th_north",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_main",
+      "to": "n_g09_hehuan_main",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_north",
+      "to": "n_g09_hehuan_north",
+      "minutes_forward": 150,
+      "minutes_backward": 90,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_east",
+      "to": "n_g09_hehuan_east",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_jianshan_s",
+      "to": "n_g09_hehuan_jianshan",
+      "minutes_forward": 20,
+      "minutes_backward": 15,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_jianshan_n",
+      "to": "n_g09_hehuan_jianshan",
+      "minutes_forward": 25,
+      "minutes_backward": 20,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_shimen_n",
+      "to": "n_g09_shimen_north",
+      "minutes_forward": 30,
+      "minutes_backward": 25,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_hehuan_main",
+      "to": "n_g09_hehuan_south",
+      "minutes_forward": 60,
+      "minutes_backward": 70,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_hehuan_jianshan",
+      "to": "n_g09_shimen",
+      "minutes_forward": 25,
+      "minutes_backward": 25,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_shimen_north",
+      "to": "n_g09_shimen",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_shimen_north",
+      "to": "n_g09_kenan_pass",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_hehuan_west",
+      "to": "n_g09_west_camp",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_east",
+      "to": "n_g09_xiaoqilai",
+      "minutes_forward": 60,
+      "minutes_backward": 45,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_xiaoqilai",
+      "to": "n_g09_heishuitang",
+      "minutes_forward": 60,
+      "minutes_backward": 90,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_heishuitang",
+      "to": "n_g09_chenggong_hut",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_main",
+      "to": "n_g09_qilai_main_east",
+      "minutes_forward": 30,
+      "minutes_backward": 35,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_main",
+      "to": "n_g09_karolou",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_karolou",
+      "to": "n_g09_qilai_south",
+      "minutes_forward": 90,
+      "minutes_backward": 100,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilaichi",
+      "to": "n_g09_qilai_main",
+      "minutes_forward": 70,
+      "minutes_backward": 75,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_hut",
+      "to": "n_g09_qilaichi",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_pingfeng",
+      "to": "n_g09_songzhen_camp",
+      "minutes_forward": 180,
+      "minutes_backward": 120,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_songzhen_camp",
+      "to": "n_g09_pingfeng",
+      "minutes_forward": 80,
+      "minutes_backward": 60,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_pingfeng",
+      "to": "n_g09_chenggong_hut",
+      "minutes_forward": 240,
+      "minutes_backward": 280,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_main",
+      "to": "n_g09_yuexing_camp",
+      "minutes_forward": 90,
+      "minutes_backward": 100,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_th_qilai_main",
+      "to": "n_g09_qilai_hut",
+      "minutes_forward": 240,
+      "minutes_backward": 180,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_qilai_south",
+      "to": "n_g09_deepkutsu",
+      "minutes_forward": 90,
+      "minutes_backward": 100,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_deepkutsu",
+      "to": "n_g09_nanhua",
+      "minutes_forward": 100,
+      "minutes_backward": 110,
+      "source": "estimated",
+      "confirmed": true
+    },
+    {
+      "from": "n_g09_xiaoqilai",
+      "to": "n_g09_qilaijian",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "estimated",
+      "confirmed": true
     }
   ],
   "presets": [
@@ -355,6 +827,61 @@
       "endNodeId": "n_g09_hehuan_east",
       "viaNodeIds": [
         "n_g09_shimen"
+      ],
+      "roundTrip": true
+    },
+    {
+      "id": "G09-hehuan-north-day",
+      "name": "合歡北峰單登 (當日來回)",
+      "startNodeId": "n_g09_th_north",
+      "endNodeId": "n_g09_hehuan_north",
+      "viaNodeIds": [],
+      "roundTrip": true
+    },
+    {
+      "id": "G09-hehuan-main-day",
+      "name": "合歡主峰單登 (當日來回)",
+      "startNodeId": "n_g09_th_main",
+      "endNodeId": "n_g09_hehuan_main",
+      "viaNodeIds": [],
+      "roundTrip": true
+    },
+    {
+      "id": "G09-hehuan-west-day",
+      "name": "合歡西峰單登 (當日往返)",
+      "startNodeId": "n_g09_hehuan_th",
+      "endNodeId": "n_g09_hehuan_west",
+      "viaNodeIds": [],
+      "roundTrip": true
+    },
+    {
+      "id": "G09-hehuan-4peaks",
+      "name": "合歡四峰串連 (主+東+石門+尖山)",
+      "startNodeId": "n_g09_th_main",
+      "endNodeId": "n_g09_hehuan_east",
+      "viaNodeIds": [
+        "n_g09_hehuan_main",
+        "n_g09_wuling",
+        "n_g09_th_jianshan_s",
+        "n_g09_hehuan_jianshan",
+        "n_g09_shimen",
+        "n_g09_shimen_th"
+      ],
+      "roundTrip": false
+    },
+    {
+      "id": "G09-pingfeng",
+      "name": "屏風山單登 (2天1夜)",
+      "startNodeId": "n_g09_th_pingfeng",
+      "endNodeId": "n_g09_pingfeng",
+      "viaNodeIds": [
+        "n_g09_songzhen_camp"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g09_songzhen_camp",
+          "type": "camp"
+        }
       ],
       "roundTrip": true
     }
