@@ -179,8 +179,8 @@
     {
       "from": "n_g12_guangtou",
       "to": "n_g12_andong_north",
-      "minutes_forward": 38,
-      "minutes_backward": 37,
+      "minutes_forward": 37,
+      "minutes_backward": 38,
       "distance_km": 2.5,
       "sources": [
         "estimated"

@@ -825,8 +825,8 @@
     {
       "from": "n_g09_yuanhuan_jct",
       "to": "n_g09_xiaoxi_camp",
-      "minutes_forward": 10,
-      "minutes_backward": 5,
+      "minutes_forward": 5,
+      "minutes_backward": 10,
       "source": "上河圖",
       "confirmed": true
     },
@@ -841,8 +841,8 @@
     {
       "from": "n_g09_songquan_th",
       "to": "n_g09_tianluanchi",
-      "minutes_forward": 30,
-      "minutes_backward": 45,
+      "minutes_forward": 45,
+      "minutes_backward": 30,
       "source": "上河圖",
       "confirmed": true
     },
@@ -857,16 +857,16 @@
     {
       "from": "n_g09_orchard_th",
       "to": "n_g09_wufana",
-      "minutes_forward": 60,
-      "minutes_backward": 80,
+      "minutes_forward": 80,
+      "minutes_backward": 60,
       "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g09_wufana",
       "to": "n_g09_tianluanchi",
-      "minutes_forward": 20,
-      "minutes_backward": 10,
+      "minutes_forward": 10,
+      "minutes_backward": 20,
       "source": "上河圖",
       "confirmed": true
     },
@@ -929,8 +929,8 @@
     {
       "from": "n_g09_ski_lodge",
       "to": "n_g09_xiaoqilai",
-      "minutes_forward": 60,
-      "minutes_backward": 45,
+      "minutes_forward": 45,
+      "minutes_backward": 60,
       "source": "上河圖",
       "confirmed": true
     },
@@ -1057,8 +1057,8 @@
     {
       "from": "n_g09_qilaichi",
       "to": "n_g09_qilai_main",
-      "minutes_forward": 70,
-      "minutes_backward": 75,
+      "minutes_forward": 75,
+      "minutes_backward": 70,
       "source": "上河圖",
       "confirmed": true
     },

@@ -560,8 +560,8 @@
     {
       "from": "n_g02_paiyun_admin",
       "to": "n_g02_lulin",
-      "minutes_forward": 20,
-      "minutes_backward": 25,
+      "minutes_forward": 25,
+      "minutes_backward": 20,
       "source": "G02_hiking.jpg",
       "sources": [
         {
@@ -758,8 +758,8 @@
     {
       "from": "n_g02_yushan_west",
       "to": "n_g02_fengkou",
-      "minutes_forward": 70,
-      "minutes_backward": 45,
+      "minutes_forward": 45,
+      "minutes_backward": 70,
       "source": "G02_hiking.jpg",
       "sources": [
         {
@@ -844,8 +844,8 @@
     {
       "from": "n_g02_main_north_jct",
       "to": "n_g02_yushan_east",
-      "minutes_forward": 80,
-      "minutes_backward": 90,
+      "minutes_forward": 90,
+      "minutes_backward": 80,
       "source": "G02_hiking.jpg",
       "sources": [
         {
@@ -1046,8 +1046,8 @@
     {
       "from": "n_g02_2k_jct",
       "to": "n_g02_yushan_xiaonan",
-      "minutes_forward": 80,
-      "minutes_backward": 70,
+      "minutes_forward": 70,
+      "minutes_backward": 80,
       "source": "G02_hiking.jpg",
       "sources": [
         {
@@ -1228,8 +1228,8 @@
     {
       "from": "n_g02_guanggao_station",
       "to": "n_g02_ancient_trail_jct",
-      "minutes_forward": 40,
-      "minutes_backward": 60,
+      "minutes_forward": 60,
+      "minutes_backward": 40,
       "source": "G02_hiking.jpg",
       "sources": [
         {
@@ -1244,8 +1244,8 @@
     {
       "from": "n_g02_ancient_trail_jct",
       "to": "n_g02_stream_camp",
-      "minutes_forward": 35,
-      "minutes_backward": 40,
+      "minutes_forward": 40,
+      "minutes_backward": 35,
       "source": "G02_hiking.jpg",
       "sources": [
         {

@@ -241,8 +241,8 @@
     {
       "from": "n_g16_xiuguluan_jct",
       "to": "n_g16_mabolas_jct",
-      "minutes_forward": 53,
-      "minutes_backward": 42,
+      "minutes_forward": 42,
+      "minutes_backward": 53,
       "distance_km": 3.0,
       "sources": [
         "estimated"
@@ -263,8 +263,8 @@
     {
       "from": "n_g16_mabolas_jct",
       "to": "n_g16_mabolas_camp",
-      "minutes_forward": 40,
-      "minutes_backward": 37,
+      "minutes_forward": 37,
+      "minutes_backward": 40,
       "distance_km": 2.5,
       "sources": [
         "estimated"
@@ -285,8 +285,8 @@
     {
       "from": "n_g16_malijianan",
       "to": "n_g16_malijianan_camp",
-      "minutes_forward": 45,
-      "minutes_backward": 40,
+      "minutes_forward": 40,
+      "minutes_backward": 45,
       "distance_km": 2.5,
       "sources": [
         "estimated"

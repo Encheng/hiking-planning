@@ -292,8 +292,8 @@
     {
       "from": "n_g04_xuebei_hut",
       "to": "n_g04_beling",
-      "minutes_forward": 65,
-      "minutes_backward": 80,
+      "minutes_forward": 80,
+      "minutes_backward": 65,
       "source": "estimated",
       "confirmed": true
     },

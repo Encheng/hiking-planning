@@ -159,8 +159,8 @@
     {
       "from": "n_g17_xiangyang",
       "to": "n_g17_sancha_jct",
-      "minutes_forward": 58,
-      "minutes_backward": 46,
+      "minutes_forward": 46,
+      "minutes_backward": 58,
       "distance_km": 3.8,
       "sources": [
         "estimated"
@@ -181,8 +181,8 @@
     {
       "from": "n_g17_sancha",
       "to": "n_g17_jiaming_lake",
-      "minutes_forward": 28,
-      "minutes_backward": 24,
+      "minutes_forward": 24,
+      "minutes_backward": 28,
       "distance_km": 1.5,
       "sources": [
         "estimated"
@@ -225,8 +225,8 @@
     {
       "from": "n_g17_guanshan_jct",
       "to": "n_g17_guanshan_hut",
-      "minutes_forward": 35,
-      "minutes_backward": 40,
+      "minutes_forward": 40,
+      "minutes_backward": 35,
       "distance_km": 2.5,
       "sources": [
         "estimated"
@@ -247,8 +247,8 @@
     {
       "from": "n_g17_guanshan_jct",
       "to": "n_g17_kuhanoxin_jct",
-      "minutes_forward": 42,
-      "minutes_backward": 39,
+      "minutes_forward": 39,
+      "minutes_backward": 42,
       "distance_km": 2.8,
       "sources": [
         "estimated"

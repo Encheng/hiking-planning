@@ -199,8 +199,8 @@
     {
       "from": "n_g19_yunfeng",
       "to": "n_g19_yunfeng_camp",
-      "minutes_forward": 43,
-      "minutes_backward": 35,
+      "minutes_forward": 35,
+      "minutes_backward": 43,
       "distance_km": 2.5,
       "sources": [
         "estimated"
@@ -221,8 +221,8 @@
     {
       "from": "n_g19_guanshan_jct",
       "to": "n_g19_guanshan_hut",
-      "minutes_forward": 35,
-      "minutes_backward": 40,
+      "minutes_forward": 40,
+      "minutes_backward": 35,
       "distance_km": 2.5,
       "sources": [
         "estimated"
@@ -243,8 +243,8 @@
     {
       "from": "n_g19_guanshan_hut",
       "to": "n_g19_xiaoguanshan_hut",
-      "minutes_forward": 165,
-      "minutes_backward": 131,
+      "minutes_forward": 131,
+      "minutes_backward": 165,
       "distance_km": 9.0,
       "sources": [
         "estimated"
@@ -265,8 +265,8 @@
     {
       "from": "n_g19_xiaoguanshan_hut",
       "to": "n_g19_south_ridge_camp",
-      "minutes_forward": 98,
-      "minutes_backward": 80,
+      "minutes_forward": 80,
+      "minutes_backward": 98,
       "distance_km": 6.5,
       "sources": [
         "estimated"
@@ -298,8 +298,8 @@
     {
       "from": "n_g19_binan_jct",
       "to": "n_g19_binan_camp",
-      "minutes_forward": 33,
-      "minutes_backward": 32,
+      "minutes_forward": 32,
+      "minutes_backward": 33,
       "distance_km": 2.0,
       "sources": [
         "estimated"

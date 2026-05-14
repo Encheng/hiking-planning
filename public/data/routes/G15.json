@@ -188,8 +188,8 @@
     {
       "from": "n_g15_danda_mt",
       "to": "n_g15_danda_mt_camp",
-      "minutes_forward": 45,
-      "minutes_backward": 33,
+      "minutes_forward": 33,
+      "minutes_backward": 45,
       "distance_km": 2.0,
       "sources": [
         "estimated"
@@ -221,8 +221,8 @@
     {
       "from": "n_g15_dongjun",
       "to": "n_g15_dongjun_camp",
-      "minutes_forward": 47,
-      "minutes_backward": 32,
+      "minutes_forward": 32,
+      "minutes_backward": 47,
       "distance_km": 2.0,
       "sources": [
         "estimated"
@@ -232,8 +232,8 @@
     {
       "from": "n_g15_danda_mt_camp",
       "to": "n_g15_liushun_jct",
-      "minutes_forward": 63,
-      "minutes_backward": 51,
+      "minutes_forward": 51,
+      "minutes_backward": 63,
       "distance_km": 3.8,
       "sources": [
         "estimated"
@@ -287,8 +287,8 @@
     {
       "from": "n_g15_maxi",
       "to": "n_g15_maxi_camp",
-      "minutes_forward": 52,
-      "minutes_backward": 38,
+      "minutes_forward": 38,
+      "minutes_backward": 52,
       "distance_km": 2.5,
       "sources": [
         "estimated"

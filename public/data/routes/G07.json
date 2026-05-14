@@ -246,8 +246,8 @@
     {
       "from": "n_g07_nanhu_north",
       "to": "n_g07_nanhu_main",
-      "minutes_forward": 35,
-      "minutes_backward": 45,
+      "minutes_forward": 45,
+      "minutes_backward": 35,
       "source": "estimated",
       "confirmed": true
     },
@@ -262,8 +262,8 @@
     {
       "from": "n_g07_taosei",
       "to": "n_g07_mabisan",
-      "minutes_forward": 70,
-      "minutes_backward": 60,
+      "minutes_forward": 60,
+      "minutes_backward": 70,
       "source": "estimated",
       "confirmed": true
     }

@@ -183,8 +183,8 @@
     {
       "from": "n_g18_xinkang",
       "to": "n_g18_xinkang_west_ridge",
-      "minutes_forward": 48,
-      "minutes_backward": 39,
+      "minutes_forward": 39,
+      "minutes_backward": 48,
       "distance_km": 2.5,
       "sources": [
         "estimated"
@@ -227,8 +227,8 @@
     {
       "from": "n_g18_central_traverse_camp",
       "to": "n_g18_dafenjian_camp",
-      "minutes_forward": 75,
-      "minutes_backward": 68,
+      "minutes_forward": 68,
+      "minutes_backward": 75,
       "distance_km": 5.0,
       "sources": [
         "estimated"
