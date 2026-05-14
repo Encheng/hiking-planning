@@ -1,382 +1,728 @@
 {
   "id": "G17",
   "name": "南二段縱走",
-  "version": "2026-05-13",
-  "source": "estimated times from community data; GPS from OSM (ODbL)",
+  "version": "2026-05-14",
+  "source": "上河文化 G17 南二段步程示意圖 (G17_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g17_xiangyang_th",
-      "name": "向陽登山口",
-      "lat": 23.278,
-      "lng": 120.954,
+      "id": "n_g17_xiangyang_forest",
+      "name": "向陽森林遊樂區",
+      "lat": 23.24779,
+      "lng": 120.98572,
       "elevation": 2370,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check",
-        "toilet"
-      ]
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g17_xiangyang_th",
+      "name": "林道登山口",
+      "lat": 23.25538,
+      "lng": 120.98375,
+      "elevation": 2500,
+      "category": "trailhead"
     },
     {
       "id": "n_g17_xiangyang_hut",
       "name": "向陽山屋",
-      "lat": 23.281,
-      "lng": 120.968,
-      "elevation": 2850,
+      "lat": 23.26269,
+      "lng": 120.98438,
+      "elevation": 2880,
       "category": "hut"
     },
     {
-      "id": "n_g17_xiangyang",
+      "id": "n_g17_heishuitang",
+      "name": "黑水塘",
+      "lat": 23.26731,
+      "lng": 120.9869,
+      "elevation": 2950,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g17_xiangyang_west_th",
+      "name": "西側登山口",
+      "lat": 23.24764,
+      "lng": 120.98278,
+      "elevation": 3000,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g17_xiangyang_peak",
       "name": "向陽山",
-      "lat": 23.2844,
-      "lng": 120.9924,
+      "lat": 23.28436,
+      "lng": 120.99245,
       "elevation": 3602,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g17_sancha_jct",
-      "name": "三叉山岔路",
-      "lat": 23.291,
-      "lng": 121.01,
-      "elevation": 3380,
-      "category": "junction"
-    },
-    {
-      "id": "n_g17_sancha",
-      "name": "三叉山",
-      "lat": 23.2972,
-      "lng": 121.0287,
-      "elevation": 3495,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g17_jiaming_lake",
-      "name": "嘉明湖",
-      "lat": 23.2934,
-      "lng": 121.0341,
-      "elevation": 3310,
-      "category": "water",
-      "tags": [
-        "lake",
-        "100mt_adjacent"
-      ]
-    },
-    {
-      "id": "n_g17_jiaming_hut",
+      "id": "n_g17_jiaminghu_hut",
       "name": "嘉明湖避難山屋",
-      "lat": 23.284,
-      "lng": 120.997,
-      "elevation": 3150,
-      "category": "hut"
-    },
-    {
-      "id": "n_g17_guanshan_jct",
-      "name": "關山岔路",
-      "lat": 23.255,
-      "lng": 120.93,
-      "elevation": 3300,
-      "category": "junction"
-    },
-    {
-      "id": "n_g17_guanshan",
-      "name": "關山",
-      "lat": 23.2282,
-      "lng": 120.9117,
-      "elevation": 3667,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g17_guanshan_hut",
-      "name": "關山山屋",
-      "lat": 23.238,
-      "lng": 120.921,
+      "lat": 23.28397,
+      "lng": 120.99697,
       "elevation": 3350,
       "category": "hut"
     },
     {
-      "id": "n_g17_taguanshan",
-      "name": "塔關山",
-      "lat": 23.2519,
-      "lng": 120.9412,
-      "elevation": 3219,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g17_kuhanoxin",
-      "name": "庫哈諾辛山",
-      "lat": 23.2627,
-      "lng": 120.9,
-      "elevation": 3114,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g17_kuhanoxin_jct",
-      "name": "庫哈諾辛岔路",
-      "lat": 23.258,
-      "lng": 120.91,
-      "elevation": 3050,
+      "id": "n_g17_jiaminghu_sanchaa_jct",
+      "name": "三岔路口",
+      "lat": 23.288,
+      "lng": 121.002,
+      "elevation": 3380,
       "category": "junction"
+    },
+    {
+      "id": "n_g17_north_peak_signs",
+      "name": "北峰下解說牌",
+      "lat": 23.29178,
+      "lng": 121.00896,
+      "elevation": 3435,
+      "category": "junction"
+    },
+    {
+      "id": "n_g17_sanchashan_th",
+      "name": "三叉山登山口",
+      "lat": 23.29425,
+      "lng": 121.02291,
+      "elevation": 3450,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g17_sanchashan",
+      "name": "三叉山",
+      "lat": 23.29719,
+      "lng": 121.02866,
+      "elevation": 3495,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_jiaminghu_jct",
+      "name": "嘉明湖岔路口",
+      "lat": 23.29589,
+      "lng": 121.03306,
+      "elevation": 3380,
+      "category": "junction"
+    },
+    {
+      "id": "n_g17_jiaminghu",
+      "name": "嘉明湖",
+      "lat": 23.29339,
+      "lng": 121.03411,
+      "elevation": 3310,
+      "category": "water"
+    },
+    {
+      "id": "n_g17_jiamingmei_pool",
+      "name": "嘉明妹池",
+      "lat": 23.28271,
+      "lng": 121.02872,
+      "elevation": 3380,
+      "category": "water"
+    },
+    {
+      "id": "n_g17_xinkang_jct",
+      "name": "新康山岔路口",
+      "lat": 23.29695,
+      "lng": 121.05463,
+      "elevation": 3450,
+      "category": "junction"
+    },
+    {
+      "id": "n_g17_lakuyin_hut",
+      "name": "拉庫音溪山屋",
+      "lat": 23.32831,
+      "lng": 121.02572,
+      "elevation": 2690,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_nan_shuangtou",
+      "name": "南雙頭山",
+      "lat": 23.34589,
+      "lng": 121.01058,
+      "elevation": 3356,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_nan_shuangtou_east",
+      "name": "南雙頭山東峰",
+      "lat": 23.34637,
+      "lng": 121.01519,
+      "elevation": 3353,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_xibei_an_camp",
+      "name": "西北鞍南雙池營地",
+      "lat": 23.349,
+      "lng": 121.005,
+      "elevation": 3200,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g17_yunfeng_east_camp",
+      "name": "雲峰東峰三岔路口營地",
+      "lat": 23.35887,
+      "lng": 120.98691,
+      "elevation": 3454,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g17_yunfeng",
+      "name": "雲峰",
+      "lat": 23.35375,
+      "lng": 120.97575,
+      "elevation": 3564,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_yunfeng_east",
+      "name": "雲峰東峰",
+      "lat": 23.35887,
+      "lng": 120.98691,
+      "elevation": 3454,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_water_source",
+      "name": "水源",
+      "lat": 23.361,
+      "lng": 120.988,
+      "elevation": 3380,
+      "category": "water"
+    },
+    {
+      "id": "n_g17_lulu_hut",
+      "name": "轆轆谷山屋",
+      "lat": 23.38605,
+      "lng": 121.00649,
+      "elevation": 2991,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_lulu_th",
+      "name": "轆轆山登山口",
+      "lat": 23.388,
+      "lng": 120.999,
+      "elevation": 3150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g17_lulu_peak",
+      "name": "轆轆山",
+      "lat": 23.39136,
+      "lng": 120.99808,
+      "elevation": 3279,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_lulu_east",
+      "name": "轆轆東峰",
+      "lat": 23.39,
+      "lng": 121.0,
+      "elevation": 3200,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_tafenchi",
+      "name": "塔芬池",
+      "lat": 23.40287,
+      "lng": 121.02833,
+      "elevation": 2930,
+      "category": "water"
+    },
+    {
+      "id": "n_g17_tafenshan",
+      "name": "塔芬山",
+      "lat": 23.40601,
+      "lng": 121.02681,
+      "elevation": 3069,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_tafengu_hut",
+      "name": "塔芬谷山屋",
+      "lat": 23.41965,
+      "lng": 121.02673,
+      "elevation": 2605,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_dafenjian_th",
+      "name": "達芬尖山登山口",
+      "lat": 23.425,
+      "lng": 121.017,
+      "elevation": 2900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g17_dafenjian",
+      "name": "達芬尖山",
+      "lat": 23.43273,
+      "lng": 121.0132,
+      "elevation": 3208,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_nan_dashuiku",
+      "name": "南大水窟山",
+      "lat": 23.45088,
+      "lng": 121.05193,
+      "elevation": 3385,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_dashuiku_hut",
+      "name": "大水窟山屋",
+      "lat": 23.45934,
+      "lng": 121.05625,
+      "elevation": 3227,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_dashuiku_pool",
+      "name": "大水窟池",
+      "lat": 23.46027,
+      "lng": 121.05635,
+      "elevation": 3220,
+      "category": "water"
+    },
+    {
+      "id": "n_g17_dashuiku",
+      "name": "大水窟山",
+      "lat": 23.47398,
+      "lng": 121.03848,
+      "elevation": 3643,
+      "category": "peak"
+    },
+    {
+      "id": "n_g17_zhongyang_mine_hut",
+      "name": "中央金礦山屋",
+      "lat": 23.48653,
+      "lng": 121.02746,
+      "elevation": 2820,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_baiyang_mine_hut",
+      "name": "白洋金礦山屋",
+      "lat": 23.48789,
+      "lng": 121.04743,
+      "elevation": 3378,
+      "category": "hut"
+    },
+    {
+      "id": "n_g17_dujuan_camp",
+      "name": "杜鵑營地",
+      "lat": 23.47447,
+      "lng": 121.02739,
+      "elevation": 3050,
+      "category": "waypoint"
     }
   ],
   "edges": [
     {
+      "from": "n_g17_xiangyang_forest",
+      "to": "n_g17_xiangyang_th",
+      "minutes_forward": 80,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
       "from": "n_g17_xiangyang_th",
       "to": "n_g17_xiangyang_hut",
-      "minutes_forward": 103,
-      "minutes_backward": 59,
-      "distance_km": 3.5,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 70,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g17_xiangyang_hut",
-      "to": "n_g17_xiangyang",
-      "minutes_forward": 156,
-      "minutes_backward": 81,
-      "distance_km": 5.5,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g17_heishuitang",
+      "minutes_forward": 30,
+      "minutes_backward": 25,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_xiangyang",
-      "to": "n_g17_sancha_jct",
-      "minutes_forward": 46,
-      "minutes_backward": 58,
-      "distance_km": 3.8,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_xiangyang_hut",
+      "to": "n_g17_xiangyang_west_th",
+      "minutes_forward": 180,
+      "minutes_backward": 130,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_sancha_jct",
-      "to": "n_g17_sancha",
-      "minutes_forward": 39,
-      "minutes_backward": 27,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_xiangyang_west_th",
+      "to": "n_g17_xiangyang_peak",
+      "minutes_forward": 35,
+      "minutes_backward": 25,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_sancha",
-      "to": "n_g17_jiaming_lake",
-      "minutes_forward": 24,
-      "minutes_backward": 28,
-      "distance_km": 1.5,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_xiangyang_peak",
+      "to": "n_g17_jiaminghu_hut",
+      "minutes_forward": 45,
+      "minutes_backward": 60,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_sancha_jct",
-      "to": "n_g17_jiaming_hut",
-      "minutes_forward": 42,
-      "minutes_backward": 42,
-      "distance_km": 2.2,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_xiangyang_west_th",
+      "to": "n_g17_jiaminghu_hut",
+      "minutes_forward": 45,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_jiaming_hut",
-      "to": "n_g17_taguanshan",
-      "minutes_forward": 75,
-      "minutes_backward": 56,
-      "distance_km": 4.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_jiaminghu_hut",
+      "to": "n_g17_jiaminghu_sanchaa_jct",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_taguanshan",
-      "to": "n_g17_guanshan_jct",
-      "minutes_forward": 60,
-      "minutes_backward": 55,
-      "distance_km": 3.8,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g17_guanshan_jct",
-      "to": "n_g17_guanshan_hut",
+      "from": "n_g17_jiaminghu_sanchaa_jct",
+      "to": "n_g17_north_peak_signs",
       "minutes_forward": 40,
       "minutes_backward": 35,
-      "distance_km": 2.5,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_guanshan_hut",
-      "to": "n_g17_guanshan",
-      "minutes_forward": 71,
-      "minutes_backward": 43,
-      "distance_km": 2.5,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_north_peak_signs",
+      "to": "n_g17_sanchashan_th",
+      "minutes_forward": 80,
+      "minutes_backward": 55,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_guanshan_jct",
-      "to": "n_g17_kuhanoxin_jct",
-      "minutes_forward": 39,
-      "minutes_backward": 42,
-      "distance_km": 2.8,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g17_sanchashan_th",
+      "to": "n_g17_sanchashan",
+      "minutes_forward": 25,
+      "minutes_backward": 15,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g17_kuhanoxin_jct",
-      "to": "n_g17_kuhanoxin",
-      "minutes_forward": 42,
+      "from": "n_g17_sanchashan_th",
+      "to": "n_g17_jiaminghu_jct",
+      "minutes_forward": 25,
       "minutes_backward": 30,
-      "distance_km": 2.0,
-      "sources": [
-        "estimated"
-      ],
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_jiaminghu_jct",
+      "to": "n_g17_jiaminghu",
+      "minutes_forward": 15,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_jiaminghu_jct",
+      "to": "n_g17_xinkang_jct",
+      "minutes_forward": 40,
+      "minutes_backward": 30,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_sanchashan",
+      "to": "n_g17_lakuyin_hut",
+      "minutes_forward": 130,
+      "minutes_backward": 220,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_xinkang_jct",
+      "to": "n_g17_lakuyin_hut",
+      "minutes_forward": 130,
+      "minutes_backward": 220,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_lakuyin_hut",
+      "to": "n_g17_nan_shuangtou",
+      "minutes_forward": 180,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_nan_shuangtou",
+      "to": "n_g17_nan_shuangtou_east",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_nan_shuangtou",
+      "to": "n_g17_xibei_an_camp",
+      "minutes_forward": 25,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_xibei_an_camp",
+      "to": "n_g17_yunfeng_east_camp",
+      "minutes_forward": 170,
+      "minutes_backward": 150,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_yunfeng_east_camp",
+      "to": "n_g17_yunfeng",
+      "minutes_forward": 120,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_yunfeng_east_camp",
+      "to": "n_g17_water_source",
+      "minutes_forward": 15,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_yunfeng_east_camp",
+      "to": "n_g17_lulu_hut",
+      "minutes_forward": 200,
+      "minutes_backward": 240,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_lulu_hut",
+      "to": "n_g17_lulu_th",
+      "minutes_forward": 70,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_lulu_th",
+      "to": "n_g17_lulu_peak",
+      "minutes_forward": 25,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_lulu_peak",
+      "to": "n_g17_lulu_east",
+      "minutes_forward": 15,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_lulu_th",
+      "to": "n_g17_tafenchi",
+      "minutes_forward": 210,
+      "minutes_backward": 250,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_tafenchi",
+      "to": "n_g17_tafenshan",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_tafenshan",
+      "to": "n_g17_tafengu_hut",
+      "minutes_forward": 80,
+      "minutes_backward": 160,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_tafengu_hut",
+      "to": "n_g17_dafenjian_th",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dafenjian_th",
+      "to": "n_g17_dafenjian",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dafenjian_th",
+      "to": "n_g17_dujuan_camp",
+      "minutes_forward": 180,
+      "minutes_backward": 120,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dujuan_camp",
+      "to": "n_g17_dashuiku_hut",
+      "minutes_forward": 80,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dashuiku_hut",
+      "to": "n_g17_dashuiku_pool",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dashuiku_hut",
+      "to": "n_g17_nan_dashuiku",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dashuiku_hut",
+      "to": "n_g17_dashuiku",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_dashuiku_hut",
+      "to": "n_g17_zhongyang_mine_hut",
+      "minutes_forward": 90,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_zhongyang_mine_hut",
+      "to": "n_g17_baiyang_mine_hut",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_jiamingmei_pool",
+      "to": "n_g17_jiaminghu",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g17_yunfeng_east",
+      "to": "n_g17_yunfeng_east_camp",
+      "minutes_forward": 3,
+      "minutes_backward": 3,
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "G17-main",
-      "name": "南二段完整縱走 (5天4夜)",
-      "startNodeId": "n_g17_xiangyang_th",
-      "endNodeId": "n_g17_guanshan_hut",
+      "id": "G17-jiaminghu",
+      "name": "嘉明湖三叉山向陽山 (3天2夜)",
+      "startNodeId": "n_g17_xiangyang_forest",
+      "endNodeId": "n_g17_jiaminghu",
       "viaNodeIds": [
+        "n_g17_xiangyang_th",
         "n_g17_xiangyang_hut",
-        "n_g17_xiangyang",
-        "n_g17_sancha_jct",
-        "n_g17_sancha",
-        "n_g17_jiaming_lake",
-        "n_g17_sancha_jct",
-        "n_g17_jiaming_hut",
-        "n_g17_taguanshan",
-        "n_g17_guanshan_jct",
-        "n_g17_guanshan"
+        "n_g17_xiangyang_west_th",
+        "n_g17_xiangyang_peak",
+        "n_g17_jiaminghu_hut",
+        "n_g17_jiaminghu_sanchaa_jct",
+        "n_g17_north_peak_signs",
+        "n_g17_sanchashan_th",
+        "n_g17_sanchashan",
+        "n_g17_jiaminghu_jct"
       ],
       "suggestedDayBreaks": [
         {
           "atNodeId": "n_g17_xiangyang_hut",
-          "type": "hut",
-          "label": "第一夜：向陽山屋"
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g17_jiaming_hut",
-          "type": "hut",
-          "label": "第二夜：嘉明湖避難山屋 (三叉山、嘉明湖側遊)"
-        },
-        {
-          "atNodeId": "n_g17_jiaming_hut",
-          "type": "hut",
-          "label": "第三夜：嘉明湖避難山屋"
-        },
-        {
-          "atNodeId": "n_g17_guanshan_hut",
-          "type": "hut",
-          "label": "第四夜：關山山屋 (關山攻頂後)"
+          "atNodeId": "n_g17_jiaminghu_hut",
+          "type": "hut"
         }
-      ]
+      ],
+      "roundTrip": true
     },
     {
-      "id": "G17-jiaming-classic",
-      "name": "嘉明湖‧三叉山 (3天2夜)",
-      "startNodeId": "n_g17_xiangyang_th",
-      "endNodeId": "n_g17_xiangyang_th",
+      "id": "G17-full-traverse",
+      "name": "南二段完整縱走 (7天6夜)",
+      "startNodeId": "n_g17_xiangyang_forest",
+      "endNodeId": "n_g17_dashuiku_hut",
       "viaNodeIds": [
+        "n_g17_xiangyang_th",
         "n_g17_xiangyang_hut",
-        "n_g17_xiangyang",
-        "n_g17_sancha_jct",
-        "n_g17_sancha",
-        "n_g17_jiaming_lake",
-        "n_g17_sancha_jct",
-        "n_g17_jiaming_hut",
-        "n_g17_xiangyang_hut"
+        "n_g17_xiangyang_west_th",
+        "n_g17_jiaminghu_hut",
+        "n_g17_sanchashan_th",
+        "n_g17_sanchashan",
+        "n_g17_xinkang_jct",
+        "n_g17_lakuyin_hut",
+        "n_g17_nan_shuangtou",
+        "n_g17_xibei_an_camp",
+        "n_g17_yunfeng_east_camp",
+        "n_g17_yunfeng",
+        "n_g17_lulu_hut",
+        "n_g17_lulu_peak",
+        "n_g17_tafenchi",
+        "n_g17_tafenshan",
+        "n_g17_tafengu_hut",
+        "n_g17_dafenjian_th",
+        "n_g17_dafenjian",
+        "n_g17_dujuan_camp"
       ],
       "suggestedDayBreaks": [
         {
           "atNodeId": "n_g17_xiangyang_hut",
-          "type": "hut",
-          "label": "第一夜：向陽山屋"
+          "type": "hut"
         },
         {
-          "atNodeId": "n_g17_jiaming_hut",
-          "type": "hut",
-          "label": "第二夜：嘉明湖避難山屋"
+          "atNodeId": "n_g17_jiaminghu_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g17_lakuyin_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g17_lulu_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g17_tafengu_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g17_dujuan_camp",
+          "type": "camp"
         }
-      ]
-    },
-    {
-      "id": "G17-guanshan-loop",
-      "name": "關山‧庫哈諾辛延伸 (5天4夜含側遊)",
-      "startNodeId": "n_g17_xiangyang_th",
-      "endNodeId": "n_g17_guanshan_hut",
-      "viaNodeIds": [
-        "n_g17_xiangyang_hut",
-        "n_g17_xiangyang",
-        "n_g17_sancha_jct",
-        "n_g17_jiaming_hut",
-        "n_g17_taguanshan",
-        "n_g17_guanshan_jct",
-        "n_g17_kuhanoxin_jct",
-        "n_g17_kuhanoxin",
-        "n_g17_kuhanoxin_jct",
-        "n_g17_guanshan_jct",
-        "n_g17_guanshan_hut",
-        "n_g17_guanshan"
       ],
-      "suggestedDayBreaks": [
-        {
-          "atNodeId": "n_g17_xiangyang_hut",
-          "type": "hut",
-          "label": "第一夜：向陽山屋"
-        },
-        {
-          "atNodeId": "n_g17_jiaming_hut",
-          "type": "hut",
-          "label": "第二夜：嘉明湖避難山屋"
-        },
-        {
-          "atNodeId": "n_g17_jiaming_hut",
-          "type": "hut",
-          "label": "第三夜：嘉明湖避難山屋"
-        },
-        {
-          "atNodeId": "n_g17_guanshan_hut",
-          "type": "hut",
-          "label": "第四夜：關山山屋"
-        }
-      ]
+      "roundTrip": false
     }
   ]
 }
