@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { NCard, NButton, NSpace, NTag } from 'naive-ui';
+import VerificationBanner from '@/components/common/VerificationBanner.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -96,6 +97,7 @@ function applyPreset(routeId: string, presetId: string) {
           <NTag type="success">{{ route.id }}</NTag>
         </template>
         <p class="text-sm text-gray-500 mb-3">{{ route.source }}</p>
+        <VerificationBanner :route-id="route.id" />
         <NSpace>
           <NButton type="primary" @click="openInPlanner(route.id)">在地圖上規劃</NButton>
           <NButton

@@ -7,6 +7,7 @@ import GanttView from '@/components/schedule/GanttView.vue';
 import ElevationView from '@/components/schedule/ElevationView.vue';
 import PrintLayout from '@/components/schedule/PrintLayout.vue';
 import TripTypeBadge from '@/components/common/TripTypeBadge.vue';
+import VerificationBanner from '@/components/common/VerificationBanner.vue';
 import { usePlanStore } from '@/stores/planStore';
 import { useRoutesStore } from '@/stores/routesStore';
 import { useGearStore } from '@/stores/gearStore';
@@ -75,6 +76,7 @@ function editPlan() {
           </header>
 
           <NSpace vertical size="large">
+            <VerificationBanner :route-id="plan.routeId" />
             <NCard title="行程時刻表">
               <NTabs default-value="v2" type="line">
                 <NTabPane name="v1" tab="V1 Gantt">

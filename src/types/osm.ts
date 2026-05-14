@@ -18,6 +18,8 @@ export interface OsmPoisFile {
   pois: OsmPoi[];
 }
 
+export type VerificationLevel = 'estimated' | 'sunriver_pending' | 'sunriver_verified' | 'n/a';
+
 export interface RoutesManifestEntry {
   id: string;
   name: string;
@@ -25,11 +27,13 @@ export interface RoutesManifestEntry {
   sunriverImage: string;
   elevationImages: string[];
   status: 'pending' | 'in_progress' | 'done' | 'skipped' | 'failed';
+  verification?: VerificationLevel;
   fetchedAt?: string;
 }
 
 export interface RoutesManifest {
   version: string;
   attribution: string;
+  verificationLevels?: Record<string, string>;
   routes: RoutesManifestEntry[];
 }

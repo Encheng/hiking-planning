@@ -47,5 +47,9 @@ export const useRoutesStore = defineStore('routes', () => {
 
   const getById = computed(() => (id: string) => routes.value.find((r) => r.id === id));
 
-  return { routes, huts, loading, error, manifest, loadAll, getById };
+  const getVerification = computed(() => (id: string) => {
+    return manifest.value?.routes.find((r) => r.id === id)?.verification ?? 'estimated';
+  });
+
+  return { routes, huts, loading, error, manifest, loadAll, getById, getVerification };
 });

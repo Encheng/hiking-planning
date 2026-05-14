@@ -10,6 +10,7 @@ import PlannedRouteLayer from '@/components/map/PlannedRouteLayer.vue';
 import NodeMarkerLayer from '@/components/map/NodeMarkerLayer.vue';
 import DailyPlanEditor from '@/components/planner/DailyPlanEditor.vue';
 import MapNodePopup from '@/components/planner/MapNodePopup.vue';
+import VerificationBanner from '@/components/common/VerificationBanner.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -288,6 +289,7 @@ watch(routeId, () => {
 
     <aside class="w-full md:w-[420px] border-t md:border-t-0 md:border-l bg-white overflow-y-auto overflow-x-hidden p-4">
       <NSpace vertical size="medium">
+        <VerificationBanner :route-id="planStore.draft?.routeId" />
         <NCard size="small" title="行程設定">
           <NSpace vertical size="small">
             <div>
