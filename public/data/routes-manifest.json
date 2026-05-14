@@ -11,7 +11,7 @@
     { "id": "G02", "name": "玉山群峰縱走", "osmRelationId": 13678202, "sunriverImage": "G02_hiking.jpg", "elevationImages": ["xG02-1.jpg", "xG02-2.jpg", "xG02-3.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G03", "name": "郡大山‧西巒大山", "osmRelationId": null, "sunriverImage": "G03_hiking.jpg", "elevationImages": ["xG03-1.jpg", "xG03-2.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G04", "name": "大霸‧聖稜‧武陵四秀", "osmRelationId": null, "sunriverImage": "G04_hiking.jpg", "elevationImages": ["xG04.jpg"], "status": "done", "verification": "sunriver_pending" },
-    { "id": "G05", "name": "雪山西‧南稜縱走", "osmRelationId": null, "sunriverImage": "G05_hiking.jpg", "elevationImages": ["xG05-1.jpg", "xG05-2.jpg", "xG05-3.jpg"], "status": "done", "verification": "estimated" },
+    { "id": "G05", "name": "雪山西‧南稜縱走", "osmRelationId": null, "sunriverImage": "G05_hiking.jpg", "elevationImages": ["xG05-1.jpg", "xG05-2.jpg", "xG05-3.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G06", "name": "白姑大山單登", "osmRelationId": null, "sunriverImage": "G06_hiking.jpg", "elevationImages": ["xG06.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G07", "name": "北一段縱走", "osmRelationId": null, "sunriverImage": "G07_hiking_new.jpg", "elevationImages": ["xG07.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G08", "name": "北二段縱走", "osmRelationId": null, "sunriverImage": "G08_hiking.jpg", "elevationImages": ["xG08-1.jpg", "xG08-2.jpg"], "status": "done", "verification": "estimated" },
