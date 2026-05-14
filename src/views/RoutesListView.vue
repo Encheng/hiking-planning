@@ -23,20 +23,11 @@ function derivePresetDailyPlans(preset: RoutePreset, route: Route): DailyPlan[] 
     return p.forward.slice(1, -1);
   }
 
-  const isRoundTrip = preset.roundTrip !== false;
   const breaks = preset.suggestedDayBreaks ?? [];
 
-  // Single-day plan (no break)
+  // Single-day plan (no break) — leave endNodeId as the user's destination.
+  // If preset.roundTrip is true, DailyPlanResolver will append the return path.
   if (breaks.length === 0) {
-    if (isRoundTrip && preset.startNodeId !== preset.endNodeId) {
-      const upIntermediates = autoVia(preset.startNodeId, preset.endNodeId);
-      const downIntermediates = autoVia(preset.endNodeId, preset.startNodeId);
-      return [{
-        endNodeId: preset.startNodeId,
-        endType: 'manual',
-        viaNodeIds: [...upIntermediates, preset.endNodeId, ...downIntermediates],
-      }];
-    }
     return [{
       endNodeId: preset.endNodeId,
       endType: 'manual',
@@ -57,22 +48,12 @@ function derivePresetDailyPlans(preset: RoutePreset, route: Route): DailyPlan[] 
     prevEnd = b.atNodeId;
   }
 
-  // Last day: round-trip or traverse
-  if (isRoundTrip && preset.startNodeId !== preset.endNodeId) {
-    const upIntermediates = autoVia(prevEnd, preset.endNodeId);
-    const downIntermediates = autoVia(preset.endNodeId, preset.startNodeId);
-    days.push({
-      endNodeId: preset.startNodeId,
-      endType: 'manual',
-      viaNodeIds: [...upIntermediates, preset.endNodeId, ...downIntermediates],
-    });
-  } else {
-    days.push({
-      endNodeId: preset.endNodeId,
-      endType: 'manual',
-      viaNodeIds: autoVia(prevEnd, preset.endNodeId),
-    });
-  }
+  // Last day ends at the preset's endNodeId. Resolver handles return when roundTrip is true.
+  days.push({
+    endNodeId: preset.endNodeId,
+    endType: 'manual',
+    viaNodeIds: autoVia(prevEnd, preset.endNodeId),
+  });
 
   return days;
 }
@@ -98,7 +79,7 @@ function applyPreset(routeId: string, presetId: string) {
   planStore.draft = {
     routeId,
     startNodeId: preset.startNodeId,
-    returnToStart: true,
+    returnToStart: preset.roundTrip !== false,
     dailyPlans: derivePresetDailyPlans(preset, route),
     paceMultiplier: settings.defaultPaceMultiplier,
   };

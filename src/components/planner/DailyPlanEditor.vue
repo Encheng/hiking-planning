@@ -97,28 +97,9 @@ function changeTarget(idx: number, nodeId: string) {
 }
 
 function onToggleReturnToStart(checked: boolean) {
-  if (!draft.value.dailyPlans) draft.value.dailyPlans = [];
+  // Resolver handles return path reactively when returnToStart=true and
+  // last day's endNodeId !== startNodeId — just update the flag here.
   draft.value.returnToStart = checked;
-
-  if (!checked || draft.value.dailyPlans.length === 0 || !route.value) return;
-
-  const lastIdx = draft.value.dailyPlans.length - 1;
-  const lastDay = draft.value.dailyPlans[lastIdx];
-  if (!lastDay.endNodeId || lastDay.endNodeId === draft.value.startNodeId) return;
-
-  // Compute BFS return path from current lastDay end → startNodeId
-  const path = resolvePath({
-    route: route.value,
-    startNodeId: lastDay.endNodeId,
-    endNodeId: draft.value.startNodeId!,
-    viaNodeIds: [],
-  });
-  if (path.warnings.includes('no_path') || path.forward.length < 2) return;
-
-  // Push: [...existing via, original endNode, ...return intermediates excluding startNode]
-  const returnIntermediates = path.forward.slice(1, -1);
-  lastDay.viaNodeIds = [...lastDay.viaNodeIds, lastDay.endNodeId, ...returnIntermediates];
-  lastDay.endNodeId = draft.value.startNodeId!;
 }
 
 function addVia(idx: number, nodeId: string) {

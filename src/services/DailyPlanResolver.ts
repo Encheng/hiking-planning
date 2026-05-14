@@ -17,10 +17,10 @@ function makeSegments(pathNodeIds: string[]): Array<{ from: string; to: string }
 }
 
 export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
-  // NOTE: returnToStart is accepted for backward-compat but no longer used by the resolver.
-  // The toggle in DailyPlanEditor performs a one-time auto-fill into viaNodeIds instead,
-  // so dailyPlans is always fully explicit here.
-  const { route, startNodeId, dailyPlans } = input;
+  // returnToStart: when true and last day's endNodeId !== overall startNodeId,
+  // the resolver appends the return path (endNodeId → startNodeId) to the last day.
+  // This allows endNodeId to remain the user's intended turn-around point.
+  const { route, startNodeId, dailyPlans, returnToStart } = input;
 
   const days: DayResolution[] = [];
   const dayBreaks: DayBreak[] = [];
@@ -42,6 +42,8 @@ export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
     const effectiveVia = daily.viaNodeIds;
 
     const isLast = i === dailyPlans.length - 1;
+    const shouldAppendReturn =
+      isLast && returnToStart && !!effectiveEnd && effectiveEnd !== startNodeId;
 
     const path = resolvePath({
       route,
@@ -62,7 +64,23 @@ export function resolveDailyPlans(input: ResolveInput): DailyPlanResolveOutput {
       continue;
     }
 
-    const pathIds = path.forward;
+    let pathIds = path.forward;
+
+    if (shouldAppendReturn) {
+      const ret = resolvePath({
+        route,
+        startNodeId: effectiveEnd,
+        endNodeId: startNodeId,
+        viaNodeIds: [],
+      });
+      if (!ret.warnings.includes('no_path') && ret.forward.length >= 2) {
+        // Skip ret.forward[0] (== effectiveEnd, already last node in pathIds)
+        pathIds = [...pathIds, ...ret.forward.slice(1)];
+      } else {
+        allWarnings.push(`day_${i + 1}_return_unreachable`);
+      }
+    }
+
     days.push({
       dayIndex: i + 1,
       startNodeId: dayStart,

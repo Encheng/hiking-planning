@@ -20,9 +20,7 @@ describe('resolveDailyPlans', () => {
     expect(result.warnings).toEqual([]);
   });
 
-  it('single-day plan, returnToStart=true is now ignored by resolver: ends at daily.endNodeId', () => {
-    // The resolver no longer rewrites the last day. returnToStart auto-fill is done
-    // by the DailyPlanEditor toggle (onToggleReturnToStart) before the data reaches here.
+  it('single-day plan, returnToStart=true: resolver appends return path so trip ends at startNodeId', () => {
     const result = resolveDailyPlans({
       route,
       startNodeId: 'n_tataka',
@@ -30,7 +28,10 @@ describe('resolveDailyPlans', () => {
       returnToStart: true,
     });
     expect(result.nodeSequence[0]).toBe('n_tataka');
-    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_paiyun');
+    // Last node should be back at start
+    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_tataka');
+    // 排雲山莊 should appear in the middle (turn-around point)
+    expect(result.nodeSequence).toContain('n_paiyun');
   });
 
   it('single-day plan, returnToStart=true, end == start: no rewrite, returns single-node path', () => {
@@ -77,8 +78,7 @@ describe('resolveDailyPlans', () => {
     expect(result.dayBreaks.map((b) => b.afterNodeId)).toEqual(['n_pailin', 'n_paiyun']);
   });
 
-  it('returnToStart=true on multi-day: resolver no longer rewrites, ends at last daily.endNodeId', () => {
-    // Resolver is now pass-through; auto-fill is done by DailyPlanEditor.onToggleReturnToStart
+  it('returnToStart=true on multi-day: resolver appends return on last day, ends at startNodeId', () => {
     const result = resolveDailyPlans({
       route,
       startNodeId: 'n_tataka',
@@ -88,7 +88,32 @@ describe('resolveDailyPlans', () => {
       ],
       returnToStart: true,
     });
-    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_yushan_main');
+    // Trip ends at start after returning
+    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_tataka');
+    // Both peak and hut still in sequence
+    expect(result.nodeSequence).toContain('n_yushan_main');
+    expect(result.nodeSequence).toContain('n_paiyun');
+    // Day breaks unchanged (no break added for return)
+    expect(result.dayBreaks).toHaveLength(1);
+    expect(result.dayBreaks[0].afterNodeId).toBe('n_paiyun');
+  });
+
+  it('returnToStart=true but last endNodeId already equals startNodeId: no double-appending', () => {
+    // Backward-compat: old saved plans had viaNodeIds already containing the return.
+    // Resolver should NOT add another return in this case.
+    const result = resolveDailyPlans({
+      route,
+      startNodeId: 'n_tataka',
+      dailyPlans: [
+        { endNodeId: 'n_tataka', endType: 'manual', viaNodeIds: ['n_paiyun'] },
+      ],
+      returnToStart: true,
+    });
+    expect(result.nodeSequence[0]).toBe('n_tataka');
+    expect(result.nodeSequence[result.nodeSequence.length - 1]).toBe('n_tataka');
+    // n_tataka appears at start and end, but n_paiyun only once in the middle
+    const paiyunCount = result.nodeSequence.filter((n) => n === 'n_paiyun').length;
+    expect(paiyunCount).toBe(1);
   });
 
   it('unreachable day: returns warning, still emits other days', () => {
