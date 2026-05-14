@@ -537,8 +537,8 @@
     {
       "from": "n_g05_369_hut",
       "to": "n_g05_xueshan",
-      "minutes_forward": 240,
-      "minutes_backward": 210,
+      "minutes_forward": 200,
+      "minutes_backward": 140,
       "source": "上河圖",
       "confirmed": true
     },

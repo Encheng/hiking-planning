@@ -91,7 +91,8 @@ EDGES = [
     ("n_g05_seven_hut", "n_g05_kupo_view", 120, 60),       # 七卡→哭坡 UP 120
     ("n_g05_kupo_view", "n_g05_xueshan_east", 90, 60),     # 哭坡→雪東 UP 90
     ("n_g05_xueshan_east", "n_g05_369_hut", 40, 80),       # 雪東→369 DOWN 40
-    ("n_g05_369_hut", "n_g05_xueshan", 240, 210),
+    # 三六九 → 雪山主峰 (上河 G05: UP 200, DOWN 140 via 圈谷)
+    ("n_g05_369_hut", "n_g05_xueshan", 200, 140),
 
     # === 翠池 chain (西稜起點) ===
     ("n_g05_xueshan", "n_g05_cuichi_hut", 80, 130),

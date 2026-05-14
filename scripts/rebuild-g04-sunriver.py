@@ -78,8 +78,8 @@ NODES = [
     ("n_g04_369_hut",         "三六九山莊",        24.39500, 121.27500, 3100, "hut"),        #EST
     ("n_g04_circle_bottom",   "圈谷底部",          24.38800, 121.24000, 3400, "waypoint"),   #EST
     ("n_g04_kupo_view",       "哭坡觀景台",        24.39800, 121.28500, 2750, "waypoint"),   #EST
-    ("n_g04_seven_hut",       "七卡山屋",          24.40000, 121.30000, 2463, "hut"),        #EST
-    ("n_g04_xueshan_admin",   "雪山登山口管理站",  24.40300, 121.30300, 2150, "trailhead"),  #EST
+    ("n_g04_seven_hut",       "七卡山莊",          24.40000, 121.30000, 2463, "hut"),        #EST
+    ("n_g04_xueshan_admin",   "雪山登山口",        24.40300, 121.30300, 2150, "trailhead"),  #EST
     ("n_g04_wuling_admin",    "武陵山莊",          24.40500, 121.30500, 1745, "junction"),   #EST
     ("n_g04_farm_jct",        "農場岔路",          24.41000, 121.31000, 1800, "junction"),   #EST
     ("n_g04_wuling_farm",     "武陵農場·遊客中心", 24.40800, 121.31700, 1745, "trailhead"),  #EST
@@ -196,8 +196,8 @@ EDGES = [
     ("n_g04_xueshan_east", "n_g04_369_hut", 40, 80),
     ("n_g04_369_hut", "n_g04_circle_bottom", 100, 140),
     ("n_g04_circle_bottom", "n_g04_xueshan", 110, 55),
-    # 三六九 ↔ 主峰直接路徑
-    ("n_g04_369_hut", "n_g04_xueshan", 60, 40),
+    # 三六九 ↔ 主峰 (上河 G05 200/140: UP 200, DOWN 140)
+    ("n_g04_369_hut", "n_g04_xueshan", 200, 140),
 
     # === 雪北 ↔ 主峰 chain (聖稜南段) ===
     ("n_g04_xueshan", "n_g04_xueshan_jct", 20, 15),

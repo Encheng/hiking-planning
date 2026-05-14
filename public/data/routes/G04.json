@@ -478,7 +478,7 @@
     },
     {
       "id": "n_g04_seven_hut",
-      "name": "七卡山屋",
+      "name": "七卡山莊",
       "lat": 24.4,
       "lng": 121.3,
       "elevation": 2463,
@@ -486,7 +486,7 @@
     },
     {
       "id": "n_g04_xueshan_admin",
-      "name": "雪山登山口管理站",
+      "name": "雪山登山口",
       "lat": 24.403,
       "lng": 121.303,
       "elevation": 2150,
@@ -1047,8 +1047,8 @@
     {
       "from": "n_g04_369_hut",
       "to": "n_g04_xueshan",
-      "minutes_forward": 60,
-      "minutes_backward": 40,
+      "minutes_forward": 200,
+      "minutes_backward": 140,
       "source": "上河圖",
       "confirmed": true
     },
