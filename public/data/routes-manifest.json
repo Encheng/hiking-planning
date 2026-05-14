@@ -22,7 +22,7 @@
     { "id": "G13", "name": "干卓萬群峰縱走", "osmRelationId": null, "sunriverImage": "G13_hiking.jpg", "elevationImages": ["xG13.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G14", "name": "七彩湖‧六順山", "osmRelationId": null, "sunriverImage": "G14_hiking.jpg", "elevationImages": ["xG14.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G15", "name": "丹大‧東郡橫斷縱走", "osmRelationId": null, "sunriverImage": "G15_hiking.jpg", "elevationImages": ["xG15.jpg"], "status": "done", "verification": "estimated" },
-    { "id": "G16", "name": "馬博拉斯橫斷縱走", "osmRelationId": null, "sunriverImage": "G16_hiking.jpg", "elevationImages": ["xG16.jpg"], "status": "done", "verification": "estimated" },
+    { "id": "G16", "name": "馬博拉斯橫斷縱走", "osmRelationId": null, "sunriverImage": "G16_hiking.jpg", "elevationImages": ["xG16.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G17", "name": "南二段縱走", "osmRelationId": null, "sunriverImage": "G17_hiking.jpg", "elevationImages": ["xG17.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G18", "name": "新康橫斷縱走", "osmRelationId": null, "sunriverImage": "G18_hiking.jpg", "elevationImages": ["xG18.jpg"], "status": "done", "verification": "estimated" },
     { "id": "G19", "name": "南一段縱走", "osmRelationId": null, "sunriverImage": "G19_hiking.jpg", "elevationImages": ["xG19.jpg"], "status": "done", "verification": "sunriver_pending" },
