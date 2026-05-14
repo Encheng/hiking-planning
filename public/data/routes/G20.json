@@ -1,184 +1,302 @@
 {
   "id": "G20",
-  "name": "北大武山",
-  "version": "2026-05-13",
-  "source": "OSM relation 12340706 (ODbL); estimated times from community data",
+  "name": "北大武山登峰",
+  "version": "2026-05-14",
+  "source": "上河文化 G20 北大武山步程示意圖 (G20_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g20_trailhead",
-      "name": "北大武新登山口",
-      "lat": 22.615003,
-      "lng": 120.702243,
-      "elevation": 1000,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ],
-      "notes": "OSM node 4472124289; elevation estimated (~1000m)"
+      "id": "n_g20_chaozhou",
+      "name": "潮州",
+      "lat": 22.55,
+      "lng": 120.55,
+      "elevation": 50,
+      "category": "trailhead"
     },
     {
-      "id": "n_g20_old_trailhead",
-      "name": "大武山舊登山口",
-      "lat": 22.624372,
-      "lng": 120.714546,
-      "elevation": 1350,
-      "category": "waypoint",
-      "notes": "OSM node 2299246825; former trailhead, now less used; elevation estimated"
+      "id": "n_g20_wanluan",
+      "name": "萬巒",
+      "lat": 22.57,
+      "lng": 120.62,
+      "elevation": 80,
+      "category": "trailhead"
     },
     {
-      "id": "n_g20_ridge_jct",
-      "name": "大武山稜線叉路",
-      "lat": 22.621,
-      "lng": 120.73,
-      "elevation": 1900,
-      "category": "junction",
-      "notes": "Estimated waypoint where new and old trails converge on main ridge"
+      "id": "n_g20_taiwu",
+      "name": "泰武",
+      "lat": 22.58,
+      "lng": 120.68,
+      "elevation": 600,
+      "category": "trailhead"
     },
     {
-      "id": "n_g20_xitaoli",
-      "name": "喜多麗斷崖",
-      "lat": 22.614784,
-      "lng": 120.738521,
+      "id": "n_g20_new_th",
+      "name": "新登山口",
+      "lat": 22.63,
+      "lng": 120.695,
+      "elevation": 1500,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g20_old_th",
+      "name": "舊登山口(0K)",
+      "lat": 22.635,
+      "lng": 120.7,
+      "elevation": 1700,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g20_ridge_pass",
+      "name": "1.75K越嶺鞍部",
+      "lat": 22.638,
+      "lng": 120.705,
+      "elevation": 1850,
+      "category": "junction"
+    },
+    {
+      "id": "n_g20_lookout",
+      "name": "3.8K展望平台",
+      "lat": 22.645,
+      "lng": 120.712,
+      "elevation": 2000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g20_4k_jct",
+      "name": "4K三岔路口",
+      "lat": 22.648,
+      "lng": 120.717,
       "elevation": 2050,
-      "category": "waypoint",
-      "notes": "OSM node 2299246709; notable cliff viewpoint along the trail"
+      "category": "junction"
     },
     {
-      "id": "n_g20_jiugushan",
+      "id": "n_g20_kuiku_hut",
       "name": "檜谷山莊",
-      "lat": 22.61529,
-      "lng": 120.742182,
-      "elevation": 2115,
-      "category": "hut",
-      "notes": "OSM node 2299246288; alpine hut, overnight stay required for most hikers"
+      "lat": 22.65,
+      "lng": 120.72,
+      "elevation": 2150,
+      "category": "hut"
     },
     {
-      "id": "n_g20_dawu_shrine",
-      "name": "大武祠",
-      "lat": 22.621098,
-      "lng": 120.756987,
-      "elevation": 2800,
-      "category": "waypoint",
-      "notes": "OSM node 2299246286; Shinto shrine ruins near upper ridge"
+      "id": "n_g20_southview",
+      "name": "南大武山展望點",
+      "lat": 22.649,
+      "lng": 120.722,
+      "elevation": 2200,
+      "category": "waypoint"
     },
     {
-      "id": "n_g20_summit",
-      "name": "北大武山",
-      "lat": 22.627061,
-      "lng": 120.761381,
-      "elevation": 3089,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ],
-      "notes": "OSM node 2299246284; ele 3089.1m; 百岳 #90; 五嶽之一"
+      "id": "n_g20_5_5k_tree",
+      "name": "5.5K大武神木",
+      "lat": 22.652,
+      "lng": 120.725,
+      "elevation": 2400,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g20_6_3k_water",
+      "name": "6.3K最後水源",
+      "lat": 22.653,
+      "lng": 120.73,
+      "elevation": 2600,
+      "category": "water"
+    },
+    {
+      "id": "n_g20_main_ridge",
+      "name": "主稜嶺線",
+      "lat": 22.657,
+      "lng": 120.735,
+      "elevation": 2850,
+      "category": "junction"
+    },
+    {
+      "id": "n_g20_8k_wushrine",
+      "name": "8K大武祠",
+      "lat": 22.62926,
+      "lng": 120.7493,
+      "elevation": 3030,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g20_9k_north_dawu",
+      "name": "9K北大武山",
+      "lat": 22.628,
+      "lng": 120.758,
+      "elevation": 3092,
+      "category": "peak"
+    },
+    {
+      "id": "n_g20_to_wutu",
+      "name": "往霧頭山",
+      "lat": 22.66,
+      "lng": 120.74,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g20_to_south_dawu",
+      "name": "往南大武山",
+      "lat": 22.64,
+      "lng": 120.745,
+      "elevation": 2950,
+      "category": "junction"
     }
   ],
   "edges": [
     {
-      "from": "n_g20_trailhead",
-      "to": "n_g20_ridge_jct",
-      "minutes_forward": 120,
-      "minutes_backward": 75,
-      "distance_km": 3.0,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g20_chaozhou",
+      "to": "n_g20_wanluan",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
       "confirmed": true,
-      "notes": "New trailhead (1000m) to ridge junction (~1900m); gain ~900m over ~3km"
+      "transport": "vehicle"
     },
     {
-      "from": "n_g20_old_trailhead",
-      "to": "n_g20_ridge_jct",
+      "from": "n_g20_wanluan",
+      "to": "n_g20_taiwu",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g20_taiwu",
+      "to": "n_g20_new_th",
+      "minutes_forward": 50,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g20_new_th",
+      "to": "n_g20_old_th",
+      "minutes_forward": 100,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_old_th",
+      "to": "n_g20_ridge_pass",
       "minutes_forward": 90,
       "minutes_backward": 60,
-      "distance_km": 2.3,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true,
-      "notes": "Old trailhead (1350m) to ridge junction (~1900m); gain ~550m over ~2.3km"
+      "source": "上河圖",
+      "confirmed": true
     },
     {
-      "from": "n_g20_ridge_jct",
-      "to": "n_g20_xitaoli",
-      "minutes_forward": 44,
-      "minutes_backward": 28,
-      "distance_km": 1.2,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true,
-      "notes": "Ridge junction (~1900m) to 喜多麗斷崖 (~2050m); gain 150m over ~1.2km"
+      "from": "n_g20_ridge_pass",
+      "to": "n_g20_lookout",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
     },
     {
-      "from": "n_g20_xitaoli",
-      "to": "n_g20_jiugushan",
-      "minutes_forward": 28,
-      "minutes_backward": 18,
-      "distance_km": 0.7,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true,
-      "notes": "喜多麗斷崖 (~2050m) to 檜谷山莊 (2115m); gain ~65m over ~0.7km; sign shows 0.2K from 4K marker"
+      "from": "n_g20_lookout",
+      "to": "n_g20_4k_jct",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
     },
     {
-      "from": "n_g20_jiugushan",
-      "to": "n_g20_dawu_shrine",
-      "minutes_forward": 172,
-      "minutes_backward": 110,
-      "distance_km": 2.3,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true,
-      "notes": "檜谷山莊 (2115m) to 大武祠 (~2800m); gain ~685m over ~2.3km; formula: round((685/300+2.3/4)*60)"
+      "from": "n_g20_4k_jct",
+      "to": "n_g20_kuiku_hut",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
     },
     {
-      "from": "n_g20_dawu_shrine",
-      "to": "n_g20_summit",
-      "minutes_forward": 68,
-      "minutes_backward": 43,
-      "distance_km": 0.7,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true,
-      "notes": "大武祠 (~2800m) to 北大武山 summit (3089m); gain ~289m over ~0.7km; formula: round((289/300+0.7/4)*60)"
+      "from": "n_g20_4k_jct",
+      "to": "n_g20_southview",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_southview",
+      "to": "n_g20_5_5k_tree",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_5_5k_tree",
+      "to": "n_g20_6_3k_water",
+      "minutes_forward": 65,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_6_3k_water",
+      "to": "n_g20_main_ridge",
+      "minutes_forward": 65,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_main_ridge",
+      "to": "n_g20_8k_wushrine",
+      "minutes_forward": 65,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_8k_wushrine",
+      "to": "n_g20_9k_north_dawu",
+      "minutes_forward": 65,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_9k_north_dawu",
+      "to": "n_g20_to_wutu",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g20_main_ridge",
+      "to": "n_g20_to_south_dawu",
+      "minutes_forward": 60,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "p_g20_standard_2d",
+      "id": "G20-standard",
       "name": "北大武山標準行程 (2天1夜)",
-      "startNodeId": "n_g20_trailhead",
-      "endNodeId": "n_g20_summit",
+      "startNodeId": "n_g20_new_th",
+      "endNodeId": "n_g20_9k_north_dawu",
       "viaNodeIds": [
-        "n_g20_ridge_jct",
-        "n_g20_xitaoli",
-        "n_g20_jiugushan",
-        "n_g20_dawu_shrine"
+        "n_g20_old_th",
+        "n_g20_ridge_pass",
+        "n_g20_lookout",
+        "n_g20_4k_jct",
+        "n_g20_kuiku_hut",
+        "n_g20_southview",
+        "n_g20_5_5k_tree",
+        "n_g20_6_3k_water",
+        "n_g20_main_ridge",
+        "n_g20_8k_wushrine"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g20_jiugushan",
+          "atNodeId": "n_g20_kuiku_hut",
           "type": "hut"
         }
-      ],
-      "roundTrip": true
-    },
-    {
-      "id": "p_g20_standard_1d",
-      "name": "北大武山單日來回 (體力佳者)",
-      "startNodeId": "n_g20_trailhead",
-      "endNodeId": "n_g20_summit",
-      "viaNodeIds": [
-        "n_g20_ridge_jct",
-        "n_g20_xitaoli",
-        "n_g20_jiugushan",
-        "n_g20_dawu_shrine"
       ],
       "roundTrip": true
     }

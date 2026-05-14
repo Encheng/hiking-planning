@@ -26,6 +26,6 @@
     { "id": "G17", "name": "南二段縱走", "osmRelationId": null, "sunriverImage": "G17_hiking.jpg", "elevationImages": ["xG17.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G18", "name": "新康橫斷縱走", "osmRelationId": null, "sunriverImage": "G18_hiking.jpg", "elevationImages": ["xG18.jpg"], "status": "done", "verification": "sunriver_pending" },
     { "id": "G19", "name": "南一段縱走", "osmRelationId": null, "sunriverImage": "G19_hiking.jpg", "elevationImages": ["xG19.jpg"], "status": "done", "verification": "sunriver_pending" },
-    { "id": "G20", "name": "北大武山登峰", "osmRelationId": null, "sunriverImage": "G20_hiking.jpg", "elevationImages": ["xG20.jpg"], "status": "done", "verification": "estimated" }
+    { "id": "G20", "name": "北大武山登峰", "osmRelationId": null, "sunriverImage": "G20_hiking.jpg", "elevationImages": ["xG20.jpg"], "status": "done", "verification": "sunriver_pending" }
   ]
 }
