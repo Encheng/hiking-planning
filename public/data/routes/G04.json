@@ -1,391 +1,1306 @@
 {
   "id": "G04",
-  "name": "聖稜 Y 型縱走",
-  "version": "2026-05-13",
-  "source": "OSM relation 13942433 (聖稜線), 18232307 (志佳陽線) (ODbL); estimated times from community data",
+  "name": "大霸‧聖稜‧武陵四秀",
+  "version": "2026-05-14",
+  "source": "上河文化 G04 大霸·聖稜·武陵四秀步程示意圖 (G04_hiking.jpg)",
   "nodes": [
     {
-      "id": "n_g04_wuling_th",
-      "name": "武陵農場登山口",
-      "lat": 24.363,
-      "lng": 121.302,
-      "elevation": 1750,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check",
-        "bus"
-      ]
+      "id": "n_g04_guanwu",
+      "name": "觀霧",
+      "lat": 24.505,
+      "lng": 121.105,
+      "elevation": 2100,
+      "category": "trailhead"
     },
     {
-      "id": "n_g04_toskan_hut",
-      "name": "桃山山屋",
-      "lat": 24.433172,
-      "lng": 121.3026,
-      "elevation": 3200,
-      "category": "hut",
-      "tags": []
+      "id": "n_g04_check_0_3k",
+      "name": "0.3K檢查哨",
+      "lat": 24.503,
+      "lng": 121.11,
+      "elevation": 2120,
+      "category": "junction"
     },
     {
-      "id": "n_g04_toskan",
-      "name": "桃山",
-      "lat": 24.432635,
-      "lng": 121.304893,
-      "elevation": 3324,
-      "category": "peak",
-      "tags": []
+      "id": "n_g04_dabajian_th",
+      "name": "大霸尖山登山口",
+      "lat": 24.49,
+      "lng": 121.18,
+      "elevation": 2200,
+      "category": "trailhead"
     },
     {
-      "id": "n_g04_chiyou_hut",
-      "name": "池有山避難小屋",
-      "lat": 24.432,
-      "lng": 121.29,
+      "id": "n_g04_jiujiu_hut",
+      "name": "九九山莊",
+      "lat": 24.47,
+      "lng": 121.2,
+      "elevation": 2700,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_jiali_th",
+      "name": "加利山登山口",
+      "lat": 24.47,
+      "lng": 121.22,
+      "elevation": 3000,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_jiali",
+      "name": "加利山",
+      "lat": 24.465,
+      "lng": 121.215,
+      "elevation": 3112,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_yize_th",
+      "name": "伊澤山第二登山口",
+      "lat": 24.465,
+      "lng": 121.23,
       "elevation": 3150,
-      "category": "hut",
-      "tags": []
+      "category": "trailhead"
     },
     {
-      "id": "n_g04_chiyou",
-      "name": "池有山",
-      "lat": 24.431098,
-      "lng": 121.288154,
+      "id": "n_g04_yize_8_8k_jct",
+      "name": "8.8K岔路",
+      "lat": 24.463,
+      "lng": 121.235,
+      "elevation": 3200,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_yize",
+      "name": "伊澤山",
+      "lat": 24.46139,
+      "lng": 121.24269,
+      "elevation": 3297,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_camp_2",
+      "name": "第二營地",
+      "lat": 24.46,
+      "lng": 121.248,
+      "elevation": 3200,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_mayang_shan",
+      "name": "馬洋山",
+      "lat": 24.45,
+      "lng": 121.25,
+      "elevation": 3220,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_mayang_chi",
+      "name": "馬洋池",
+      "lat": 24.452,
+      "lng": 121.255,
+      "elevation": 3050,
+      "category": "water"
+    },
+    {
+      "id": "n_g04_zhongba_jct",
+      "name": "中霸坪叉路",
+      "lat": 24.455,
+      "lng": 121.258,
+      "elevation": 3380,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_xiaoba_jct_th",
+      "name": "小霸岔路登山口",
+      "lat": 24.457,
+      "lng": 121.257,
+      "elevation": 3450,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_xiaoba",
+      "name": "小霸尖山",
+      "lat": 24.4616,
+      "lng": 121.2518,
+      "elevation": 3445,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_banan_hut",
+      "name": "霸南山屋",
+      "lat": 24.454,
+      "lng": 121.26,
       "elevation": 3300,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "hut"
     },
     {
-      "id": "n_g04_pinta_front",
+      "id": "n_g04_dabajian",
+      "name": "大霸尖山",
+      "lat": 24.45844,
+      "lng": 121.25653,
+      "elevation": 3492,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_basha_hut_ruins",
+      "name": "巴紗拉雲山屋(毀損)",
+      "lat": 24.447,
+      "lng": 121.262,
+      "elevation": 3200,
+      "category": "shelter"
+    },
+    {
+      "id": "n_g04_basha",
+      "name": "巴紗拉雲山",
+      "lat": 24.43869,
+      "lng": 121.25812,
+      "elevation": 3407,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_takejin_river",
+      "name": "塔克金溪源頭",
+      "lat": 24.435,
+      "lng": 121.26,
+      "elevation": 3100,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_zhenxibao",
+      "name": "鎮西堡",
+      "lat": 24.65,
+      "lng": 121.4,
+      "elevation": 1700,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_shenmu_th",
+      "name": "神木區登山口",
+      "lat": 24.62,
+      "lng": 121.38,
+      "elevation": 1750,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_shenmu_jct",
+      "name": "A.B區神木岔路",
+      "lat": 24.6,
+      "lng": 121.36,
+      "elevation": 2000,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_zhenxi_jct",
+      "name": "鎮西堡岔路口",
+      "lat": 24.55,
+      "lng": 121.32,
+      "elevation": 2500,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_mayang_jct",
+      "name": "往馬洋山岔路口",
+      "lat": 24.5,
+      "lng": 121.27,
+      "elevation": 2800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_lieliao_camp",
+      "name": "獵寮營地",
+      "lat": 24.47,
+      "lng": 121.265,
+      "elevation": 2900,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_camp_1",
+      "name": "第一營地",
+      "lat": 24.465,
+      "lng": 121.26,
+      "elevation": 3000,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_susmida",
+      "name": "素密達山",
+      "lat": 24.4251,
+      "lng": 121.25355,
+      "elevation": 3517,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_susmida_hut",
+      "name": "素密達山屋",
+      "lat": 24.423,
+      "lng": 121.252,
+      "elevation": 3450,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_susmida_jct",
+      "name": "素密達岔路",
+      "lat": 24.424,
+      "lng": 121.251,
+      "elevation": 3480,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_mutele",
+      "name": "穆特勒布山",
+      "lat": 24.42496,
+      "lng": 121.24927,
+      "elevation": 3623,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_susmida_water",
+      "name": "水源",
+      "lat": 24.422,
+      "lng": 121.254,
+      "elevation": 3400,
+      "category": "water"
+    },
+    {
+      "id": "n_g04_xinda_hut",
+      "name": "新達山屋·水池",
+      "lat": 24.425,
+      "lng": 121.275,
+      "elevation": 3220,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_pinta_qianfeng",
       "name": "品田山前峰",
-      "lat": 24.427584,
-      "lng": 121.269226,
+      "lat": 24.42758,
+      "lng": 121.26923,
       "elevation": 3442,
-      "category": "waypoint",
-      "tags": []
+      "category": "peak"
     },
     {
       "id": "n_g04_pinta",
       "name": "品田山",
       "lat": 24.4283,
-      "lng": 121.266766,
+      "lng": 121.26677,
       "elevation": 3524,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "category": "peak"
     },
     {
-      "id": "n_g04_mutele",
-      "name": "穆特勒布山",
-      "lat": 24.424959,
-      "lng": 121.249271,
-      "elevation": 3623,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "id": "n_g04_buxiulan",
+      "name": "布秀蘭山",
+      "lat": 24.42889,
+      "lng": 121.25921,
+      "elevation": 3452,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_chiyou",
+      "name": "池有山",
+      "lat": 24.4311,
+      "lng": 121.28815,
+      "elevation": 3303,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_chiyou_th",
+      "name": "池有山登山口",
+      "lat": 24.432,
+      "lng": 121.286,
+      "elevation": 3250,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_yancai_falls",
+      "name": "煙聲瀑布",
+      "lat": 24.438,
+      "lng": 121.29,
+      "elevation": 2300,
+      "category": "water"
+    },
+    {
+      "id": "n_g04_sanchayingdi",
+      "name": "三叉營地",
+      "lat": 24.432,
+      "lng": 121.295,
+      "elevation": 3250,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_toushan_hut",
+      "name": "桃山山屋",
+      "lat": 24.43317,
+      "lng": 121.3026,
+      "elevation": 3175,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_toushan",
+      "name": "桃山",
+      "lat": 24.43264,
+      "lng": 121.30489,
+      "elevation": 3325,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_shilun",
+      "name": "詩崙山",
+      "lat": 24.43,
+      "lng": 121.31,
+      "elevation": 3149,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_kalaye",
+      "name": "喀拉業山",
+      "lat": 24.435,
+      "lng": 121.315,
+      "elevation": 3133,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_xueshan_north",
+      "name": "雪山北峰",
+      "lat": 24.41471,
+      "lng": 121.2404,
+      "elevation": 3703,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_xuebei_th",
+      "name": "雪北登山口",
+      "lat": 24.415,
+      "lng": 121.243,
+      "elevation": 3680,
+      "category": "junction"
     },
     {
       "id": "n_g04_xuebei_hut",
       "name": "雪北山屋",
-      "lat": 24.411677,
-      "lng": 121.242928,
-      "elevation": 3590,
-      "category": "hut",
-      "tags": []
+      "lat": 24.41168,
+      "lng": 121.24293,
+      "elevation": 3585,
+      "category": "hut"
     },
     {
-      "id": "n_g04_xueshan_hut",
-      "name": "雪山山屋",
-      "lat": 24.3782,
-      "lng": 121.2198,
-      "elevation": 3700,
-      "category": "hut",
-      "tags": []
+      "id": "n_g04_munan_camp",
+      "name": "穆南鞍部營地",
+      "lat": 24.418,
+      "lng": 121.247,
+      "elevation": 3450,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_kailan_north",
+      "name": "凱蘭特崑山北峰",
+      "lat": 24.39843,
+      "lng": 121.23498,
+      "elevation": 3707,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_anbu_jct",
+      "name": "鞍部叉路",
+      "lat": 24.395,
+      "lng": 121.235,
+      "elevation": 3650,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_kailan",
+      "name": "凱蘭特崑山",
+      "lat": 24.39534,
+      "lng": 121.23413,
+      "elevation": 3731,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_beling",
+      "name": "北稜角",
+      "lat": 24.38751,
+      "lng": 121.23114,
+      "elevation": 3882,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_xueshan_jct",
+      "name": "岔路口",
+      "lat": 24.385,
+      "lng": 121.232,
+      "elevation": 3850,
+      "category": "junction"
     },
     {
       "id": "n_g04_xueshan",
       "name": "雪山主峰",
-      "lat": 24.383404,
-      "lng": 121.231797,
-      "elevation": 3885,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
+      "lat": 24.3834,
+      "lng": 121.2318,
+      "elevation": 3886,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_cuichi_hut",
+      "name": "翠池山屋",
+      "lat": 24.37927,
+      "lng": 121.21534,
+      "elevation": 3585,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_xueshan_east",
+      "name": "雪山東峰",
+      "lat": 24.38873,
+      "lng": 121.27196,
+      "elevation": 3199,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_369_hut",
+      "name": "三六九山莊",
+      "lat": 24.395,
+      "lng": 121.275,
+      "elevation": 3100,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_circle_bottom",
+      "name": "圈谷底部",
+      "lat": 24.388,
+      "lng": 121.24,
+      "elevation": 3400,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_kupo_view",
+      "name": "哭坡觀景台",
+      "lat": 24.398,
+      "lng": 121.285,
+      "elevation": 2750,
+      "category": "waypoint"
+    },
+    {
+      "id": "n_g04_seven_hut",
+      "name": "七卡山屋",
+      "lat": 24.4,
+      "lng": 121.3,
+      "elevation": 2463,
+      "category": "hut"
+    },
+    {
+      "id": "n_g04_xueshan_admin",
+      "name": "雪山登山口管理站",
+      "lat": 24.403,
+      "lng": 121.303,
+      "elevation": 2150,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_wuling_admin",
+      "name": "武陵山莊",
+      "lat": 24.405,
+      "lng": 121.305,
+      "elevation": 1745,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_farm_jct",
+      "name": "農場岔路",
+      "lat": 24.41,
+      "lng": 121.31,
+      "elevation": 1800,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_wuling_farm",
+      "name": "武陵農場·遊客中心",
+      "lat": 24.408,
+      "lng": 121.317,
+      "elevation": 1745,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_toushan_th",
+      "name": "桃山登山口",
+      "lat": 24.415,
+      "lng": 121.31,
+      "elevation": 1900,
+      "category": "trailhead"
+    },
+    {
+      "id": "n_g04_toushan_2k",
+      "name": "桃山2K",
+      "lat": 24.42,
+      "lng": 121.308,
+      "elevation": 2400,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_helipad",
+      "name": "停機坪",
+      "lat": 24.425,
+      "lng": 121.307,
+      "elevation": 2900,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_chiyou_jct",
+      "name": "桃山岔路口",
+      "lat": 24.43,
+      "lng": 121.308,
+      "elevation": 2950,
+      "category": "junction"
+    },
+    {
+      "id": "n_g04_zhijiayan",
+      "name": "志佳陽大山",
+      "lat": 24.35997,
+      "lng": 121.24815,
+      "elevation": 3346,
+      "category": "peak"
+    },
+    {
+      "id": "n_g04_piaohuan_hut",
+      "name": "瓢簞避難山屋",
+      "lat": 24.35587,
+      "lng": 121.25501,
+      "elevation": 3100,
+      "category": "shelter"
     },
     {
       "id": "n_g04_zhijiayan_th",
       "name": "志佳陽登山口",
       "lat": 24.3065,
       "lng": 121.224,
-      "elevation": 1800,
-      "category": "trailhead",
-      "tags": [
-        "parking",
-        "permit_check"
-      ]
-    },
-    {
-      "id": "n_g04_piaohuan_hut",
-      "name": "瓢簞避難山屋",
-      "lat": 24.355872,
-      "lng": 121.255006,
-      "elevation": 3200,
-      "category": "hut",
-      "tags": []
-    },
-    {
-      "id": "n_g04_zhijiayan",
-      "name": "志佳陽大山",
-      "lat": 24.359968,
-      "lng": 121.248151,
-      "elevation": 3346,
-      "category": "peak",
-      "tags": [
-        "100mt"
-      ]
-    },
-    {
-      "id": "n_g04_beling",
-      "name": "北稜角",
-      "lat": 24.3875106,
-      "lng": 121.2311408,
-      "elevation": 3882,
-      "category": "peak"
+      "elevation": 1700,
+      "category": "trailhead"
     }
   ],
   "edges": [
     {
-      "from": "n_g04_wuling_th",
-      "to": "n_g04_toskan_hut",
-      "minutes_forward": 407,
-      "minutes_backward": 268,
-      "distance_km": 7.8,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_guanwu",
+      "to": "n_g04_check_0_3k",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_toskan_hut",
-      "to": "n_g04_toskan",
-      "minutes_forward": 28,
-      "minutes_backward": 18,
-      "distance_km": 0.24,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_check_0_3k",
+      "to": "n_g04_dabajian_th",
+      "minutes_forward": 430,
+      "minutes_backward": 400,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_toskan",
-      "to": "n_g04_chiyou_hut",
-      "minutes_forward": 39,
-      "minutes_backward": 57,
-      "distance_km": 1.51,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_dabajian_th",
+      "to": "n_g04_jiujiu_hut",
+      "minutes_forward": 210,
+      "minutes_backward": 130,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_chiyou_hut",
-      "to": "n_g04_chiyou",
-      "minutes_forward": 33,
-      "minutes_backward": 21,
-      "distance_km": 0.21,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_jiujiu_hut",
+      "to": "n_g04_jiali_th",
+      "minutes_forward": 80,
+      "minutes_backward": 50,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_chiyou",
-      "to": "n_g04_pinta_front",
-      "minutes_forward": 58,
-      "minutes_backward": 41,
-      "distance_km": 1.96,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_jiali_th",
+      "to": "n_g04_jiali",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_pinta_front",
+      "from": "n_g04_jiali_th",
+      "to": "n_g04_yize_th",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_yize_th",
+      "to": "n_g04_yize_8_8k_jct",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_yize_8_8k_jct",
+      "to": "n_g04_yize",
+      "minutes_forward": 15,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_yize_8_8k_jct",
+      "to": "n_g04_zhongba_jct",
+      "minutes_forward": 60,
+      "minutes_backward": 45,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_yize",
+      "to": "n_g04_camp_2",
+      "minutes_forward": 10,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_camp_2",
+      "to": "n_g04_mayang_shan",
+      "minutes_forward": 15,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_mayang_shan",
+      "to": "n_g04_mayang_chi",
+      "minutes_forward": 100,
+      "minutes_backward": 110,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_mayang_chi",
+      "to": "n_g04_zhongba_jct",
+      "minutes_forward": 180,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_zhongba_jct",
+      "to": "n_g04_xiaoba_jct_th",
+      "minutes_forward": 45,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xiaoba_jct_th",
+      "to": "n_g04_xiaoba",
+      "minutes_forward": 50,
+      "minutes_backward": 35,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xiaoba_jct_th",
+      "to": "n_g04_banan_hut",
+      "minutes_forward": 70,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_banan_hut",
+      "to": "n_g04_dabajian",
+      "minutes_forward": 70,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_zhenxibao",
+      "to": "n_g04_shenmu_th",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_shenmu_th",
+      "to": "n_g04_shenmu_jct",
+      "minutes_forward": 40,
+      "minutes_backward": 35,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_shenmu_jct",
+      "to": "n_g04_zhenxi_jct",
+      "minutes_forward": 50,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_zhenxi_jct",
+      "to": "n_g04_mayang_jct",
+      "minutes_forward": 130,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_mayang_jct",
+      "to": "n_g04_lieliao_camp",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_lieliao_camp",
+      "to": "n_g04_camp_1",
+      "minutes_forward": 45,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_camp_1",
+      "to": "n_g04_camp_2",
+      "minutes_forward": 45,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_dabajian",
+      "to": "n_g04_basha_hut_ruins",
+      "minutes_forward": 60,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_basha_hut_ruins",
+      "to": "n_g04_basha",
+      "minutes_forward": 80,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_basha",
+      "to": "n_g04_susmida",
+      "minutes_forward": 140,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_susmida",
+      "to": "n_g04_susmida_hut",
+      "minutes_forward": 70,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_susmida_hut",
+      "to": "n_g04_susmida_jct",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_susmida_jct",
+      "to": "n_g04_mutele",
+      "minutes_forward": 30,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_susmida_hut",
+      "to": "n_g04_susmida_water",
+      "minutes_forward": 15,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_susmida_jct",
+      "to": "n_g04_xinda_hut",
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xinda_hut",
       "to": "n_g04_pinta",
+      "minutes_forward": 120,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xinda_hut",
+      "to": "n_g04_chiyou_th",
+      "minutes_forward": 50,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_chiyou_th",
+      "to": "n_g04_chiyou",
       "minutes_forward": 20,
-      "minutes_backward": 13,
-      "distance_km": 0.26,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_chiyou_th",
+      "to": "n_g04_sanchayingdi",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_sanchayingdi",
+      "to": "n_g04_toushan_hut",
+      "minutes_forward": 140,
+      "minutes_backward": 150,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_toushan_hut",
+      "to": "n_g04_toushan",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_toushan",
+      "to": "n_g04_shilun",
+      "minutes_forward": 70,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_shilun",
+      "to": "n_g04_kalaye",
+      "minutes_forward": 30,
+      "minutes_backward": 30,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g04_pinta",
-      "to": "n_g04_mutele",
-      "minutes_forward": 47,
-      "minutes_backward": 34,
-      "distance_km": 1.81,
-      "sources": [
-        "estimated"
-      ],
+      "to": "n_g04_buxiulan",
+      "minutes_forward": 200,
+      "minutes_backward": 240,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_mutele",
-      "to": "n_g04_xuebei_hut",
-      "minutes_forward": 23,
-      "minutes_backward": 31,
-      "distance_km": 1.61,
-      "sources": [
-        "estimated"
-      ],
+      "from": "n_g04_buxiulan",
+      "to": "n_g04_basha",
+      "minutes_forward": 140,
+      "minutes_backward": 110,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_xueshan_hut",
+      "from": "n_g04_chiyou_th",
+      "to": "n_g04_yancai_falls",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_chiyou_th",
+      "to": "n_g04_chiyou_jct",
+      "minutes_forward": 180,
+      "minutes_backward": 280,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_chiyou_jct",
+      "to": "n_g04_wuling_admin",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_toushan",
+      "to": "n_g04_helipad",
+      "minutes_forward": 90,
+      "minutes_backward": 160,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_helipad",
+      "to": "n_g04_toushan_2k",
+      "minutes_forward": 30,
+      "minutes_backward": 50,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_toushan_2k",
+      "to": "n_g04_toushan_th",
+      "minutes_forward": 100,
+      "minutes_backward": 180,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_toushan_th",
+      "to": "n_g04_wuling_admin",
+      "minutes_forward": 3,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_wuling_admin",
+      "to": "n_g04_farm_jct",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_farm_jct",
+      "to": "n_g04_wuling_farm",
+      "minutes_forward": 10,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_wuling_farm",
+      "to": "n_g04_xueshan_admin",
+      "minutes_forward": 20,
+      "minutes_backward": 20,
+      "source": "上河圖",
+      "confirmed": true,
+      "transport": "vehicle"
+    },
+    {
+      "from": "n_g04_xueshan_admin",
+      "to": "n_g04_seven_hut",
+      "minutes_forward": 70,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_seven_hut",
+      "to": "n_g04_kupo_view",
+      "minutes_forward": 120,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_kupo_view",
+      "to": "n_g04_xueshan_east",
+      "minutes_forward": 90,
+      "minutes_backward": 60,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xueshan_east",
+      "to": "n_g04_369_hut",
+      "minutes_forward": 40,
+      "minutes_backward": 80,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_369_hut",
+      "to": "n_g04_circle_bottom",
+      "minutes_forward": 140,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_circle_bottom",
       "to": "n_g04_xueshan",
-      "minutes_forward": 57,
-      "minutes_backward": 38,
-      "distance_km": 1.35,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 110,
+      "minutes_backward": 55,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_369_hut",
+      "to": "n_g04_xueshan",
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xueshan",
+      "to": "n_g04_xueshan_jct",
+      "minutes_forward": 20,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xueshan_jct",
+      "to": "n_g04_beling",
+      "minutes_forward": 15,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_beling",
+      "to": "n_g04_kailan",
+      "minutes_forward": 40,
+      "minutes_backward": 70,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_kailan",
+      "to": "n_g04_anbu_jct",
+      "minutes_forward": 5,
+      "minutes_backward": 10,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_anbu_jct",
+      "to": "n_g04_kailan_north",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_anbu_jct",
+      "to": "n_g04_circle_bottom",
+      "minutes_forward": 50,
+      "minutes_backward": 100,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_kailan_north",
+      "to": "n_g04_xuebei_hut",
+      "minutes_forward": 75,
+      "minutes_backward": 90,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xuebei_hut",
+      "to": "n_g04_xuebei_th",
+      "minutes_forward": 35,
+      "minutes_backward": 25,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xuebei_th",
+      "to": "n_g04_munan_camp",
+      "minutes_forward": 65,
+      "minutes_backward": 95,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xuebei_th",
+      "to": "n_g04_xueshan_north",
+      "minutes_forward": 5,
+      "minutes_backward": 5,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_munan_camp",
+      "to": "n_g04_susmida",
+      "minutes_forward": 100,
+      "minutes_backward": 85,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_xueshan_jct",
+      "to": "n_g04_cuichi_hut",
+      "minutes_forward": 80,
+      "minutes_backward": 110,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g04_zhijiayan_th",
       "to": "n_g04_piaohuan_hut",
-      "minutes_forward": 375,
-      "minutes_backward": 244,
-      "distance_km": 6.33,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 300,
+      "minutes_backward": 200,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g04_piaohuan_hut",
       "to": "n_g04_zhijiayan",
-      "minutes_forward": 42,
-      "minutes_backward": 27,
-      "distance_km": 0.83,
-      "sources": [
-        "estimated"
-      ],
+      "minutes_forward": 60,
+      "minutes_backward": 40,
+      "source": "上河圖",
       "confirmed": true
     },
     {
       "from": "n_g04_zhijiayan",
-      "to": "n_g04_mutele",
-      "minutes_forward": 164,
-      "minutes_backward": 120,
-      "distance_km": 7.23,
-      "sources": [
-        "estimated"
-      ],
-      "confirmed": true
-    },
-    {
-      "from": "n_g04_xuebei_hut",
-      "to": "n_g04_beling",
-      "minutes_forward": 80,
-      "minutes_backward": 65,
-      "source": "estimated",
-      "confirmed": true
-    },
-    {
-      "from": "n_g04_beling",
       "to": "n_g04_xueshan",
-      "minutes_forward": 20,
-      "minutes_backward": 25,
-      "source": "estimated",
+      "minutes_forward": 240,
+      "minutes_backward": 180,
+      "source": "上河圖",
       "confirmed": true
     },
     {
-      "from": "n_g04_beling",
-      "to": "n_g04_xueshan_hut",
-      "minutes_forward": 45,
-      "minutes_backward": 60,
-      "source": "estimated",
+      "from": "n_g04_xinda_hut",
+      "to": "n_g04_takejin_river",
+      "minutes_forward": 95,
+      "minutes_backward": 130,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_pinta_qianfeng",
+      "to": "n_g04_pinta",
+      "minutes_forward": 20,
+      "minutes_backward": 15,
+      "source": "上河圖",
+      "confirmed": true
+    },
+    {
+      "from": "n_g04_chiyou",
+      "to": "n_g04_pinta_qianfeng",
+      "minutes_forward": 60,
+      "minutes_backward": 50,
+      "source": "上河圖",
       "confirmed": true
     }
   ],
   "presets": [
     {
-      "id": "p_g04_main_arm",
-      "name": "聖稜主線（武陵進出）",
-      "startNodeId": "n_g04_wuling_th",
-      "endNodeId": "n_g04_xueshan",
+      "id": "G04-sheng-leng-Y",
+      "name": "聖稜Y縱走 (4天3夜，武陵進出)",
+      "startNodeId": "n_g04_wuling_admin",
+      "endNodeId": "n_g04_wuling_admin",
       "viaNodeIds": [
-        "n_g04_toskan_hut",
-        "n_g04_toskan",
-        "n_g04_chiyou",
-        "n_g04_chiyou_hut",
-        "n_g04_pinta_front",
-        "n_g04_pinta",
-        "n_g04_mutele",
+        "n_g04_xueshan_admin",
+        "n_g04_seven_hut",
+        "n_g04_kupo_view",
+        "n_g04_xueshan_east",
+        "n_g04_369_hut",
+        "n_g04_xueshan",
+        "n_g04_beling",
+        "n_g04_kailan",
+        "n_g04_kailan_north",
         "n_g04_xuebei_hut",
-        "n_g04_xueshan_hut"
+        "n_g04_munan_camp",
+        "n_g04_susmida",
+        "n_g04_mutele",
+        "n_g04_xinda_hut",
+        "n_g04_pinta",
+        "n_g04_chiyou_th",
+        "n_g04_chiyou",
+        "n_g04_sanchayingdi",
+        "n_g04_toushan_hut",
+        "n_g04_toushan",
+        "n_g04_helipad",
+        "n_g04_toushan_2k",
+        "n_g04_toushan_th"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g04_toskan_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g04_chiyou_hut",
+          "atNodeId": "n_g04_369_hut",
           "type": "hut"
         },
         {
           "atNodeId": "n_g04_xuebei_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g04_xinda_hut",
           "type": "hut"
         }
       ],
       "roundTrip": false
     },
     {
-      "id": "p_g04_y_traverse",
-      "name": "Y 型縱走（志佳陽進、武陵出）",
-      "startNodeId": "n_g04_zhijiayan_th",
-      "endNodeId": "n_g04_wuling_th",
+      "id": "G04-daba",
+      "name": "大霸群峰 (4天3夜)",
+      "startNodeId": "n_g04_guanwu",
+      "endNodeId": "n_g04_dabajian",
       "viaNodeIds": [
-        "n_g04_piaohuan_hut",
-        "n_g04_zhijiayan",
-        "n_g04_mutele",
-        "n_g04_xuebei_hut",
-        "n_g04_xueshan",
-        "n_g04_xueshan_hut",
-        "n_g04_xueshan",
-        "n_g04_pinta",
-        "n_g04_pinta_front",
-        "n_g04_chiyou",
-        "n_g04_chiyou_hut",
-        "n_g04_toskan",
-        "n_g04_toskan_hut"
+        "n_g04_check_0_3k",
+        "n_g04_dabajian_th",
+        "n_g04_jiujiu_hut",
+        "n_g04_jiali_th",
+        "n_g04_jiali",
+        "n_g04_yize_th",
+        "n_g04_yize_8_8k_jct",
+        "n_g04_yize",
+        "n_g04_zhongba_jct",
+        "n_g04_xiaoba_jct_th",
+        "n_g04_xiaoba"
       ],
       "suggestedDayBreaks": [
         {
-          "atNodeId": "n_g04_piaohuan_hut",
+          "atNodeId": "n_g04_jiujiu_hut",
           "type": "hut"
         },
         {
-          "atNodeId": "n_g04_xuebei_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g04_xueshan_hut",
-          "type": "hut"
-        },
-        {
-          "atNodeId": "n_g04_chiyou_hut",
+          "atNodeId": "n_g04_jiujiu_hut",
           "type": "hut"
         }
       ],
-      "roundTrip": false
+      "roundTrip": true
+    },
+    {
+      "id": "G04-wuling-four",
+      "name": "武陵四秀 (4天3夜)",
+      "startNodeId": "n_g04_wuling_admin",
+      "endNodeId": "n_g04_pinta",
+      "viaNodeIds": [
+        "n_g04_toushan_th",
+        "n_g04_toushan_2k",
+        "n_g04_helipad",
+        "n_g04_toushan",
+        "n_g04_toushan_hut",
+        "n_g04_kalaye",
+        "n_g04_sanchayingdi",
+        "n_g04_chiyou",
+        "n_g04_xinda_hut"
+      ],
+      "suggestedDayBreaks": [
+        {
+          "atNodeId": "n_g04_toushan_hut",
+          "type": "hut"
+        },
+        {
+          "atNodeId": "n_g04_xinda_hut",
+          "type": "hut"
+        }
+      ],
+      "roundTrip": true
     }
   ]
 }
