@@ -7,6 +7,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/plans', name: 'plans', component: () => import('@/views/PlansListView.vue') },
   { path: '/schedule/:planId', name: 'schedule', component: () => import('@/views/PlanScheduleView.vue'), props: true },
   { path: '/gear/:planId', name: 'gear', component: () => import('@/views/GearChecklistView.vue'), props: true },
+  { path: '/checklist/:planId', name: 'checklist', component: () => import('@/views/PreTripChecklistView.vue'), props: true },
   { path: '/settings', name: 'settings', component: () => import('@/views/SettingsView.vue') },
 ];
 

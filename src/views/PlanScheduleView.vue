@@ -70,6 +70,9 @@ function editPlan() {
             </div>
             <NSpace>
               <NButton @click="editPlan">編輯行程</NButton>
+              <NButton type="primary" @click="router.push({ name: 'checklist', params: { planId: plan.id } })">
+                行前準備
+              </NButton>
               <NButton @click="router.push({ name: 'gear', params: { planId: plan.id } })">裝備清單</NButton>
               <NButton :disabled="!printReady" @click="printPage">列印</NButton>
             </NSpace>

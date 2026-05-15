@@ -1,4 +1,5 @@
 import type { DailyPlan } from './daily';
+import type { PreTripChecklist } from './checklist';
 
 export type TripType = 'light_summit' | 'long_day' | 'overnight_hut' | 'overnight_camp';
 export type DayBreakType = 'hut' | 'shelter' | 'camp' | 'manual';
@@ -27,6 +28,9 @@ export interface Plan {
   // Phase 2.5
   dailyPlans?: DailyPlan[];
   returnToStart?: boolean;
+
+  // Phase A: 行前安全
+  preTripChecklist?: PreTripChecklist;
 }
 
 export interface SegmentTime {

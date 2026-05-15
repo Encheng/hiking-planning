@@ -5,3 +5,4 @@ export * from './hut';
 export * from './daily';
 export * from './osm';
 export * from './validation';
+export * from './checklist';
