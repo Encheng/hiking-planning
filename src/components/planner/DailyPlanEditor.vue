@@ -158,9 +158,25 @@ function reorderVia(idx: number, from: number, to: number) {
       @remove-day="removeDay(i)"
     />
 
-    <NButton dashed block @click="addDay">+ 加一天</NButton>
+    <!-- Empty-state hint when no days planned yet -->
+    <div
+      v-if="(draft.dailyPlans?.length ?? 0) === 0"
+      class="rounded-lg border-2 border-dashed border-brand-300 bg-brand-tint-info p-4 text-center"
+    >
+      <p class="text-sm text-brand-900 font-medium mb-1">尚未規劃任何天數</p>
+      <p class="text-xs text-brand-gray mb-3">先確認起點，再點下方按鈕新增第一天</p>
+    </div>
 
-    <div v-if="resolution?.warnings.length" class="text-xs text-red-600 mt-2">
+    <NButton
+      :type="(draft.dailyPlans?.length ?? 0) === 0 ? 'primary' : 'default'"
+      :dashed="(draft.dailyPlans?.length ?? 0) > 0"
+      block
+      @click="addDay"
+    >
+      ＋ 加一天
+    </NButton>
+
+    <div v-if="resolution?.warnings.length" class="text-xs text-brand-danger mt-2">
       ⚠ {{ resolution.warnings.join(', ') }}
     </div>
   </div>

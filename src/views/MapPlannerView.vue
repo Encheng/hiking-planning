@@ -62,7 +62,9 @@ const canSave = computed(() => {
 
 // Mobile bottom-drawer state: peek (collapsed) → half (map+edit visible) → full
 type DrawerState = 'peek' | 'half' | 'full';
-const mobileDrawerState = ref<DrawerState>('peek');
+// Default to 'half' on mobile so user sees the editor immediately on entry.
+// Desktop layout ignores this state entirely (md+ uses static side-by-side).
+const mobileDrawerState = ref<DrawerState>('half');
 
 const DRAWER_LABELS: Record<DrawerState, string> = {
   peek: '收合',
@@ -336,20 +338,25 @@ watch(routeId, () => {
       ]"
       :aria-expanded="mobileDrawerState !== 'peek'"
     >
-      <!-- Drag/peek handle (mobile only) -->
+      <!-- Drawer handle (mobile only). Tap to cycle peek → half → full → peek -->
+      <div class="md:hidden flex flex-col items-center pt-2 pb-1 bg-brand-white rounded-t-2xl">
+        <span
+          class="block w-10 h-1.5 bg-brand-gray/40 rounded-full mb-1"
+          aria-hidden="true"
+        ></span>
+      </div>
       <button
         type="button"
-        class="md:hidden flex items-center justify-between gap-3 px-4 py-3 border-b border-brand-cream w-full bg-brand-white rounded-t-2xl select-none"
+        class="md:hidden flex items-center justify-between gap-3 px-4 pb-3 border-b border-brand-cream w-full bg-brand-white select-none"
         :aria-label="`切換編輯面板 (目前: ${drawerLabel})`"
         @click="cycleDrawerState"
       >
-        <div class="flex items-center gap-2 min-w-0">
-          <span class="block w-10 h-1 bg-brand-gray/30 rounded-full" aria-hidden="true"></span>
-          <span class="font-medium text-brand-900">編輯行程</span>
-        </div>
+        <span class="font-medium text-brand-900">編輯行程</span>
         <div class="flex items-center gap-2 text-xs text-brand-gray flex-shrink-0">
           <span>{{ daySummary }}</span>
-          <span aria-hidden="true">{{ mobileDrawerState === 'full' ? '↓' : '↑' }}</span>
+          <span class="text-brand-700" aria-hidden="true">
+            {{ mobileDrawerState === 'peek' ? '▲ 展開' : mobileDrawerState === 'half' ? '▲ 全開' : '▼ 收合' }}
+          </span>
         </div>
       </button>
 
