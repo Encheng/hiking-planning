@@ -60,37 +60,17 @@ const canSave = computed(() => {
   return true;
 });
 
-// Mobile bottom-drawer state: peek (collapsed) → half (map+edit visible) → full
-type DrawerState = 'peek' | 'half' | 'full';
-// Default to 'half' on mobile so user sees the editor immediately on entry.
-// Desktop layout ignores this state entirely (md+ uses static side-by-side).
-const mobileDrawerState = ref<DrawerState>('half');
-
-const DRAWER_LABELS: Record<DrawerState, string> = {
-  peek: '收合',
-  half: '半開',
-  full: '展開',
-};
-const drawerLabel = computed(() => DRAWER_LABELS[mobileDrawerState.value]);
-
-function cycleDrawerState() {
-  const order: DrawerState[] = ['peek', 'half', 'full'];
-  const idx = order.indexOf(mobileDrawerState.value);
-  mobileDrawerState.value = order[(idx + 1) % order.length];
-}
+// Mobile tab state: 'map' or 'edit'. Default to 'edit' so user sees the
+// planner immediately on first entry. Desktop ignores this entirely
+// (md+ shows both panes side-by-side via CSS).
+type MobileTab = 'map' | 'edit';
+const mobileTab = ref<MobileTab>('edit');
 
 const daySummary = computed(() => {
   const dayCount = planStore.draft?.dailyPlans?.length ?? 0;
   const nodeCount = highlightedNodeIds.value.length;
   if (dayCount === 0) return '尚未規劃';
   return `${dayCount} 天 · ${nodeCount} 節點`;
-});
-
-// Auto-open drawer to half when a node is picked from map
-watch(() => editor.expandedDayIndex, (v) => {
-  if (v != null && mobileDrawerState.value === 'peek') {
-    mobileDrawerState.value = 'half';
-  }
 });
 
 const startDateTs = computed({
@@ -205,8 +185,8 @@ function onPopupSetTarget() {
   if (!dailyPlans || !dailyPlans[idx]) return;
   dailyPlans[idx].endNodeId = popupNode.value.id;
   closePopup();
-  // On mobile, lift drawer so user can confirm the edit
-  if (mobileDrawerState.value === 'peek') mobileDrawerState.value = 'half';
+  // On mobile, switch back to edit tab so user sees the result
+  mobileTab.value = 'edit';
 }
 
 function onPopupAddVia() {
@@ -216,7 +196,7 @@ function onPopupAddVia() {
   if (!dailyPlans || !dailyPlans[idx]) return;
   dailyPlans[idx].viaNodeIds.push(popupNode.value.id);
   closePopup();
-  if (mobileDrawerState.value === 'peek') mobileDrawerState.value = 'half';
+  mobileTab.value = 'edit';
 }
 
 function closePopup() {
@@ -297,9 +277,42 @@ watch(routeId, () => {
 </script>
 
 <template>
-  <div class="planner-root md:flex md:h-[calc(100vh-65px)]">
-    <!-- Map: full-screen on mobile (behind drawer), left pane on desktop -->
-    <div class="map-pane relative h-[calc(100vh-65px)] md:flex-1 md:h-auto">
+  <div class="planner-root flex flex-col md:flex-row h-[calc(100vh-65px)] overflow-hidden">
+    <!-- Mobile tab switcher (mobile-only) -->
+    <div
+      class="mobile-tab-bar md:hidden flex border-b border-brand-cream bg-brand-white"
+      role="tablist"
+    >
+      <button
+        type="button"
+        role="tab"
+        :aria-selected="mobileTab === 'map'"
+        class="flex-1 py-3 text-center font-medium transition-colors"
+        :class="mobileTab === 'map' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray'"
+        @click="mobileTab = 'map'"
+      >
+        🗺️ 地圖
+      </button>
+      <button
+        type="button"
+        role="tab"
+        :aria-selected="mobileTab === 'edit'"
+        class="flex-1 py-3 text-center font-medium transition-colors"
+        :class="mobileTab === 'edit' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray'"
+        @click="mobileTab = 'edit'"
+      >
+        📋 行程編輯
+        <span v-if="daySummary !== '尚未規劃'" class="text-xs text-brand-gray ml-1">
+          ({{ daySummary }})
+        </span>
+      </button>
+    </div>
+
+    <!-- Map pane (always visible on desktop; tab-controlled on mobile) -->
+    <div
+      class="map-pane relative flex-1"
+      :class="{ 'hidden md:block': mobileTab !== 'map' }"
+    >
       <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
         <TileSwitcher />
         <PlannedRouteLayer
@@ -324,46 +337,18 @@ watch(routeId, () => {
       </Teleport>
     </div>
 
-    <!-- Sidebar / Bottom drawer -->
+    <!-- Editor pane (always visible on desktop; tab-controlled on mobile) -->
     <aside
-      class="planner-sidebar bg-brand-white flex flex-col
-             md:w-[420px] md:border-l md:border-brand-cream md:static md:rounded-none md:shadow-none md:translate-y-0
-             md:overflow-hidden md:h-auto"
-      :class="[
-        mobileDrawerState === 'full'
-          ? 'mobile-drawer-full'
-          : mobileDrawerState === 'half'
-            ? 'mobile-drawer-half'
-            : 'mobile-drawer-peek',
-      ]"
-      :aria-expanded="mobileDrawerState !== 'peek'"
+      class="editor-pane bg-brand-white overflow-y-auto overflow-x-hidden flex-1
+             md:flex-none md:w-[420px] md:border-l md:border-brand-cream"
+      :class="{ 'hidden md:block': mobileTab !== 'edit' }"
     >
-      <!-- Drawer handle (mobile only). Tap to cycle peek → half → full → peek -->
-      <div class="md:hidden flex flex-col items-center pt-2 pb-1 bg-brand-white rounded-t-2xl">
-        <span
-          class="block w-10 h-1.5 bg-brand-gray/40 rounded-full mb-1"
-          aria-hidden="true"
-        ></span>
-      </div>
-      <button
-        type="button"
-        class="md:hidden flex items-center justify-between gap-3 px-4 pb-3 border-b border-brand-cream w-full bg-brand-white select-none"
-        :aria-label="`切換編輯面板 (目前: ${drawerLabel})`"
-        @click="cycleDrawerState"
-      >
-        <span class="font-medium text-brand-900">編輯行程</span>
-        <div class="flex items-center gap-2 text-xs text-brand-gray flex-shrink-0">
-          <span>{{ daySummary }}</span>
-          <span class="text-brand-700" aria-hidden="true">
-            {{ mobileDrawerState === 'peek' ? '▲ 展開' : mobileDrawerState === 'half' ? '▲ 全開' : '▼ 收合' }}
-          </span>
-        </div>
-      </button>
-
-      <!-- Scrollable content -->
-      <div class="planner-content flex-1 overflow-y-auto overflow-x-hidden p-4 pb-24 md:pb-4">
+      <div class="p-4 pb-24 md:pb-4">
         <NSpace vertical size="medium">
           <VerificationBanner :route-id="planStore.draft?.routeId" />
+          <NCard size="small" title="行程編輯">
+            <DailyPlanEditor v-if="planStore.draft" />
+          </NCard>
           <NCard size="small" title="行程設定">
             <NSpace vertical size="small">
               <div>
@@ -380,9 +365,6 @@ watch(routeId, () => {
               </div>
             </NSpace>
           </NCard>
-          <NCard size="small" title="行程編輯">
-            <DailyPlanEditor v-if="planStore.draft" />
-          </NCard>
           <NButton type="primary" block :disabled="!canSave" @click="savePlan">
             儲存行程
           </NButton>
@@ -391,31 +373,3 @@ watch(routeId, () => {
     </aside>
   </div>
 </template>
-
-<style scoped>
-@media (max-width: 767px) {
-  .planner-sidebar {
-    position: fixed;
-    inset-inline: 0;
-    bottom: 0;
-    z-index: 30;
-    height: 88vh;
-    border-top: 1px solid var(--brand-cream, #E6E2D6);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    box-shadow: 0 -8px 24px rgba(31, 79, 91, 0.12);
-    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
-    /* Respect iOS notch / home indicator */
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  .mobile-drawer-peek {
-    transform: translateY(calc(88vh - 56px));
-  }
-  .mobile-drawer-half {
-    transform: translateY(50vh);
-  }
-  .mobile-drawer-full {
-    transform: translateY(0);
-  }
-}
-</style>
