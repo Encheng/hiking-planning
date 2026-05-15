@@ -31,6 +31,12 @@ export interface Plan {
 
   // Phase A: 行前安全
   preTripChecklist?: PreTripChecklist;
+
+  /** Custom free-form label that overrides the standard tripType badge text. */
+  customTripTypeLabel?: string;
+  /** When true, tripType/customTripTypeLabel were set by user and must not be
+   * overwritten by the auto-classifier. */
+  tripTypeOverridden?: boolean;
 }
 
 export interface SegmentTime {

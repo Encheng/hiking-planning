@@ -5,7 +5,7 @@
  * Merges with the user's existing items, preserving check state and any user-added items.
  */
 import type { Plan, ChecklistItem, PreTripChecklist } from '@/types';
-import { getRegulation, getAuthorityName, COMMON_URLS } from './RouteRegulations';
+import { getRegulation, getAuthorityName, getParkInfoUrl, COMMON_URLS } from './RouteRegulations';
 
 /** Generate the suggested-by-system items for a plan. */
 export function generateSuggestedItems(plan: Plan): ChecklistItem[] {
@@ -191,7 +191,7 @@ export function generateSuggestedItems(plan: Plan): ChecklistItem[] {
     category: 'external',
     title: '路況/封山公告查詢',
     description: '颱風、地震後常有封山或路徑變更；出發前查詢公告。',
-    externalLink: reg?.parkApplicationUrl ?? COMMON_URLS.forestry,
+    externalLink: reg ? getParkInfoUrl(reg.authority) : COMMON_URLS.forestry,
     required: true,
     systemSuggested: true,
   });

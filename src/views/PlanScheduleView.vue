@@ -51,6 +51,29 @@ function editPlan() {
   planStore.draft = JSON.parse(JSON.stringify(planStore.currentPlan));
   router.push({ name: 'map', query: { route: planStore.currentPlan.routeId } });
 }
+
+import type { TripType } from '@/types';
+async function onTripTypeUpdate(tripType: TripType, customLabel?: string) {
+  if (!planStore.currentPlan) return;
+  const updated = JSON.parse(JSON.stringify(planStore.currentPlan));
+  updated.tripType = tripType;
+  updated.customTripTypeLabel = customLabel ?? undefined;
+  updated.tripTypeOverridden = true;
+  await planStore.savePlan(updated);
+  planStore.currentPlan = updated;
+}
+async function onTripTypeReset() {
+  if (!planStore.currentPlan) return;
+  const updated = JSON.parse(JSON.stringify(planStore.currentPlan));
+  updated.customTripTypeLabel = undefined;
+  updated.tripTypeOverridden = false;
+  // Re-run classifier
+  await planStore.savePlan(updated);
+  planStore.currentPlan = updated;
+  planStore.refreshTripType('current');
+  // Save again with auto-classified type
+  await planStore.savePlan(planStore.currentPlan);
+}
 </script>
 
 <template>
@@ -62,7 +85,13 @@ function editPlan() {
             <div>
               <h1 class="text-2xl font-bold">{{ plan.name }}</h1>
               <NSpace size="small" class="mt-2">
-                <TripTypeBadge :trip-type="plan.tripType" />
+                <TripTypeBadge
+                  :trip-type="plan.tripType"
+                  :custom-label="plan.customTripTypeLabel"
+                  editable
+                  @update="onTripTypeUpdate"
+                  @reset="onTripTypeReset"
+                />
                 <span class="text-sm text-gray-500">
                   {{ plan.startDate }} {{ plan.startTime }} 出發 · 倍率 {{ plan.paceMultiplier }}x
                 </span>

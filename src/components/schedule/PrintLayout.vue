@@ -18,7 +18,7 @@ const tripTypeLabels: Record<TripType, string> = {
   overnight_camp: '紮營過夜',
 };
 
-const tripTypeLabel = computed(() => tripTypeLabels[props.plan.tripType]);
+const tripTypeLabel = computed(() => props.plan.customTripTypeLabel || tripTypeLabels[props.plan.tripType]);
 
 const printedAt = computed(() => new Date().toISOString().slice(0, 10));
 

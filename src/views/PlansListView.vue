@@ -34,7 +34,7 @@ async function deletePlan(id: number) {
               <div class="text-sm text-gray-500">
                 {{ plan.startDate }} · 倍率 {{ plan.paceMultiplier }}x · 節點 {{ plan.nodeSequence.length }}
               </div>
-              <TripTypeBadge :trip-type="plan.tripType" />
+              <TripTypeBadge :trip-type="plan.tripType" :custom-label="plan.customTripTypeLabel" />
             </div>
             <NSpace>
               <NButton size="small" @click="router.push({ name: 'schedule', params: { planId: plan.id } })">查看</NButton>

@@ -548,7 +548,7 @@ function openExternalLink(url: string) {
     >
       <div class="max-w-5xl mx-auto px-6 py-3 flex justify-end gap-2">
         <NButton @click="backToSchedule">返回行程</NButton>
-        <NButton type="primary" size="large" @click="save">儲存行前準備</NButton>
+        <NButton type="primary" @click="save">儲存行前準備</NButton>
       </div>
     </div>
   </div>

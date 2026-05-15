@@ -43,20 +43,31 @@ const PARK_NAMES: Record<RegulatoryAuthority, string> = {
   multiple: '多個管轄機關',
 };
 
+/**
+ * Stable landing pages (avoid deep links with internal GUIDs that may rotate).
+ * Verified working as of 2026-05.
+ */
 const URLS = {
-  mountain_permit: 'https://nv2.npa.gov.tw/NM103-604Client/main',
-  yushan_np: 'https://npm.cpami.gov.tw/apply_1_2.aspx?unit=8ce95b3f-00c6-4ce2-9b46-c598f2e84d68',
-  sheipa_np: 'https://npm.cpami.gov.tw/apply_1_2.aspx?unit=fb874360-ddef-415c-913d-15d24f1c39e6',
-  taroko_np: 'https://npm.cpami.gov.tw/apply_1_2.aspx?unit=12881223-39e3-4934-be99-2f48bfa6d52d',
+  // 內政部警政署 — 入山案件申辦系統
+  mountain_permit: 'https://nv2.npa.gov.tw/',
+  // 台灣國家公園 — 線上申請入園系統 (主入口，所有 NP 共用)
+  np_application: 'https://npm.cpami.gov.tw/',
+  // 個別 NP 官網（含入園資訊、最新公告）
+  yushan_np: 'https://www.ysnp.gov.tw/',
+  sheipa_np: 'https://www.spnp.gov.tw/',
+  taroko_np: 'https://www.taroko.gov.tw/',
+  // 林務局 (現為農業部林業及自然保育署)
   forestry: 'https://recreation.forest.gov.tw/',
-  cwa_weather: 'https://www.cwa.gov.tw/V8/C/W/MOD/MAP_LIST.html',
+  forestry_conservation: 'https://conservation.forest.gov.tw/',
+  // 中央氣象署 山域天氣預報
+  cwa_weather: 'https://www.cwa.gov.tw/V8/C/M/index.html',
 };
 
 const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G02: {
     routeId: 'G02', authority: 'yushan_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.yushan_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '排雲山莊', bookingType: 'lottery' },
       { name: '圓峰山屋', bookingType: 'lottery' },
@@ -73,7 +84,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G04: {
     routeId: 'G04', authority: 'sheipa_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.sheipa_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '九九山莊', bookingType: 'lottery' },
       { name: '七卡山莊', bookingType: 'first_come' },
@@ -88,7 +99,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G05: {
     routeId: 'G05', authority: 'sheipa_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.sheipa_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '七卡山莊', bookingType: 'first_come' },
       { name: '三六九山莊', bookingType: 'lottery' },
@@ -105,7 +116,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G07: {
     routeId: 'G07', authority: 'taroko_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.taroko_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '新雲稜山莊', bookingType: 'first_come' },
       { name: '審馬陣山莊', bookingType: 'first_come' },
@@ -116,14 +127,14 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G08: {
     routeId: 'G08', authority: 'taroko_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.taroko_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [],
     notes: '畢祿羊頭連峰中橫進出，林道路況須確認。',
   },
   G09: {
     routeId: 'G09', authority: 'taroko_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.taroko_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '成功山屋', bookingType: 'first_come' },
       { name: '奇萊山莊', bookingType: 'first_come' },
@@ -134,7 +145,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G10: {
     routeId: 'G10', authority: 'taroko_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.taroko_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [],
     notes: '太魯閣山列為長程連峰縱走，無山屋僅營地。',
   },
@@ -185,7 +196,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G16: {
     routeId: 'G16', authority: 'yushan_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.yushan_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '樂樂山屋', bookingType: 'lottery' },
       { name: '觀高登山服務站', bookingType: 'first_come' },
@@ -199,7 +210,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G17: {
     routeId: 'G17', authority: 'yushan_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.yushan_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '向陽山屋', bookingType: 'lottery' },
       { name: '嘉明湖避難山屋', bookingType: 'lottery' },
@@ -212,7 +223,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G18: {
     routeId: 'G18', authority: 'yushan_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.yushan_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '向陽山屋', bookingType: 'lottery' },
       { name: '嘉明湖避難山屋', bookingType: 'lottery' },
@@ -224,7 +235,7 @@ const ROUTE_REGULATIONS: Record<string, RouteRegulation> = {
   G19: {
     routeId: 'G19', authority: 'yushan_np',
     enterMountainPermit: true, enterParkPermit: true,
-    parkApplicationUrl: URLS.yushan_np,
+    parkApplicationUrl: URLS.np_application,
     hutBookings: [
       { name: '埡口山莊', bookingType: 'first_come' },
       { name: '庫哈諾辛山屋', bookingType: 'first_come' },
@@ -249,6 +260,23 @@ export function getRegulation(routeId: string): RouteRegulation | null {
 
 export function getAuthorityName(authority: RegulatoryAuthority): string {
   return PARK_NAMES[authority];
+}
+
+/**
+ * Return the official info/announcement website for the authority
+ * (closure notices, weather warnings, hut status). Distinct from the
+ * shared `npm.cpami.gov.tw` apply portal.
+ */
+export function getParkInfoUrl(authority: RegulatoryAuthority): string {
+  switch (authority) {
+    case 'yushan_np': return URLS.yushan_np;
+    case 'sheipa_np': return URLS.sheipa_np;
+    case 'taroko_np': return URLS.taroko_np;
+    case 'forestry_bureau':
+    case 'multiple':
+    default:
+      return URLS.forestry;
+  }
 }
 
 export const COMMON_URLS = URLS;

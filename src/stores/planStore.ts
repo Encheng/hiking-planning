@@ -84,6 +84,8 @@ export const usePlanStore = defineStore('plan', () => {
   function refreshTripType(target: 'draft' | 'current') {
     const plan = target === 'draft' ? draft.value : currentPlan.value;
     if (!plan) return;
+    // Respect explicit user override — never auto-overwrite manually set tags.
+    if (plan.tripTypeOverridden) return;
     const dailyPlans = plan.dailyPlans ?? [];
     const totalMins = (target === 'current' ? computedTimes.value : []).reduce((s, x) => s + x.adjustedMinutes, 0);
     const hasOvernight = dailyPlans.length > 1;

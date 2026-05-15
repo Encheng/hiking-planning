@@ -44,7 +44,7 @@ const plan = computed(() => planStore.currentPlan);
         <header class="mb-4 flex justify-between">
           <div>
             <h1 class="text-2xl font-bold">{{ plan.name }} - 裝備清單</h1>
-            <TripTypeBadge :trip-type="plan.tripType" class="mt-2" />
+            <TripTypeBadge :trip-type="plan.tripType" :custom-label="plan.customTripTypeLabel" class="mt-2" />
           </div>
           <NButton @click="router.push({ name: 'schedule', params: { planId: plan.id } })">回行程表</NButton>
         </header>
