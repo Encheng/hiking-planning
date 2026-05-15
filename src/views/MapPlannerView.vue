@@ -283,7 +283,7 @@ watch(routeId, () => {
 </script>
 
 <template>
-  <div class="planner-root flex flex-col h-full md:flex-row md:overflow-hidden">
+  <div class="planner-root flex flex-col md:flex-row md:overflow-hidden">
     <!-- Mobile tab switcher (mobile-only) -->
     <div
       class="md:hidden flex border-b border-brand-cream bg-brand-white flex-shrink-0"
@@ -385,3 +385,11 @@ watch(routeId, () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Fill viewport minus the app header. 100dvh handles mobile browser chrome;
+   env(safe-area-inset-top) handles iPhone notch / dynamic island. */
+.planner-root {
+  height: calc(100dvh - 56px - env(safe-area-inset-top, 0px));
+}
+</style>
