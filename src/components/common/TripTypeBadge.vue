@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { NTag, NPopover, NSpace, NButton, NInput, NDivider } from 'naive-ui';
+import AppIcon from '@/components/common/AppIcon.vue';
 import type { TripType } from '@/types';
 
 const props = defineProps<{
@@ -82,7 +83,7 @@ function reset() {
         aria-label="編輯行程類型"
       >
         <NTag :type="displayColor" class="cursor-pointer">{{ displayLabel }}</NTag>
-        <span class="text-xs text-brand-gray" aria-hidden="true">✎</span>
+        <AppIcon name="pencil" :size="12" class="text-brand-gray" />
       </button>
     </template>
 

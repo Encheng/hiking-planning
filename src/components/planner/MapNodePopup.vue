@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppIcon from '@/components/common/AppIcon.vue';
 import type { RouteNode } from '@/types';
 
 defineProps<{
@@ -19,19 +20,21 @@ defineEmits<{
     <template v-if="expandedDayIndex">
       <button
         type="button"
-        class="block w-full px-2 py-1 mb-1 rounded bg-amber-100 hover:bg-amber-200 text-left"
+        class="flex w-full items-center gap-1 px-2 py-1 mb-1 rounded bg-brand-tint-warning hover:bg-brand-yellow/30 text-left"
         @click="$emit('set-target')"
       >
-        ▶ 當作 Day {{ expandedDayIndex }} 目標
+        <AppIcon name="play" :size="12" class="text-brand-amber flex-shrink-0" />
+        <span>當作 Day {{ expandedDayIndex }} 目標</span>
       </button>
       <button
         type="button"
-        class="block w-full px-2 py-1 rounded bg-blue-100 hover:bg-blue-200 text-left"
+        class="flex w-full items-center gap-1 px-2 py-1 rounded bg-brand-tint-info hover:bg-brand-300/30 text-left"
         @click="$emit('add-via')"
       >
-        + 加為 Day {{ expandedDayIndex }} 加爬點
+        <AppIcon name="plus" :size="12" class="text-brand-700 flex-shrink-0" />
+        <span>加為 Day {{ expandedDayIndex }} 加爬點</span>
       </button>
     </template>
-    <p v-else class="text-amber-600">請先在右側展開要編輯的一天</p>
+    <p v-else class="text-brand-amber">請先在右側展開要編輯的一天</p>
   </div>
 </template>

@@ -11,6 +11,7 @@ import NodeMarkerLayer from '@/components/map/NodeMarkerLayer.vue';
 import DailyPlanEditor from '@/components/planner/DailyPlanEditor.vue';
 import MapNodePopup from '@/components/planner/MapNodePopup.vue';
 import VerificationBanner from '@/components/common/VerificationBanner.vue';
+import AppIcon from '@/components/common/AppIcon.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -277,99 +278,104 @@ watch(routeId, () => {
 </script>
 
 <template>
-  <div class="planner-root flex flex-col md:flex-row h-[calc(100vh-65px)] overflow-hidden">
+  <div class="planner-root flex flex-col h-[calc(100vh-65px)] md:flex-row md:overflow-hidden">
     <!-- Mobile tab switcher (mobile-only) -->
     <div
-      class="mobile-tab-bar md:hidden flex border-b border-brand-cream bg-brand-white"
+      class="md:hidden flex border-b border-brand-cream bg-brand-white flex-shrink-0"
       role="tablist"
     >
       <button
         type="button"
         role="tab"
         :aria-selected="mobileTab === 'map'"
-        class="flex-1 py-3 text-center font-medium transition-colors"
-        :class="mobileTab === 'map' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray'"
+        class="flex-1 py-3 flex items-center justify-center gap-2 font-medium transition-colors"
+        :class="mobileTab === 'map' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray border-b-2 border-transparent'"
         @click="mobileTab = 'map'"
       >
-        🗺️ 地圖
+        <AppIcon name="map" :size="18" />
+        <span>地圖</span>
       </button>
       <button
         type="button"
         role="tab"
         :aria-selected="mobileTab === 'edit'"
-        class="flex-1 py-3 text-center font-medium transition-colors"
-        :class="mobileTab === 'edit' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray'"
+        class="flex-1 py-3 flex items-center justify-center gap-2 font-medium transition-colors"
+        :class="mobileTab === 'edit' ? 'text-brand-900 border-b-2 border-brand-900' : 'text-brand-gray border-b-2 border-transparent'"
         @click="mobileTab = 'edit'"
       >
-        📋 行程編輯
-        <span v-if="daySummary !== '尚未規劃'" class="text-xs text-brand-gray ml-1">
+        <AppIcon name="clipboard-list" :size="18" />
+        <span>行程編輯</span>
+        <span v-if="daySummary !== '尚未規劃'" class="text-xs text-brand-gray">
           ({{ daySummary }})
         </span>
       </button>
     </div>
 
-    <!-- Map pane (always visible on desktop; tab-controlled on mobile) -->
-    <div
-      class="map-pane relative flex-1"
-      :class="{ 'hidden md:block': mobileTab !== 'map' }"
-    >
-      <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
-        <TileSwitcher />
-        <PlannedRouteLayer
-          :nodes="currentRoute.nodes"
-          :node-ids="highlightedNodeIds"
-          :day-breaks="plannedDayBreaks"
-          :active-day-index="activeDayIndex"
-        />
-        <NodeMarkerLayer
-          :nodes="currentRoute.nodes"
-          :highlighted-node-ids="highlightedNodeIds"
-          @node-click="onNodeClick"
-        />
-      </MapCanvas>
-      <Teleport :to="`#${popupContainerId}`" v-if="popupOpen && popupNode">
-        <MapNodePopup
-          :node="popupNode"
-          :expanded-day-index="editor.expandedDayIndex"
-          @set-target="onPopupSetTarget"
-          @add-via="onPopupAddVia"
-        />
-      </Teleport>
-    </div>
-
-    <!-- Editor pane (always visible on desktop; tab-controlled on mobile) -->
-    <aside
-      class="editor-pane bg-brand-white overflow-y-auto overflow-x-hidden flex-1
-             md:flex-none md:w-[420px] md:border-l md:border-brand-cream"
-      :class="{ 'hidden md:block': mobileTab !== 'edit' }"
-    >
-      <div class="p-4 pb-24 md:pb-4">
-        <NSpace vertical size="medium">
-          <VerificationBanner :route-id="planStore.draft?.routeId" />
-          <NCard size="small" title="行程編輯">
-            <DailyPlanEditor v-if="planStore.draft" />
-          </NCard>
-          <NCard size="small" title="行程設定">
-            <NSpace vertical size="small">
-              <div>
-                <label class="text-xs text-brand-gray block mb-1">出發日期</label>
-                <NDatePicker v-model:value="startDateTs" type="date" style="width: 100%" />
-              </div>
-              <div>
-                <label class="text-xs text-brand-gray block mb-1">出發時間</label>
-                <NTimePicker v-model:value="startTimeTs" format="HH:mm" style="width: 100%" />
-              </div>
-              <div>
-                <label class="text-xs text-brand-gray block mb-1">腳程倍率</label>
-                <PaceSlider v-model="paceMultiplier" />
-              </div>
-            </NSpace>
-          </NCard>
-          <NButton type="primary" block :disabled="!canSave" @click="savePlan">
-            儲存行程
-          </NButton>
-        </NSpace>
+    <!-- Pane container: relative on mobile so children can overlay; display:contents on desktop so panes become flex children of planner-root -->
+    <div class="panes-wrapper relative flex-1 min-h-0 md:contents">
+      <!-- Map pane: always sized correctly; visibility-toggled on mobile -->
+      <div
+        class="map-pane absolute inset-0 md:relative md:inset-auto md:flex-1"
+        :class="{ 'invisible md:visible': mobileTab !== 'map' }"
+      >
+        <MapCanvas v-if="currentRoute" :center="center" :zoom="13">
+          <TileSwitcher />
+          <PlannedRouteLayer
+            :nodes="currentRoute.nodes"
+            :node-ids="highlightedNodeIds"
+            :day-breaks="plannedDayBreaks"
+            :active-day-index="activeDayIndex"
+          />
+          <NodeMarkerLayer
+            :nodes="currentRoute.nodes"
+            :highlighted-node-ids="highlightedNodeIds"
+            @node-click="onNodeClick"
+          />
+        </MapCanvas>
+        <Teleport :to="`#${popupContainerId}`" v-if="popupOpen && popupNode">
+          <MapNodePopup
+            :node="popupNode"
+            :expanded-day-index="editor.expandedDayIndex"
+            @set-target="onPopupSetTarget"
+            @add-via="onPopupAddVia"
+          />
+        </Teleport>
       </div>
-    </aside>
+
+      <!-- Editor pane -->
+      <aside
+        class="editor-pane absolute inset-0 overflow-y-auto overflow-x-hidden bg-brand-white
+               md:relative md:inset-auto md:w-[420px] md:flex-none md:border-l md:border-brand-cream"
+        :class="{ 'invisible md:visible': mobileTab !== 'edit' }"
+      >
+        <div class="p-4 pb-24 md:pb-4">
+          <NSpace vertical size="medium">
+            <VerificationBanner :route-id="planStore.draft?.routeId" />
+            <NCard size="small" title="行程編輯">
+              <DailyPlanEditor v-if="planStore.draft" />
+            </NCard>
+            <NCard size="small" title="行程設定">
+              <NSpace vertical size="small">
+                <div>
+                  <label class="text-xs text-brand-gray block mb-1">出發日期</label>
+                  <NDatePicker v-model:value="startDateTs" type="date" style="width: 100%" />
+                </div>
+                <div>
+                  <label class="text-xs text-brand-gray block mb-1">出發時間</label>
+                  <NTimePicker v-model:value="startTimeTs" format="HH:mm" style="width: 100%" />
+                </div>
+                <div>
+                  <label class="text-xs text-brand-gray block mb-1">腳程倍率</label>
+                  <PaceSlider v-model="paceMultiplier" />
+                </div>
+              </NSpace>
+            </NCard>
+            <NButton type="primary" block :disabled="!canSave" @click="savePlan">
+              儲存行程
+            </NButton>
+          </NSpace>
+        </div>
+      </aside>
+    </div>
   </div>
 </template>

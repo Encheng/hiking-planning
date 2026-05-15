@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import AppIcon from '@/components/common/AppIcon.vue';
 import type { Plan, RouteNode, SegmentTime } from '@/types';
 import { useRoutesStore } from '@/stores/routesStore';
 import { groupByDayBreaks, type DayGroup } from '@/services/ScheduleGrouper';
@@ -134,7 +135,7 @@ const days = computed<ElevationDay[]>(() => {
       >
         DAY {{ day.index }} · {{ day.startTime }} → {{ day.endTime }} · {{ fmt(day.totalMinutes) }}
       </div>
-      <svg :viewBox="`0 0 ${SVG_W} ${SVG_H}`" class="w-full h-20">
+      <svg :viewBox="`0 0 ${SVG_W} ${SVG_H}`" class="w-full h-20" data-testid="elevation-chart">
         <line :x1="X_LEFT" :y1="Y_BOTTOM" :x2="X_RIGHT" :y2="Y_BOTTOM" stroke="#ddd" />
         <path :d="day.fillPath" :fill="dayColor(day.index)" fill-opacity="0.18" />
         <polyline
@@ -159,7 +160,10 @@ const days = computed<ElevationDay[]>(() => {
       </svg>
       <div class="flex justify-between text-xs text-gray-600 -mt-1">
         <span>{{ day.startNode.name }}</span>
-        <span v-if="day.peakNode" class="font-medium">⛰ {{ day.peakNode.name }} {{ day.peakNode.elevation }}m</span>
+        <span v-if="day.peakNode" class="font-medium inline-flex items-center gap-1">
+          <AppIcon name="mountain" :size="12" />
+          {{ day.peakNode.name }} {{ day.peakNode.elevation }}m
+        </span>
         <span>{{ day.endNode.name }}</span>
       </div>
     </section>

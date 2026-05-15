@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { NCard, NButton, NSpace, NSpin, NTabs, NTabPane, NDropdown, NIcon } from 'naive-ui';
+import { NCard, NButton, NSpace, NSpin, NTabs, NTabPane, NDropdown } from 'naive-ui';
+import AppIcon from '@/components/common/AppIcon.vue';
 import TableView from '@/components/schedule/TableView.vue';
 import GanttView from '@/components/schedule/GanttView.vue';
 import ElevationView from '@/components/schedule/ElevationView.vue';
@@ -72,7 +73,7 @@ async function onTripTypeReset() {
   planStore.currentPlan = updated;
   planStore.refreshTripType('current');
   // Save again with auto-classified type
-  await planStore.savePlan(planStore.currentPlan);
+  if (planStore.currentPlan) await planStore.savePlan(planStore.currentPlan);
 }
 
 // "More" menu (3-dot) — keeps non-primary actions out of the way on mobile
@@ -120,7 +121,11 @@ function onMoreMenuSelect(key: string) {
                 :options="moreMenuOptions"
                 @select="onMoreMenuSelect"
               >
-                <NButton aria-label="更多動作">⋮</NButton>
+                <NButton aria-label="更多動作">
+                  <template #icon>
+                    <AppIcon name="more-vertical" :size="18" />
+                  </template>
+                </NButton>
               </NDropdown>
             </div>
           </header>

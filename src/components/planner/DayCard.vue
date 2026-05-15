@@ -3,6 +3,7 @@ import { computed, ref } from 'vue';
 import { NTag, NButton, NPopconfirm } from 'naive-ui';
 import draggable from 'vuedraggable';
 import NodePicker from './NodePicker.vue';
+import AppIcon from '@/components/common/AppIcon.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import { dayColor } from '@/services/DayColors';
@@ -74,12 +75,20 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
       class="w-full flex justify-between items-center gap-2 p-2 text-left"
       @click="emit('toggle-expand')"
     >
-      <span class="text-xs flex-1 min-w-0 truncate">
-        <strong :style="{ color: dayColor(index - 1) }">
-          {{ expanded ? '▾' : '▸' }} DAY {{ index }}
-        </strong>
-        <span class="ml-1">· {{ startNodeName }} → {{ endNodeName }}</span>
-        <span v-if="warnings.length > 0" class="ml-1 text-red-600">⚠</span>
+      <span class="text-xs flex-1 min-w-0 truncate flex items-center gap-1">
+        <AppIcon
+          :name="expanded ? 'chevron-down' : 'chevron-right'"
+          :size="14"
+          :style="{ color: dayColor(index - 1) }"
+        />
+        <strong :style="{ color: dayColor(index - 1) }">DAY {{ index }}</strong>
+        <span class="ml-1 truncate">· {{ startNodeName }} → {{ endNodeName }}</span>
+        <AppIcon
+          v-if="warnings.length > 0"
+          name="alert-triangle"
+          :size="14"
+          class="text-brand-danger flex-shrink-0"
+        />
       </span>
       <span class="text-xs text-gray-600 shrink-0">{{ fmt(totalMinutes) }}</span>
     </button>
@@ -122,13 +131,18 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
           <NodePicker :key="viaPickerKey" :value="undefined" placeholder="搜尋加入中途點…" @select="onAddVia" />
         </div>
         <p v-if="dailyPlan.viaNodeIds.length === 0" class="text-xs text-gray-400 mt-1">
-          從下拉選單搜尋加入，或直接點地圖節點 → 選「加為加爬點」
+          從下拉選單搜尋加入，或直接點地圖節點，選「加為加爬點」
         </p>
       </div>
 
       <NPopconfirm v-if="!isOnly" @positive-click="emit('remove-day')">
         <template #trigger>
-          <NButton size="small" type="error" ghost>✕ 移除這天</NButton>
+          <NButton size="small" type="error" ghost>
+            <template #icon>
+              <AppIcon name="trash" :size="14" />
+            </template>
+            移除這天
+          </NButton>
         </template>
         確定移除這天？
       </NPopconfirm>

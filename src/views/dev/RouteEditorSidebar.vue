@@ -4,6 +4,7 @@ import {
   NCollapse, NCollapseItem, NButton, NInput, NInputNumber,
   NSelect, NCheckbox, NTag, useMessage,
 } from 'naive-ui';
+import AppIcon from '@/components/common/AppIcon.vue';
 import type { Route, RouteNode, RouteEdge, OsmPoi, NodeCategory } from '@/types';
 import RouteEditorMatcher from './RouteEditorMatcher.vue';
 
@@ -17,12 +18,12 @@ const emit = defineEmits<{ save: [] }>();
 const message = useMessage();
 
 const categoryOptions: Array<{ label: string; value: NodeCategory }> = [
-  { label: '⛰ 山頭', value: 'peak' },
-  { label: '🏠 山屋', value: 'hut' },
-  { label: '🚪 登山口', value: 'trailhead' },
-  { label: '🔀 岔路', value: 'junction' },
-  { label: '💧 水源', value: 'water' },
-  { label: '⛳ 其他', value: 'waypoint' },
+  { label: '山頭', value: 'peak' },
+  { label: '山屋', value: 'hut' },
+  { label: '登山口', value: 'trailhead' },
+  { label: '岔路', value: 'junction' },
+  { label: '水源', value: 'water' },
+  { label: '其他', value: 'waypoint' },
 ];
 
 const editingNodeId = ref<string | null>(null);
@@ -120,7 +121,11 @@ function nodeOptions() {
               <NButton size="tiny" @click="editingNodeId = editingNodeId === n.id ? null : n.id">
                 {{ editingNodeId === n.id ? '收起' : '編輯' }}
               </NButton>
-              <NButton size="tiny" type="error" ghost @click="removeNode(n.id)">✕</NButton>
+              <NButton size="tiny" type="error" ghost @click="removeNode(n.id)">
+                <template #icon>
+                  <AppIcon name="x" :size="12" />
+                </template>
+              </NButton>
             </div>
           </div>
           <div class="text-xs text-gray-500">
@@ -147,7 +152,12 @@ function nodeOptions() {
             />
           </div>
         </div>
-        <NButton size="small" block dashed @click="addNode">+ 新增節點</NButton>
+        <NButton size="small" block dashed @click="addNode">
+          <template #icon>
+            <AppIcon name="plus" :size="14" />
+          </template>
+          新增節點
+        </NButton>
       </NCollapseItem>
 
       <NCollapseItem :title="`邊 (${route.edges.length})`" name="edges">
@@ -158,14 +168,27 @@ function nodeOptions() {
               <NButton size="tiny" @click="editingEdgeIndex = editingEdgeIndex === i ? null : i">
                 {{ editingEdgeIndex === i ? '收起' : '編輯' }}
               </NButton>
-              <NButton size="tiny" type="error" ghost @click="removeEdge(i)">✕</NButton>
+              <NButton size="tiny" type="error" ghost @click="removeEdge(i)">
+                <template #icon>
+                  <AppIcon name="x" :size="12" />
+                </template>
+              </NButton>
             </div>
           </div>
           <div class="text-xs flex gap-2 items-center">
             <span>去 {{ e.minutes_forward }}m / 返 {{ e.minutes_backward }}m</span>
-            <NTag v-if="e.confirmed" type="success" size="small">✓</NTag>
+            <NTag v-if="e.confirmed" type="success" size="small">
+              <template #icon>
+                <AppIcon name="check" :size="10" />
+              </template>
+            </NTag>
             <NTag v-else type="warning" size="small">待確認</NTag>
-            <NTag v-if="isEdgeInconsistent(e)" type="error" size="small">⚠ 來源不一致</NTag>
+            <NTag v-if="isEdgeInconsistent(e)" type="error" size="small">
+              <template #icon>
+                <AppIcon name="alert-triangle" :size="10" />
+              </template>
+              來源不一致
+            </NTag>
           </div>
           <div v-if="editingEdgeIndex === i" class="mt-2 space-y-2">
             <div class="flex gap-1 min-w-0">
@@ -182,19 +205,38 @@ function nodeOptions() {
                 <NInput v-model:value="s.file" placeholder="檔名" size="small" />
                 <NInputNumber v-model:value="s.minutes_forward" placeholder="去" size="small" style="width: 60px" />
                 <NInputNumber v-model:value="s.minutes_backward" placeholder="返" size="small" style="width: 60px" />
-                <NButton size="tiny" type="error" ghost @click="removeEdgeSource(e, si)">✕</NButton>
+                <NButton size="tiny" type="error" ghost @click="removeEdgeSource(e, si)">
+                  <template #icon>
+                    <AppIcon name="x" :size="12" />
+                  </template>
+                </NButton>
               </div>
-              <NButton size="tiny" @click="addEdgeSource(e)">+ 來源</NButton>
+              <NButton size="tiny" @click="addEdgeSource(e)">
+                <template #icon>
+                  <AppIcon name="plus" :size="12" />
+                </template>
+                來源
+              </NButton>
             </div>
             <NCheckbox v-model:checked="e.confirmed" :disabled="isEdgeInconsistent(e)">
-              ✓ 已確認時間正確
+              已確認時間正確
             </NCheckbox>
           </div>
         </div>
-        <NButton size="small" block dashed @click="addEdge">+ 新增邊</NButton>
+        <NButton size="small" block dashed @click="addEdge">
+          <template #icon>
+            <AppIcon name="plus" :size="14" />
+          </template>
+          新增邊
+        </NButton>
       </NCollapseItem>
     </NCollapse>
 
-    <NButton type="primary" block size="small" @click="emit('save')">💾 下載 JSON</NButton>
+    <NButton type="primary" block size="small" @click="emit('save')">
+      <template #icon>
+        <AppIcon name="save" :size="14" />
+      </template>
+      下載 JSON
+    </NButton>
   </div>
 </template>

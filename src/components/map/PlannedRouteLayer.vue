@@ -49,13 +49,26 @@ function arrowIcon(color: string, angle: number): L.DivIcon {
   });
 }
 
+// Lucide-style inline SVG paths for overnight markers (kept inline so Leaflet
+// divIcon can render without mounting a Vue tree per marker).
+const TENT_SVG_PATH =
+  '<path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/>';
+const HOME_SVG_PATH =
+  '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>';
+
 function overnightIcon(type: DayBreak['type']): L.DivIcon {
-  const emoji = type === 'camp' ? '⛺' : '🏠';
+  const isCamp = type === 'camp';
+  const bg = isCamp ? '#BE603D' : '#1F4F5B';
+  const inner = isCamp ? TENT_SVG_PATH : HOME_SVG_PATH;
+  const html = `
+    <div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:${bg};box-shadow:0 1px 3px rgba(0,0,0,0.4);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFAFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>
+    </div>`;
   return L.divIcon({
-    html: `<div style="font-size:18px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))">${emoji}</div>`,
+    html,
     className: '',
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
   });
 }
 

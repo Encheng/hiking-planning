@@ -3,6 +3,7 @@ import { computed } from 'vue';
 import { NCheckbox, NButton } from 'naive-ui';
 import DayCard from './DayCard.vue';
 import NodePicker from './NodePicker.vue';
+import AppIcon from '@/components/common/AppIcon.vue';
 import { usePlanStore } from '@/stores/planStore';
 import { useRoutesStore } from '@/stores/routesStore';
 import { useDailyEditorStore } from '@/stores/dailyEditorStore';
@@ -173,11 +174,18 @@ function reorderVia(idx: number, from: number, to: number) {
       block
       @click="addDay"
     >
-      ＋ 加一天
+      <template #icon>
+        <AppIcon name="plus" :size="14" />
+      </template>
+      加一天
     </NButton>
 
-    <div v-if="resolution?.warnings.length" class="text-xs text-brand-danger mt-2">
-      ⚠ {{ resolution.warnings.join(', ') }}
+    <div
+      v-if="resolution?.warnings.length"
+      class="text-xs text-brand-danger mt-2 flex items-center gap-1"
+    >
+      <AppIcon name="alert-triangle" :size="14" />
+      <span>{{ resolution.warnings.join(', ') }}</span>
     </div>
   </div>
 </template>

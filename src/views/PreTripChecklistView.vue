@@ -5,6 +5,7 @@ import {
   NSpin, NSpace, NCard, NButton, NCheckbox, NInput, NSelect,
   NProgress, NTag, NAlert, NDatePicker, useMessage,
 } from 'naive-ui';
+import AppIcon from '@/components/common/AppIcon.vue';
 import { usePlanStore } from '@/stores/planStore';
 import { useRoutesStore } from '@/stores/routesStore';
 import {
@@ -250,7 +251,10 @@ function openExternalLink(url: string) {
                     :aria-label="`開啟 ${item.title} 的申請網址`"
                     @click="openExternalLink(item.externalLink)"
                   >
-                    開啟申請網址 →
+                    <template #icon>
+                      <AppIcon name="external-link" :size="14" />
+                    </template>
+                    開啟申請網址
                   </NButton>
                 </div>
               </div>
@@ -312,7 +316,10 @@ function openExternalLink(url: string) {
             <div class="flex justify-between items-center mb-2">
               <h3 class="text-sm font-medium text-brand-900">緊急聯絡人（至少 2 位）</h3>
               <NButton size="small" @click="addEmergencyContact">
-                ＋ 新增聯絡人
+                <template #icon>
+                  <AppIcon name="plus" :size="14" />
+                </template>
+                新增聯絡人
               </NButton>
             </div>
             <p
@@ -389,7 +396,12 @@ function openExternalLink(url: string) {
         <!-- 裝備 -->
         <NCard :title="categoryMeta.gear.title" class="mb-4">
           <template #header-extra>
-            <NButton size="small" @click="goToGearChecklist">前往裝備清單 →</NButton>
+            <NButton size="small" @click="goToGearChecklist">
+              前往裝備清單
+              <template #icon>
+                <AppIcon name="arrow-right" :size="14" />
+              </template>
+            </NButton>
           </template>
           <ul class="space-y-2">
             <li
@@ -421,7 +433,10 @@ function openExternalLink(url: string) {
                     class="mt-2"
                     @click="router.push(item.internalRoute)"
                   >
-                    前往 →
+                    前往
+                    <template #icon>
+                      <AppIcon name="arrow-right" :size="14" />
+                    </template>
                   </NButton>
                 </div>
               </div>
@@ -465,7 +480,10 @@ function openExternalLink(url: string) {
                     :aria-label="`開啟 ${item.title} 的連結`"
                     @click="openExternalLink(item.externalLink)"
                   >
-                    開啟連結 →
+                    <template #icon>
+                      <AppIcon name="external-link" :size="14" />
+                    </template>
+                    開啟連結
                   </NButton>
                 </div>
               </div>
@@ -524,7 +542,12 @@ function openExternalLink(url: string) {
               style="width: 110px"
             />
             <NCheckbox v-model:checked="newItemRequired">必要</NCheckbox>
-            <NButton type="primary" @click="addCustomItem">＋ 加入</NButton>
+            <NButton type="primary" @click="addCustomItem">
+              <template #icon>
+                <AppIcon name="plus" :size="14" />
+              </template>
+              加入
+            </NButton>
           </div>
         </NCard>
 

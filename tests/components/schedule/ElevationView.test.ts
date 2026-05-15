@@ -39,12 +39,12 @@ const segments = calculateTimes({
 describe('ElevationView', () => {
   it('renders one SVG per day', () => {
     const wrapper = mount(ElevationView, { props: { plan, segments } });
-    expect(wrapper.findAll('svg').length).toBe(2);
+    expect(wrapper.findAll('[data-testid="elevation-chart"]').length).toBe(2);
   });
 
   it('polyline points count = daySegments.length + 1 (start + each toNode)', () => {
     const wrapper = mount(ElevationView, { props: { plan, segments } });
-    const firstSvg = wrapper.findAll('svg').at(0)!;
+    const firstSvg = wrapper.findAll('[data-testid="elevation-chart"]').at(0)!;
     const polyline = firstSvg.find('polyline');
     const points = polyline.attributes('points')!.trim().split(/\s+/);
     expect(points.length).toBe(7);
@@ -52,7 +52,7 @@ describe('ElevationView', () => {
 
   it('renders peak/hut/trailhead markers as <circle> elements', () => {
     const wrapper = mount(ElevationView, { props: { plan, segments } });
-    const firstSvg = wrapper.findAll('svg').at(0)!;
+    const firstSvg = wrapper.findAll('[data-testid="elevation-chart"]').at(0)!;
     expect(firstSvg.findAll('circle').length).toBeGreaterThan(0);
   });
 

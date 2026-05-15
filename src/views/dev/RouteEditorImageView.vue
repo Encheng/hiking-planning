@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { NTabs, NTabPane, NSlider, NButton } from 'naive-ui';
+import AppIcon from '@/components/common/AppIcon.vue';
 
 const props = defineProps<{
   sunriverImage: string;
@@ -49,7 +50,12 @@ function activeImageUrl(): string {
       <span class="text-gray-500">縮放</span>
       <NSlider v-model:value="zoom" :min="0.3" :max="3" :step="0.1" style="width: 100px" />
       <span class="w-8 text-gray-600">{{ zoom.toFixed(1) }}x</span>
-      <NButton size="tiny" @click="popout(activeImageUrl())">🔗 popout</NButton>
+      <NButton size="tiny" @click="popout(activeImageUrl())">
+        <template #icon>
+          <AppIcon name="external-link" :size="12" />
+        </template>
+        popout
+      </NButton>
     </div>
 
     <!-- Scrollable image area -->

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { createPinia, setActivePinia } from 'pinia';
 import DayCard from '@/components/planner/DayCard.vue';
+import AppIcon from '@/components/common/AppIcon.vue';
 import { useRoutesStore } from '@/stores/routesStore';
 import { usePlanStore } from '@/stores/planStore';
 import g02 from '../../fixtures/G02-test.json';
@@ -65,6 +66,9 @@ describe('DayCard', () => {
 
   it('shows warning indicator when warnings is non-empty', () => {
     const wrapper = mount(DayCard, { props: { ...baseProps, warnings: ['no_path'] } });
-    expect(wrapper.text()).toContain('⚠');
+    const hasWarningIcon = wrapper
+      .findAllComponents(AppIcon)
+      .some((i) => i.props('name') === 'alert-triangle');
+    expect(hasWarningIcon).toBe(true);
   });
 });

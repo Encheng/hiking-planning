@@ -18,7 +18,7 @@ const config = computed(() => {
     default:
       return {
         type: 'warning',
-        title: '⚠ 時間為 AI 估算，未對照上河圖',
+        title: '時間為 AI 估算，未對照上河圖',
         body: '本路線節點與時間尚未經上河圖驗證，誤差可能很大。實際入山請務必交叉比對紙本上河圖、林務局申請資料、或健行筆記實測軌跡，並預留充足的時間與物資。錯誤的步程預估可能導致摸黑、體力透支等山難風險。',
       } as const;
   }
@@ -30,6 +30,7 @@ const config = computed(() => {
     v-if="level !== 'n/a'"
     :type="config.type"
     :title="config.title"
+    :show-icon="true"
     class="mb-3"
   >
     {{ config.body }}
