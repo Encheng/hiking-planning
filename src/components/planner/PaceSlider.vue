@@ -13,6 +13,16 @@ const marks = {
   1.0: '上河',
   1.5: '1.5x',
 };
+
+/* Enlarge handle/rail so the touch target meets WCAG/Apple minimum.
+   Theme tokens are the only knobs that flow into Naive's positioning math
+   (padding around the rail is computed from handleSize). */
+const sliderThemeOverrides = {
+  handleSize: '24px',
+  railHeight: '6px',
+  dotHeight: '10px',
+  dotWidth: '10px',
+};
 </script>
 
 <template>
@@ -22,6 +32,7 @@ const marks = {
       :value="props.modelValue"
       :min="0.8" :max="1.5" :step="0.05"
       :marks="marks"
+      :theme-overrides="sliderThemeOverrides"
       @update:value="update"
     />
   </div>
@@ -30,28 +41,12 @@ const marks = {
 <style scoped>
 .pace-slider {
   padding-bottom: 1.5rem;
-  /* Larger touch target — Naive's default handle is 18px which is below the
-     44px WCAG/Apple minimum. Enlarge the handle and the hit area. */
-  --handle-size: 28px;
 }
-.pace-slider :deep(.n-slider-handle) {
-  width: var(--handle-size);
-  height: var(--handle-size);
-  /* Center the larger handle on the rail */
-  transform: translate(-50%, -50%);
-  top: 50%;
-}
-.pace-slider :deep(.n-slider-handle::after) {
-  /* Invisible expanded hit-box so finger taps register reliably */
+/* Extra invisible hit-area so finger taps register reliably without
+   inflating the visible handle further. */
+.pace-slider :deep(.n-slider-handle-wrapper)::after {
   content: '';
   position: absolute;
   inset: -10px;
-}
-.pace-slider :deep(.n-slider-rail) {
-  height: 6px;
-}
-.pace-slider :deep(.n-slider-dots .n-slider-dot) {
-  width: 10px;
-  height: 10px;
 }
 </style>

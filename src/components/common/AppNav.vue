@@ -52,7 +52,7 @@ const desktopOptions = items.map((it) => ({
       @click="drawerOpen = true"
     >
       <template #icon>
-        <AppIcon name="more-horizontal" :size="22" />
+        <AppIcon name="menu" :size="24" />
       </template>
     </NButton>
 
