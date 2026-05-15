@@ -6,6 +6,22 @@
 
 html, body, #app { height: 100%; margin: 0; }
 
+/* iOS notch / home indicator safe area support */
+:root {
+  --safe-bottom: env(safe-area-inset-bottom, 0);
+  --safe-top: env(safe-area-inset-top, 0);
+}
+
+/* Utility for any sticky/fixed bottom bar */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0); }
+.pt-safe { padding-top: env(safe-area-inset-top, 0); }
+
+/* Prevent double-tap zoom delay on interactive elements */
+button, a, [role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ============================================ */
 /*  Print stylesheet (Phase 2)                  */
 /* ============================================ */

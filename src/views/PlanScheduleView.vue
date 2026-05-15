@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { NCard, NButton, NSpace, NSpin, NTabs, NTabPane } from 'naive-ui';
+import { NCard, NButton, NSpace, NSpin, NTabs, NTabPane, NDropdown, NIcon } from 'naive-ui';
 import TableView from '@/components/schedule/TableView.vue';
 import GanttView from '@/components/schedule/GanttView.vue';
 import ElevationView from '@/components/schedule/ElevationView.vue';
@@ -74,6 +74,17 @@ async function onTripTypeReset() {
   // Save again with auto-classified type
   await planStore.savePlan(planStore.currentPlan);
 }
+
+// "More" menu (3-dot) — keeps non-primary actions out of the way on mobile
+const moreMenuOptions = computed(() => [
+  { key: 'gear', label: '裝備清單' },
+  { key: 'print', label: '列印', disabled: !printReady.value },
+]);
+function onMoreMenuSelect(key: string) {
+  if (!plan.value) return;
+  if (key === 'gear') router.push({ name: 'gear', params: { planId: plan.value.id } });
+  if (key === 'print') printPage();
+}
 </script>
 
 <template>
@@ -81,10 +92,10 @@ async function onTripTypeReset() {
     <NSpin :show="!plan">
       <template v-if="plan && route">
         <div class="screen-only">
-          <header class="mb-4 flex justify-between items-start">
-            <div>
-              <h1 class="text-2xl font-bold">{{ plan.name }}</h1>
-              <NSpace size="small" class="mt-2">
+          <header class="mb-4 flex justify-between items-start gap-3 flex-wrap">
+            <div class="min-w-0 flex-1">
+              <h1 class="text-xl sm:text-2xl font-bold text-brand-900 break-words">{{ plan.name }}</h1>
+              <NSpace size="small" class="mt-2" :wrap="true">
                 <TripTypeBadge
                   :trip-type="plan.tripType"
                   :custom-label="plan.customTripTypeLabel"
@@ -92,19 +103,26 @@ async function onTripTypeReset() {
                   @update="onTripTypeUpdate"
                   @reset="onTripTypeReset"
                 />
-                <span class="text-sm text-gray-500">
+                <span class="text-sm text-brand-gray">
                   {{ plan.startDate }} {{ plan.startTime }} 出發 · 倍率 {{ plan.paceMultiplier }}x
                 </span>
               </NSpace>
             </div>
-            <NSpace>
+            <!-- Primary actions (always visible) + overflow menu -->
+            <div class="flex gap-2 flex-shrink-0">
               <NButton @click="editPlan">編輯行程</NButton>
               <NButton type="primary" @click="router.push({ name: 'checklist', params: { planId: plan.id } })">
                 行前準備
               </NButton>
-              <NButton @click="router.push({ name: 'gear', params: { planId: plan.id } })">裝備清單</NButton>
-              <NButton :disabled="!printReady" @click="printPage">列印</NButton>
-            </NSpace>
+              <NDropdown
+                trigger="click"
+                placement="bottom-end"
+                :options="moreMenuOptions"
+                @select="onMoreMenuSelect"
+              >
+                <NButton aria-label="更多動作">⋮</NButton>
+              </NDropdown>
+            </div>
           </header>
 
           <NSpace vertical size="large">

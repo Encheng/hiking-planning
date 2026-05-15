@@ -544,9 +544,9 @@ function openExternalLink(url: string) {
     <!-- Sticky bottom action bar -->
     <div
       v-if="plan && route"
-      class="fixed bottom-0 inset-x-0 bg-brand-white border-t border-brand-cream shadow-lg z-10"
+      class="fixed bottom-0 inset-x-0 bg-brand-white border-t border-brand-cream shadow-lg z-10 pb-safe"
     >
-      <div class="max-w-5xl mx-auto px-6 py-3 flex justify-end gap-2">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex justify-end gap-2">
         <NButton @click="backToSchedule">返回行程</NButton>
         <NButton type="primary" @click="save">儲存行前準備</NButton>
       </div>

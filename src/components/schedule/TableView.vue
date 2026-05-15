@@ -70,15 +70,37 @@ const rows = computed<Row[]>(() => {
 });
 
 const columns = [
-  { title: 'Day', key: 'day', width: 60 },
-  { title: '時刻', key: 'time' },
-  { title: '節點', key: 'nodeName' },
-  { title: '段落', key: 'segmentDuration', width: 80 },
-  { title: '海拔', key: 'elevation', width: 80, render: (r: Row) => `${r.elevation}m` },
-  { title: '累計', key: 'cumulative', width: 80 },
+  { title: 'Day', key: 'day', width: 56, fixed: 'left' as const, className: 'tabular-nums' },
+  { title: '節點', key: 'nodeName', width: 140, fixed: 'left' as const, ellipsis: { tooltip: true } },
+  { title: '時刻', key: 'time', width: 160, className: 'tabular-nums' },
+  { title: '段落', key: 'segmentDuration', width: 84, className: 'tabular-nums' },
+  { title: '海拔', key: 'elevation', width: 84, render: (r: Row) => `${r.elevation}m`, className: 'tabular-nums' },
+  { title: '累計', key: 'cumulative', width: 84, className: 'tabular-nums' },
 ];
 </script>
 
 <template>
-  <NDataTable :columns="columns" :data="rows" :row-class-name="(r: Row) => r.isBreak ? 'bg-yellow-50' : ''" />
+  <div class="table-view-wrapper relative">
+    <NDataTable
+      :columns="columns"
+      :data="rows"
+      :scroll-x="608"
+      :row-class-name="(r: Row) => r.isBreak ? 'is-day-break' : ''"
+    />
+    <!-- Scroll affordance hint (visible on narrow screens) -->
+    <div
+      class="scroll-hint md:hidden pointer-events-none absolute top-0 bottom-0 right-0 w-6
+             bg-gradient-to-l from-brand-white to-transparent"
+      aria-hidden="true"
+    ></div>
+  </div>
 </template>
+
+<style scoped>
+:deep(.is-day-break) {
+  background-color: var(--brand-tint-warning-bg, #FBF1CE);
+}
+:deep(.tabular-nums) {
+  font-variant-numeric: tabular-nums;
+}
+</style>
