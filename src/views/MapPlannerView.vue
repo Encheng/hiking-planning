@@ -200,6 +200,11 @@ function onPopupAddVia() {
   mobileTab.value = 'edit';
 }
 
+function onPopupGoToEdit() {
+  closePopup();
+  mobileTab.value = 'edit';
+}
+
 function closePopup() {
   if (activeLeafletPopup) {
     // Detach the remove handler first so it doesn't fire during .remove()
@@ -278,7 +283,7 @@ watch(routeId, () => {
 </script>
 
 <template>
-  <div class="planner-root flex flex-col h-[calc(100vh-65px)] md:flex-row md:overflow-hidden">
+  <div class="planner-root flex flex-col h-full md:flex-row md:overflow-hidden">
     <!-- Mobile tab switcher (mobile-only) -->
     <div
       class="md:hidden flex border-b border-brand-cream bg-brand-white flex-shrink-0"
@@ -338,6 +343,7 @@ watch(routeId, () => {
             :expanded-day-index="editor.expandedDayIndex"
             @set-target="onPopupSetTarget"
             @add-via="onPopupAddVia"
+            @go-to-edit="onPopupGoToEdit"
           />
         </Teleport>
       </div>

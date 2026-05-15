@@ -134,13 +134,32 @@ function onMoreMenuSelect(key: string) {
             <VerificationBanner :route-id="plan.routeId" />
             <NCard title="行程時刻表">
               <NTabs default-value="v2" type="line">
-                <NTabPane name="v1" tab="V1 Gantt">
+                <NTabPane name="v1">
+                  <template #tab>
+                    <span class="inline-flex items-center gap-1.5">
+                      <AppIcon name="clipboard-list" :size="14" />
+                      <span class="hidden sm:inline">甘特圖</span>
+                      <span class="sm:hidden">甘特</span>
+                    </span>
+                  </template>
                   <GanttView :plan="plan" :segments="planStore.computedTimes" />
                 </NTabPane>
-                <NTabPane name="v2" tab="V2 表格">
+                <NTabPane name="v2">
+                  <template #tab>
+                    <span class="inline-flex items-center gap-1.5">
+                      <AppIcon name="route" :size="14" />
+                      <span>表格</span>
+                    </span>
+                  </template>
                   <TableView :plan="plan" :segments="planStore.computedTimes" />
                 </NTabPane>
-                <NTabPane name="v3" tab="V3 海拔">
+                <NTabPane name="v3">
+                  <template #tab>
+                    <span class="inline-flex items-center gap-1.5">
+                      <AppIcon name="mountain" :size="14" />
+                      <span>海拔</span>
+                    </span>
+                  </template>
                   <ElevationView :plan="plan" :segments="planStore.computedTimes" />
                 </NTabPane>
               </NTabs>

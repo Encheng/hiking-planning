@@ -72,7 +72,7 @@ function onDragEnd(e: { oldIndex: number; newIndex: number }) {
   <div class="border rounded mb-1" :class="expanded ? 'bg-white' : 'bg-gray-50'">
     <button
       type="button"
-      class="w-full flex justify-between items-center gap-2 p-2 text-left"
+      class="w-full flex justify-between items-center gap-2 px-2 py-3 text-left min-h-[44px]"
       @click="emit('toggle-expand')"
     >
       <span class="text-xs flex-1 min-w-0 truncate flex items-center gap-1">

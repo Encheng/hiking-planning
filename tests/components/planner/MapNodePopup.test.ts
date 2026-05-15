@@ -27,7 +27,7 @@ describe('MapNodePopup', () => {
 
   it('expandedDayIndex null: shows hint message', () => {
     const wrapper = mount(MapNodePopup, { props: { node, expandedDayIndex: null } });
-    expect(wrapper.text()).toContain('請先在右側展開');
+    expect(wrapper.text()).toContain('請先展開');
   });
 
   it('emits set-target on target button click', async () => {

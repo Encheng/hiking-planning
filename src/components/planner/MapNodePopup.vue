@@ -10,6 +10,7 @@ defineProps<{
 defineEmits<{
   'set-target': [];
   'add-via': [];
+  'go-to-edit': [];
 }>();
 </script>
 
@@ -35,6 +36,16 @@ defineEmits<{
         <span>加為 Day {{ expandedDayIndex }} 加爬點</span>
       </button>
     </template>
-    <p v-else class="text-brand-amber">請先在右側展開要編輯的一天</p>
+    <template v-else>
+      <p class="text-brand-amber mb-1">請先展開要編輯的一天</p>
+      <button
+        type="button"
+        class="md:hidden flex items-center justify-center w-full gap-1 px-2 py-1 rounded bg-brand-tint-info text-brand-900 text-left"
+        @click="$emit('go-to-edit')"
+      >
+        <AppIcon name="clipboard-list" :size="12" />
+        <span>前往行程編輯</span>
+      </button>
+    </template>
   </div>
 </template>

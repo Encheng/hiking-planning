@@ -89,26 +89,30 @@ function applyPreset(routeId: string, presetId: string) {
 </script>
 
 <template>
-  <div class="p-6 max-w-5xl mx-auto">
-    <h1 class="text-2xl font-bold mb-4">百岳路線</h1>
+  <div class="p-4 sm:p-6 max-w-5xl mx-auto">
+    <h1 class="text-xl sm:text-2xl font-bold mb-4 text-brand-900">百岳路線</h1>
     <NSpace vertical size="large">
       <NCard v-for="route in routes" :key="route.id" :title="route.name">
         <template #header-extra>
           <NTag type="success">{{ route.id }}</NTag>
         </template>
-        <p class="text-sm text-gray-500 mb-3">{{ route.source }}</p>
+        <p class="text-sm text-brand-gray mb-3">{{ route.source }}</p>
         <VerificationBanner :route-id="route.id" />
-        <NSpace>
-          <NButton type="primary" @click="openInPlanner(route.id)">在地圖上規劃</NButton>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+          <NButton type="primary" block class="sm:!w-auto" @click="openInPlanner(route.id)">
+            在地圖上規劃
+          </NButton>
           <NButton
             v-for="preset in route.presets"
             :key="preset.id"
             secondary
+            block
+            class="sm:!w-auto"
             @click="applyPreset(route.id, preset.id)"
           >
             預設 · {{ preset.name }}
           </NButton>
-        </NSpace>
+        </div>
       </NCard>
     </NSpace>
   </div>

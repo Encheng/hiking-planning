@@ -273,24 +273,22 @@ function openExternalLink(url: string) {
             <h3 class="text-sm font-medium text-brand-900 mb-2">
               留守人（出發前及回程後須通知）
             </h3>
-            <div class="flex gap-2 flex-wrap">
+            <div class="grid grid-cols-1 sm:grid-cols-[1fr_1.2fr_0.8fr] gap-2">
               <NInput
                 v-model:value="ensureCustodian().name"
                 placeholder="姓名"
                 aria-label="留守人姓名"
-                style="width: 140px"
               />
               <NInput
                 v-model:value="ensureCustodian().phone"
                 placeholder="電話"
                 aria-label="留守人電話"
-                style="width: 160px"
+                :input-props="{ inputmode: 'tel', autocomplete: 'tel' }"
               />
               <NInput
                 v-model:value="ensureCustodian().relation"
                 placeholder="關係"
                 aria-label="與留守人關係"
-                style="width: 100px"
               />
             </div>
           </section>
@@ -303,7 +301,7 @@ function openExternalLink(url: string) {
               type="datetime"
               format="yyyy-MM-dd HH:mm"
               placeholder="選擇預計安全下山並回報的時間"
-              style="width: 280px"
+              class="w-full sm:max-w-[280px]"
               aria-label="預計回報時間"
             />
             <p class="text-xs text-brand-gray mt-2">
@@ -328,36 +326,38 @@ function openExternalLink(url: string) {
             >
               尚未新增
             </p>
-            <ul class="space-y-2">
+            <ul class="space-y-3">
               <li
                 v-for="(c, idx) in checklist.emergencyContacts"
                 :key="idx"
-                class="flex gap-2 flex-wrap items-center"
+                class="grid grid-cols-1 sm:grid-cols-[1fr_1.2fr_0.8fr_auto] gap-2 items-start sm:items-center pb-3 border-b border-brand-cream/60 last:border-b-0 last:pb-0"
               >
                 <NInput
                   v-model:value="c.name"
                   placeholder="姓名"
                   :aria-label="`緊急聯絡人 ${idx + 1} 姓名`"
-                  style="width: 140px"
                 />
                 <NInput
                   v-model:value="c.phone"
                   placeholder="電話"
                   :aria-label="`緊急聯絡人 ${idx + 1} 電話`"
-                  style="width: 160px"
+                  :input-props="{ inputmode: 'tel', autocomplete: 'tel' }"
                 />
                 <NInput
                   v-model:value="c.relation"
                   placeholder="關係"
                   :aria-label="`與聯絡人 ${idx + 1} 關係`"
-                  style="width: 100px"
                 />
                 <NButton
                   size="small"
                   quaternary
                   :aria-label="`移除聯絡人 ${c.name || idx + 1}`"
+                  class="justify-self-end sm:justify-self-auto"
                   @click="removeEmergencyContact(idx)"
                 >
+                  <template #icon>
+                    <AppIcon name="x" :size="14" />
+                  </template>
                   移除
                 </NButton>
               </li>
@@ -528,21 +528,20 @@ function openExternalLink(url: string) {
             </li>
           </ul>
 
-          <div class="pt-3 border-t border-brand-cream flex gap-2 flex-wrap items-center">
+          <div class="pt-3 border-t border-brand-cream grid grid-cols-1 sm:grid-cols-[1fr_140px_auto_auto] gap-2 items-center">
             <NInput
               v-model:value="newItemTitle"
               placeholder="新增項目，例如：和山友確認手機門號…"
               aria-label="新增自訂 checklist 項目"
-              style="min-width: 220px; flex: 1"
             />
             <NSelect
               v-model:value="newItemCategory"
               :options="categoryOptions"
               aria-label="項目分類"
-              style="width: 110px"
+              class="sm:!w-[140px]"
             />
             <NCheckbox v-model:checked="newItemRequired">必要</NCheckbox>
-            <NButton type="primary" @click="addCustomItem">
+            <NButton type="primary" block class="sm:!w-auto" @click="addCustomItem">
               <template #icon>
                 <AppIcon name="plus" :size="14" />
               </template>
